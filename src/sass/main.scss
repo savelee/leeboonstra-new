@@ -1,0 +1,12 @@
+/* Main SCSS File */
+
+//You could customize your imports in bootstrap.scss
+@import "bootstrap";
+@import "_gridsystem";
+
+//
+body { }
+
+.card {
+    border: none;
+}
