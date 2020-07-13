@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue-webfont.svg#bebas') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.woff') format('woff'),
+         url('../fonts/icomoon.ttf') format('truetype'),
+         url('../fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'consolas';
+    src: url('../fonts/consolas-webfont.eot');
+    src: url('../fonts/consolas-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/consolas-webfont.woff') format('woff'),
+         url('../fonts/consolas-webfont.ttf') format('truetype'),
+         url('../fonts/consolas-webfont.svg#consolas') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AbhayaLibre-Regular';
+    src: url('../fonts/AbhayaLibre-Regular-webfont.eot');
+    src: url('../fonts/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
+         url('../fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/AbhayaLibre-Regular-webfont.svg#AbhayaLibre-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-github:before {
+    content: "G";
+}
+.icon-linkedin:before {
+    content: "\69";
+}
+.twitter-share-button span:before,
+.icon-twitter:before {
+    content: "\e606";
+}
+.icon-rss:before {
+    content: "\ea9b";
+}
+
+.iconmenu:after {
+    content: "M";
+    font-family: icomoon;
+    speak: none;
+    text-transform: none;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.iconsearch:before {
+    content: "S";
+    font-family: icomoon;
+    speak: none;
+    text-transform: none;
+}
+
+.iconHome:before,
+.iconContact:before,
+.iconWriting:before,
+.iconAbstracts:before,
+.iconSpeaking:before,
+.iconAbout:before,
+.iconVideos:before {
+    font-family: icomoon;
+    speak: none;
+    text-transform: none;
+}
+
+.iconHome:before{
+    content: "H";
+}
+.iconContact:before{
+    content: "C";
+}
+.iconWriting:before {
+    content: "w";
+}
+.iconAbstracts:before,
+.iconSpeaking:before {
+    content: "\e91e";
+}
+.iconVideos:before{
+    content: "\76";
+}
+.iconAbout:before {
+    content: "\e971";
+}

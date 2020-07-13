@@ -1,10 +1,63 @@
 @include media-breakpoint-up(xs) { 
+    .card {
+        width: 100% !important;
+    }
+    .searchbar {
+        display: none !important;
+    }
+    header .navbar {
+        padding: 0 !important;
+    }  
 
+    header {
+        .headertop {            
+            .navbar-toggler {
+                display: inline-block !important;
+            }
+        }
+    }
+    
  }
 @include media-breakpoint-up(sm) { 
+    .card {
+        width: 100% !important;
+    }
+
+    .searchbar {
+        display: none !important;
+    }
+
+    header .navbar {
+        padding: 0 !important;
+    } 
+    
+    header {
+        .headertop {            
+            .navbar-toggler {
+                display: inline-block !important;
+            }
+        }
+    }
 
  }
 @include media-breakpoint-up(md) { 
+    .card.w-75{
+        width: 75% !important;
+    }
+    .card.w-50{
+        width: 50% !important;
+    }
+    .card.w-25{
+        width: 25% !important;
+    }
+
+    header .headertop {
+        text-align: center !important;
+        .navbar-toggler {
+            display: none !important;
+        }
+    }
+
 
  }
 @include media-breakpoint-up(lg) { 
@@ -15,6 +68,5 @@
 }
 
 .col {
-    background: #fafafa;
     height: 100%;
 }

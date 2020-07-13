@@ -4,9 +4,13 @@ var extractPlugin = new ExtractTextPlugin({
    filename: 'main.css'
 });
 
-
 module.exports = {
 	entry: './src/js/index.js',
+	devServer: {
+		contentBase: path.join(__dirname, 'dist'),
+		compress: true,
+		port: 9000
+	  },
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'public')
@@ -26,9 +30,23 @@ module.exports = {
 		{
 			test: /\.scss$/,
 			use: extractPlugin.extract({
-				use: ['css-loader', 'sass-loader']
+				use: ['css-loader', 'resolve-url-loader', 'sass-loader']
 			})
-		}]
+		},
+		{
+			test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+			use: [
+			  {
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+					outputPath: 'fonts/',
+					esModule: false
+				}
+			  }
+			]
+		}
+	]
 	},
 	plugins: [
 		extractPlugin
