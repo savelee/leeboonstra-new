@@ -1,0 +1,22 @@
+ <% if (index){ %>
+    <% if (highlight){ %>
+    <div class="card w-75 p-2 float-md-left">
+    <% } else { %>
+    <div class="card w-25 p-2 float-md-left">
+    <% }%>
+      <div class="shadow-sm">
+        <img class="card-img-top" src="https://dummyimage.com/300x175/000/fff" alt="Card image cap">
+        <div class="card-header">
+          <span>by Lee Boonstra in </span><%- partial('post/category') %>
+          <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
+        </div>
+        <div class="card-body">
+          <%- partial('post/title', {class_name: 'article-title'}) %>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="" class="btn btn-primary stretched-link">Read more</a>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+

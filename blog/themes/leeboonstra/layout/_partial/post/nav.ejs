@@ -1,0 +1,20 @@
+<% if (post.prev || post.next){ %>
+<ul id="article-nav">
+  <% if (post.prev){ %>
+    <li>
+    <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap" rel="prev">
+      <div class="article-nav-title">
+        &laquo;
+      </div>
+    </a>
+  </li>
+  <% } %>
+  <% if (post.next){ %>
+  <li>
+    <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap" rel="next">
+      <div class="article-nav-title">&raquo;</div>
+    </a>
+  </li>
+  <% } %>
+  </ul>
+<% } %>
