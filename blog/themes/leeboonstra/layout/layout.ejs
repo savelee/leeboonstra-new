@@ -1,11 +1,14 @@
 <%- partial('_partial/head'), {}, {cache: true}%>
 
   <div class="container main">    
-    <div class="row align-items-center">
+    <div class="row align-items-start">
 
       <%- body %>
 
     </div>
   </div>
+  <% if (page.total > 1){ %>
+    <%- partial('_widget/pagination', {type: 'page'}) %>
+  <% } %>
 
 <%- partial('_partial/footer') %>
