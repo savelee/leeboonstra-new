@@ -7148,6 +7148,9 @@ header .headertop .navbar-toggler {
     width: 50% !important; }
   .card.w-25 {
     width: 25% !important; }
+  .card-body {
+    height: 300px;
+    overflow: hidden; }
   header .headertop {
     text-align: center !important; }
     header .headertop .navbar-toggler {
@@ -7224,6 +7227,7 @@ header .headertop .navbar-toggler {
 .iconAbstracts:before,
 .iconSpeaking:before,
 .iconAbout:before,
+.iconBio:before,
 .iconVideos:before {
   font-family: icomoon;
   speak: none;
@@ -7245,8 +7249,12 @@ header .headertop .navbar-toggler {
 .iconVideos:before {
   content: "v"; }
 
+.iconBio:before,
 .iconAbout:before {
   content: "\E971"; }
+
+.hidden {
+  display: none; }
 
 .card {
   border: none; }
@@ -7272,7 +7280,7 @@ header .headertop .navbar-toggler {
 .footer {
   background: #222;
   color: #fff;
-  height: 300px;
+  min-height: 300px;
   margin-top: 20px; }
 
 body {
@@ -7326,3 +7334,28 @@ header .nav-link {
   header .nav-link.active, header .nav-link:hover {
     background: #000;
     color: #fff !important; }
+
+.badge a {
+  color: #fff; }
+
+.card .h1 {
+  font-size: 20px; }
+
+.card .card-header {
+  font-size: 80%; }
+
+.blogcontent .header {
+  font-size: 80%; }
+
+.blogcontent .lead:first-of-type,
+.blogcontent p:first-of-type {
+  font-size: 28px;
+  line-height: 1.5; }
+
+.blogcontent img {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto; }

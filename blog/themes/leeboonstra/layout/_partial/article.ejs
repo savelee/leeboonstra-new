@@ -12,8 +12,8 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="" class="btn btn-primary stretched-link">Read more</a>
+          <p class="card-text"><%- truncate(post.excerpt, {length: 100, omission: '...'}) %></p>
+          <a href="" class="btn btn-primary">Read more</a>
         </div>
       </div>
     </div>
@@ -21,20 +21,25 @@
 
     <div class="row justify-content-md-center">
       <article class="col-8 blogcontent">
-        <h1>Blog title</h1>
+        <h1><%= post.title %></h1>
+        <div class="header">
+          <span>by Lee Boonstra in </span><%- partial('post/category') %>
+          <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
+        </div>
+          <%- post.content %>
+        <!--
         <p class="lead">
           Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
         </p>
         
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam erat eu iaculis tincidunt. Aenean at tortor volutpat, iaculis metus eget, iaculis ipsum. Etiam nibh elit, porta vel sapien ultricies, condimentum mattis mi. Nam condimentum odio eu turpis lacinia, a sagittis sapien tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sapien massa, semper eu dictum sit amet, maximus ac sem. Maecenas consectetur ultrices maximus. Aliquam condimentum libero quis enim dapibus, lacinia blandit orci volutpat. Sed sit amet tincidunt tellus. Vestibulum elit arcu, eleifend vitae mauris vel, mattis imperdiet lorem.
   
-  <!--
+
         <img src="https://dummyimage.com/300x200/000/fff" class="img-fluid" alt="Responsive image">
-       -->
-        <!--
+    
         <img src="https://dummyimage.com/300x200/000/fff" class="rounded float-left" alt="left">
         <img src="https://dummyimage.com/300x200/000/fff" class="rounded float-right" alt="right.">
-        -->
+        
         <img src="https://dummyimage.com/300x200/000/fff" class="rounded mx-auto d-block" alt="center">
         
         Maecenas dignissim consectetur sem, non porta sapien rutrum non. Etiam interdum arcu tempor nulla interdum efficitur feugiat sit amet est. Nullam sodales sed lacus id aliquam. Vestibulum magna ante, porttitor eget porta a, lacinia vel urna. Aliquam sed ante leo. Praesent quam mi, ornare at egestas sit amet, consectetur tristique nunc. Fusce convallis gravida lorem, in egestas ante elementum ac.
@@ -44,6 +49,7 @@
         Maecenas sagittis tempus lectus aliquet laoreet. Nunc eu ex vel nibh luctus mollis fringilla suscipit lacus. Nulla blandit vitae ligula at varius. Cras nec nibh dolor. Vestibulum nec eros eu felis congue fermentum tempor in nunc. Nam leo mauris, auctor et nisi et, bibendum laoreet urna. Quisque et ullamcorper ligula.
         
         Donec ac lacus sodales, consectetur turpis et, ultrices turpis. Vivamus quis orci eros. Ut quis iaculis nibh. Ut hendrerit magna pellentesque nunc laoreet placerat. Ut lobortis eros turpis. Sed nisi eros, congue ut pretium ut, hendrerit nec dui. Vivamus id lorem id turpis scelerisque hendrerit eget vel elit. Duis euismod facilisis augue sed tristique. Nulla a rutrum ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ultricies tellus ac augue tempor, et commodo orci vehicula. Nulla in quam magna. Donec ullamcorper suscipit nunc, sit amet pharetra risus rutrum a. Suspendisse potenti. Sed porttitor at velit eu tempus.
+      -->
       </article>
   </div>
 

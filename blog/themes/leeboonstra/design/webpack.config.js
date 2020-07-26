@@ -7,13 +7,13 @@ var extractPlugin = new ExtractTextPlugin({
 module.exports = {
 	entry: './src/js/index.js',
 	devServer: {
-		contentBase: path.join(__dirname, '../blog/themes/leeboonstra/source'),
+		contentBase: path.join(__dirname, '../source'),
 		compress: true,
 		port: 9000
 	  },
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, '../blog/themes/leeboonstra/source')
+		path: path.resolve(__dirname, '../source')
 	},
 	module: {
 		rules: [

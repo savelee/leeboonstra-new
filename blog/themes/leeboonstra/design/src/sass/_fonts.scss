@@ -89,6 +89,7 @@
 .iconAbstracts:before,
 .iconSpeaking:before,
 .iconAbout:before,
+.iconBio:before,
 .iconVideos:before {
     font-family: icomoon;
     speak: none;
@@ -111,6 +112,7 @@
 .iconVideos:before{
     content: "\76";
 }
+.iconBio:before,
 .iconAbout:before {
     content: "\e971";
 }

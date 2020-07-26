@@ -51,6 +51,11 @@
         width: 25% !important;
     }
 
+    .card-body {
+        height: 300px;
+        overflow: hidden;
+    }
+
     header .headertop {
         text-align: center !important;
         .navbar-toggler {

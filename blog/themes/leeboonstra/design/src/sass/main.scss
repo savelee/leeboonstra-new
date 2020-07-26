@@ -7,8 +7,9 @@ $font-family-base: 'AbhayaLibre-Regular';
 @import "_gridsystem";
 @import "_fonts";
 
-//
-body { }
+.hidden {
+    display: none;
+}
 
 .card {
     border: none;
@@ -41,7 +42,7 @@ body { }
 .footer {
     background: #222;
     color: #fff;
-    height: 300px;
+    min-height: 300px;
     margin-top: 20px;
 }
 
@@ -113,5 +114,41 @@ header {
             background: #000;
             color: #fff !important;
         }
+    }
+}
+
+.badge a {
+    color: #fff;
+}
+
+.card {
+    .h1 {
+        font-size: 20px;
+    }
+    .card-header {
+        font-size: 80%;
+    }
+
+}
+
+.blogcontent {
+
+    .header {
+        font-size: 80%;
+    }
+    .lead,
+    p {
+        &:first-of-type {
+            font-size: 28px;
+            line-height: 1.5;
+        }    
+    }
+    img {
+        padding: .25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: .25rem;
+        max-width: 100%;
+        height: auto;
     }
 }
