@@ -2,19 +2,34 @@
     <div class="row justify-content-md-center">
       <div class="col-8 blogcontent">
   
-        <h1>About me</h1>
+        <h1><%-page.title %></h1>
   
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam erat eu iaculis tincidunt. Aenean at tortor volutpat, iaculis metus eget, iaculis ipsum. Etiam nibh elit, porta vel sapien ultricies, condimentum mattis mi. Nam condimentum odio eu turpis lacinia, a sagittis sapien tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sapien massa, semper eu dictum sit amet, maximus ac sem. Maecenas consectetur ultrices maximus. Aliquam condimentum libero quis enim dapibus, lacinia blandit orci volutpat. Sed sit amet tincidunt tellus. Vestibulum elit arcu, eleifend vitae mauris vel, mattis imperdiet lorem.
-  
-        Maecenas dignissim consectetur sem, non porta sapien rutrum non. Etiam interdum arcu tempor nulla interdum efficitur feugiat sit amet est. Nullam sodales sed lacus id aliquam. Vestibulum magna ante, porttitor eget porta a, lacinia vel urna. Aliquam sed ante leo. Praesent quam mi, ornare at egestas sit amet, consectetur tristique nunc. Fusce convallis gravida lorem, in egestas ante elementum ac.
-        
-        Nunc ipsum ex, porttitor et interdum semper, facilisis nec sem. Etiam aliquam finibus neque nec vestibulum. Aliquam erat volutpat. Proin dictum iaculis egestas. Fusce venenatis tempor felis, at dictum eros egestas vel. In sollicitudin est neque, non rhoncus tortor consectetur vitae. Sed vitae interdum libero. Donec eu nulla vel nisl pulvinar cursus eget et lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer sagittis, nisi sed egestas volutpat, eros orci dictum tortor, vel maximus risus magna id justo. Sed tempor ante posuere sapien finibus rutrum. Aenean lobortis magna a nulla tristique, vitae tempor est finibus.
-        
-        Maecenas sagittis tempus lectus aliquet laoreet. Nunc eu ex vel nibh luctus mollis fringilla suscipit lacus. Nulla blandit vitae ligula at varius. Cras nec nibh dolor. Vestibulum nec eros eu felis congue fermentum tempor in nunc. Nam leo mauris, auctor et nisi et, bibendum laoreet urna. Quisque et ullamcorper ligula.
-        
-        Donec ac lacus sodales, consectetur turpis et, ultrices turpis. Vivamus quis orci eros. Ut quis iaculis nibh. Ut hendrerit magna pellentesque nunc laoreet placerat. Ut lobortis eros turpis. Sed nisi eros, congue ut pretium ut, hendrerit nec dui. Vivamus id lorem id turpis scelerisque hendrerit eget vel elit. Duis euismod facilisis augue sed tristique. Nulla a rutrum ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ultricies tellus ac augue tempor, et commodo orci vehicula. Nulla in quam magna. Donec ullamcorper suscipit nunc, sit amet pharetra risus rutrum a. Suspendisse potenti. Sed porttitor at velit eu tempus.
-  
-  
+        <%- page.content %>
+
+        <script type="application/ld+json">
+          { "@context": "http://schema.org", 
+          "@type": "BlogPosting",
+          "headline": "<%- page.title %>",
+          "genre": "technology", 
+          "datePublished": "<%- page.date.toISOString() %>",
+          "dateCreated": "<%- page.date.toISOString()  %>",
+          "dateModified": "<%- page.date.toISOString() %>",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Lee Boonstra",
+            "logo": "<%- config.url %>/images/screen.png"
+          },
+          "description": "Lee Boonstra's developer blog.",
+          "mainEntityOfPage": "<%- post.permalink %>",
+          "image": "<%- config.url %>/images/screen.png",
+          "articleBody": "<%- post.description %>",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra",
+            "url": "http://www.leeboonstra.com"
+          }
+          }
+          </script>
   
       </div>
       <div class="col-4 photocol">
@@ -24,8 +39,6 @@
         <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
         <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
         
-  
-  
       </div>
     </div>
   </div>

@@ -128,6 +128,9 @@ header {
     .card-header {
         font-size: 80%;
     }
+    .card-foot {
+        margin: 20px;
+    }
 
 }
 
@@ -156,4 +159,24 @@ header {
     figure .code {
         max-width: 300px;
     }
+}
+
+.pagination {
+    .page-number,
+    .extend {
+        position: relative;
+        display: block;
+        padding: .5rem .75rem;
+        margin-left: -1px;
+        line-height: 1.25;
+        color: #007bff;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
 }

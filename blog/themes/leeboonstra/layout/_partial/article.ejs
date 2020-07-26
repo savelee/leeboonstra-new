@@ -12,8 +12,14 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
+          <% if (highlight){ %>
+            <p class="card-text"><%- truncate(post.excerpt, {length: 300, omission: '...'}) %></p> 
+          <% } else { %>
           <p class="card-text"><%- truncate(post.excerpt, {length: 100, omission: '...'}) %></p>
-          <a href="" class="btn btn-primary">Read more</a>
+          <% }%>
+        </div>
+        <div class="card-foot">
+          <a href="<%- url_for(post.path) %>" class="btn btn-primary stretched-link">Read more</a>
         </div>
       </div>
     </div>
@@ -25,6 +31,13 @@
         <div class="header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
           <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
+        <a class="twitter-share-button btn"
+          href="https://twitter.com/intent/tweet" data-size="large" target="_blank">
+        <span>Tweet this</span></a>
+    
+        <a class="twitter-follow-button btn"
+          href="https://twitter.com/ladysign" data-size="large">
+        Follow @ladysign</a>
         </div>
           <%- post.content %>
         <!--

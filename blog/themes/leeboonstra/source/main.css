@@ -7144,12 +7144,15 @@ header .headertop .navbar-toggler {
 @media (min-width: 768px) {
   .card.w-75 {
     width: 75% !important; }
+    .card.w-75 .card-body {
+      height: 150px;
+      overflow: hidden; }
   .card.w-50 {
     width: 50% !important; }
   .card.w-25 {
     width: 25% !important; }
   .card-body {
-    height: 300px;
+    height: 220px;
     overflow: hidden; }
   header .headertop {
     text-align: center !important; }
@@ -7344,6 +7347,9 @@ header .nav-link {
 .card .card-header {
   font-size: 80%; }
 
+.card .card-foot {
+  margin: 20px; }
+
 .blogcontent .header {
   font-size: 80%; }
 
@@ -7363,3 +7369,18 @@ header .nav-link {
 
 .blogcontent figure .code {
   max-width: 300px; }
+
+.pagination .page-number,
+.pagination .extend {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  text-decoration: none; }
+  .pagination .page-number:hover,
+  .pagination .extend:hover {
+    background-color: #ccc; }
