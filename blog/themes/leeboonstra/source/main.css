@@ -7352,6 +7352,7 @@ header .nav-link {
   font-size: 28px;
   line-height: 1.5; }
 
+.blogcontent figure,
 .blogcontent img {
   padding: .25rem;
   background-color: #fff;
@@ -7359,3 +7360,6 @@ header .nav-link {
   border-radius: .25rem;
   max-width: 100%;
   height: auto; }
+
+.blogcontent figure .code {
+  max-width: 300px; }
