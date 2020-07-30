@@ -5,40 +5,42 @@
         <h1><%-page.title %></h1>
   
         <%- page.content %>
-
-        <script type="application/ld+json">
-          { "@context": "http://schema.org", 
-          "@type": "BlogPosting",
-          "headline": "<%- page.title %>",
-          "genre": "technology", 
-          "datePublished": "<%- page.date.toISOString() %>",
-          "dateCreated": "<%- page.date.toISOString()  %>",
-          "dateModified": "<%- page.date.toISOString() %>",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Lee Boonstra",
-            "logo": "<%- config.url %>/images/screen.png"
-          },
-          "description": "Lee Boonstra's developer blog.",
-          "mainEntityOfPage": "<%- post.permalink %>",
-          "image": "<%- config.url %>/images/screen.png",
-          "articleBody": "<%- post.description %>",
-          "author": {
-            "@type": "Person",
-            "name": "Lee Boonstra",
-            "url": "http://www.leeboonstra.com"
-          }
-          }
-          </script>
   
       </div>
       <div class="col-4 photocol">
-  
-        <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
-        <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
-        <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
-        <a href=""><img src="https://dummyimage.com/150x100/000/fff" class="rounded mx-auto d-block" alt="center"></a>
-        
+
+          <h3>Photo's</h3>
+          <a href="/images/bio/leeboonstra1.jpg">
+          <img src="/images/bio/leeboonstra1-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+          <a href="/images/bio/leeboonstra2.jpg">
+          <img src="/images/bio/leeboonstra2-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+          <a href="/images/bio/leeboonstra3.jpg">
+          <img src="/images/bio/leeboonstra3-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+          <br/>
+          <a href="/images/bio/leeboonstra4.jpg">
+          <img src="/images/bio/leeboonstra4-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+          <a href="/images/bio/leeboonstra5.jpg">
+          <img src="/images/bio/leeboonstra5-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+          <a href="/images/aboutme1.jpg">
+            <img src="/images/aboutme1-small.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Google Developer Advocate and public speaker." loading="lazy">
+          </a>
+
+          <h3>Social Links</h3>
+          <ul>
+            <li><a href="https://twitter.com/ladysign">Twitter (@ladysign)</a></li>
+            <li><a href="https://github.com/savelee/">Github (savelee)</a></li>
+            <li><a href="http://www.leeboonstra.dev">Blog (www.leeboonstra.dev)</a></li>
+            <li><a href="https://www.linkedin.com/in/leeboonstra/n">LinkedIn (leeboonstra)</a></li>
+            <li><a href="https://www.leebooonstra.dev/speaker">Past speaking events</a></li>
+            <li><a href="https://www.leebooonstra.dev/videos">Videos of me</a></li>
+            <li><a href="https://speakerdeck.com/savelee/">Previous presentations</a></li>
+          </ul>
+
       </div>
     </div>
   </div>

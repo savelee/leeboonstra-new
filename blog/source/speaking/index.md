@@ -6,17 +6,15 @@ nocomments: true
 layout: speaking
 ---
 
-<img src="/images/lee-fos.jpg" width="400" class="float-right img-fluid border" alt="Lee Speaking" loading="lazy">
-
-
 I worked in the past as a technical trainer, now I am a developer advocate at Google on Conversational AI. I'm a public speaker at conferences and events. Below is a list of upcoming and past sessions.
 
 Check out my Speaker Deck, for an overview of all my presentations: [Speaker Deck](https://speakerdeck.com/savelee/).
 
 Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<img src="/images/lee-fos.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
+
+
 <hr>
 
 2020

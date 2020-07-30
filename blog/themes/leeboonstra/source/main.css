@@ -7360,8 +7360,19 @@ header .nav-link {
 
 .blogcontent .lead:first-of-type,
 .blogcontent p:first-of-type {
-  font-size: 28px;
+  font-size: 1.6rem;
   line-height: 1.5; }
+
+.blogcontent h2, .blogcontent .h2 {
+  margin-top: 40px;
+  font-size: 1.6rem; }
+
+.blogcontent blockquote p:first-of-type,
+.blogcontent blockquote p:first-of-type {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #484848;
+  font-style: italic; }
 
 .blogcontent figure,
 .blogcontent img {
@@ -7375,6 +7386,10 @@ header .nav-link {
 .blogcontent pre,
 .blogcontent figure .code {
   max-width: 720px; }
+
+.photocol h3 {
+  font-size: 1.4rem;
+  text-align: center; }
 
 .pagination .page-number,
 .pagination .extend {

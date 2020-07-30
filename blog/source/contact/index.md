@@ -7,8 +7,6 @@ layout: contact
 
 In case you want to contact me, please send me a dm on <a href="https://twitter.com/ladysign" target="_blank">Twitter</a> or contact me via <a href="https://linkedin.com/in/leeboonstra/" target="_blank">LinkedIn</a>.
 
-* [Here's my resume: Lee Boonstra CV](/images/lee.boonstra-resume.pdf)
-
 <div class="vcard hidden">
     <span class="fn">Lee Boonstra</span>
     <span class="title">Developer Advocate</span>

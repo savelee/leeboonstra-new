@@ -142,9 +142,26 @@ header {
     .lead,
     p {
         &:first-of-type {
-            font-size: 28px;
+            font-size: 1.6rem;
             line-height: 1.5;
         }    
+    }
+
+    h2, .h2 {
+        margin-top: 40px;
+        font-size: 1.6rem;
+    }
+
+    blockquote {
+        p,
+        p {
+            &:first-of-type {
+                font-size: 1.3rem;
+                line-height: 1.5;
+                color: #484848;
+                font-style: italic;
+            }    
+        }
     }
 
     figure,
@@ -160,6 +177,13 @@ header {
     pre,
     figure .code {
         max-width: 720px;
+    }
+}
+
+.photocol {
+    h3 { 
+        font-size: 1.4rem;
+        text-align: center;
     }
 }
 
