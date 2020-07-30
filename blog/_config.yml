@@ -62,13 +62,16 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
+prism_plugin:
+  mode: 'realtime'    # realtime/preprocess
+  theme: 'atom-dark'
+  line_number: false    # default false
+  no_assets: false
+highlight: 
+  enable: false
+  line_number: false
   auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+
   
 # Pagination
 ## Set per_page to 0 to disable pagination
