@@ -7261,6 +7261,9 @@ code,
 .code {
   font-family: consolas; }
 
+.footer h4 {
+  font-family: bebas; }
+
 .hidden {
   display: none; }
 
@@ -7289,7 +7292,22 @@ code,
   background: #222;
   color: #fff;
   min-height: 300px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding: 50px; }
+  .footer a {
+    color: #fff; }
+  .footer ul {
+    margin-left: -20px; }
+    .footer ul li {
+      font-size: 1.2rem; }
+      .footer ul li span {
+        margin: auto 5px;
+        font-size: 0.9rem; }
+
+.disclaimer {
+  font-family: bebas;
+  font-size: 1rem;
+  padding: 0 20px; }
 
 body {
   font-size: 21px;

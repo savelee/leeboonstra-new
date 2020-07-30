@@ -44,6 +44,28 @@ $font-family-base: 'AbhayaLibre-Regular';
     color: #fff;
     min-height: 300px;
     margin-top: 20px;
+    padding: 50px;
+
+    a {
+        color: #fff;
+    }
+
+    ul {
+        margin-left: -20px;
+        li {
+            font-size: 1.2rem;
+            span {
+                margin: auto 5px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.disclaimer {
+    font-family: bebas;
+    font-size: 1rem;
+    padding: 0 20px;
 }
 
 body {
