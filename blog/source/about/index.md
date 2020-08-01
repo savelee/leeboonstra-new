@@ -42,3 +42,4 @@ Topics include: **Dialogflow, Chatbots, Customer Care, The Future of the Contact
 
 Beside technology I love (alternative) music, concerts and I’m a videogames addict.
 
+

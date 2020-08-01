@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
       <div class="col">
-        <h1>Videos</h1>
+        <h1><%-page.title-%></h1>
   
         <div class="card w-100" >
           <div class="shadow-sm">
@@ -13,40 +13,18 @@
             </div>
           </div>
         </div>
-  
-        <div class="card w-25 p-2 float-md-left" >
-          <div class="shadow-sm">
-            <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+        <% site.categories.findOne({name: 'Videos'}).posts.forEach(function(post) { %>
+          <div class="card w-25 p-2 float-md-left" >
+            <div class="shadow-sm">
+              <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text"><%-post.title-%></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card w-25 p-2 float-md-left" >
-          <div class="shadow-sm">
-            <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card w-25 p-2 float-md-left" >
-          <div class="shadow-sm">
-            <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card w-25 p-2 float-md-left" >
-          <div class="shadow-sm">
-            <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-  
+        <% }) %>
+    
       </div>
     </div>
   </div>

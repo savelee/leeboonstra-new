@@ -1,9 +1,9 @@
 <% if (pagination == 2){ %>
   <% page.posts.each(function(post, i){ %>
     <% if (i== 0) { %>
-      <%- partial('article', {post: post, index: true, highlight: true}) %>
+        <%- partial('article', {post: post, index: true, highlight: true}) %>
     <% } else { %>
-      <%- partial('article', {post: post, index: true, highlight: false}) %>
+        <%- partial('article', {post: post, index: true, highlight: false}) %>
     <% }%>
   <% }) %>
 <% } else { %>
