@@ -16,6 +16,7 @@ categories:
 date: 2017-09-26 10:21:28
 alias: /developer/video-create-custom-chat-agents-for-google-home-with-api-ai/
 youtube: iWWodOrIf7I
+hidden: true
 ---
 
 During Google Cloud Next in Amsterdam, I spoke for the Leader Circle (c-level discussions for Dutch companies) about chatbots, and smart conversation agents. A talk about Google Home, and how you can create custom agents with Dialogflow.

@@ -75,8 +75,18 @@ highlight:
   
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 4
+per_page: 2
 pagination_dir: page
+
+# hexo-hide-posts
+hide_posts:
+  # Change the filter name to fit your need
+  filter: hidden
+  # Generators which you want to expose all posts (include hidden ones) to.
+  # Common generators: index, tag, category, archive, sitemap, feed, etc.
+  public_generators: [category]
+  # Add "noindex" meta tag to prevent hidden posts from being indexed by search engines
+  noindex: false
 
 # Miscellaneous
 google_analytics: 'UA-85081556-1'

@@ -15,11 +15,15 @@
         </div>
 
         <% site.categories.findOne({name: 'Videos'}).posts.forEach(function(post) { %>
-          <div class="card w-25 p-2 float-md-left" >
+          <div class="card w-25 p-2 float-md-left youtube">
             <div class="shadow-sm">
-              <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
+              <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/0.jpg" alt="Watch on YouTube">
               <div class="card-body">
                 <p class="card-text"><%-post.title-%></p>
+              </div>
+              <div class="foot">
+                <span class="hidden youtubeId"><%-post.youtube-%></span>
+                <a href="#" class="btn btn-primary stretched-link">Watch</a>
               </div>
             </div>
           </div>

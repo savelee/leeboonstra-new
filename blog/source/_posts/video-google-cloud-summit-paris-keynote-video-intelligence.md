@@ -14,6 +14,7 @@ youtube: ROSZHWkV4i8
 alias: /developer/video-google-cloud-summit-paris-keynote-video-intelligence/
 categories:
   - Videos
+hidden: true
 ---
 
 At the Google Cloud Summit event in Paris, I presented the Video Intelligence API for 3000+ IT professionals: 

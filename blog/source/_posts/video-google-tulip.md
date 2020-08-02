@@ -11,6 +11,7 @@ tags:
   - Serverless
   - Cloud Run
   - Dialogflow
+hidden: true
 ---
 
 Together with Matt & Christiaan I spoke at GOTO Conference. We presented the Google Tulip, April Fools case. The code that I wrote; is actually available online:

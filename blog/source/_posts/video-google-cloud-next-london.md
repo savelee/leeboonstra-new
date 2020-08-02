@@ -14,6 +14,7 @@ categories:
 date: 2018-11-08 17:25:28
 youtube: KhB0hwlyZkg
 alias: /developer/video-google-cloud-next-london/
+hidden: true
 ---
 
 At the Google Cloud Next event in London, I presented my customer care solution during the demo derby! 

@@ -13,6 +13,7 @@ tags:
   - Dialogflow
   - Chatbots
   - Video
+hidden: true
 ---
 
 I've presented in Eindhoven during Digital Wednesday about Dialogflow and Google Assistant:

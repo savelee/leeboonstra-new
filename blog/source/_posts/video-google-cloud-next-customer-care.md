@@ -10,6 +10,7 @@ youtube: byN48HF0QLQ
 alias: /developer/video-google-cloud-next-customer-care/
 categories:
   - Videos
+hidden: true
 ---
 
 At the Google Cloud Summit event in Paris, I presented the Video Intelligence API for 3000+ IT professionals: 

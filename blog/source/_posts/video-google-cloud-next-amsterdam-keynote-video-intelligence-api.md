@@ -14,6 +14,7 @@ categories:
 date: 2017-09-26 10:24:57
 youtube: 1IZuD103rX0
 alias: /developer/video-google-cloud-next-amsterdam-keynote-video-intelligence-api/
+hidden: true
 ---
 
 At the Google Cloud Next event in Amsterdam, I presented the Video Intelligence API for 3000+ IT professionals: 

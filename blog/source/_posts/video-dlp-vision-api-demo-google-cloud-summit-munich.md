@@ -13,6 +13,7 @@ categories:
 date: 2018-02-14 10:52:59
 alias: /developer/video-dlp-vision-api-demo-google-cloud-summit-munich/
 youtube: sm3xLN0n95o
+hidden: true
 ---
 
 At the Google Cloud Summit event in Munich, I presented the Vision API and DLP API for 3000+ IT professionals: 

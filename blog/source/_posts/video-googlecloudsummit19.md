@@ -12,6 +12,7 @@ tags:
   - Machine Learning
   - Google Cloud Summit Amsterdam
   - AutoML Tables
+hidden: true
 ---
 
 I joined the keynote session at the Google Cloud Summit 2019,

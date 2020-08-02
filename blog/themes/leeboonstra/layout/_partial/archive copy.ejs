@@ -1,11 +1,10 @@
-
 <% if (pagination == 2){ %>
   <% page.posts.each(function(post, i){ %>
-    <% if (i == 0){ %>
-      <%- partial('article', {post: post, index: true, highlight: true}) %>
+    <% if (i== 0) { %>
+        <%- partial('article', {post: post, index: true, highlight: true}) %>
     <% } else { %>
-      <%- partial('article', {post: post, index: true, highlight: false}) %>
-    <% } %>
+        <%- partial('article', {post: post, index: true, highlight: false}) %>
+    <% }%>
   <% }) %>
 <% } else { %>
   <% var last; %>
@@ -22,21 +21,8 @@
         </div>
         <div class="archives">
     <% } %>
-    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
   <% }) %>
   <% if (page.posts.length){ %>
     </div></section>
   <% } %>
 <% } %>
-<% if (page.total > 1){ %>
-  <nav id="page-nav">
-    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
-    <%- paginator({
-      prev_text: prev_text,
-      next_text: next_text
-    }) %>
-  </nav>
-<% } %>
-
-
-  

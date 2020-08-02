@@ -14,9 +14,8 @@ tags:
   - ML APIs
   - Video
   - Frontmania
+hidden: true
 ---
-
-
 
 At Frontmania in Utrecht I presented during the keynote, about machine learning for JavaScript developers:
 <!--more-->

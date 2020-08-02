@@ -13,6 +13,7 @@ tags:
   - Tensorflow
   - Pre-trained Models
   - ML APIs
+hidden: true
 ---
 
 I recently spoke at the Schiphol Developers Group about Machine Learning and Auto ML.

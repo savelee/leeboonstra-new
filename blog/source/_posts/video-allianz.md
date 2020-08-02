@@ -5,6 +5,7 @@ categories:
   - Videos
 date: 2019-10-17 10:45:17
 youtube: Y9zOZ0EDDsE
+hidden: true
 alias: /developer/video-allianz/
 tags:
   - Google Assistant

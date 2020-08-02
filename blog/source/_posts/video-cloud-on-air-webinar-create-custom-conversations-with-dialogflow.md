@@ -4,6 +4,7 @@ description: Training Session by Lee Boonstra. Learn about Dialogflow and Chatbo
 categories:
   - Videos
 date: 2017-11-06 08:43:23
+hidden: true
 tags: 
   - Dialogflow
   - Chatbots
