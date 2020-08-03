@@ -7154,6 +7154,8 @@ header .headertop .navbar-toggler {
   .card-body {
     height: 220px;
     overflow: hidden; }
+  .writing .card .card-body {
+    height: 300px; }
   header .headertop {
     text-align: center !important; }
     header .headertop .navbar-toggler {
@@ -7373,6 +7375,9 @@ header .nav-link {
 .card .card-foot {
   margin: 20px; }
 
+.card.tall .card-body {
+  height: 100%; }
+
 .blogcontent .header {
   font-size: 80%; }
 
@@ -7423,3 +7428,14 @@ header .nav-link {
   .pagination .page-number:hover,
   .pagination .extend:hover {
     background-color: #ccc; }
+
+.writing .card h2 {
+  font-size: 1.5rem;
+  color: #007bff; }
+
+.writing .card .date {
+  color: #007bff;
+  font-size: 1rem; }
+
+.writing .card .card-body {
+  height: 100%; }

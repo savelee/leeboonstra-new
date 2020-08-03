@@ -24,7 +24,7 @@ rss: /atom.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.leeboonstra.dev
+url: http://0.0.0.0:4000/
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -75,7 +75,7 @@ highlight:
   
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 2
+per_page: 5
 pagination_dir: page
 
 # hexo-hide-posts
@@ -84,7 +84,7 @@ hide_posts:
   filter: hidden
   # Generators which you want to expose all posts (include hidden ones) to.
   # Common generators: index, tag, category, archive, sitemap, feed, etc.
-  public_generators: [category]
+  public_generators: [category, sitemap, feed, tag, paginator]
   # Add "noindex" meta tag to prevent hidden posts from being indexed by search engines
   noindex: false
 

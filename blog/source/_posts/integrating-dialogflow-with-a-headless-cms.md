@@ -15,13 +15,15 @@ date: 2020-03-03 14:41:36
 
 I often get the question, why does Dialogflow not have a CMS? So non-techy people can modify webhook fulfillment answers, without having to train models or use the Dialogflow console. The thing is, Dialogflow can be integrated with anything you like.
 
-In [my Dialogflow, Django, Angular example](https://github.com/savelee/kube-django-ng/) I am using Django as a CMS to import user accounts. In fact, I am using the Django Rest module, to communicate with Django via a Rest API.
-
 In this tutorial I will make use of a headless CMS; [Sanity](https://www.sanity.io/).
 
 <!--more-->
 
 You can use any CMS, even Wordpress, but it makes things easier when there are (out of the box) REST APIs to use. This is what a headless CMS can do really well. It detaches the content from a webpage in order to reuse it in various contexts such as Mobile Apps or Chatbots.
+
+In [my Dialogflow, Django, Angular example](https://github.com/savelee/kube-django-ng/) I am using Django as a CMS to import user accounts. In fact, I am using the Django Rest module, to communicate with Django via a Rest API.
+
+In this tutorial I will make use of a headless CMS; [Sanity](https://www.sanity.io/).
 
 ### **Dialogflow**
 

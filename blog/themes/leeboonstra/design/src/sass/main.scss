@@ -154,6 +154,9 @@ header {
         margin: 20px;
     }
 
+    &.tall .card-body {
+        height: 100%;
+    }
 }
 
 .blogcontent {
@@ -227,4 +230,18 @@ header {
         }
     }
 
+}
+
+.writing .card {
+    h2 {
+        font-size: 1.5rem;
+        color: $primary;
+    }
+    .date {
+        color: $primary;
+        font-size: 1rem;
+    }
+    .card-body  {
+        height: 100%;
+    }
 }

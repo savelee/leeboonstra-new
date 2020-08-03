@@ -60,6 +60,13 @@
         overflow: hidden;
     }
 
+
+    .writing .card {
+        .card-body  {
+            height: 300px;
+        }
+    }
+
     header .headertop {
         text-align: center !important;
         .navbar-toggler {

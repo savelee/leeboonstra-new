@@ -1,11 +1,40 @@
  <% if (index){ %>
     <% if (highlight){ %>
-    <div class="card w-75 p-2 float-md-left">
-    <% } else { %>
-    <div class="card w-25 p-2 float-md-left">
-    <% }%>
+    <div class="card w-75 p-2 float-md-left tall">
       <div class="shadow-sm">
         <img class="card-img-top" src="https://dummyimage.com/300x175/000/fff" alt="Card image cap">
+        <div class="card-header">
+          <span>by Lee Boonstra in </span><%- partial('post/category') %>
+          <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
+        </div>
+        <div class="card-body">
+          <%- partial('post/title', {class_name: 'article-title'}) %>
+            <p class="card-text"><%-post.excerpt-%></p> 
+        </div>
+        <div class="card-foot">
+          <a href="<%- url_for(post.path) %>" class="btn btn-primary stretched-link">Read more</a>
+        </div>
+      </div>
+    </div>
+    <div class="card w-25 p-2 float-md-left tall">
+    <div class="shadow-sm">
+      <div class="card-body">
+        <h2>Lee Boonstra</h2>
+        <p class="card-text">
+          Lee Boonstra s a Conversational AI Developer Advocate at Google. In this role she is focusing on Dialogflow, Contact Center AI & Speech technology. She is based in Amsterdam, and an O’Reilly published author.
+        </p>
+        <p>
+          Prior to Google, Lee worked at Sencha Inc. and wrote a book for O’Reilly Hands-on Sencha Touch 2.
+        </p>
+      </div>
+    </div>
+  </div>
+    <% } else { %>   
+    <div class="card w-25 p-2 float-md-left">
+      <div class="shadow-sm">
+        <% if (post.featured_image){ %>
+          <img class="card-img-top" src="<%- post.featured_image %>" alt="<%-post.title-%>">
+        <% } %>
         <div class="card-header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
           <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
@@ -23,6 +52,7 @@
         </div>
       </div>
     </div>
+    <% }%>
  <% } else { %>
 
     <div class="row justify-content-md-center">
