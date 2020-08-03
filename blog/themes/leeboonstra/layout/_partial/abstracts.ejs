@@ -6,7 +6,9 @@
       <% site.categories.findOne({name: 'Abstract'}).posts.forEach(function(post) { %>
       <div class="card w-50 p-2 float-md-left" >
         <div class="shadow-sm">
-          <img class="card-img-top" src="https://dummyimage.com/300x200/000/fff" alt="Card image cap">
+          <% if (post.featured_image){ %>
+            <img class="card-img-top" src="<%- post.featured_image %>" alt="<%-post.title-%>">
+          <% } %>
           <div class="card-body">
             <p class="card-text"><%-post.title-%></p>
             <a href="#" class="btn btn-primary stretched-link">Read more</a>
