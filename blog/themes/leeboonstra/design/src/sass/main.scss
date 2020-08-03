@@ -245,3 +245,28 @@ header {
         height: 100%;
     }
 }
+
+.profile {
+
+    font-size: 1rem;
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .headshot {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        border: 5px solid #fff;
+        overflow: hidden;
+        margin-left: 60px;
+
+        img {
+            height: 100px;
+            width: 100px;       
+        }
+    }
+
+}

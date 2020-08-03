@@ -7439,3 +7439,19 @@ header .nav-link {
 
 .writing .card .card-body {
   height: 100%; }
+
+.profile {
+  font-size: 1rem; }
+  .profile h2 {
+    font-size: 1.4rem; }
+  .profile .headshot {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    margin-left: 60px; }
+    .profile .headshot img {
+      height: 100px;
+      width: 100px; }
