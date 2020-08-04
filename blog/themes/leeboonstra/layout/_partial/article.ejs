@@ -57,13 +57,13 @@
         <div class="header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
           <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
-        <a class="twitter-share-button btn"
-          href="https://twitter.com/intent/tweet" data-size="large" target="_blank">
-        <span>Tweet this</span></a>
-    
-        <a class="twitter-follow-button btn"
-          href="https://twitter.com/ladysign" data-size="large">
-        Follow @ladysign</a>
+ 
+          <a href="https://twitter.com/intent/tweet" 
+          class="twitter-share-button btn" data-text="<%-post.title-%> #Dialogflow #GCP by @ladysign" data-related="" data-lang="en" data-show-count="false">Tweet</a>
+
+          <a href="https://twitter.com/ladysign?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-text="I like this." data-related="" data-lang="en" data-show-count="false">Follow @ladysign</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
         </div>
         <%- post.content %>
       </article>
