@@ -20,4 +20,10 @@ try {
  * Now you'll be ready to develop your application
  * using bootstrap core files.
  */
-console.log('Your app is running...')
+
+/* Play Videos */
+$( ".youtubeLink" ).click(function() {
+	var id = $(this).find( ".youtubeId").html();
+	var url = 'https://www.youtube.com/embed/' + id;
+	$('#youtubeFrame').attr("src", url);
+});

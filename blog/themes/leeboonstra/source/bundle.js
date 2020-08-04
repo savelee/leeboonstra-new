@@ -10969,8 +10969,14 @@ try {
  * using bootstrap core files.
  */
 
+/* Play Videos */
 
-console.log('Your app is running...');
+
+$(".youtubeLink").click(function () {
+  var id = $(this).find(".youtubeId").html();
+  var url = 'https://www.youtube.com/embed/' + id;
+  $('#youtubeFrame').attr("src", url);
+});
 
 /***/ }),
 /* 2 */

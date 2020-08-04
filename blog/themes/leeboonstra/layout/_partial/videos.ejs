@@ -6,7 +6,7 @@
         <div class="card w-100" >
           <div class="shadow-sm">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+              <iframe id="youtubeFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/Ob_Oc3U1vS4" allowfullscreen></iframe>
             </div>
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -22,8 +22,10 @@
                 <p class="card-text"><%-post.title-%></p>
               </div>
               <div class="foot">
-                <span class="hidden youtubeId"><%-post.youtube-%></span>
-                <a href="#" class="btn btn-primary stretched-link">Watch</a>
+                <a href="#" class="btn youtubeLink btn-primary stretched-link">
+                  <span class="hidden youtubeId"><%-post.youtube-%></span>
+                  Watch
+              </a>
               </div>
             </div>
           </div>
