@@ -17,11 +17,3 @@ In case you want to contact me, please send me a dm on <a href="https://twitter.
         <span class="country-name">The Netherlands</span>
     </div>
 </div>
-
-<img src="/images/lee1.jpg" class="img-fluid border" alt="Lee Boonstra, Googler and public speaker." loading="lazy">
-
-<div class="row">
-    <div class="col col-sm-8"> <a class="twitter-timeline" href="https://twitter.com/ladysign"> Tweets by @ladysign</a>
-    </div>
-    <div class="col col-sm-4"></div>
-</div>
