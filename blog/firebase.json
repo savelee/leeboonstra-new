@@ -1,0 +1,56 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [ {
+      "source": "/developer/category/:post*",
+      "destination": "/categories/:post",
+      "type": 301
+    },
+    {
+      "source": "/speaker/",
+      "destination": "/speaking/",
+      "type": 301
+    },
+    {
+      "source": "/writer/",
+      "destination": "/writing/",
+      "type": 301
+    },    
+    {
+      "source": "/about-me/",
+      "destination": "/about/",
+      "type": 301
+    }],
+    "headers": [ {
+      "source" : "**/*.@(eot|otf|svg|ttf|ttc|woff2|woff|font.css)",
+      "headers" : [ {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      } ]
+    }, {
+      "source" : "**/*.@(jpg|jpeg|ttf|svg|woff|eot|ico|gif|js|png)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=31557600"
+      } ]
+    }, {
+      "source" : "**/*.@(html|htm|xml|css)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=86400"
+      } ]
+    },
+    {
+      "source" : "404.html",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=300"
+      } ]
+    }]
+  }
+}
+

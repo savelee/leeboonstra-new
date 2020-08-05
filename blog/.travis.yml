@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "10"
+branches:
+  only:
+  - master
+before_install:
+  - sudo apt-get install libpng-dev
+  - sudo apt-get install nasm
+  - npm install -g firebase-tools
+  - npm install -g hexo
+install:
+  - npm install
+script:
+  - hexo clean
+  - workbox generateSW
+  - hexo generate
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
