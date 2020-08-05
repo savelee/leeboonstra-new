@@ -7460,6 +7460,9 @@ header .nav-link {
 .blogcontent figure .code {
   max-width: 720px; }
 
+.blogcontent .badge {
+  vertical-align: top; }
+
 .photocol h3 {
   font-size: 1.4rem;
   text-align: center; }

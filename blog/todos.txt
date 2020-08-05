@@ -1,4 +1,3 @@
-* pages dont have search tags
 * service worker - only enable this
 * enable hexo caching - enable in config
 

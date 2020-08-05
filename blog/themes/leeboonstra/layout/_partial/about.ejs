@@ -5,6 +5,31 @@
         <h1><%-page.title %></h1>
   
         <%- page.content %>
+
+        <script type="application/ld+json">
+          { "@context": "http://schema.org", 
+          "@type": "BlogPosting",
+          "headline": "<%- page.title %>",
+          "genre": "technology", 
+          "datePublished": "<%- page.date.toISOString() %>",
+          "dateCreated": "<%- page.date.toISOString()  %>",
+          "dateModified": "<%- page.date.toISOString() %>",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Ladysign",
+            "logo": "<%- config.url %>/images/screen.png"
+          },
+          "description": "Lee Boonstra's blog. <%- page.description %>",
+          "mainEntityOfPage": "<%- page.permalink %>",
+          "image": "<%- config.url %>/images/screen.png",
+          "articleBody": "Lee Boonstra's blog. <%- page.description %>",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra",
+            "url": "http://www.leeboonstra.dev"
+          }
+          }
+          </script>
   
       </div>
       <div class="col-4 photocol">
