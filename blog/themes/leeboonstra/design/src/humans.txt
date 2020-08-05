@@ -1,0 +1,14 @@
+# humanstxt.org/
+
+Thank you for visiting my blog!
+
+Lee Boonstra
+Developer Advocate Conversational AI at Google
+Twitter: @ladysign
+https://github.com/savelee/
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, Sass, HTML5, JavaScript
+    Dialogflow,
+    Hexo Site generator, Firebase Hosting, Travis CI, Github

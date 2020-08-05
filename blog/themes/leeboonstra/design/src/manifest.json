@@ -1,0 +1,16 @@
+{
+	"short_name": "Lee Boonstra",
+	"name": "LeeBoonstra.dev - Developer Advocate Google",
+	"icons": [
+	  {
+		"src": "/images/profile.jpg",
+		"type": "image/jpg",
+		"sizes": "400x400"
+	  }
+	],
+	"start_url": "/",
+	"background_color": "#8bd2f7",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#000"
+  }

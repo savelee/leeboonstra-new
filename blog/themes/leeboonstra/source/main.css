@@ -7226,6 +7226,7 @@ header .headertop .navbar-toggler {
   speak: none;
   text-transform: none; }
 
+.social li a,
 .iconHome:before,
 .iconContact:before,
 .iconWriting:before,
@@ -7455,3 +7456,32 @@ header .nav-link {
     .profile .headshot img {
       height: 100px;
       width: 100px; }
+
+.videos .youtubeblock {
+  margin-bottom: 20px; }
+  .videos .youtubeblock .shadow-lg {
+    padding: 10px; }
+
+.videos .youtube .card-body {
+  height: 200px; }
+
+.videos .youtube .foot {
+  text-align: center;
+  padding: 10px; }
+
+.social {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  display: block; }
+  .social li {
+    float: left;
+    list-style: none;
+    margin-right: 5px; }
+    .social li a {
+      color: #007bff; }
+    .social li a:hover {
+      color: #004a99;
+      text-decoration: none; }
+    .social li span {
+      display: none !important; }

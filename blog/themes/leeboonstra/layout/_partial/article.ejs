@@ -67,6 +67,30 @@
         </div>
         <%- post.content %>
       </article>
+      <script type="application/ld+json">
+        { "@context": "http://schema.org", 
+        "@type": "BlogPosting",
+        "headline": "<%- post.title %>",
+        "genre": "technology", 
+        "datePublished": "<%- post.date.toISOString() %>",
+        "dateCreated": "<%- post.date.toISOString()  %>",
+        "dateModified": "<%- post.date.toISOString() %>",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ladysign",
+          "logo": "<%- config.url %>/images/screen.png"
+        },
+        "description": "Lee Boonstra's blog. <%- post.description %>",
+        "mainEntityOfPage": "<%- post.permalink %>",
+        "image": "<%- config.url %>/images/screen.png",
+        "articleBody": "Lee Boonstra's blog. <%- post.description %>",
+        "author": {
+          "@type": "Person",
+          "name": "Lee Boonstra",
+          "url": "http://www.leeboonstra.dev"
+        }
+        }
+        </script>
   </div>
 
  <% } %>

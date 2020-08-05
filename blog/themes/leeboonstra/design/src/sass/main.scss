@@ -270,3 +270,49 @@ header {
     }
 
 }
+
+.videos {
+    .youtubeblock {
+        margin-bottom: 20px;
+
+        .shadow-lg {
+            padding: 10px;
+        }
+    }
+
+    .youtube {
+        .card-body {
+            height: 200px;
+        }
+        .foot {
+            text-align: center;
+            padding: 10px;
+        }
+    }
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    display: block;
+
+    li {
+        float: left;
+        list-style: none;
+        margin-right: 5px;
+
+        a {
+            color: $primary;
+        }
+        a:hover {
+            color: darken($primary, 20%);
+            text-decoration: none;
+        }
+
+        span {
+            display: none !important;
+        }
+    }
+
+}

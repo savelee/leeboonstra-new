@@ -3,13 +3,10 @@
       <div class="col">
         <h1><%-page.title-%></h1>
   
-        <div class="card w-100" >
-          <div class="shadow-sm">
+        <div class="card w-100 youtubeblock" >
+          <div class="shadow-lg">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe id="youtubeFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/Ob_Oc3U1vS4" allowfullscreen></iframe>
-            </div>
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
         </div>
@@ -29,6 +26,26 @@
               </div>
             </div>
           </div>
+
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org/",
+              "@type": "VideoObject",
+              "name": "<%= post.title %>",
+              "@id":  "https://www.youtube.com/embed/<%= page.youtube %>",
+              "datePublished": "<%- post.date.toISOString() %>",
+              "description" : "Video: <%- post.title %>",
+              "thumbnailURL" : "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
+              "thumbnail" : "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
+              "uploadDate" : "<%- post.updated.toISOString() %>",
+              "author": {
+                "@type": "Person",
+                "name": "Lee Boonstra"
+              }
+            }
+        </script>
+
+
         <% }) %>
     
       </div>
