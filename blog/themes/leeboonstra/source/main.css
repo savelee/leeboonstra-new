@@ -7131,6 +7131,23 @@ header .navbar {
 header .headertop .navbar-toggler {
   display: inline-block !important; }
 
+.iconHome:before,
+.iconContact:before,
+.iconWriting:before,
+.iconAbstracts:before,
+.iconSpeaking:before,
+.iconAbout:before,
+.iconBio:before,
+.iconVideos:before {
+  display: none; }
+
+.photocol {
+  display: none; }
+
+.blogcontent {
+  max-width: 100%;
+  flex: 0 0 100%; }
+
 @media (min-width: 576px) {
   .card {
     width: 100% !important; }
@@ -7139,7 +7156,21 @@ header .headertop .navbar-toggler {
   header .navbar {
     padding: 0 !important; }
   header .headertop .navbar-toggler {
-    display: inline-block !important; } }
+    display: inline-block !important; }
+  .iconHome:before,
+  .iconContact:before,
+  .iconWriting:before,
+  .iconAbstracts:before,
+  .iconSpeaking:before,
+  .iconAbout:before,
+  .iconBio:before,
+  .iconVideos:before {
+    display: inline-block; }
+  .photocol {
+    display: none; }
+  .blogcontent {
+    max-width: 100%;
+    flex: 0 0 100%; } }
 
 @media (min-width: 768px) {
   .card.w-75 {
@@ -7159,7 +7190,23 @@ header .headertop .navbar-toggler {
   header .headertop {
     text-align: center !important; }
     header .headertop .navbar-toggler {
-      display: none !important; } }
+      display: none !important; }
+  .nav-item {
+    width: calc(95% / 6); }
+  .iconHome:before,
+  .iconContact:before,
+  .iconWriting:before,
+  .iconAbstracts:before,
+  .iconSpeaking:before,
+  .iconAbout:before,
+  .iconBio:before,
+  .iconVideos:before {
+    display: inline-block; }
+  .photocol {
+    display: block; }
+  .blogcontent {
+    max-width: 66.6667%;
+    flex: 0 0 66.6667%; } }
 
 .col {
   height: 100%; }
@@ -7347,12 +7394,14 @@ header .nav-item {
   -webkit-box-sizing: border-box;
   font-family: 'bebas';
   font-size: 18px;
-  width: calc(95% / 6);
   border-right: 1px solid #ccc;
   display: inline-block;
   padding: 0;
   margin: 0;
   vertical-align: middle; }
+  header .nav-item.active a {
+    background: #007bff;
+    color: #fff !important; }
 
 header .navbar-nav {
   width: 100%; }
@@ -7360,8 +7409,8 @@ header .navbar-nav {
 header .nav-link {
   display: inline-block;
   width: 100%; }
-  header .nav-link.active, header .nav-link:hover {
-    background: #000;
+  header .nav-link:hover {
+    background: #004a99 !important;
     color: #fff !important; }
 
 .badge a {
