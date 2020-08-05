@@ -1,0 +1,9 @@
+* pages dont have search tags
+* service worker?
+* google analytics?
+* enable hexo caching
+
+* fix the colors
+* active menu items
+
+* fix the content & images
