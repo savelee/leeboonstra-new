@@ -13,6 +13,7 @@ install:
 script:
 - hexo clean
 - hexo generate
+- hexo deploy
 deploy:
     provider: firebase
     token:
