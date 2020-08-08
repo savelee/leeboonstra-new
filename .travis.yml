@@ -16,4 +16,4 @@ script:
   - hexo generate
   - hexo deploy
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+  - firebase deploy --token $FIREBASE_TOKEN2
