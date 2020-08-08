@@ -1,7 +1,0 @@
-* service worker - only enable this
-* enable hexo caching - enable in config
-
-* fix the colors
-* fix the content & images
-
-* travis CI
