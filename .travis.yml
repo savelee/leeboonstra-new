@@ -17,5 +17,6 @@ script:
 after_success:
   deploy:
     provider: firebase
-    token: $FIREBASE_TOKEN
+    token:
+      secure: $FIREBASE_TOKEN
     project: $FIREBASE_PROJECT
