@@ -42,7 +42,6 @@ We will use Firebase for static hosting.
 npm install -g firebase-tools
 firebase login
 Firebase login:ci
-travis encrypt 'token'
 Firebase init (hosting; public)
 ```
 
@@ -50,6 +49,14 @@ Firebase init (hosting; public)
 
 We will need Github and Travis CI, to create a pipeline,
 to automatically build the site, when pushing files to Github.
+
+```
+travis encrypt 'token'
+```
+
+Create in the project settings page the following 2 environment variables:
+- FIREBASE_TOKEN
+- FIREBASE_PROJECT
 
 ### Setup Github Repo
 
