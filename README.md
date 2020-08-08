@@ -45,18 +45,8 @@ Firebase login:ci
 Firebase init (hosting; public)
 ```
 
-## Github & Travis CI
+https://medium.com/@bartwijnants/continuous-deployment-to-firebase-hosting-using-travis-ci-e7d9c798ead4
 
-We will need Github and Travis CI, to create a pipeline,
-to automatically build the site, when pushing files to Github.
-
-```
-travis encrypt 'token'
-```
-
-Create in the project settings page the following 2 environment variables:
-- FIREBASE_TOKEN
-- FIREBASE_PROJECT
 
 ### Setup Github Repo
 
@@ -75,3 +65,16 @@ git push -u origin master
 1. Activate access to Github repositories
 
 1. Add the FIREBASE_TOKEN environment variable to the Travis CLI settings page.
+
+## Github & Travis CI
+
+We will need Github and Travis CI, to create a pipeline,
+to automatically build the site, when pushing files to Github.
+
+```
+travis encrypt 'token' -r githubname/repo
+```
+
+Create in the project settings page the following 2 environment variables:
+- FIREBASE_TOKEN
+- FIREBASE_PROJECT
