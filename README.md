@@ -72,7 +72,7 @@ We will need Github and Travis CI, to create a pipeline,
 to automatically build the site, when pushing files to Github.
 
 ```
-travis encrypt 'token' -r githubname/repo
+travis encrypt 'token' --repo=gituser/gitrepo
 ```
 
 Create in the project settings page the following 2 environment variables:
