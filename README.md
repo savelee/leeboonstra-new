@@ -42,7 +42,8 @@ We will use Firebase for static hosting.
 npm install -g firebase-tools
 firebase login
 Firebase login:ci
-Firebase init (hosting; blog/public)
+travis encrypt 'token'
+Firebase init (hosting; public)
 ```
 
 ## Github & Travis CI
