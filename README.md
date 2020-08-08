@@ -78,3 +78,8 @@ travis encrypt 'token' --repo=gituser/gitrepo
 Create in the project settings page the following 2 environment variables:
 - FIREBASE_TOKEN
 - FIREBASE_PROJECT
+
+
+
+TOOD problem with travis, when i change the firebase.json public path to root
+travis will deploy. but than in firebase i cant find the files.
