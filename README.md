@@ -1,5 +1,12 @@
 # Setting up Hexo, with Travis CI & Firebase
 
+## Sass
+
+```
+cd themes/leeboonstra/design
+npm run watch
+```
+
 ## Hexo
 
 Hexo is a site generator for Node.js.

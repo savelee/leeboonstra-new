@@ -3,6 +3,7 @@ $enable-responsive-font-sizes: true;
 $font-family-base: 'AbhayaLibre-Regular';
 
 //You could customize your imports in bootstrap.scss
+@import "_colors";
 @import "bootstrap";
 @import "_gridsystem";
 @import "_fonts";
@@ -80,9 +81,22 @@ body {
 
 header {
 
+    &.active {
+        background: $primary;
+        .headertop {
+            background: $primary;
+            color: #fff !important;
+        }
+
+        .active a {
+            color: #fff !important;
+        }
+    }
+
     .headertop {
         background: #f8f9fa;
         text-align: left;
+        color: #000;
 
         a {
             color: #000;
@@ -121,10 +135,15 @@ header {
         margin: 0;
         vertical-align: middle;
         
-        &.active a {
+        &.active {
             background: $primary;
             color: #fff !important;
         }
+        &.active.home {
+            background: #fff;
+            color: #000 !important;
+        }
+        
     }
 
     .navbar-nav {
@@ -136,7 +155,7 @@ header {
         width: 100%;
 
         &:hover {
-            background: darken($primary, 20%) !important;
+            background: #000!important;
             color: #fff !important;
         }
     }
@@ -322,4 +341,8 @@ header {
         }
     }
 
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
 }

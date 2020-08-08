@@ -1,9 +1,0 @@
-# hexo robots.txt
-User-agent: *
-Allow: /
-Allow: /archives/
-Allow: /categories/
-
-Disallow: /404.html
-
-Sitemap: https://www.leeboonstra.com/sitemap.xml

@@ -1,0 +1,58 @@
+$primary: #EF6C00;
+$red: #C62828;
+$orange: #EF6C00;
+$yellow: #FFEB3B;
+$green: #00695C;
+$blue: #1565C0;
+$purple: #6A1B9A;
+$pink: #AD1457;
+
+.Speaking {
+    .active,
+    header .nav-item.active {
+        background: $red;
+        .headertop {
+            background: $red;
+        }
+    }
+}
+
+.Videos {
+    .active,
+    header .nav-item.active {
+        background: $purple;
+        .headertop {
+            background: $purple;
+        }
+    }
+}
+
+.Writing {
+    .active,
+    header .nav-item.active {
+        background: $blue;
+        .headertop {
+            background: $blue;
+        }
+    }
+}
+
+.Abstracts {
+    .active,
+    header .nav-item.active {
+        background: $green;
+        .headertop {
+            background: $green;
+        }
+    }
+}
+
+.Contact {
+    .active,
+    header .nav-item.active {
+        background: $pink;
+        .headertop {
+            background: $pink;
+        }
+    }
+}

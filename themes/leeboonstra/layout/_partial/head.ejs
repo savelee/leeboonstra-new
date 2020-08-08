@@ -58,15 +58,17 @@
   <link rel="stylesheet" href="/main.css">
 
 </head>
-<body>
+<body
+  class="<%= page.title %>"
+>
 
-  <header class="shadow">
+  <header class="shadow <%- is_home() ? 'home' : 'active' %>">
 
     <div class="d-block w-100 headertop">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="iconmenu"></span>
       </button>
-      <a class="navbar-brand" href="#">LeeBoonstra.dev</a>
+      <span class="navbar-brand">LeeBoonstra.dev</span>
       <form class="form-inline mt-2 mt-md-0 searchbar">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -80,7 +82,7 @@
         <ul class="navbar-nav mr-auto">
 
           <% for (var prop in theme.menu){ %>
-            <li class="nav-item icon<%= prop %> <%= is_current(theme.menu[prop]) ? 'active' : '' %> text-center">
+            <li class="nav-item icon<%= prop %> <%= is_current(theme.menu[prop]) ? 'active' : '' %><%- is_home() ? 'home' : '' %> text-center">
               <a class="nav-link" href="<%- url_for(theme.menu[prop]) %>"><%= prop %></a>
             </li>
           <% } %>

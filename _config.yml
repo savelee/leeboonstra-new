@@ -24,7 +24,7 @@ rss: /atom.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://0.0.0.0:4000/
+url: https://leeboonstra-dev-7d578.web.app/
 root: /
 permalink: :category/:title/
 permalink_defaults:

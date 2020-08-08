@@ -15,5 +15,7 @@ script:
   - hexo clean
   - hexo generate
   - hexo deploy
+  - cd themes/leeboonstra/design
+  - npm run build
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN2

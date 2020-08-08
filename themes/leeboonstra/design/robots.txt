@@ -1,5 +1,9 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
+# hexo robots.txt
 User-agent: *
-Disallow:
+Allow: /
+Allow: /archives/
+Allow: /categories/
+
+Disallow: /404.html
+
+Sitemap: https://www.leeboonstra.com/sitemap.xml
