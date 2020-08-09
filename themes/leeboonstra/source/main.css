@@ -7246,6 +7246,9 @@ header .headertop .navbar-toggler {
 .col {
   height: 100%; }
 
+.Abstracts .card-body {
+  height: 350px; }
+
 @font-face {
   font-family: 'open_sansregular';
   src: url(fonts/OpenSans-Regular-webfont.eot);

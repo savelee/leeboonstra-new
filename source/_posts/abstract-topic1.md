@@ -1,8 +1,8 @@
 ---
 title: 'Improve your customer care by building an AI bot platform'
-description: Lee was interviewd for the Dataloog (Dutch) Podcast - Cloud Summit Special 1 - Dialogflow Contact Center AI en Auto ML voor developers
 categories:
   - Abstract
+class: Abstracts
 date: 2019-10-17 11:45:17
 alias: /developer/improve-your-customer-care/
 hidden: true
@@ -15,10 +15,10 @@ tags:
   - contact centers
 ---
 
-Type: Keynote / Breakout Talk
-Time: 25min - 50min
-Level: Beginners
-Audience: Decision makers, Conversational AI practitioners, Developers
+**Type**: Keynote / Breakout Talk
+**Time**: 25min - 50min
+**Level**: Beginners
+**Audience**: Decision makers, Conversational AI practitioners, Developers
 
 <!--more-->
 

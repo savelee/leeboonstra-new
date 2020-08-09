@@ -4,5 +4,3 @@ description: I'm a public speaker, topics I love to talk about include; Dialogfl
 nocomments: true
 layout: videos
 ---
-
-TODO
