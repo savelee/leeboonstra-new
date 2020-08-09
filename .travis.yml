@@ -11,7 +11,7 @@ before_install:
   - npm install -g webpack-cli
   - npm install -g webpack@3.10.0
   - npm install -g hexo
-  - npm install bootstrap@4.0.0-beta.2
+  - npm install -g bootstrap@4.0.0-beta.2
   - npm install
 install:
   - npm install
