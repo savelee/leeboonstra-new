@@ -11,6 +11,7 @@ before_install:
   - npm install -g webpack-cli
   - npm install -g webpack@3.10.0
   - npm install -g hexo
+  - npm install
 install:
   - npm install
 script:
