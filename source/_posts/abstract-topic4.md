@@ -2,6 +2,7 @@
 title: 'Work smarter with Chatbots & Hangouts Chatrooms'
 categories:
   - Abstract
+class: Abstracts
 date: 2019-10-17 11:45:17
 alias: /developer/dialogflow-hangouts/
 hidden: true

@@ -15,6 +15,13 @@ $pink: #AD1457;
             background: $red;
         }
     }
+
+    a {
+        color: $red; 
+        &:hover {
+            color: darken($red, 20%);
+        }
+    }
 }
 
 .Videos {
@@ -23,6 +30,16 @@ $pink: #AD1457;
         background: $purple;
         .headertop {
             background: $purple;
+        }
+    }
+
+    .btn {
+        background: $purple; 
+        border: darken($purple, 20%);
+        color: #fff;
+        &:hover {
+            background: darken($purple, 20%);
+            color: #fff;
         }
     }
 }
@@ -35,6 +52,18 @@ $pink: #AD1457;
             background: $blue;
         }
     }
+
+    time,
+    .writing .card h2 {
+        color: $blue;
+    }
+
+    a {
+        color: $blue; 
+        &:hover {
+            color: darken($blue, 20%);
+        }
+    }
 }
 
 .Abstracts {
@@ -45,6 +74,24 @@ $pink: #AD1457;
             background: $green;
         }
     }
+
+    a {
+        color: $green; 
+        &:hover {
+            color: darken($green, 20%);
+        }
+    }
+
+    .badge,
+    .btn {
+        background: $green; 
+        border: darken($green, 20%);
+        color: #fff;
+        &:hover {
+            background: darken($green, 20%);
+            color: #fff;
+        }
+    }
 }
 
 .Contact {
@@ -53,6 +100,13 @@ $pink: #AD1457;
         background: $pink;
         .headertop {
             background: $pink;
+        }
+    }
+
+    a {
+        color: $pink; 
+        &:hover {
+            color: darken($pink, 20%);
         }
     }
 }

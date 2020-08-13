@@ -6,12 +6,25 @@
   .Speaking header .nav-item.active .headertop {
     background: #C62828; }
 
+.Speaking a {
+  color: #C62828; }
+  .Speaking a:hover {
+    color: #711717; }
+
 .Videos .active,
 .Videos header .nav-item.active {
   background: #6A1B9A; }
   .Videos .active .headertop,
   .Videos header .nav-item.active .headertop {
     background: #6A1B9A; }
+
+.Videos .btn {
+  background: #6A1B9A;
+  border: #2e0c43;
+  color: #fff; }
+  .Videos .btn:hover {
+    background: #2e0c43;
+    color: #fff; }
 
 .Writing .active,
 .Writing header .nav-item.active {
@@ -20,6 +33,15 @@
   .Writing header .nav-item.active .headertop {
     background: #1565C0; }
 
+.Writing time,
+.Writing .writing .card h2 {
+  color: #1565C0; }
+
+.Writing a {
+  color: #1565C0; }
+  .Writing a:hover {
+    color: #0b3564; }
+
 .Abstracts .active,
 .Abstracts header .nav-item.active {
   background: #00695C; }
@@ -27,12 +49,32 @@
   .Abstracts header .nav-item.active .headertop {
     background: #00695C; }
 
+.Abstracts a {
+  color: #00695C; }
+  .Abstracts a:hover {
+    color: #000303; }
+
+.Abstracts .badge,
+.Abstracts .btn {
+  background: #00695C;
+  border: #000303;
+  color: #fff; }
+  .Abstracts .badge:hover,
+  .Abstracts .btn:hover {
+    background: #000303;
+    color: #fff; }
+
 .Contact .active,
 .Contact header .nav-item.active {
   background: #AD1457; }
   .Contact .active .headertop,
   .Contact header .nav-item.active .headertop {
     background: #AD1457; }
+
+.Contact a {
+  color: #AD1457; }
+  .Contact a:hover {
+    color: #520929; }
 
 /*!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
@@ -7374,9 +7416,6 @@ code,
 .blogcontent img {
   margin: 15px 0 15px; }
 
-.pagination {
-  margin-top: 20px; }
-
 .footer {
   background: #222;
   color: #fff;
@@ -7518,20 +7557,22 @@ header .nav-link {
   font-size: 1.4rem;
   text-align: center; }
 
-.pagination .page-number,
-.pagination .extend {
-  position: relative;
-  display: block;
-  padding: .5rem .75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #007bff;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  text-decoration: none; }
-  .pagination .page-number:hover,
-  .pagination .extend:hover {
-    background-color: #ccc; }
+.pagination {
+  margin-top: 20px; }
+  .pagination .page-number,
+  .pagination .extend {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #fff;
+    background-color: #EF6C00;
+    border: 1px solid #000;
+    text-decoration: none; }
+    .pagination .page-number:hover,
+    .pagination .extend:hover {
+      background-color: #bc5500; }
 
 .writing .card h2 {
   font-size: 1.5rem;

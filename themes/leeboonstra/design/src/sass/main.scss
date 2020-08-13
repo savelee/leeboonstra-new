@@ -36,9 +36,6 @@ $font-family-base: 'AbhayaLibre-Regular';
     margin: 15px 0 15px;
 }
 
-.pagination {
-    margin-top: 20px;
-}
 
 .footer {
     background: #222;
@@ -239,6 +236,7 @@ header {
 }
 
 .pagination {
+    margin-top: 20px;
     .page-number,
     .extend {
         position: relative;
@@ -246,16 +244,15 @@ header {
         padding: .5rem .75rem;
         margin-left: -1px;
         line-height: 1.25;
-        color: #007bff;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
+        color: #fff;;
+        background-color: $primary;
+        border: 1px solid #000;
         text-decoration: none;
 
         &:hover {
-            background-color: #ccc;
+            background-color: darken($primary, 10%);
         }
     }
-
 }
 
 .writing .card {
