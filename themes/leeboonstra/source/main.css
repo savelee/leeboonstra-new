@@ -7530,6 +7530,9 @@ header .nav-link {
   margin-top: 40px;
   font-size: 1.6rem; }
 
+.blogcontent h3 {
+  font-size: 1.4rem; }
+
 .blogcontent blockquote p:first-of-type,
 .blogcontent blockquote p:first-of-type {
   font-size: 1.3rem;
