@@ -9,7 +9,7 @@ tags:
   - Dialogflow
   - Voicebots
   - Callbots
-alias: /developer/Mastering auto speech adaptation in Dialogflow for voice agents/
+alias: /developer/mastering-auto-speech-adaptation-in-Dialogflow-for-voice-agents/
 date: 2020-03-23 14:41:36
 ---
 
