@@ -11,7 +11,6 @@ before_install:
   - npm install -g webpack-cli
   - npm install -g webpack@3.10.0
   - npm install -g hexo
-  - npm install -g bootstrap@4.0.0-beta.2
   - npm install
 install:
   - npm install
@@ -20,6 +19,7 @@ script:
   - hexo generate
   - hexo deploy
   - cd themes/leeboonstra/design
+  - npm install
   - npm run build
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN2
