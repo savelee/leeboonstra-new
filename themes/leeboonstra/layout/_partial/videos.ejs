@@ -11,7 +11,7 @@
           </div>
         </div>
 
-        <% site.categories.findOne({name: 'Videos'}).posts.forEach(function(post) { %>
+        <% site.categories.findOne({name: 'Videos'}).posts.sort('date', -1).forEach(function(post) { %>
           <div class="card w-25 p-2 float-md-left youtube">
             <div class="shadow-sm">
               <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/0.jpg" alt="Watch on YouTube">
