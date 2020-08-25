@@ -13,7 +13,7 @@ tags:
 **Type**: Breakout
 **Time**: 30min - 45min
 **Level**: Beginner
-**Audience**: Conversational AI practitioners, Developers, Engineers, Existing Dialogflow users
+**Audience**: Developers, Engineers, Existing Dialogflow users
 
 <!--more-->
 
