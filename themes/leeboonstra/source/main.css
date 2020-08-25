@@ -7196,8 +7196,13 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
+footer .col,
 .card {
   width: 100% !important; }
+
+footer .col {
+  flex-basis: unset;
+  flex-grow: 0; }
 
 .searchbar {
   display: none !important; }
@@ -7228,6 +7233,9 @@ header .headertop .navbar-toggler {
 @media (min-width: 576px) {
   .card {
     width: 100% !important; }
+  footer .col {
+    flex-basis: 0;
+    flex-grow: 1; }
   .searchbar {
     display: none !important; }
   header .navbar {
@@ -7250,6 +7258,9 @@ header .headertop .navbar-toggler {
     flex: 0 0 100%; } }
 
 @media (min-width: 768px) {
+  footer .col {
+    flex-basis: 0;
+    flex-grow: 1; }
   .card.w-75 {
     width: 75% !important; }
     .card.w-75 .card-body {
@@ -7395,6 +7406,13 @@ code,
 .footer h4 {
   font-family: bebas; }
 
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .hidden {
   display: none; }
 
@@ -7461,9 +7479,11 @@ header .headertop {
     color: #000; }
   header .headertop .navbar-toggler {
     display: none;
-    border: 1px solid #ccc;
     margin-left: 5px;
     margin-bottom: 5px; }
+  header .headertop .navbar-toggler:hover {
+    border: none;
+    outline: none; }
 
 header .navbar-brand {
   font-family: 'bebas'; }

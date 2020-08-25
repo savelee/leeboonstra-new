@@ -1,7 +1,14 @@
 @include media-breakpoint-up(xs) { 
+    footer .col,
     .card {
         width: 100% !important;
     }
+
+    footer .col {
+        flex-basis: unset;
+        flex-grow: 0;
+    }
+
     .searchbar {
         display: none !important;
     }
@@ -43,6 +50,11 @@
         width: 100% !important;
     }
 
+    footer .col {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
     .searchbar {
         display: none !important;
     }
@@ -80,6 +92,12 @@
     }
  }
 @include media-breakpoint-up(md) { 
+    footer .col {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+
     .card.w-75{
         width: 75% !important;
         .card-body {

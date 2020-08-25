@@ -8,6 +8,14 @@ $font-family-base: 'AbhayaLibre-Regular';
 @import "_gridsystem";
 @import "_fonts";
 
+body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 .hidden {
     display: none;
 }
@@ -102,9 +110,12 @@ header {
         
         .navbar-toggler {
             display: none;
-            border: 1px solid #ccc;
             margin-left: 5px;
             margin-bottom: 5px;
+        }
+        .navbar-toggler:hover {
+            border: none;
+            outline: none;
         }
     }
 
