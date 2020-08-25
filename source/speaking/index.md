@@ -20,9 +20,14 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 2020
 ----
 
+
+* ### Google Cloud DevDays
+
+ ? Oct | **Online** | [Website](https://developers.google.com/events) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
+
 * ### Conversational Conference by Frank Watching
 
- 24 Sept | **Jaarbeurs, Utrecht** | [Website](https://www.frankwatching.com/conversationalconference/sprekers/) | Conversational 
+ 24 Sept | **Jaarbeurs, Utrecht** | [Website](https://www.frankwatching.com/conversationalconference/sprekers/) | The Next Generation of Conversational 
 
 <script type='application/ld+json'> 
 {
@@ -45,10 +50,6 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 }
 }</script>
 
-
-* ### AppDevCon 2020
-
- 15 Sept - 18 Sept | **Amsterdam** | [Website](https://appdevcon.nl/) | Raise your Voice & Workshop
 
 * ### OmniChannelX 2020
 
