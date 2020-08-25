@@ -25,8 +25,22 @@
 
 <script src="/bundle.js"></script>
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<style>
+    df-messenger {
+      --df-messenger-bot-message: #282828;
+      --df-messenger-button-titlebar-color: #ff9000;
+      --df-messenger-button-titlebar-font-color: #ffffff;
+      --df-messenger-chat-background-color: #121212;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #878fac;
+      --df-messenger-user-message: #535353;
+      --df-messenger-input-font-color: #000;
+      --df-messenger-input-placeholder-font-color: #cccccc;
+      --df-minimized-chat-close-icon-color: #ff9000;
+     }
+</style>
+
 <df-messenger
-  chat-icon="https://storage.googleapis.com/cloudprod-apiai/a9cd6fb4-f8cc-4d3f-b77e-1568b234ad99_x.png"
   intent="WELCOME"
   chat-title="dialogflowcookbook"
   agent-id="0892aa5c-b1d4-43de-be6f-9ca29b5c151b"
