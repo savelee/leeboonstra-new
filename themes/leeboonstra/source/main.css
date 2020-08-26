@@ -7244,8 +7244,12 @@ header .headertop .navbar-toggler {
     flex-grow: 1; }
   .main {
     margin-top: 120px; }
-  .card-img-top {
+  .card.w-75 .card-img-top {
     height: auto !important; }
+  .card.w-50 .card-img-top {
+    height: 100px; }
+  .card.w-25 .card-img-top {
+    height: 100px; }
   .searchbar {
     display: none !important; }
   header .navbar {

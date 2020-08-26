@@ -66,9 +66,22 @@
     .main {
         margin-top: 120px;
     }
+
+    .card.w-75{
+        .card-img-top {
+            height: auto !important;
+        }
+    }
     
-    .card-img-top {
-        height: auto !important;
+    .card.w-50{
+        .card-img-top {
+            height: 100px;
+        }
+    }
+    .card.w-25{
+        .card-img-top {
+            height: 100px;
+        }
     }
 
     .searchbar {
