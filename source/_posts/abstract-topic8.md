@@ -12,8 +12,8 @@ tags:
 
 **Type**: Breakout
 **Time**: 30min - 45min
-**Level**: Beginner
-**Audience**: Developers, Engineers, Existing Dialogflow users
+**Level**: Beginner, Novice
+**Audience**: Engineers, Existing Dialogflow users
 
 <!--more-->
 
