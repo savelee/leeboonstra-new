@@ -7213,6 +7213,9 @@ header .navbar {
 header .headertop .navbar-toggler {
   display: inline-block !important; }
 
+.card-img-top {
+  height: auto !important; }
+
 .iconHome:before,
 .iconContact:before,
 .iconWriting:before,
@@ -7271,6 +7274,8 @@ header .headertop .navbar-toggler {
     .card.w-75 .card-body {
       height: 150px;
       overflow: hidden; }
+    .card.w-75 .card-img-top {
+      height: auto !important; }
   .card.w-50 {
     width: 50% !important; }
   .card.w-25 {
@@ -7413,9 +7418,9 @@ code,
 .footer h4 {
   font-family: bebas; }
 
-body {
+html {
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100vw;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
