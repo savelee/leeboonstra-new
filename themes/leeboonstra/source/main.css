@@ -7667,3 +7667,7 @@ header .nav-link {
 
 .card-img-top {
   height: 100px; }
+
+footer.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
