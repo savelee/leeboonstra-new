@@ -43,6 +43,10 @@
         max-width: 100%;
         flex: 0 0 100%
     }
+
+    .main {
+        margin-top: 60px;
+    }
     
  }
 @include media-breakpoint-up(sm) { 
@@ -54,6 +58,11 @@
         flex-basis: 0;
         flex-grow: 1;
     }
+
+    .main {
+        margin-top: 120px;
+    }
+    
 
     .searchbar {
         display: none !important;
@@ -97,7 +106,6 @@
         flex-grow: 1;
     }
 
-
     .card.w-75{
         width: 75% !important;
         .card-body {
@@ -117,6 +125,10 @@
         overflow: hidden;
     }
 
+    .main {
+        margin-top: 120px !important;
+    }
+    
 
     .writing .card {
         .card-body  {
