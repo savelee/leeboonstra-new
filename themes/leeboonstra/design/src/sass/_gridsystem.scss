@@ -24,10 +24,14 @@
         }
     }
 
-    .card-img-top {
-        height: auto !important;
+    .card.w-75,
+    .card.w-50,
+    .card.w-25 {
+        .card-img-top {
+            height: auto;
+        }
     }
-
+    
     .iconHome:before,
     .iconContact:before,
     .iconWriting:before,
