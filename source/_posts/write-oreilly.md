@@ -13,6 +13,9 @@ Build snappy web apps for mobile devices with Sencha Touch 2, the user interface
 With this book, you’ll learn how to build a complete HTML5-based multi-device app...
 <a href="https://www.amazon.com/_/dp/144936652X?tag=oreilly20-20">Find on Amazon</a>
 
+![Book](/images/leeboonstra-book.jpg)
+
 <!-- more --> 
 
 ![Book](/images/leeboonstra-book.png)
+
