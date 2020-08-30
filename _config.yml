@@ -45,6 +45,8 @@ skip_render:
 
 sitemap:
     path: sitemap.xml
+    rel: true
+    tags: false
 
 # widget behavior
 archive_type: 'monthly'
