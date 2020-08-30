@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: LeeBoonstra.dev | Developer blog
+title: LeeBoonstra.dev | Google developer advocate on Dialogflow & Chatbots
 subtitle: Hi my name is Lee. I'm a developer advocate, a writer, an engineer, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
-description: Developer blog of senior developer advocate & Googler; Lee Boonstra. Ex Sencha trainer. Learn more about Chatbots, Dialogflow, Conversational AI, Contact Center AI, Customer Care, Google Assistant. O'Reilly book author of the book Hands-on Sencha Touch 2 and public speaker. Ex-Sencha technical trainer.
+description: Developer blog of Google developer advocate Lee Boonstra. Learn about Chatbots, Dialogflow, Conversational AI, Contact Center AI, Google Assistant.
 keywords: Googler, Dialogflow, JavaScript, Contact Center AI, Customer Care, Chatbotz.dev, Chatbotz, Chatbots, Voicebots, Conversational AI, Ext JS, Sencha Touch, Cordova, Machine Learning, AI, ML, Machine Learning for Developers, Cloud, GCP, Public Cloud, Ext JS engineer, Google Sales Engineer, Public Speaker, Google Customer Engineer, Googler Engineer, Sencha Sales Engineer, Sencha Trainer, Dev-ops, Dev-ops Specialist, Public Speaker, Machine Learning Public Speaker, Cloud Architect, Devrel, Developer Relations, Developer Expert, Chatbot expert, Actions on Google, Dialogflow expert, Google Cloud Sales, GCP Engineer, Sencha Trainings, JavaScript Developer, Front-end Developer, Lead front-end developer, Client-side Developer, O'Reilly book author, JavaScript Programmer, Node JS Developer, Client-side code, Lead Developer JavaScript Amsterdam, JavaScript Evangelist, Google Assistant Expert, Chatbot Expertise, Chatbot Help, Cloud Help, GCP Help, Google Cloud Solutions, Google Cloud Consultant, Dialogflow Enterprise, Bots Chat agents, HTML5 & CSS3, Sencha Touch Mobile Apps, Enterprise App developer
 author: Lee Boonstra
 language: en
@@ -142,3 +142,9 @@ theme: leeboonstra
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+uglify:
+  mangle: true
+  output:
+  compress: true
+  es6: false

@@ -4,7 +4,7 @@ title: How to build chatbots for Hangouts with Dialogflow by using custom payloa
 description:   The Dialogflow Hangouts integration lets you create bots you can include in
   one-on-one chats as well as chat rooms. From the Integrations…
 categories:
-  - Bots
+  - Chatbots
 tags:
   - Cloud Functions
   - Dialogflow
@@ -15,7 +15,7 @@ tags:
 alias: /developer/build-chatbots-for-hangouts-with-dialogflow/
 date: 2020-02-21 14:41:36
 featured_image: 0_YaAyVGrY9A3jYPaW.png
-thumbnail: 0_YaAyVGrY9A3jYPaW_1.png
+thumbnail: 0_YaAyVGrY9A3jYPaW_1.jpg
 ---
 
 The Dialogflow Hangouts integration lets you create bots you can include in one-on-one chats as well as chat rooms. From the Integrations menu on the left, you can enable this feature and select your agent environment.

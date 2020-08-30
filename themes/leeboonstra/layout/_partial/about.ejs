@@ -4,6 +4,8 @@
   
         <h1><%-page.title %></h1>
   
+        <h2 class="hidden"><%-page.subtitle %></h2>
+
         <%- page.content %>
 
         <script type="application/ld+json">
@@ -19,10 +21,10 @@
             "name": "Ladysign",
             "logo": "<%- config.url %>/images/screen.png"
           },
-          "description": "Lee Boonstra's blog. <%- page.description %>",
+          "description": "<%- page.description %>",
           "mainEntityOfPage": "<%- page.permalink %>",
           "image": "<%- config.url %>/images/screen.png",
-          "articleBody": "Lee Boonstra's blog. <%- page.description %>",
+          "articleBody": "<%- page.description %>",
           "author": {
             "@type": "Person",
             "name": "Lee Boonstra",
@@ -60,10 +62,10 @@
             <li><a href="https://twitter.com/ladysign">Twitter (@ladysign)</a></li>
             <li><a href="https://github.com/savelee/">Github (savelee)</a></li>
             <li><a href="http://www.leeboonstra.dev">Blog (www.leeboonstra.dev)</a></li>
+            <li><a href="https://speakerdeck.com/savelee/">SpeakerDeck (savelee)</a></li>
             <li><a href="https://www.linkedin.com/in/leeboonstra/n">LinkedIn (leeboonstra)</a></li>
             <li><a href="https://www.leebooonstra.dev/speaker">Past speaking events</a></li>
             <li><a href="https://www.leebooonstra.dev/videos">Videos of me</a></li>
-            <li><a href="https://speakerdeck.com/savelee/">Previous presentations</a></li>
           </ul>
 
       </div>

@@ -10,10 +10,10 @@ tags:
   - Chatbots
   - Dialogflow Enterprise
 categories:
-  - Bots
+  - Chatbots
 alias: /developer/conditional-templating-in-dialogflow-for-google-assistant/
 featured_image: 0_ajEHOpc-Kr03Zv1E.png
-thumbnail: 0_ajEHOpc-Kr03Zv1E_1.png
+thumbnail: 0_ajEHOpc-Kr03Zv1E_1.jpg
 date: 2018-05-20 17:02:22
 
 ---

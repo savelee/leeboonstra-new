@@ -1,6 +1,7 @@
 ---
-title: Lee Boonstra
-description: Lee Boonstra is a Senior Developer Advocate for Dialogflow and Contact Center AI @ Google. She is based in Amsterdam and an O'Reilly book author. @ladysign
+title: Biography Lee Boonstra
+subtitle: Senior Developer Advocate & Applied AI Engineer at Google
+description: Lee Boonstra is a Senior Developer Advocate for Dialogflow and Contact Center AI @ Google. She is based in Amsterdam & O'Reilly book author. @ladysign
 nocomments: true
 layout: about
 ---

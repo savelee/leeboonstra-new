@@ -2,7 +2,7 @@
 title: Mastering auto speech adaptation in Dialogflow for voice agents
 description: Auto speech adaptation improves the speech recognition accuracy of your Dialogflow voice agent by effectively adding context to your conversations. In the Netherlands, we have this radio show called… 
 categories:
-  - Bots
+  - Chatbots
 tags:
   - Speech Adaptation
   - ML Bias
@@ -11,7 +11,7 @@ tags:
   - Callbots
 alias: /developer/mastering-auto-speech-adaptation-in-Dialogflow-for-voice-agents/
 featured_image: 0_UZklk43Hek7Drmgu.png
-thumbnail: 0_UZklk43Hek7Drmgu_1.png
+thumbnail: 0_UZklk43Hek7Drmgu_1.jpg
 date: 2020-03-23 14:41:36
 ---
 

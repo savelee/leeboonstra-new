@@ -7250,8 +7250,12 @@ header .headertop .navbar-toggler {
     height: auto !important; }
   .card.w-50 .card-img-top {
     height: 100px; }
+  .card.w-50.youtube .card-img-top {
+    height: auto; }
   .card.w-25 .card-img-top {
     height: 100px; }
+  .card.w-25.youtube .card-img-top {
+    height: auto; }
   .searchbar {
     display: none !important; }
   header .navbar {
@@ -7288,15 +7292,19 @@ header .headertop .navbar-toggler {
     width: 50% !important; }
     .card.w-50 .card-img-top {
       height: 100px; }
+    .card.w-50.youtube .card-img-top {
+      height: auto; }
   .card.w-25 {
     width: 25% !important; }
     .card.w-25 .card-img-top {
       height: 100px; }
+    .card.w-25.youtube .card-img-top {
+      height: auto; }
   .card-body {
     height: 220px;
     overflow: hidden; }
   .main {
-    margin-top: 120px !important; }
+    margin-top: 140px !important; }
   .writing .card .card-body {
     height: 300px; }
   header .headertop {
@@ -7559,43 +7567,38 @@ header .nav-link {
 .card.tall .card-body {
   height: 100%; }
 
-.blogcontent .header {
-  font-size: 80%; }
-
-.blogcontent .lead:first-of-type,
-.blogcontent p:first-of-type {
-  font-size: 1.6rem;
-  line-height: 1.5; }
-
-.blogcontent h2, .blogcontent .h2 {
-  margin-top: 40px;
-  font-size: 1.6rem; }
-
-.blogcontent h3 {
-  font-size: 1.4rem; }
-
-.blogcontent blockquote p:first-of-type,
-.blogcontent blockquote p:first-of-type {
-  font-size: 1.3rem;
-  line-height: 1.5;
-  color: #484848;
-  font-style: italic; }
-
-.blogcontent figure,
-.blogcontent img {
-  padding: .25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: .25rem;
-  max-width: 100%;
-  height: auto; }
-
-.blogcontent pre,
-.blogcontent figure .code {
-  max-width: 720px; }
-
-.blogcontent .badge {
-  vertical-align: top; }
+.blogcontent {
+  word-break: break-word; }
+  .blogcontent .header {
+    font-size: 80%; }
+  .blogcontent .lead:first-of-type,
+  .blogcontent p:first-of-type {
+    font-size: 1.6rem;
+    line-height: 1.5; }
+  .blogcontent h2, .blogcontent .h2 {
+    margin-top: 40px;
+    font-size: 1.6rem; }
+  .blogcontent h3 {
+    font-size: 1.4rem; }
+  .blogcontent blockquote p:first-of-type,
+  .blogcontent blockquote p:first-of-type {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #484848;
+    font-style: italic; }
+  .blogcontent figure,
+  .blogcontent img {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto; }
+  .blogcontent pre,
+  .blogcontent figure .code {
+    max-width: 720px; }
+  .blogcontent .badge {
+    vertical-align: top; }
 
 .photocol h3 {
   font-size: 1.4rem;
@@ -7651,7 +7654,7 @@ header .nav-link {
     padding: 10px; }
 
 .videos .youtube .card-body {
-  height: 200px; }
+  height: 120px; }
 
 .videos .youtube .foot {
   text-align: center;

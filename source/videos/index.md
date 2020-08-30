@@ -1,6 +1,6 @@
 ---
-title: Videos
-description: I'm a public speaker, topics I love to talk about include; Dialogflow, Chatbots, Customer Care, The Future of the Contact Center (CCAI), Machine Learning for Developers, Diversity, LGBTQ+, Women in Tech
+title: Dialogflow Conversational AI Videos
+description: Public speaking & event videos, topics include; Dialogflow, Chatbots, Customer Care, Contact Centers, Machine Learning, Conversational AI, Diversity
 nocomments: true
 layout: videos
 ---

@@ -2,7 +2,7 @@
 title: Actions on Google with Google Cloud Functions
 description: Learn how to invoke the Google Assistant with Cloud Functions
 categories:
-  - Bots
+  - Chatbots
 tags:
   - Actions on Google
   - Cloud Functions
@@ -14,7 +14,7 @@ tags:
 alias: /developer/actions-on-google-for-google-cloud-functions/
 date: 2018-05-19 14:41:36
 featured_image: 0_ajEHOpc-Kr03Zv1E.png
-thumbnail: 0_ajEHOpc-Kr03Zv1E_1.png
+thumbnail: 0_ajEHOpc-Kr03Zv1E_1.jpg
 ---
 
 When building Google Assistant apps (actions) with Dialogflow, you likely will have to write some logics. The most common way in developing this logics layer is by using a webhook and a Cloud Function. The webhook requires a URL. So technically you can use any web server and program language you like, Cloud Functions are just easy.

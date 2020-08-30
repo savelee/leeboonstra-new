@@ -34,7 +34,13 @@ self.__precacheManifest = [
   {
     "url": "robots.txt",
     "revision": "c1e4b0c9cb7b3fa38acab2b6a0733518"
-  }
+  },
+  {
+    "url": "/css/prism-atom-dark.css",
+  },
+  {
+    "url": "/js/prism.js",
+  },
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

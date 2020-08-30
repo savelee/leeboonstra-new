@@ -1,6 +1,6 @@
 ---
-title: Speaking
-description: I'm a public speaker, topics I love to talk about include; Dialogflow, Chatbots, Customer Care, The Future of the Contact Center (CCAI), Machine Learning for Developers, Diversity, LGBTQ+, Women in Tech
+title: Public Speaking, Conferences and Events Conversational AI
+description: Public speaking & events, topics include; Dialogflow, Chatbots, Customer Care, Contact Centers, Machine Learning, Conversational AI, Diversity
 event: true
 nocomments: true
 layout: speaking

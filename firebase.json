@@ -12,6 +12,11 @@
       "type": 301
     },
     {
+      "source": "/Bots/",
+      "destination": "/Chatbots/",
+      "type": 301
+    },
+    {
       "source": "/speaker/",
       "destination": "/speaking/",
       "type": 301
