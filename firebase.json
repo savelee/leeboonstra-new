@@ -6,7 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [ {
+    "rewrites": [ {
       "source": "/developer/category/:post*",
       "destination": "/categories/:post",
       "type": 301
