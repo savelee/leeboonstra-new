@@ -7355,8 +7355,7 @@ header .headertop .navbar-toggler {
   src: url(fonts/icomoon.eot);
   src: url(fonts/icomoon.eot?#iefix) format("embedded-opentype"), url(fonts/icomoon.woff) format("woff"), url(fonts/icomoon.ttf) format("truetype"), url(fonts/icomoon.svg#icomoon) format("svg");
   font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
+  font-style: normal; }
 
 @font-face {
   font-family: 'consolas';
@@ -7485,7 +7484,9 @@ html {
         font-size: 0.9rem; }
 
 .disclaimer {
-  font-family: bebas;
+  font-family: bebas, Impact;
+  text-transform: uppercase;
+  font-display: swap;
   font-size: 1rem;
   padding: 0 20px; }
 
@@ -7520,7 +7521,9 @@ header .headertop {
     outline: none; }
 
 header .navbar-brand {
-  font-family: 'bebas'; }
+  font-family: bebas, Impact;
+  text-transform: uppercase;
+  font-display: swap; }
 
 header ul {
   display: flex;
@@ -7534,6 +7537,9 @@ header .nav-item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-family: 'bebas';
+  font-family: bebas, Impact;
+  text-transform: uppercase;
+  font-display: swap;
   font-size: 18px;
   border-right: 1px solid #ccc;
   display: inline-block;

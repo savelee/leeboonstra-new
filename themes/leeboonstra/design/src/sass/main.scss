@@ -65,7 +65,9 @@ html {
 }
 
 .disclaimer {
-    font-family: bebas;
+    font-family: bebas, Impact;
+    text-transform: uppercase;
+    font-display: swap;
     font-size: 1rem;
     padding: 0 20px;
 }
@@ -116,7 +118,9 @@ header {
     }
 
     .navbar-brand {
-        font-family: 'bebas';
+        font-family: bebas, Impact;
+        text-transform: uppercase;
+        font-display: swap;
     }
 
     ul {
@@ -132,6 +136,9 @@ header {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         font-family: 'bebas';
+        font-family: bebas, Impact;
+        text-transform: uppercase;
+        font-display: swap;
         font-size: 18px;
         border-right: 1px solid #ccc;
         display: inline-block;
@@ -188,7 +195,7 @@ header {
 .blogcontent {
 
     word-break: break-word;
-    
+
     .header {
         font-size: 80%;
     }
