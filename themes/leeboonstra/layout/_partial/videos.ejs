@@ -33,6 +33,8 @@
               "@type": "VideoObject",
               "name": "<%= post.title %>",
               "@id":  "https://www.youtube.com/embed/<%= page.youtube %>",
+              "contentUrl": "https://www.youtube.com/embed/<%= page.youtube %>",
+              "embedUrl": "https://www.youtube.com/embed/<%= page.youtube %>",
               "datePublished": "<%- post.date.toISOString() %>",
               "description" : "Video: <%- post.title %>",
               "thumbnailURL" : "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
