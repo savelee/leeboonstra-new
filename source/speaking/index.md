@@ -41,12 +41,8 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "endDate": "2020-09-24T18:00+01:00",
 "image": "https://www.leeboonstra.com/images/profile.jpg",
 "location": {
-"@type": "Place",
-"name": "Jaarbeurs",
-"address": {
-"addressLocality": "Utrecht",
-"addressCountry": "NL"
-}
+  "@type": "Place",
+  "name": "Online"
 }
 }</script>
 
@@ -71,6 +67,10 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "url": "https://omnichannelx.digital/",
 "availability": "http://schema.org/SoldOut",
 "validFrom": "2019-11-01T09:30+01:00"
+}
+"location": {
+  "@type": "Place",
+  "name": "Online"
 }
 }</script>
 
@@ -99,6 +99,10 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "url": "https://omnichannelx.digital/",
 "availability": "http://schema.org/SoldOut",
 "validFrom": "2019-11-01T09:30+01:00"
+}
+"location": {
+  "@type": "Place",
+  "name": "Online"
 }
 }</script>
 
@@ -159,14 +163,6 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "startDate": "2020-02-11T13:00+01:00",
 "endDate": "2020-02-11T17:00+01:00",
 "image": "https://www.leeboonstra.com/images/profile.jpg",
-"@type": "Offer",
-"description": "Register for free",
-"url": "https://www.fourcast.io/events/womenintech-brussels-11february2020",
-"price": "0.00",
-"priceCurrency": "EUR",
-"availability": "http://schema.org/SoldOut",
-"validFrom": "2018-11-01T09:30+01:00"
-},
 "location": {
 "@type": "Place",
 "name": "Google BE",

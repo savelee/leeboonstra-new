@@ -1,5 +1,5 @@
 module.exports = {
-  "globDirectory": "themes/leeboonstra/source/",
+  "globDirectory": "/",
   "globPatterns": [
     "**/*.{js,css,xml,json,txt}"
   ],
@@ -16,9 +16,9 @@ module.exports = {
       // Use a custom cache name.
       "cacheName": 'images',
 
-      // Only cache 10 images.
+      // Only cache 15 images.
       "expiration": {
-        "maxEntries": 10
+        "maxEntries": 15
       }
     }
   }]
