@@ -6,25 +6,42 @@
   <%
   var title = page.title;
   if (is_archive()){
-    title = __('page.archive');
+    title = 'Archive';
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
     } else if (is_year()){
       title += ': ' + page.year;
     }
   } else if (is_category()){
-    title = __('page.category') + ': ' + page.category;
+    title = 'Conversational AI Category: ' + page.category;
   } else if (is_tag()){
-    title = __('page.tag') + ': ' + page.tag;
+    title = 'Conversational AI Tag: ' + page.tag;
   }
 
   // keywords.
   var keyWords = config.keywords ? config.keywords : config.title;
   %>
   <title>LeeBoonstra.dev | <% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
-
+  
   <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
   <meta name="keywords" content="<%= keyWords %> Lee Boonstra, Developer Advocate, Applied AI Engineer, O'Reilly Author, Apress Author, Writer, Google Engineer, Google">
+
+  <script type="application/ld+json">
+    {
+     "@context": "https://schema.org/",
+     "@type": "WebPage",
+     "name": "LeeBoonstra.dev",
+     "speakable":
+     {
+      "@type": "SpeakableSpecification",
+      "xpath": [
+        "/html/head/title",
+        "/html/head/meta[@name='description']/@content"
+        ]
+      },
+     "url": "https://www.leeboonstra.dev/"
+     }
+    </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />

@@ -15,27 +15,31 @@
           </div>
         </div>
         <script type="application/ld+json">
-          { "@context": "http://schema.org", 
-          "@type": "BlogPosting",
-          "headline": "<%- post.title %>",
-          "genre": "technology", 
-          "datePublished": "<%- post.date.toISOString() %>",
-          "dateCreated": "<%- post.date.toISOString()  %>",
-          "dateModified": "<%- post.date.toISOString() %>",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ladysign",
-            "logo": "<%- config.url %>/images/screen.png"
-          },
-          "description": "<%- post.description %>",
-          "mainEntityOfPage": "<%- post.permalink %>",
-          "image": "<%- config.url %>/images/screen.png",
-          "articleBody": "<%- post.description %>",
-          "author": {
-            "@type": "Person",
-            "name": "Lee Boonstra",
-            "url": "http://www.leeboonstra.dev"
-          }
+          {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "<%- post.permalink %>"
+            },
+            "headline": "<%- post.title %>",
+            "image": [
+              "<%- post.thumbnail %>"
+             ],
+             "datePublished": "<%- post.date.toISOString() %>",
+             "dateModified": "<%- post.date.toISOString() %>",
+            "author": {
+              "@type": "Person",
+              "name": "Lee Boonstra"
+            },
+             "publisher": {
+              "@type": "Organization",
+              "name": "Lee Boonstra",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "<%- config.url %>/images/screen.jpg"
+              }
+            }
           }
           </script>
         <% }) %>  

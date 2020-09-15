@@ -27,7 +27,7 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
 * ### Conversational Conference by Frank Watching
 
- 24 Sept | **Jaarbeurs, Utrecht** | [Website](https://www.frankwatching.com/conversationalconference/sprekers/) | The Next Generation of Conversational 
+ 24 Sept | **Online`** | [Website](https://fw.nu/1ntv) | The Next Generation of Conversational 
 
 <script type='application/ld+json'> 
 {
@@ -40,11 +40,9 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "startDate": "2020-09-24T09:00+01:00",
 "endDate": "2020-09-24T18:00+01:00",
 "image": "https://www.leeboonstra.com/images/profile.jpg",
-"location": {
-  "@type": "Place",
-  "name": "Online"
-}
-}</script>
+"location" : 
+{"@type" : "VirtualLocation",
+"url" : "https://fw.nu/1ntv"}}</script>
 
 
 * ### OmniChannelX 2020
@@ -67,12 +65,10 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "url": "https://omnichannelx.digital/",
 "availability": "http://schema.org/SoldOut",
 "validFrom": "2019-11-01T09:30+01:00"
-}
-"location": {
-  "@type": "Place",
-  "name": "Online"
-}
-}</script>
+},
+"location" : 
+{"@type" : "VirtualLocation",
+"url" : "https://omnichannelx.digital/"}}</script>
 
 
 * ### VOICE Global 2020 (VoiceSummit.ai)
@@ -99,12 +95,11 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 "url": "https://omnichannelx.digital/",
 "availability": "http://schema.org/SoldOut",
 "validFrom": "2019-11-01T09:30+01:00"
-}
-"location": {
-  "@type": "Place",
-  "name": "Online"
-}
-}</script>
+},
+"location" : 
+{"@type" : "VirtualLocation",
+"url" : "https://omnichannelx.digital/"}}
+</script>
 
 
 * ### WeAreDevelopers Live 2020
