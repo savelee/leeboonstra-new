@@ -1,46 +1,34 @@
 ---
 title: Biography Lee Boonstra
-subtitle: Senior Developer Advocate & Applied AI Engineer at Google
-description: Lee Boonstra is a Senior Developer Advocate for Dialogflow and Contact Center AI @ Google. She is based in Amsterdam & O'Reilly book author. @ladysign
+subtitle: Applied AI Engineer and Senior Developer Advocate
+description: Lee Boonstra is a conversational AI developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Contact Center AI & Speech technology. She is a public speaker and a published author. Lee wrote a book for O’Reilly; Hands-on Sencha Touch 2 and is currently working on the Google Conversational AI book at Apress. Lee lives in Amsterdam, the Netherlands, and is a rainbow mommy. @ladysign
 nocomments: true
 layout: about
 ---
 
-Applied AI Engineer and Senior Developer Advocate @ Google
-(for Conversational AI; Dialogflow, CCAI & Speech Technology)
-@ladysign
+Applied AI Engineer & Senior Developer Advocate
 
-[Lee Boonstra](https://plus.google.com/117712452932146916020) is a Conversational AI <a href="#da" title="What is a Developer Advocate, Lee Boonstra?">Senior Developer Advocate</a> at Google. In this role she is focusing on Dialogflow, Contact Center AI & Speech technology. She is based in Amsterdam, and an O'Reilly published author.
+<b>Google</b>
 
-She has been working with different technologies in the past 15 years, ranging from Web/Mobile Technology, Ext JS, Sencha Touch, Node.js, Conversational AI, Dialogflow, Actions on Google and Contact Centers.
+[Lee Boonstra](https://plus.google.com/117712452932146916020) has been at Google since 2017. She is a conversational AI expert and has helped many businesses develop AI-powered chatbots and voice assistants at an enterprise scale. They are building smart AI platforms on the Google Cloud Platform using Dialogflow for intent detection and natural language processing, speech recognition technology, and contact center technology.
 
-Over the years she has helped many brands & enterprises to build and deploy Conversational AI solutions (chatbots and voice assistants) at enterprise scale. She's worn different hats from engineer to technical trainer to sales engineer to Developer Advocate.
+Lee has worn different hats in the past 17 years. She began her career as an engineer developing websites and apps for famous brands and large enterprises such as ING Bank, KLM, and Heineken. She worked for Sencha Inc. as a lead technical trainer and curriculum creator before moving to Google as a developer advocate.
 
-Prior to Google, Lee worked at Sencha Inc. and wrote a book for O'Reilly [Hands-on Sencha Touch 2](http://shop.oreilly.com/product/0636920030058.do).
+A developer advocate’s role is to bridge the Google engineering team and the developer community. Her job is to give feedback to both parties, equally, in both ways. Developer relations at Google falls under engineering, and it includes writing public open-source code, writing technical documentation, public speaking, and creating (video) content.
 
-Lee has a bachelor's degree in arts & technology.
+She is also a published author. She wrote [a book for O’Reilly on mobile web applications](https://www.amazon.com/_/dp/144936652X?tag=oreilly20-20), and currently, she is writing the Google Conversational AI book for [Apress](https://www.apress.com/gp).
 
-<a name="da"></a>
-## What is a Developer Advocate?
+Besides writing and her work at Google, she is an active member of the [DDMA Voice Committee](https://ddma.nl/commissies/voice/) in the Netherlands. This task force aims to increase the belief in the ‘voice channel’ by showing brands and publishers its opportunities for marketing, sales, and service and, therefore, to give it a permanent place in the digital transformation.
 
-**TL;DR: A developer advocate is a developer’s best friend!**
-
-A Developer Advocate's role is to act as a bridge between the engineering team and the developer community. Their job is to give feedback to both parties, equally, in both ways. 
-
-Also, a Developer Advocate is an engineer who has good communication and community-building skills.  The responsibilities of the role typically are some or all of the following: public speaking, writing public open source code, writing articles and creating (video) content.
-
-With other words; A Developer Advocate is someone who truly advocates for developers, not just a platform.
-
->“Every presentation needs a live demo! I'm an engineer and I love to show what I have built!”
-
-## Speaking & Article Topics
-
-I love technology, especially Chatbots, Customer Care & Web, and I love writing and speaking about it!
-
-Topics include: **Dialogflow, Chatbots, Customer Care, The Future of the Contact Center (CCAI), Machine Learning for Developers, Diversity, LGBTQ+, Women in Tech, AI for Financials**
-
-> “I love <strong>creating</strong>, instead of just consuming technology.”
-
-Beside technology I love (alternative) music, concerts and I’m a videogames addict.
+<div class="blockquote-wrapper">
+  <div class="blockquote">
+    <h1>
+     I love <span style="color:#e36803">creating</span> instead of just consuming technology.
+     </h1>
+    <h4>&mdash;Lee Boonstra<br><em>Developer Advocate, Google</em></h4>
+  </div>
+</div>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
 

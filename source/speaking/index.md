@@ -17,13 +17,47 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
 <hr>
 
+2021
+----
+
+* ### DDMA Voice - Digital talk about Chat & Voice Analytics
+
+ 25 Mar | **Online`** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
+
+<script type='application/ld+json'> 
+{
+"@context": "http://www.schema.org",
+"@type": "Event",
+"name": "Digital Talk",
+"url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
+"performer": "Lee Boonstra",
+"description":"Digital Talk",
+"startDate": "2021-03-25T15:20+01:00",
+"endDate": "2021-03-25T17:00+01:00",
+"image": "https://www.leeboonstra.com/images/profile.jpg",
+"offers": {
+    "@type": "Offer",
+    "description": "Register for free",
+    "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
+    "price": "0.00",
+    "priceCurrency": "EUR",
+    "availability": "http://schema.org/OnlineOnly",
+    "validFrom": "2020-11-01T09:30+01:00"
+  },
+"location" : 
+{"@type" : "VirtualLocation",
+"url" : "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/"}}
+</script>
+
+
+<hr>
+
 2020
 ----
 
+* ### Google DevFest
 
-* ### Google Cloud DevDays
-
- ? Oct | **Online** | [Website](https://developers.google.com/events) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
+ 19 Oct | **Online** | [Website](https://gdg.community.dev/devfest/) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
 
 * ### Conversational Conference by Frank Watching
 
@@ -751,7 +785,7 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
           "@type": "Offer",
           "description": "GoDataFest 2018",
           "url": "https://www.godatafest.com/",
-          "price": "Free"
+          "price": "0.00"
         },
         "location": {
           "@type": "Place",
@@ -780,7 +814,7 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
         "offers": {
           "@type": "Offer",
           "description": "Google Cloud Next",
-          "price": "Free"
+          "price": "0.00"
         },
         "location": {
           "@type": "Place",

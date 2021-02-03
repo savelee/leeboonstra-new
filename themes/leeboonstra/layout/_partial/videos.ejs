@@ -16,7 +16,7 @@
             <div class="shadow-sm">
               <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/0.jpg" alt="Watch on YouTube">
               <div class="card-body">
-                <p class="card-text"><%-post.title-%></p>
+                <p class="card-text"><%- truncate(post.title, {length: 65, omission: '...'}) %></p>
               </div>
               <div class="foot">
                 <a href="#" class="btn youtubeLink btn-primary stretched-link">
