@@ -2,8 +2,8 @@
     <% if (highlight){ %>
     <div class="card w-75 p-2 float-md-left tall">
       <div class="shadow-sm">
-        <% if (post.featured_image){ %>
-          <img class="card-img-top" src="<%- post.featured_image %>" alt="<%-post.title-%>">
+        <% if (post.featured){ %>
+          <img class="card-img-top" src="/images/medium_<%- post.featured %>" alt="<%-post.title-%>">
         <% } %>
         <div class="card-header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
@@ -28,8 +28,8 @@
     <% } else { %>   
     <div class="card w-25 p-2 float-md-left">
       <div class="shadow-sm">
-        <% if (post.featured_image){ %>
-          <img class="card-img-top" src="<%- post.thumbnail %>" alt="<%-post.title-%>">
+        <% if (post.featured){ %>
+          <img class="card-img-top" src="/images/thumb_<%- post.featured %>" alt="<%-post.title-%>">
         <% } %>
         <div class="card-header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>

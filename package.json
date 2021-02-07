@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo generate && workbox generateSW workbox-config.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "serviceWorker": "workbox generateSW workbox-config.js"
   },
   "hexo": {
     "version": "4.2.1"
@@ -17,6 +18,7 @@
     "babel-loader": "^8.0.0-beta.0",
     "hexo": "^4.2.1",
     "hexo-featured-image": "^0.4.3",
+    "hexo-filter-responsive-images": "^1.6.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",

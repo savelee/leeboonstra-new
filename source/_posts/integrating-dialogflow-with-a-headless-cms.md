@@ -11,8 +11,7 @@ tags:
   - Chatbots
 alias: /developer/integrating-dialogflow-with-sanity-headless-cms/
 date: 2020-03-03 14:41:36
-featured_image: 0_oiY4oK9y_2upL2lR.png
-thumbnail: 0_oiY4oK9y_2upL2lR_1.jpg
+featured: 0_oiY4oK9y_2upL2lR.png
 ---
 
 I often get the question, why does Dialogflow not have a CMS? So non-techy people can modify webhook fulfillment answers, without having to train models or use the Dialogflow console. The thing is, Dialogflow can be integrated with anything you like.

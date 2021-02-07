@@ -16,8 +16,10 @@ https://hexo.io/
 ```
 npm install -g hexo
 hexo init
+hexo clean
 hexo generate
 hexo deploy
+npm run serviceWorker
 hexo server / hexo serve
 ```
 
@@ -31,11 +33,32 @@ hexo server / hexo serve
 
 ### Generate static files
 
-`hexo generate`
+`hexo clean && hexo generate`
 
 ### Deploy to remote sites
 
 `hexo deploy`
+
+## Workbox Service Worker
+
+```
+npm i workbox-cli
+workbox wizard 
+workbox generateSW workbox-config.js
+```
+
+The serviceworker should be generated in public/serviceworker.js based on the public folder.
+And the themes/leeboonstra/design/js/index.js will need to be modified to load the service worker.
+
+Manually force the css, by updating the version number in:
+themes/leeboonstra/layout/_partial/head.ejb
+public/serviceworker.js & map
+
+npm run serviceWorker
+
+
+```hexo clean & hexo generate```
+Modify workbox-config.js, it should point to the public folder.
 
 
 ## Firebase

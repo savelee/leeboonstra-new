@@ -7247,9 +7247,13 @@ header .headertop .navbar-toggler {
   .main {
     margin-top: 120px; }
   .card.w-75 .card-img-top {
-    height: auto !important; }
+    height: 200px !important;
+    object-fit: cover;
+    object-position: 0 0; }
   .card.w-50 .card-img-top {
-    height: 100px; }
+    height: 100px;
+    object-fit: cover;
+    object-position: 0 0; }
   .card.w-50.youtube .card-img-top {
     height: auto; }
   .card.w-25 .card-img-top {
@@ -7287,17 +7291,23 @@ header .headertop .navbar-toggler {
       height: 150px;
       overflow: hidden; }
     .card.w-75 .card-img-top {
-      height: auto !important; }
+      height: 400px !important;
+      object-fit: cover;
+      object-position: 0 0; }
   .card.w-50 {
     width: 50% !important; }
     .card.w-50 .card-img-top {
-      height: 100px; }
+      height: 100px;
+      object-fit: cover;
+      object-position: 0 0; }
     .card.w-50.youtube .card-img-top {
       height: auto; }
   .card.w-25 {
     width: 25% !important; }
     .card.w-25 .card-img-top {
-      height: 100px; }
+      height: 100px;
+      object-fit: cover;
+      object-position: 0 0; }
     .card.w-25.youtube .card-img-top {
       height: auto; }
   .card-body {
@@ -7576,7 +7586,11 @@ header .nav-link {
   margin: 20px; }
 
 .card.tall .card-body {
-  height: 100%; }
+  height: 100%;
+  font-size: 100%; }
+
+.card .card-body {
+  font-size: 80%; }
 
 .blogcontent {
   word-break: break-word; }
@@ -7641,10 +7655,11 @@ header .nav-link {
   font-size: 1rem; }
 
 .writing .card .card-body {
-  height: 100%; }
+  height: 100%;
+  font-size: 80%; }
 
 .profile {
-  font-size: 1rem; }
+  font-size: 0.9rem; }
   .profile h2 {
     font-size: 1.4rem; }
   .profile .headshot {
@@ -7671,6 +7686,12 @@ header .nav-link {
 .videos .youtube .foot {
   text-align: center;
   padding: 10px; }
+
+.abstracts h2 {
+  font-size: 120%; }
+
+.abstracts .card-body {
+  font-size: 80%; }
 
 .Events .blogcontent ul li p {
   font-size: 65%; }

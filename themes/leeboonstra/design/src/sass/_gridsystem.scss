@@ -73,13 +73,17 @@
 
     .card.w-75{
         .card-img-top {
-            height: auto !important;
+            height: 200px !important;
+            object-fit: cover;
+            object-position: 0 0;
         }
     }
     
     .card.w-50{
         .card-img-top {
             height: 100px;
+            object-fit: cover;
+            object-position: 0 0;
         }
         &.youtube .card-img-top {
             height: auto;
@@ -143,7 +147,9 @@
             overflow: hidden;
         }
         .card-img-top {
-            height: auto !important;
+            height: 400px !important;
+            object-fit: cover;
+            object-position: 0 0;
         }
     }
     .card.w-50{
@@ -151,6 +157,8 @@
 
         .card-img-top {
             height: 100px;
+            object-fit: cover;
+            object-position: 0 0;
         }
         &.youtube .card-img-top {
             height: auto;
@@ -161,6 +169,8 @@
 
         .card-img-top {
             height: 100px;
+            object-fit: cover;
+            object-position: 0 0
         }
         &.youtube .card-img-top {
             height: auto;

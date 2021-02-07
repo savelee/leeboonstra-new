@@ -1,25 +1,7 @@
 module.exports = {
-  "globDirectory": "/",
+  "globDirectory": "public/",
   "globPatterns": [
-    "**/*.{js,css,xml,json,txt}"
+    "**/*.{html,png,webp,xml,js,css,ico,eot,svg,ttf,woff,txt,jpg,gif,pdf,json}"
   ],
-  "swDest": "themes/leeboonstra/source/sw.js",
-  // Define runtime caching rules.
-  "runtimeCaching": [{
-    // Match any request ends with .png, .jpg, .jpeg or .svg.
-    "urlPattern": /\.(?:png|gif|woff|woff2|ttf|eot|pdf|ico|jpg|jpeg|svg)$/,
-
-    // Apply a cache-first strategy.
-    "handler": 'cacheFirst',
-
-    "options": {
-      // Use a custom cache name.
-      "cacheName": 'images',
-
-      // Only cache 15 images.
-      "expiration": {
-        "maxEntries": 15
-      }
-    }
-  }]
+  "swDest": "public/serviceworker.js"
 };

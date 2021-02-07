@@ -189,6 +189,11 @@ header {
 
     &.tall .card-body {
         height: 100%;
+        font-size: 100%;
+    }
+
+    .card-body {
+        font-size: 80%;
     }
 }
 
@@ -286,12 +291,13 @@ header {
     }
     .card-body  {
         height: 100%;
+        font-size: 80%;
     }
 }
 
 .profile {
 
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     h2 {
         font-size: 1.4rem;
@@ -332,6 +338,15 @@ header {
             text-align: center;
             padding: 10px;
         }
+    }
+}
+
+.abstracts  {
+    h2 {
+        font-size: 120%;
+    }
+    .card-body{
+        font-size: 80%;
     }
 }
 

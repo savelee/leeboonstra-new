@@ -10,8 +10,7 @@ tags:
   - Voicebots
   - Callbots
 alias: /developer/mastering-auto-speech-adaptation-in-Dialogflow-for-voice-agents/
-featured_image: 0_UZklk43Hek7Drmgu.png
-thumbnail: 0_UZklk43Hek7Drmgu_1.jpg
+featured: 0_UZklk43Hek7Drmgu.png
 date: 2020-03-23 14:41:36
 ---
 

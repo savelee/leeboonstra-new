@@ -10,8 +10,7 @@ tags:
   - AI
 alias: /developer/agent-validation/
 date: 2020-03-30 14:41:36
-featured_image: 0_ajEHOpc-Kr03Zv1E.png
-thumbnail: 0_ajEHOpc-Kr03Zv1E_1.jpg
+featured: 0_ajEHOpc-Kr03Zv1E.png
 ---
 
 Dialogflow provides a validation feature. Agent validation results are available automatically whenever agent training is performed and completed. You can access the results of validation from either the Dialogflow Console or the API.
@@ -33,8 +32,6 @@ What's good to know is that Dialogflow has an automatic validation feature built
 The agent validation feature is by default enabled. Should you not be able to find it, you can enable the Agent Validation toggle setting in the **Settings > ML Settings** tab.
 
 Once you click **Validation** in the Dialogflow menu (and the agent has been trained), you will see the results of the validation:
-
-![Dialogflow Validation](/images/0_ajEHOpc-Kr03Zv1E.png)
 
 The validation results provide a list of warnings and errors that you should correct to improve the quality and performance of your agent. It can find issues on (global) agent level, in intents or in entities. If your agent has warnings or errors, you can choose to ignore them and launch your agent. It's for informational purposes only, but you would rob yourself from Agent Quality by not using this feature, basically this is a Dialogflow Agent Review out of the box, for free!
 

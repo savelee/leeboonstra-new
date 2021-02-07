@@ -12,8 +12,7 @@ categories:
   - Chatbots
 date: 2018-05-20 08:20:08
 alias: /developer/custom-greeting-google-assistant-app-with-dialogflow-and-actions-on-google/
-featured_image: 0_oiY4oK9y_2upL2lR.png
-thumbnail: 0_oiY4oK9y_2upL2lR_1.jpg
+featured: 0_oiY4oK9y_2upL2lR.png
 ---
 
 Let's have a look into how you can create custom dynamic **Welcome messages** for your Google Assistant with Dialogflow and Actions on Google. 
