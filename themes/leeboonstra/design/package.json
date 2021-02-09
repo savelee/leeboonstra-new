@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack && parcel index.html --open",
-    "build": "webpack -p",
+    "build": "webpack",
     "watch": "webpack --watch"
   },
   "author": "Lee Boonstra",
