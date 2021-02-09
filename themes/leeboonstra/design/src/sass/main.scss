@@ -2,11 +2,10 @@
 $enable-responsive-font-sizes: true;
 $font-family-base: 'AbhayaLibre-Regular';
 
-//You could customize your imports in bootstrap.scss
-@import "_colors";
-@import "bootstrap";
-@import "_gridsystem";
-@import "_fonts";
+@import "./_colors.scss";
+@import "./bootstrap.scss";
+@import "./_gridsystem.scss";
+@import "./_fonts.scss";
 
 html {
     overflow-x: hidden;
@@ -314,7 +313,8 @@ header {
 
         img {
             height: 100px;
-            width: 100px;       
+            width: 100px;
+            display: block;       
         }
     }
 

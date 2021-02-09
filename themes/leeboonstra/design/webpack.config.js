@@ -1,11 +1,14 @@
 const path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+//var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-var extractPlugin = new ExtractTextPlugin({
-   filename: 'main.css'
-});
+var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//var extractPlugin = new ExtractTextPlugin({
+//   filename: 'main.css'
+//});
 
 module.exports = {
+	mode: 'production',
 	entry: './src/js/index.js',
 	devServer: {
 		contentBase: path.join(__dirname, '../source'),
@@ -30,9 +33,25 @@ module.exports = {
 		},
 		{
 			test: /\.scss$/,
-			use: extractPlugin.extract({
-				use: ['css-loader', 'resolve-url-loader', 'sass-loader']
-			})
+			use: [
+				{
+				  loader: "file-loader",
+				  options: {
+					name: "main.css"
+				  }
+				},
+				{
+				  loader: "extract-loader"
+				},
+				{
+				  loader: "css-loader?-url"
+				},
+				{
+				  loader: "postcss-loader"
+				},
+				{
+				  loader: "sass-loader"
+				}]
 		},
 		{
 			test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -49,8 +68,19 @@ module.exports = {
 		}
 	]
 	},
+	optimization: {
+	minimizer: [
+		new OptimizeCSSAssetsPlugin({
+		cssProcessorPluginOptions: {
+			preset: ['default', { discardComments: { removeAll: true } }],
+		}
+		})
+	],
+	},
 	plugins: [
-		extractPlugin,
+		new MiniCssExtractPlugin({
+			filename: "main.css"
+		}),
 		new MinifyPlugin()
 	]
 };

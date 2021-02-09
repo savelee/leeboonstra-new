@@ -78,21 +78,22 @@ highlight:
 
 # Image generation
 responsive_images:
-  pattern: 'images/*.+(png|jpg|jpeg)'
+  pattern: 'images/*.+(png|webp|jpg|jpeg)'
   sizes:
     small:
-      width: 640
+      width: 300
       quality: 50
     medium:
-      width: 800
+      width: 640
+      quality: 70
     large:
-      width: 1000
-      quality: 100
+      width: 800
+      quality: 80
     thumb:
       width: 270
       height: 100
       fit: cover
-      quality: 80
+      quality: 50
 
 # Pagination
 ## Set per_page to 0 to disable pagination
