@@ -57,7 +57,7 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
 * ### Google DevFest
 
- 19 Oct | **Online** | [Website](https://gdg.community.dev/devfest/) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
+ 19 Nov | **Online** | [Website](https://gdg.community.dev/devfest/) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
 
 * ### Conversational Conference by Frank Watching
 

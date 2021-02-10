@@ -10,13 +10,13 @@
     "serviceWorker": "workbox generateSW workbox-config.js"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.3.0"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.37",
     "@babel/preset-env": "^7.0.0-beta.37",
     "babel-loader": "^8.0.0-beta.0",
-    "hexo": "^4.2.1",
+    "hexo": "^5.3.0",
     "hexo-featured-image": "^0.4.3",
     "hexo-filter-responsive-images": "^1.6.0",
     "hexo-generator-archive": "^1.0.0",
@@ -37,16 +37,17 @@
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.3.1",
     "bootstrap": "^4.0.0-beta.2",
-    "css-loader": "^0.28.8",
+    "css-loader": "^5.0.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^6.0.0",
+    "hexo-html-prettify": "^1.1.3",
     "jquery": "^3.2.1",
     "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4",
-    "resolve-url-loader": "^3.1.1",
+    "resolve-url-loader": "^3.1.2",
     "sass-loader": "^6.0.6",
     "url-loader": "^4.1.0",
-    "webpack": "^3.10.0",
+    "webpack": "^5.21.2",
     "webpack-merge": "^5.1.3"
   }
 }

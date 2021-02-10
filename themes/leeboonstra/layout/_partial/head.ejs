@@ -167,10 +167,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
 
-          <% for (var prop in theme.menu){ %>
-            <li class="nav-item icon<%= prop %> <%= is_current(theme.menu[prop]) ? 'active' : '' %> <%- is_home() ? 'home' : '' %> text-center">
+          <% for (var prop in config.nav){ %>
+            <li class="nav-item icon<%= prop %> <%= is_current(config.nav[prop]) ? 'active' : '' %> <%- is_home() ? 'home' : '' %> text-center">
               <svg class="icon i<%= prop %>"><use xlink:href="#icon-i<%= prop %>"></use></svg>
-              <a class="nav-link" href="<%- url_for(theme.menu[prop]) %>"><%= prop %></a>
+              <a class="nav-link" href="<%- url_for(config.nav[prop]) %>"><%= prop %></a>
             </li>
           <% } %>
 

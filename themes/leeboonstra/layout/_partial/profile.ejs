@@ -30,7 +30,7 @@
             <svg class="icon icon-ilinkedin"><use xlink:href="#icon-ilinkedin"></use></svg><span class="name"> icon-ilinkedin</span>
             <span>LinkedIn</span></a></li>
         <% if (config.rss){ %>
-          <li><a id="nav-rss-link" class="icon-rss" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+          <li><a id="nav-rss-link" class="icon-rss" href="<%- url_for(config.rss) %>" title="<%= __('rss_feed') %>">
             <svg class="icon icon-irss"><use xlink:href="#icon-irss"></use></svg><span class="name"> icon-irss</span>
         </a></li>
         <% } %>

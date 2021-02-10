@@ -7,7 +7,7 @@ $blue: #1565C0;
 $purple: #6A1B9A;
 $pink: #AD1457;
 
-.Speaking {
+.Conferences {
     .active,
     header .nav-item.active {
         background: $red;
@@ -47,21 +47,21 @@ $pink: #AD1457;
 .Writing {
     .active,
     header .nav-item.active {
-        background: $blue;
+        background: $pink;
         .headertop {
-            background: $blue;
+            background: $pink;
         }
     }
 
     time,
     .writing .card h2 {
-        color: $blue;
+        color: $pink;
     }
 
     a {
-        color: $blue; 
+        color: $pink; 
         &:hover {
-            color: darken($blue, 20%);
+            color: darken($pink, 20%);
         }
     }
 }

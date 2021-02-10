@@ -12,7 +12,7 @@ language: en
 timezone: Europe/Amsterdam
 
 #Header
-menu:
+nav:
   Home: index.html
   Bio: about/
   Speaking: speaking/
@@ -146,7 +146,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: false
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
@@ -169,3 +169,26 @@ uglify:
   output:
   compress: true
   es6: false
+
+html_prettify:
+  enable: true
+  exclude:
+      - "*/**/test"
+  options:
+      indent_size: 1
+      indent_char: " "
+      max_preserve_newlines: "-1"
+      preserve_newlines: false
+      keep_array_indentation: true
+      break_chained_methods: false
+      indent_scripts: normal
+      brace_style: expand
+      space_before_conditional: true
+      unescape_strings: false
+      jslint_happy: true
+      end_with_newline: true
+      wrap_line_length: "0"
+      indent_inner_html: false
+      comma_first: false
+      e4x: false
+      indent_empty_lines: false
