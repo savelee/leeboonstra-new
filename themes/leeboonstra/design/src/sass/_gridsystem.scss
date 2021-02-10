@@ -31,17 +31,6 @@
             height: auto;
         }
     }
-    
-    .iconHome:before,
-    .iconContact:before,
-    .iconWriting:before,
-    .iconAbstracts:before,
-    .iconSpeaking:before,
-    .iconAbout:before,
-    .iconBio:before,
-    .iconVideos:before {
-        display: none;
-    }
 
     .photocol {
         display: none;
@@ -112,17 +101,6 @@
                 display: inline-block !important;
             }
         }
-    }
-
-    .iconHome:before,
-    .iconContact:before,
-    .iconWriting:before,
-    .iconAbstracts:before,
-    .iconSpeaking:before,
-    .iconAbout:before,
-    .iconBio:before,
-    .iconVideos:before {
-        display: inline-block;
     }
 
     .photocol {
@@ -203,17 +181,6 @@
 
     .nav-item {
         width: calc(95% / 6);
-    }
-
-    .iconHome:before,
-    .iconContact:before,
-    .iconWriting:before,
-    .iconAbstracts:before,
-    .iconSpeaking:before,
-    .iconAbout:before,
-    .iconBio:before,
-    .iconVideos:before {
-        display: inline-block;
     }
 
     .photocol {

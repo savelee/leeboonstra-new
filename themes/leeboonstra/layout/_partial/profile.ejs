@@ -20,11 +20,19 @@
     </p>
     </div>
     <ul class="social">
-        <li><a href="http://github.com/savelee/" target="_blank" class="icon-github"><span>Github</span></a></li>
-        <li><a href="http://www.twitter.com/ladysign" target="_blank" class="icon-twitter"><span>Twitter</span></a></li>
-        <li><a href="http://nl.linkedin.com/in/leeboonstra/" target="_blank" class="icon-linkedin"><span>LinkedIn</span></a></li>
+        <li><a href="http://github.com/savelee/" target="_blank" class="icon-github">
+            <svg class="icon icon-igithub"><use xlink:href="#icon-igithub"></use></svg><span class="name"> icon-igithub</span>
+            <span>Github</span></a></li>
+        <li><a href="http://www.twitter.com/ladysign" target="_blank" class="icon-twitter">
+            <svg class="icon icon-itwitter"><use xlink:href="#icon-itwitter"></use></svg><span class="name"> icon-itwitter</span>
+            <span>Twitter</span></a></li>
+        <li><a href="http://nl.linkedin.com/in/leeboonstra/" target="_blank" class="icon-linkedin">
+            <svg class="icon icon-ilinkedin"><use xlink:href="#icon-ilinkedin"></use></svg><span class="name"> icon-ilinkedin</span>
+            <span>LinkedIn</span></a></li>
         <% if (config.rss){ %>
-          <li><a id="nav-rss-link" class="icon-rss" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a></li>
+          <li><a id="nav-rss-link" class="icon-rss" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+            <svg class="icon icon-irss"><use xlink:href="#icon-irss"></use></svg><span class="name"> icon-irss</span>
+        </a></li>
         <% } %>
     </ul>
     <script type="application/ld+json">

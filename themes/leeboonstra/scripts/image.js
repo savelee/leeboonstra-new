@@ -2,7 +2,6 @@ const image_version = hexo.extend.helper.get('image_version');
 
 
 hexo.extend.filter.register('after_post_render', data => {
-    //var regex = new RegExp(/<img src="\/images\/(.*?)(?=".*?.)/igm);
     var regex = new RegExp(/(<img\b[^<>]*?src=['"].*?\/?.*?)([^.\/<>]*)(\.[^.\/<>]*?['"])([^><]*?\>)/igm);
     data.content = data.content.replace(regex, (_, start, name, ext, end) => {
       return `<picture>

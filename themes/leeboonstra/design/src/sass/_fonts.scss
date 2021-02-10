@@ -12,18 +12,6 @@
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src: local('icomoon'), local('icomoon'),
-        url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.woff2') format('woff2'),
-        url('../fonts/icomoon.woff') format('woff'),
-        url('../fonts/icomoon.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'consolas';
     src: local('consolas'), local('consolas'),
          url('../fonts/Consolas?#iefix') format('embedded-opentype'),
@@ -47,72 +35,6 @@
     font-display: swap;
 }
 
-.icon-github:before {
-    content: "G";
-}
-.icon-linkedin:before {
-    content: "\69";
-}
-.twitter-share-button span:before,
-.icon-twitter:before {
-    content: "\e606";
-}
-.icon-rss:before {
-    content: "\ea9b";
-}
-
-.iconmenu:after {
-    content: "M";
-    font-family: icomoon;
-    speak: none;
-    text-transform: none;
-    margin-top: -10px;
-    font-size: 20px;
-}
-
-.iconsearch:before {
-    content: "S";
-    font-family: icomoon;
-    speak: none;
-    text-transform: none;
-}
-
-.social li a,
-.iconHome:before,
-.iconContact:before,
-.iconWriting:before,
-.iconAbstracts:before,
-.iconSpeaking:before,
-.iconAbout:before,
-.iconBio:before,
-.iconVideos:before {
-    font-family: icomoon;
-    speak: none;
-    text-transform: none;
-    margin-top: 8px;
-}
-
-.iconHome:before{
-    content: "H";
-}
-.iconContact:before{
-    content: "C";
-}
-.iconWriting:before {
-    content: "w";
-}
-.iconAbstracts:before,
-.iconSpeaking:before {
-    content: "\e91e";
-}
-.iconVideos:before{
-    content: "\76";
-}
-.iconBio:before,
-.iconAbout:before {
-    content: "\e971";
-}
-
 pre,
 code,
 .code {
@@ -124,3 +46,23 @@ code,
         font-family: bebas;
     }
 }
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+  
+  .icon-iHome,
+  .icon-iBio,
+  .icon-iWriting,
+  .icon-iAbstracts,
+  .icon-iSpeaking,
+  .icon-iContact,
+  .icon-iVideos {
+    font-size: 32px;
+  }  
+ 
