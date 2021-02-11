@@ -81,7 +81,7 @@ responsive_images:
   pattern: 'images/*.+(png|webp|jpg|jpeg)'
   sizes:
     small:
-      width: 300
+      width: 270
       quality: 50
     medium:
       width: 640

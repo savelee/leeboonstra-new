@@ -38,11 +38,17 @@
         "value" : "*"
       } ]
     }, {
-      "source" : "**/*.@(jpg|jpeg|ttf|svg|woff|eot|ico|gif|js|png)",
+      "source" : "**/*.@(jpg|jpeg|ttf|svg|woff|woff2|webp|eot|ico|gif|js|png)",
       "headers" : [ {
         "key" : "Cache-Control",
         "value" : "max-age=31557600"
       } ]
+    }, {
+        "source" : "**/prism-atom-dark.css",
+        "headers" : [ {
+          "key" : "Cache-Control",
+          "value" : "max-age=31557600"
+        } ]
     }, {
       "source" : "**/*.@(html|htm|xml|css)",
       "headers" : [ {

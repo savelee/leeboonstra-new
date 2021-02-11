@@ -1,16 +1,24 @@
 {
-	"short_name": "Lee Boonstra",
-	"name": "LeeBoonstra.dev - Developer Advocate Google",
-	"icons": [
-	  {
+"short_name": "Lee Boonstra",
+"name": "LeeBoonstra.dev - Developer Advocate Google",
+"icons": [
+	{
 		"src": "/images/profile.jpg",
 		"type": "image/jpg",
 		"sizes": "400x400"
-	  }
-	],
-	"start_url": "/",
-	"background_color": "#8bd2f7",
-	"display": "standalone",
-	"scope": "/",
-	"theme_color": "#000"
-  }
+	}
+],
+"start_url": "/",
+"background_color": "#8bd2f7",
+"display": "standalone",
+"scope": "/",
+"theme_color": "#3367D6",
+"description": "Lee Boonstra is a conversational AI developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Chatbots, Contact Center AI & Google Cloud Speech technology. She is a public speaker and a published author.",
+"screenshots": [
+	{
+	"src": "/images/screen.jpg",
+	"type": "image/jpg",
+	"sizes": "500x348"
+	}
+]
+}
