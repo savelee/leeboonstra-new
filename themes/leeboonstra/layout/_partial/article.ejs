@@ -5,8 +5,8 @@
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/large_<%- post.featured %>" media="(min-width: 1000px)">
-            <source srcset="/images/medium_<%- post.featured %>" media="(min-width: 320px)">
-            <source srcset="/images/thumb_<%- post.featured %>" media="(max-width: 319px)">
+            <source srcset="/images/medium_<%- post.featured %>" media="(min-width: 500px)">
+            <source srcset="/images/thumb_<%- post.featured %>" media="(max-width: 499px)">
             <img class="card-img-top" src="/images/thumb_<%- post.featured %>" alt="<%-post.title-%>">
           </picture>
         <% } %>
