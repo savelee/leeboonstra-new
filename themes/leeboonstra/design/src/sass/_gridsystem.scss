@@ -24,10 +24,31 @@
         }
     }
 
-    .card.w-75,
-    .card.w-50,
-    .card.w-25 {
+    .card.w-75{
         .card-img-top {
+            height: 100px !important;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+    }
+    
+    .card.w-50{
+        .card-img-top {
+            height: 100px !important;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+        &.youtube .card-img-top {
+            height: auto;
+        }
+    }
+    .card.w-25{
+        .card-img-top {
+            height: 100px !important;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+        &.youtube .card-img-top {
             height: auto;
         }
     }
@@ -62,7 +83,7 @@
 
     .card.w-75{
         .card-img-top {
-            height: 200px !important;
+            height: 100px !important;
             object-fit: cover;
             object-position: 0 0;
         }
@@ -70,7 +91,7 @@
     
     .card.w-50{
         .card-img-top {
-            height: 100px;
+            height: 100px !important;
             object-fit: cover;
             object-position: 0 0;
         }
@@ -80,7 +101,9 @@
     }
     .card.w-25{
         .card-img-top {
-            height: 100px;
+            height: 100px !important;
+            object-fit: cover;
+            object-position: 0 0;
         }
         &.youtube .card-img-top {
             height: auto;
