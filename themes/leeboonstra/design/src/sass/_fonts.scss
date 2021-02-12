@@ -56,8 +56,14 @@ code,
     fill: currentColor;
   }
   
+    .icon-menu {
+        height: 20px !important;
+        fill: $white;
+    }
+
   .icon-iHome,
   .icon-iBio,
+  .icon-menu,
   .icon-iWriting,
   .icon-iAbstracts,
   .icon-iSpeaking,
