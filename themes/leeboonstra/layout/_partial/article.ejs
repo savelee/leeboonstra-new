@@ -64,7 +64,7 @@
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
 
           <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-          <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+          <script type="IN/Share" data-url="<%- post.permalink %>"></script>
 
           <a href="https://twitter.com/intent/tweet" 
           class="twitter-share-button btn" data-text="<%-post.title-%> #Dialogflow #GCP by @ladysign" data-related="" data-lang="en" data-show-count="false">Tweet</a>
