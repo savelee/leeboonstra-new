@@ -46,7 +46,7 @@ Follow the [readme steps](https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Fd
 npm --EXAMPLE=1 --PORT=8080 --PROJECT_ID=[your-gcp-id] run start
 ```
 
-When you browse to http://localhost:8080, you will see a screen like the one below and you can play around by creating examples in Dialogflow, which are similar to the examples in this blog.
+When you browse to localhost:8080, you will see a screen like the one below and you can play around by creating examples in Dialogflow, which are similar to the examples in this blog.
 
 ![Demo](/images/0_pBJieu9ZjA-CLga5.png)
 
