@@ -204,6 +204,22 @@
 
     .nav-item {
         width: calc(95% / 6);
+
+        a.nav-link {
+            display: grid;
+            justify-content: center;
+
+            svg {
+                display: block;
+                margin: 5px auto;
+            }
+    
+            span {
+                text-align: center;
+            }
+
+        }
+
     }
 
     .photocol {

@@ -1,14 +1,24 @@
-$primary: #e36803;
+$primary: #c75d07;
 $red: #C62828;
-$orange: #EF6C00;
+$orange: #c75d07;
 $yellow: #FFEB3B;
 $green: #00695C;
 $blue: #1565C0;
+$lightblue: rgba(29,161,242,1.00);
 $purple: #6A1B9A;
 $pink: #AD1457;
 
+.nav-link:hover {
+    background: $primary;
+    .headertop {
+        background: $primary;
+    }
+}
+
+
 .Conferences {
     .active,
+    .nav-link:hover,
     header .nav-item.active {
         background: $red;
         .headertop {
@@ -26,6 +36,7 @@ $pink: #AD1457;
 
 .Videos {
     .active,
+    .nav-link:hover,
     header .nav-item.active {
         background: $purple;
         .headertop {
@@ -46,28 +57,30 @@ $pink: #AD1457;
 
 .Writing {
     .active,
+    .nav-link:hover,
     header .nav-item.active {
-        background: $pink;
+        background: $blue;
         .headertop {
-            background: $pink;
+            background: $blue;
         }
     }
 
     time,
     .writing .card h2 {
-        color: $pink;
+        color: $blue;
     }
 
     a {
-        color: $pink; 
+        color: $blue; 
         &:hover {
-            color: darken($pink, 20%);
+            color: darken($blue, 20%);
         }
     }
 }
 
 .Abstracts {
     .active,
+    .nav-link:hover,
     header .nav-item.active {
         background: $green;
         .headertop {
@@ -96,17 +109,36 @@ $pink: #AD1457;
 
 .Contact {
     .active,
+    .nav-link:hover,
     header .nav-item.active {
-        background: $pink;
+        background: $lightblue;
         .headertop {
-            background: $pink;
+            background: $lightblue;
         }
     }
 
     a {
-        color: $pink; 
+        color: $lightblue; 
         &:hover {
-            color: darken($pink, 20%);
+            color: darken($lightblue, 20%);
+        }
+    }
+}
+
+.Biography {
+    .active,
+    .nav-link:hover,
+    header .nav-item.active {
+        background: $orange;
+        .headertop {
+            background: $orange;
+        }
+    }
+
+    a {
+        color: $orange; 
+        &:hover {
+            color: darken($orange, 20%);
         }
     }
 }

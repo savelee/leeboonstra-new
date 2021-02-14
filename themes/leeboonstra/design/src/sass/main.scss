@@ -27,10 +27,6 @@ html {
     background: none;
 }
 
-.header {
-    height: 65px;
-}
-
 .photocol img {
     margin: 10px 0 10px;
 }
@@ -99,6 +95,10 @@ header {
         text-align: left;
         color: #000;
 
+        svg {
+            color: #000;
+        }
+
         a {
             color: #000;
         }
@@ -139,20 +139,14 @@ header {
         text-transform: uppercase;
         font-size: 18px;
         border-right: 1px solid #ccc;
-        display: inline-block;
         padding: 0;
         margin: 0;
         vertical-align: middle;
         
-        &.active {
-            background: $primary;
-            color: #fff !important;
-        }
-        &.active.home {
-            background: #fff;
-            color: #000 !important;
-        }
-        
+        &.home:hover {
+            background: $primary !important;
+            color: #fff !important;   
+        }   
     }
 
     .navbar-nav {
@@ -164,7 +158,6 @@ header {
         width: 100%;
 
         &:hover {
-            background: #000!important;
             color: #fff !important;
         }
     }
@@ -201,6 +194,15 @@ header {
 
     .header {
         font-size: 80%;
+        margin-bottom: 30px;
+
+        * {
+            position: relative;
+        }
+
+        .IN-widget {
+            top: -8px;
+        }
     }
     .lead,
     p {

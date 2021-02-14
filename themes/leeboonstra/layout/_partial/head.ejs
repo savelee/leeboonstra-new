@@ -21,12 +21,12 @@
   // keywords.
   var keyWords = config.keywords ? config.keywords : config.title;
   %>
-  <title>LeeBoonstra.dev | <% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
+  <title><% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
   
   <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
   <meta name="keywords" content="<%= keyWords %> Lee Boonstra, Developer Advocate, Applied AI Engineer, O'Reilly Author, Apress Author, Writer, Google Engineer, Google">
 
-  <script type="application/ld+json">
+  <script type="application/ld+json" async>
     {
      "@context": "https://schema.org/",
      "@type": "WebPage",
@@ -43,7 +43,7 @@
      }
     </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="640">
@@ -51,8 +51,8 @@
 
   <meta name="theme-color" content="#fafafa">
   <link rel="stylesheet" href="/main.css">
-  <link rel="preload" href="/css/prism-atom-dark.css" as="style">
-  <link rel="preload" href="/js/prism.js" as="script">
+  <link rel="preload" href="/css/prism-atom-dark.css" as="style" importance="low">
+  <link rel="preload" href="/js/prism.js" as="script" importance="low">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -88,7 +88,11 @@
   <meta name="twitter:card" content="https://www.leeboonstra.dev/images/screen.jpg">
   <meta name="twitter:creator" content="@ladysign">
 
-  <link rel="preconnect" href="https://www.leeboonstra.dev">
+  <link rel="preconnect" href="platform.twitter.com">
+  <link rel="preconnect" href="youtube.com">
+  <link rel="preconnect" href="www.google-analytics.com">
+  <link rel="preconnect" href="platform.linkedin.com">
+  
   
   <link itemprop="mainEntityOfPage" href="https://www.leeboonstra.dev">
   <meta itemprop="author" content="Lee Boonstra">
@@ -97,9 +101,10 @@
 
   <link type="text/plain" rel="author" href="https://www.leeboonstra.dev/humans.txt">
  
-  <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin="anonymous" importance="high" />
+  <link rel="preload" href="/fonts/AbhayaLibre-Regular-webfont.woff2" as="font" crossorigin="anonymous" importance="high" />
   <link rel="preload" href="/fonts/Consolas.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="/fonts/AbhayaLibre-Regular-webfont.woff2" as="font" crossorigin="anonymous" />
+
 </head>
 <body class="<%= page.title %> <%= page.class %>">
 
@@ -172,8 +177,10 @@
 
           <% for (var prop in config.nav){ %>
             <li class="nav-item icon<%= prop %> <%= is_current(config.nav[prop]) ? 'active' : '' %> <%- is_home() ? 'home' : '' %> text-center">
-              <svg class="icon i<%= prop %>"><use xlink:href="#icon-i<%= prop %>"></use></svg>
-              <a class="nav-link" href="<%- url_for(config.nav[prop]) %>"><%= prop %></a>
+              <a class="nav-link" href="<%- url_for(config.nav[prop]) %>">
+                <svg class="icon i<%= prop %>"><use xlink:href="#icon-i<%= prop %>"></use></svg>
+                <span><%= prop %></span>
+              </a>
             </li>
           <% } %>
 

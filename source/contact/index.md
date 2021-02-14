@@ -5,7 +5,7 @@ nocomments: true
 layout: contact
 ---
 
-In case you want to contact me, please send me a dm on <a href="https://twitter.com/ladysign" target="_blank">Twitter</a> or contact me via <a href="https://linkedin.com/in/leeboonstra/" target="_blank">LinkedIn</a>.
+In case you want to contact me, please add me on<a href="https://twitter.com/ladysign" target="_blank">Twitter</a> and send me a DM.
 
 <div class="vcard hidden">
     <span class="fn">Lee Boonstra</span>
