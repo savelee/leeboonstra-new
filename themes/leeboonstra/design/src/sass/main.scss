@@ -109,6 +109,9 @@ header {
             margin-left: 0;
             margin-bottom: 5px;
             padding: .25rem !important;
+            background: $primary;
+            border-radius: 1px;
+            margin: 4px;
         }
         .navbar-toggler:hover {
             border: none;
