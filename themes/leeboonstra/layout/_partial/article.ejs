@@ -16,7 +16,7 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
-            <p class="card-text"><%-post.excerpt-%></p> 
+            <div class="card-text"><%-post.excerpt-%></div> 
         </div>
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary stretched-link">Read more</a>

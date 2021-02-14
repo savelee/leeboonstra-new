@@ -25,34 +25,10 @@
 </div> 
 
 <script src="/bundle.js" async></script>
-<!--
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<style>
-    df-messenger {
-      --df-messenger-bot-message: #282828;
-      --df-messenger-button-titlebar-color: #ff9000;
-      --df-messenger-button-titlebar-font-color: #ffffff;
-      --df-messenger-chat-background-color: #121212;
-      --df-messenger-font-color: white;
-      --df-messenger-send-icon: #878fac;
-      --df-messenger-user-message: #535353;
-      --df-messenger-input-font-color: #000;
-      --df-messenger-input-placeholder-font-color: #cccccc;
-      --df-minimized-chat-close-icon-color: #ff9000;
-     }
-</style>
-
-<df-messenger
-  intent="WELCOME"
-  chat-title="dialogflowcookbook"
-  agent-id="0892aa5c-b1d4-43de-be6f-9ca29b5c151b"
-  language-code="en"
-  wait-open="true"
-></df-messenger>-->
 
 <% if (theme.google_analytics){ %>
     <!-- Google Analytics -->
-    <script>
+    <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,7 +38,6 @@
         cookieFlags: 'max-age=7200;domain=leeboonstra.dev;path=/;secure;samesite=none'
     });
     ga('send', 'pageview');
-    
     </script>
     <!-- End Google Analytics -->
 <% } %>
