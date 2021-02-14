@@ -51,6 +51,8 @@ html {
         margin-left: -20px;
         li {
             font-size: 1rem;
+            padding: 5px 0;
+            
             span {
                 margin: auto 5px;
                 font-size: 0.9rem;
@@ -320,6 +322,11 @@ header {
             width: 100px;
             display: block;       
         }
+    }
+
+    .icon {
+        padding: 5px;
+        box-sizing: content-box;
     }
 
 }
