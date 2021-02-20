@@ -78,6 +78,7 @@ highlight:
 
 # Image generation
 responsive_images:
+  priority: 1
   pattern: 'images/*.+(png|webp|jpg|jpeg)'
   sizes:
     small:
@@ -192,6 +193,11 @@ html_prettify:
       comma_first: false
       e4x: false
       indent_empty_lines: false
+
+webpconfig:
+  quality: 80
+  height: 0
+  width: 0
 
 related_posts:
     enabled: true
