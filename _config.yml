@@ -192,3 +192,22 @@ html_prettify:
       comma_first: false
       e4x: false
       indent_empty_lines: false
+
+related_posts:
+    enabled: true
+    filter_threshold: 0.2
+    related_count: 5
+    weight:
+        title: 0.05
+        description: 0.05
+        keywords: 0.03
+        tags: 0.005
+        categories: 0.001
+        text: 1
+    stemmers:
+      - en
+    reserved:
+      - console.dialogflow.com
+      - console.cloud.google.com
+      - google.com
+      - leeboonstra.dev

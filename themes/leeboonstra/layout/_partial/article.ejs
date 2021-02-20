@@ -74,6 +74,30 @@
 
         </div>
         <%- post.content %>
+
+        <% if (page.related_posts && page.related_posts.length > 0) { %>
+
+        <%
+        function getLinkTitle(path){
+          path = path.replace('/', ': ');
+          path = path.replace('/', '');
+          path = path.replace(/-/g, ' ');
+          return path;
+        }
+        %>
+
+          <section>
+              <h2>Related posts</h2>
+              <ul class="relatedPosts">
+              <% for (const path of page.related_posts) { %>
+                  <% const url = url_for(path) %>
+                  <% if (url) { %>
+                      <li><a href="<%= url %>"><%- getLinkTitle(path) %></a></li>
+                  <% } %>
+              <% } %>
+              </ul>
+          </section>
+        <% } %>
       </article>
       <script type="application/ld+json">
         {
