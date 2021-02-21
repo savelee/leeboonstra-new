@@ -1,7 +1,7 @@
 ---
 title: Biography Lee Boonstra
 subtitle: Applied AI Engineer and Senior Developer Advocate
-description: Lee Boonstra is a conversational AI developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Contact Center AI & Speech technology. She is a public speaker and a published author. Lee wrote a book for O’Reilly; Hands-on Sencha Touch 2 and is currently working on the Google Conversational AI book at Apress. Lee lives in Amsterdam, the Netherlands, and is a rainbow mommy. @ladysign
+description: Lee Boonstra is a conversational AI, senior developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Contact Center AI & Speech technology. She is a public speaker and a published author for O'Reilly and Apress.
 nocomments: true
 layout: about
 ---
