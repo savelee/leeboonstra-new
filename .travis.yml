@@ -20,6 +20,6 @@ script:
   - hexo deploy
   - cd themes/leeboonstra/design
   - npm install
-  - npm run build
+  - npm run serviceWorker
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN2
