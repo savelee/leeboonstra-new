@@ -11,6 +11,17 @@ buttons.forEach(function(button){
 	});
 });
 
+const navbartoggle = document.querySelector('.navbar-toggler');
+const navbar = document.querySelector('.navbar');
+
+navbartoggle.addEventListener('click', event => {
+	navbar.setAttribute('style', 'width: 300px');
+});
+navbar.addEventListener('click', event => {
+	navbar.setAttribute('style', 'width: 0');
+});
+
+
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 	  navigator.serviceWorker.register('/serviceworker.js').then(registration => {

@@ -51,7 +51,15 @@
   <%- autoCanonical(config, page) %>
 
   <meta name="theme-color" content="#fafafa">
-  <link rel="stylesheet" href="/main.css">
+
+  <%
+    var dateObj = new Date();
+    var m = dateObj.getUTCMonth() + 1;
+    var y = dateObj.getUTCFullYear();
+    var d = y + "-" + m;
+  %>
+
+  <link rel="stylesheet" href="/main.css?version=<%= d %>">
   <link rel="preload" href="/css/prism-atom-dark.css" as="style">
   <link rel="preload" href="/js/prism.js" as="script">
 
@@ -90,10 +98,12 @@
   <meta name="twitter:creator" content="@ladysign">
 
   <link rel="preconnect" href="platform.twitter.com">
+  <link rel="preconnect" href="syndication.twitter.com">
   <link rel="preconnect" href="youtube.com">
   <link rel="preconnect" href="www.google-analytics.com">
   <link rel="preconnect" href="platform.linkedin.com">
-  
+  <link rel="preconnect" href="github.githubassets.com">
+  <link rel="preconnect" href="gist.github.com">
 
   <link itemprop="mainEntityOfPage" href="https://www.leeboonstra.dev">
   <meta itemprop="author" content="Lee Boonstra">
