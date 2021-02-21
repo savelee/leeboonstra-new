@@ -1,32 +1,41 @@
 <section class="profile">
     <span class="headshot" >
-        <a href="/images/profile.jpg">
-            <img src="/images/profile_small.jpg" width="100" height="100" alt="Lee Boonstra" />
+        <a href="/images/large_profile.webp">
+            <picture>
+                <source srcset="/images/small_profile.webp">
+                <img class="card-img-top" src="/images/small_profile.jpg" alt="Lee Boonstra">
+            </picture>
         </a>
     </span>
 
-    <h2><a href="https://plus.google.com/117712452932146916020/" rel="author me" target="_blank">Lee Boonstra</a></h2>
+    <h2><a href="https://plus.google.com/117712452932146916020/" rel="author me noreferrer noopener" target="_blank">Lee Boonstra</a></h2>
     <div>
-    <p><a href="https://plus.google.com/117712452932146916020/" rel="author me" target="_blank">Lee Boonstra</a> 
+    <p><a href="https://plus.google.com/117712452932146916020/" rel="author me noreferrer noopener" target="_blank">Lee Boonstra</a> 
         is a conversational AI developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Contact Center AI & Speech technology. She is a public speaker and a published author.
     </p>
-    <img src="/images/googlelogo.jpg" style="display: block;" width="150" height="113" alt="Google" />
+    <picture>
+        <source srcset="/images/small_googlelogo.webp 150w">
+        <img class="card-img-top" src="/images/small_googlelogo.jpg" alt="Lee Boonstra" style="display: block;" width="150" height="113" alt="Google">
+    </picture>
     <p>
         Lee wrote a book for O’Reilly: Hands-on Sencha Touch 2 and is currently working on the Google Conversational AI book at Apress.
     </p>
-    <img src="/images/leeboonstra-book.jpg" width="76" height="100" style="display: block;" class="border mb-3" alt="My book" />
+    <picture>
+        <source srcset="/images/small_leeboonstra-book-large.webp 76w">
+        <img class="card-img-top" src="/images/small_leeboonstra-book-large.jpg" width="76" height="100" style="display: block;" class="border mb-3" alt="My book">
+    </picture>
     <p>
         Lee lives in Amsterdam, the Netherlands, and is a rainbow mommy.
     </p>
     </div>
     <ul class="social">
-        <li><a href="http://github.com/savelee/" rel="noreferrer" target="_blank" class="icon-github">
+        <li><a href="http://github.com/savelee/" rel="noreferrer noopener" target="_blank" class="icon-github">
             <svg class="icon icon-igithub"><use xlink:href="#icon-igithub"></use></svg><span class="name"> icon-igithub</span>
             <span>Lee's code on Github</span></a></li>
-        <li><a href="http://www.twitter.com/ladysign" rel="noreferrer" target="_blank" class="icon-twitter">
+        <li><a href="http://www.twitter.com/ladysign" rel="noreferrer noopener" target="_blank" class="icon-twitter">
             <svg class="icon icon-itwitter"><use xlink:href="#icon-itwitter"></use></svg><span class="name"> icon-itwitter</span>
             <span>Find Lee on Twitter</span></a></li>
-        <li><a href="http://nl.linkedin.com/in/leeboonstra/" rel="noreferrer" target="_blank" class="icon-linkedin">
+        <li><a href="http://nl.linkedin.com/in/leeboonstra/" rel="noreferrer noopener" target="_blank" class="icon-linkedin">
             <svg class="icon icon-ilinkedin"><use xlink:href="#icon-ilinkedin"></use></svg><span class="name"> icon-ilinkedin</span>
             <span>Find Lee on LinkedIn</span></a></li>
         <% if (config.rss){ %>

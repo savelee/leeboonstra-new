@@ -79,10 +79,10 @@ highlight:
 # Image generation
 responsive_images:
   priority: 1
-  pattern: 'images/*.+(png|webp|jpg|jpeg)'
+  pattern: 'images/**.+(png|webp|jpg)'
   sizes:
     small:
-      width: 270
+      width: 200
       quality: 50
     medium:
       width: 640

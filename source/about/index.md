@@ -20,6 +20,9 @@ She is also a published author. She wrote [a book for O’Reilly on mobile web a
 
 Besides writing and her work at Google, she is an active member of the [DDMA Voice Committee](https://ddma.nl/commissies/voice/) in the Netherlands. This task force aims to increase the belief in the ‘voice channel’ by showing brands and publishers its opportunities for marketing, sales, and service and, therefore, to give it a permanent place in the digital transformation.
 
+Web: https://www.leeboonstra.dev
+Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
+
 <div class="blockquote-wrapper">
   <div class="blockquote">
     <h1>
@@ -28,7 +31,7 @@ Besides writing and her work at Google, she is an active member of the [DDMA Voi
     <h4>&mdash;Lee Boonstra<br><em>Developer Advocate, Google</em></h4>
   </div>
 </div>
-<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
 

@@ -4,10 +4,10 @@
       <div class="shadow-sm">
         <% if (post.featured){ %>
           <picture>
-            <source srcset="/images/large_<%- post.featured %>" media="(min-width: 1000px)">
-            <source srcset="/images/medium_<%- post.featured %>" media="(min-width: 500px)">
-            <source srcset="/images/thumb_<%- post.featured %>" media="(max-width: 499px)">
-            <img class="card-img-top" src="/images/thumb_<%- post.featured %>" alt="<%-post.title-%>">
+            <source srcset="/images/large_<%- post.featured %>.webp" media="(min-width: 1000px)">
+            <source srcset="/images/medium_<%- post.featured %>.webp" media="(min-width: 500px)">
+            <source srcset="/images/thumb_<%- post.featured %>.webp" media="(max-width: 499px)">
+            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.png" alt="<%-post.title-%>">
           </picture>
         <% } %>
         <div class="card-header">
@@ -34,7 +34,10 @@
     <div class="card w-25 p-2 float-md-left">
       <div class="shadow-sm">
         <% if (post.featured){ %>
-          <img class="card-img-top" src="/images/thumb_<%- post.featured %>" alt="<%-post.title-%>">
+          <picture>
+            <source srcset="/images/thumb_<%- post.featured %>.webp">
+            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.png" alt="<%-post.title-%>">
+          </picture>
         <% } %>
         <div class="card-header">
           <span>by Lee Boonstra in </span><%- partial('post/category') %>
@@ -99,35 +102,58 @@
           </section>
         <% } %>
       </article>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "<%- post.permalink %>"
-          },
-          "headline": "<%- post.title %>",
-          "image": [
-            "<%- post.thumbnail %>"
-           ],
-           "datePublished": "<%- post.date.toISOString() %>",
-           "dateModified": "<%- post.date.toISOString() %>",
-          "author": {
-            "@type": "Person",
-            "name": "Lee Boonstra"
-          },
-           "publisher": {
-            "@type": "Organization",
-            "name": "Lee Boonstra",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "<%- config.url %>/images/screen.jpg"
+
+ 
+      <%
+      post.categories.forEach(function(item){
+        if (item.name == "Videos") {
+      %>
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": "<%= post.title %>",
+              "description": "Video: <%= post.description %>",
+              "thumbnailUrl": [
+                "https://img.youtube.com/vi/<%= post.youtube %>/default.jpg",
+                "https://img.youtube.com/vi/<%= post.youtube %>/0.jpg",
+                "https://img.youtube.com/vi/<%= post.youtube %>/sddefault.jpg",
+                "https://img.youtube.com/vi/<%= post.youtube %>/mqdefault.jpg",
+                "https://img.youtube.com/vi/<%= post.youtube %>/hqdefault.jpg",
+                "https://img.youtube.com/vi/<%= post.youtube %>/maxresdefault.jpg"
+               ],
+              "uploadDate": "<%- post.date.toISOString() %>",
+              "contentUrl": "https://www.youtube.com/watch?v=<%= post.youtube %>",
+              "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>"
             }
-          }
+            </script>
+        <%
         }
-        </script>
-  </div>
+        if (item.name == "Chatbots") {
+        %>
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "NewsArticle",
+              "headline": "<%- truncate(post.title, {length: 107, omission: '...'}) %>,
+              "image": [
+                "/images/thumb_<%- post.featured %>",
+                "/images/medium_<%- post.featured %>",
+                "/images/large_<%- post.featured %>"
+               ],
+               "datePublished": "<%- post.date.toISOString() %>",
+               "dateModified": "<%- post.updated.toISOString() %>"
+            }
+          </script>
+        <%
+        }
+        })
+        %>
+        
+
+
+      </div>
+    </div>
 </div>
  <% } %>
 

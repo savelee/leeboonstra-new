@@ -10,7 +10,7 @@ tags:
   - AI
 alias: /developer/agent-validation/
 date: 2020-03-30 14:41:36
-featured: 0_ajEHOpc-Kr03Zv1E.png
+featured: 0_ajEHOpc-Kr03Zv1E
 ---
 
 Dialogflow provides a validation feature. Agent validation results are available automatically whenever agent training is performed and completed. You can access the results of validation from either the Dialogflow Console or the API.

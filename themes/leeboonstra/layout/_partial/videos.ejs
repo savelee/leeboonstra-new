@@ -14,7 +14,7 @@
         <% site.categories.findOne({name: 'Videos'}).posts.sort('date', -1).forEach(function(post) { %>
           <div class="card w-25 p-2 float-md-left youtube">
             <div class="shadow-sm">
-              <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/0.jpg" alt="Watch on YouTube">
+              <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/mqdefault.jpg" alt="Watch on YouTube">
               <div class="card-body">
                 <p class="card-text"><%- truncate(post.title, {length: 65, omission: '...'}) %></p>
               </div>
@@ -27,25 +27,25 @@
             </div>
           </div>
 
-          <script type="application/ld+json">
-            {
-              "@context": "http://schema.org/",
-              "@type": "VideoObject",
-              "name": "<%= post.title %>",
-              "@id":  "https://www.youtube.com/embed/<%= page.youtube %>",
-              "contentUrl": "https://www.youtube.com/embed/<%= page.youtube %>",
-              "embedUrl": "https://www.youtube.com/embed/<%= page.youtube %>",
-              "datePublished": "<%- post.date.toISOString() %>",
-              "description" : "Video: <%- post.title %>",
-              "thumbnailURL" : "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
-              "thumbnail" : "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
-              "uploadDate" : "<%- post.updated.toISOString() %>",
-              "author": {
-                "@type": "Person",
-                "name": "Lee Boonstra"
-              }
-            }
-        </script>
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "<%= post.title %>",
+            "description": "Video: <%= post.title %>",
+            "thumbnailUrl": [
+              "https://img.youtube.com/vi/<%= page.youtube %>/default.jpg",
+              "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
+              "https://img.youtube.com/vi/<%= page.youtube %>/sddefault.jpg",
+              "https://img.youtube.com/vi/<%= page.youtube %>/mqdefault.jpg",
+              "https://img.youtube.com/vi/<%= page.youtube %>/hqdefault.jpg",
+              "https://img.youtube.com/vi/<%= page.youtube %>/maxresdefault.jpg"
+             ],
+            "uploadDate": "<%- post.date.toISOString() %>",
+            "contentUrl": "https://www.youtube.com/watch?v=<%= page.youtube %>",
+            "embedUrl": "https://www.youtube.com/embed/<%= page.youtube %>"
+          }
+          </script>
 
 
         <% }) %>

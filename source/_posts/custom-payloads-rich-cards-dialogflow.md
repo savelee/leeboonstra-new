@@ -14,7 +14,7 @@ tags:
   - Chatbots
 alias: /developer/build-chatbots-for-hangouts-with-dialogflow/
 date: 2020-02-21 14:41:36
-featured: 0_YaAyVGrY9A3jYPaW.png
+featured: 0_YaAyVGrY9A3jYPaW
 
 ---
 

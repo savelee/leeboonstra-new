@@ -270,12 +270,30 @@
 
     .photocol {
         display: block;
+
+        img {
+            width: 200px;
+        }
     }
 
     .blogcontent {
         max-width: 66.6667%;
         flex: 0 0 66.6667%
     }
+
+    .navbar {
+        width: 100%;
+        position: relative;
+      }
+      
+      .navbar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
 
  }
 @include media-breakpoint-up(lg) { 

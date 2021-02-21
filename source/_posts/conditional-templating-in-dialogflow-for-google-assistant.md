@@ -12,7 +12,7 @@ tags:
 categories:
   - Chatbots
 alias: /developer/conditional-templating-in-dialogflow-for-google-assistant/
-featured: 0_ajEHOpc-Kr03Zv1E.png
+featured: 0_ajEHOpc-Kr03Zv1E
 date: 2018-05-20 17:02:22
 
 ---

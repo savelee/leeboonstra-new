@@ -17,9 +17,9 @@ const navbar = document.querySelector('.navbar');
 navbartoggle.addEventListener('click', event => {
 	navbar.setAttribute('style', 'width: 300px');
 });
-navbar.addEventListener('click', event => {
-	navbar.setAttribute('style', 'width: 0');
-});
+//navbar.addEventListener('click', event => {
+//	navbar.setAttribute('style', 'width: 0');
+//});
 
 
 if ('serviceWorker' in navigator) {

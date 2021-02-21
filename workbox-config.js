@@ -1,7 +1,7 @@
 module.exports = {
   "globDirectory": "public/",
   "globPatterns": [
-    "**/*.{html,png,webp,js,css,ico,svg,ttf,woff,woff2,jpg,gif}",
+    "**/*.{html,webp,js,css,ico,ttf,woff,woff2}",
   ],
   "offlineGoogleAnalytics": "true",
   "swDest": "public/serviceworker.js"

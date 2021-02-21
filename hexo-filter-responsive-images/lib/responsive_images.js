@@ -4,6 +4,7 @@ var micromatch = require('micromatch')
 var streamToArray = require('stream-to-array')
 var streamToArrayAsync = Promise.promisify(streamToArray)
 var getNewPath = require('./new_path')
+var webp = require('./webp')
 var applySharpApiOptions = require('./sharp_options').applyOptions
 var getResizeOptions = require('./sharp_options').getResizeOptions
 var sharp = require('sharp')
@@ -36,6 +37,8 @@ function generateResponsiveImages() {
       return Promise.all(sizes.map(function (sizeSets) {
         return Promise.all(Object.keys(sizeSets).map(function (name) {
           var newPath = getNewPath(filePath, {prefix: name})
+          var webPPath = webp(filePath, {prefix: name})
+          route.set(webPPath, resizeImageFn(hexo, buffer, sizeSets[name]))
           return route.set(newPath, resizeImageFn(hexo, buffer, sizeSets[name]))
         }))
       }))
@@ -59,7 +62,7 @@ function resizeImageFn(hexo, buffer, config) {
     var img = sharp(buffer)
     var resizeOptions = getResizeOptions(hexo, config)
 
-    return applySharpApiOptions(img, config).resize(config.width, config.height, resizeOptions).webp().toBuffer()
+    return applySharpApiOptions(img, config).resize(config.width, config.height, resizeOptions).toBuffer()
   }
 }
 

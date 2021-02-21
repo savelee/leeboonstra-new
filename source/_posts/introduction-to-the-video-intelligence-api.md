@@ -12,6 +12,7 @@ categories:
   - Machine Learning
 alias: /developer/introduction-to-the-video-intelligence-api/
 date: 2017-04-10 15:59:18
+featured: Screen-Shot-2017-04-10-at-4.57.56-PM
 ---
 
 ## Search and discover your media content with powerful Cloud Video Intelligence API 
