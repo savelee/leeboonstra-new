@@ -85,10 +85,10 @@ responsive_images:
       width: 200
       quality: 50
     medium:
-      width: 640
-      quality: 60
+      width: 500
+      quality: 65
     large:
-      width: 750
+      width: 700
       quality: 75
     thumb:
       width: 270
