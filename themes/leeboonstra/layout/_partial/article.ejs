@@ -103,7 +103,23 @@
         <% } %>
       </article>
 
- 
+      <script type="application/ld+json">
+        {
+         "@context": "https://schema.org/",
+         "@type": "WebPage",
+         "name": "<%= post.title %>",
+         "speakable":
+         {
+          "@type": "SpeakableSpecification",
+          "xpath": [
+            "/html/head/title",
+            "/html/head/meta[@name='description']/@content"
+            ]
+          },
+         "url": "<%- url_for(post.path) %>"
+         }
+      </script>
+  
       <%
       post.categories.forEach(function(item){
         if (item.name == "Videos") {
@@ -145,13 +161,30 @@
                "dateModified": "<%- post.updated.toISOString() %>"
             }
           </script>
+
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Chatbots",
+                "item": "https://www.leeboonstra.dev/categories/Chatbots/"
+              },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<%= post.title %>",
+                "item": "<%- url_for(post.path) %>"
+              }]
+            }
+          </script>
+
         <%
         }
         })
         %>
         
-
-
       </div>
     </div>
 </div>

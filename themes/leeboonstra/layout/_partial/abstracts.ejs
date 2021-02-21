@@ -20,20 +20,20 @@
         "genre": "technology", 
         "datePublished": "<%- post.date.toISOString() %>",
         "dateCreated": "<%- post.date.toISOString()  %>",
-        "dateModified": "<%- post.date.toISOString() %>",
+        "dateModified": "<%- post.updated.toISOString() %>",
         "publisher": {
           "@type": "Organization",
           "name": "Ladysign",
           "logo": "<%- config.url %>/images/screen.png"
         },
-        "description": "Lee Boonstra's blog. <%- post.description %>",
+        "description": "<%- post.description %>",
         "mainEntityOfPage": "<%- post.permalink %>",
         "image": "<%- config.url %>/images/screen.png",
-        "articleBody": "Lee Boonstra's blog. <%- post.description %>",
+        "articleBody": "<%- post.description %>",
         "author": {
           "@type": "Person",
           "name": "Lee Boonstra",
-          "url": "http://www.leeboonstra.dev"
+          "url": "https://www.leeboonstra.dev/abstracts/"
         }
         }
         </script>

@@ -17,6 +17,11 @@
       "type": 301
     },
     {
+      "source": "/Chatbots/",
+      "destination": "/categories/Chatbots/",
+      "type": 301
+    },
+    {
       "source": "/speaker/",
       "destination": "/speaking/",
       "type": 301

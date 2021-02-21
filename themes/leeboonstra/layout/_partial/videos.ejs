@@ -42,7 +42,7 @@
               "https://img.youtube.com/vi/<%= page.youtube %>/maxresdefault.jpg"
              ],
             "uploadDate": "<%- post.date.toISOString() %>",
-            "contentUrl": "https://www.youtube.com/watch?v=<%= page.youtube %>",
+            "contentUrl": "<%- url_for(post.path) %>",
             "embedUrl": "https://www.youtube.com/embed/<%= page.youtube %>"
           }
           </script>
