@@ -21,6 +21,7 @@ script:
   - hexo deploy
   - cd themes/leeboonstra/design
   - npm install
+  - cd ../../../
   - workbox generateSW workbox-config.js
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN2
