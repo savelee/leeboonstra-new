@@ -21,7 +21,7 @@ Google Cloud Video Intelligence API makes videos searchable, and discoverable, b
 
 <!--more-->
 
-1. Open: [https://cloud.google.com/video-intelligence/#demo](https://cloud.google.com/video-intelligence/#demo) 
+1. Open: [https://cloud.google.com/video-intelligence/#demo](https://cloud.google.com/video-intelligence/#demo?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
 2. Select a sample video from the list, for example: **Volleyball Court**, (which is a video made at the Google Mountain View office). Notice the labels. 
 3. Select another sample video from the list: **Google Work**.
 4. Click on the **Shots** tab. Notice all the keywords detected from the video, which are being renewed per video shot! 
@@ -32,7 +32,7 @@ Google Cloud Video Intelligence API makes videos searchable, and discoverable, b
 
 Machine Learning for videos, can be super interesting, in case you want to implement it within your own systems. Let’s say you host a lot of videos on your website. Instead of manually writing meta per video; you could create an ETL job, (for example through Cloud Functions), which listens to the upload event of Google Cloud Storage, runs the Video Intelligence API, and writes the metadata in a database. This looks like a great use case! Let’s see if we can build this! ### Getting Started To get started, open the GCP console, and create a new project. 
 
-Go to: [https://console.cloud.google.com](https://console.cloud.google.com) and click: [Create new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects), and enter an easy to remember project name, which will be used as the *project id*. 
+Go to: [https://console.cloud.google.com](https://console.cloud.google.com?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) and click: [Create new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects), and enter an easy to remember project name, which will be used as the *project id*. 
 
 You will have to remember this. The project id will have to be unique. For this workshop, it might be a good practice to prefix it with your **[firstname][lastname]** 
 

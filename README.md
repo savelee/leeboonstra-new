@@ -113,3 +113,6 @@ Create in the project settings page the following 2 environment variables:
 
 TOOD problem with travis, when i change the firebase.json public path to root
 travis will deploy. but than in firebase i cant find the files.
+
+## UTM
+?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_
