@@ -158,7 +158,16 @@
                 "/images/large_<%- post.featured %>"
                ],
                "datePublished": "<%- post.date.toISOString() %>",
-               "dateModified": "<%- post.updated.toISOString() %>"
+               "dateModified": "<%- post.updated.toISOString() %>",
+               "abstract": "<%= post.description %>",
+               "speakable":
+               {
+                "@type": "SpeakableSpecification",
+                "xpath": [
+                  "/html/head/title",
+                  "/html/head/meta[@name='description']/@content"
+                  ]
+                }
             }
           </script>
 
