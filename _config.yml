@@ -4,9 +4,9 @@
 
 # Site
 title: Dialogflow & Conversational AI blog by Google Developer Advocate Lee Boonstra
-subtitle: Hi my name is Lee. I'm a Developer Advocate, a writer, an engineer, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
-description: Blog of Google Developer Advocate & Applied AI Engineer Lee Boonstra. Writes about Dialogflow, Chatbots, Google Cloud and AI in Contact Centers.
-keywords: Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Dialogflow, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS
+subtitle: Hi my name is Lee. I'm a senior Developer Advocate, a writer, an engineer, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
+description: Conversational AI Blog of Google Developer Advocate & Applied AI Engineer Lee Boonstra. Writes about Dialogflow, Chatbots, NLP and AI in Contact Centers.
+keywords: Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding
 author: Lee Boonstra
 language: en
 timezone: Europe/Amsterdam

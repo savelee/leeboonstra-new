@@ -1,6 +1,6 @@
 ---
-title: Custom greeting Google Assistant app with Dialogflow and Actions on Google
-description: Create custom dynamic welcome messages for the Google Assistant.
+title: Build a dynamic welcome message with Dialogflow webhook fulfillment and Actions on Google.
+description: Create a dynamic welcome messages for the Google Assistant with Dialogflow
 tags:
   - Custom Welcome Intent
   - Dialogflow
@@ -8,6 +8,9 @@ tags:
   - Chatbots
   - Actions on Google
   - Greeting
+  - Custom Payload
+  - Fulfillment
+  - Webhook
 categories:
   - Chatbots
 date: 2018-05-20 08:20:08

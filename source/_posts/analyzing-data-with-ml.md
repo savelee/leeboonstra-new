@@ -193,7 +193,7 @@ You might have noticed, that when you start running nodemon, and you close the V
 
 ## Conclusion
 
-By now, you have learned how to work with various Google Cloud services. We have been looking into: **Compute Engine** and **Cloud Launcher** to spin off a VM in the cloud, **Machine Learning APIs** like the **Natural Language API** and **Translation API** to understand the data, **BigQuery** to analyze the data and **Data Studio** to visualize the data in nice charts. Did I predict the Dutch elections well? Well, in some extend. The top 2 most positively spoken parties on Twitter, got the 2nd and 3rd place in the final results. So that was as expected. The PvdA didn’t do well at all, and the VVD got the first place in the elections, with the most votes. If I do random checks on the collected data, I can see that the sentiment detection has been calculated correctly. There is just no real direct relation between popularity on social media vs. the voting process. But mind you every person can only vote once, but can post unlimited positive or negative tweets. All my code will be in Github [https://github.com/savelee/gcloud-bq-election-demo]. Feel free to use my code, to run a similar case. I will put the instructions on how to setup, in the readme file. In case you are new to Google Cloud platform. You can create [a free trial account](https://cloud.google.com/free-trial/), which includes $300 dollars that can be used to spend on cloud services which expire after 12 months. That should be enough money to try out this demo.
+By now, you have learned how to work with various Google Cloud services. We have been looking into: **Compute Engine** and **Cloud Launcher** to spin off a VM in the cloud, **Machine Learning APIs** like the **Natural Language API** and **Translation API** to understand the data, **BigQuery** to analyze the data and **Data Studio** to visualize the data in nice charts. Did I predict the Dutch elections well? Well, in some extend. The top 2 most positively spoken parties on Twitter, got the 2nd and 3rd place in the final results. So that was as expected. The PvdA didn’t do well at all, and the VVD got the first place in the elections, with the most votes. If I do random checks on the collected data, I can see that the sentiment detection has been calculated correctly. There is just no real direct relation between popularity on social media vs. the voting process. But mind you every person can only vote once, but can post unlimited positive or negative tweets. All my code will be in Github [https://github.com/savelee/gcloud-bq-election-demo]. Feel free to use my code, to run a similar case. I will put the instructions on how to setup, in the readme file. In case you are new to Google Cloud platform. You can create [a free trial account](https://cloud.google.com/free-trial/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_), which includes $300 dollars that can be used to spend on cloud services which expire after 12 months. That should be enough money to try out this demo.
 
 ### The costs
 
@@ -229,19 +229,19 @@ I left these tweets in my score calculation, assuming that people will use sarca
 
 ## Handy Links 
 
-* [Create a free GCP trial account]([https://cloud.google.com/free-trial/) 
+* [Create a free GCP trial account](https://cloud.google.com/free-trial/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
 * [Node JS](https://nodejs.org/en/) 
 * [Express](http://expressjs.com/) 
 * [Twitter Streaming APIs](https://dev.twitter.com/streaming/overview) 
 * [Translate API](https://cloud.google.com/translate/) 
-* [Translate API pricing](https://cloud.google.com/translate/pricing) 
-* [Natural Language API](https://cloud.google.com/natural-language/) 
-* [Natural Language Pricing](https://cloud.google.com/natural-language/pricing) 
-* [BigQuery](https://cloud.google.com/bigquery/) 
-* [BigQuery pricing]([https://cloud.google.com/bigquery/pricing]) 
-* [Data Studio]([https://www.google.com/analytics/data-studio/]) 
-* [Run Google Data Studio](https://datastudio.google.com) 
-* [Cloud Launcher](https://cloud.google.com/launcher/) 
-* [Cloud Storage](https://cloud.google.com/storage/) 
-* [GCP Pricing calculators](https://cloud.google.com/pricing/calculators) 
-* [Comparing tweets about Trump & Hillary with natural language processing.](https://medium.com/google-cloud/comparing-tweets-about-trump-hillary-with-natural-language-processing-a0064e949666)
+* [Translate API pricing](https://cloud.google.com/translate/pricing?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Natural Language API](https://cloud.google.com/natural-language/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Natural Language Pricing](https://cloud.google.com/natural-language/pricing?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [BigQuery](https://cloud.google.com/bigquery/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [BigQuery pricing](https://cloud.google.com/bigquery/pricing?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Data Studio](https://www.google.com/analytics/data-studio/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Run Google Data Studio](https://datastudio.google.com?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Cloud Launcher](https://cloud.google.com/launcher/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Cloud Storage](https://cloud.google.com/storage/?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [GCP Pricing calculators](https://cloud.google.com/pricing/calculators?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_) 
+* [Comparing tweets about Trump & Hillary with natural language processing.](https://medium.com/google-cloud/comparing-tweets-about-trump-hillary-with-natural-language-processing-a0064e949666?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_)

@@ -1,8 +1,8 @@
 ---
-title: How to build chatbots for Hangouts with Dialogflow by using custom payloads
+title: How to build chatbots for Hangouts / Google Chat with Dialogflow by using custom payloads
   and cards.
-description:   The Dialogflow Hangouts integration lets you create bots you can include in
-  one-on-one chats as well as chat rooms. From the Integrations…
+description: The Dialogflow Hangouts Google Chat integration lets you create bots you can include in
+  one-on-one chats as well as chat rooms. 
 categories:
   - Chatbots
 tags:
@@ -12,6 +12,7 @@ tags:
   - Firebase
   - Hangouts Chat
   - Chatbots
+  - Custom Payloads
 alias: /developer/build-chatbots-for-hangouts-with-dialogflow/
 date: 2020-02-21 14:41:36
 featured: 0_YaAyVGrY9A3jYPaW

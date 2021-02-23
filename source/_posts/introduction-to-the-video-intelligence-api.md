@@ -12,7 +12,7 @@ categories:
   - Machine Learning
 alias: /developer/introduction-to-the-video-intelligence-api/
 date: 2017-04-10 15:59:18
-featured: Screen-Shot-2017-04-10-at-4.57.56-PM
+featured: bucket-permissions
 ---
 
 ## Search and discover your media content with powerful Cloud Video Intelligence API 
@@ -44,7 +44,7 @@ Click on the menu button. **Cloud Functions > Enable API**.
 
 Click on the menu button. **API Manager**. Search for: **Google Cloud Video Intelligence**. **API > Enable** Click **Credentials > Create Credentials > Service Account** Choose **New Service Account** Service Account Name: **demoapp** Role: **Project Owner** Choose **JSON** Click **Create** Click **Manage Service Accounts** Click the menu button (the 3 vertical dots), and select **Create Key** This will download the key on your local machine. Create a folder on your machine called: **cloudfunctions-videoapi**, and move the file over. ### Create storage buckets When you write the JavaScript code for the cloud function, you will need to upload it somewhere. Under the hood, GCP will create a container with a Node environment for you, so you can execute your function. You can upload function code, in a bucket of the Google Storage. Let’s create a bucket which contains function code. You can create the bucket via the Cloud Console (menu > **Storage > Create Bucket**), or from the command-line, on your local machine (if you have the gcloud sdk installed), or from your online terminal in the Cloud Console: `gsutil mb -p [PROJECT_ID] gs://[BUCKET_NAME]` *Create two buckets, with the name of your [project id] + **-functions-src**, and one [project-id]**-videos**. (This way, your bucket will be unique.)* After you’ve created the videos bucket, you will need to make this bucket public, so your video’s get gs:// public urls. You can do this by clicking on the menu button of the bucket (the button with the 3 vertical dots). Click **Add Item**: *User - allAuthenticatedUsers - Reader* Click **Save**. 
 
-![Screenshot](/images/Screen-Shot-2017-04-10-at-4.57.56-PM.png) 
+![Screenshot](/images/bucket-permissions.png) 
 
 ### Client Library 
 

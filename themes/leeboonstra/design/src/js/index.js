@@ -30,4 +30,4 @@ if ('serviceWorker' in navigator) {
 		console.log('My SW registration failed: ', registrationError);
 	  });
 	});
-  }
+}

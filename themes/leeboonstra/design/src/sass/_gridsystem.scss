@@ -9,6 +9,8 @@
         flex-grow: 0;
     }
 
+    .homecard { display: none; }
+    
     .searchbar {
         display: none !important;
     }
@@ -186,6 +188,8 @@
         flex-basis: 0;
         flex-grow: 1;
     }
+
+    .homecard { display: block; }
 
     .card.w-75{
         width: 75% !important;

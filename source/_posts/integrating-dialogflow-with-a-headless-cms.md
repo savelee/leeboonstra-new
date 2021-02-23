@@ -113,7 +113,7 @@ cd chatbotcms
 sanity start
 ```
 
-5\. Navigate to [http://localhost:3333](http://localhost:3333)
+5\. Navigate to localhost:3333
 
 Click on **Intent > +**
 

@@ -303,6 +303,7 @@ header {
 .profile {
 
     font-size: 0.9rem;
+    text-align: justify;
 
     h2 {
         font-size: 1.4rem;
@@ -482,4 +483,42 @@ footer.row {
 
  .relatedPosts li a {
     text-transform: capitalize;
+ }
+
+ .homecard {
+     h1, h2 {
+         font-size: 70%;
+     }
+     p {
+         font-size: 80%;
+         color: #181818;
+     }
+
+    blockquote {
+        text-align: center;
+    }
+
+    blockquote p {
+        padding: 15px 50px;
+        background: #eee;
+        border-radius: 5px;
+    }
+    
+    blockquote p::before {
+        content: '\201C';
+    }
+    
+    blockquote p::after {
+        content: '\201D';
+    }
+
+    figcaption {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    cite {
+        font-style: italic;
+    }
+
  }

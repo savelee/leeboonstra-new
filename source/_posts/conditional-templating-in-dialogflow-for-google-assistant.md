@@ -1,5 +1,6 @@
 ---
-title: Conditional Templating in Dialogflow for Google Assistant
+title: Build a conditional template in Dialogflow for Google Assistant with custom payloads
+description: With the use of custom payloads, webhook fulfillments and templating system, you can use conditionals from the Dialogflow console.
 tags:
   - Actions on Google
   - Conditionals
@@ -9,6 +10,7 @@ tags:
   - Templating
   - Chatbots
   - Dialogflow Enterprise
+  - Custom Payloads
 categories:
   - Chatbots
 alias: /developer/conditional-templating-in-dialogflow-for-google-assistant/
