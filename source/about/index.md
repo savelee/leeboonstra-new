@@ -28,7 +28,7 @@ Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
     <h1>
      I love <span style="color:#e36803">creating</span> instead of just consuming technology.
      </h1>
-    <figurecaption>&mdash;Lee Boonstra<br><em>Developer Advocate, Google</em></h4></figurecaption>
+    <figcaption>&mdash;Lee Boonstra<br><em>Developer Advocate, Google</em></h4></figcaption>
   </blockquote>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

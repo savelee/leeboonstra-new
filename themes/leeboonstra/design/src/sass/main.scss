@@ -463,7 +463,8 @@ footer.row {
  }
  
  /* Blockquote subheader */
- .blockquote h4 {
+ .blockquote h4,
+ .Biography .blockquote figcaption {
      position: relative;
      color: $primary;
      font-size: 1.3rem;
@@ -515,10 +516,14 @@ footer.row {
     figcaption {
         text-align: right;
         font-size: 12px;
+        cite, em {
+            font-style: italic;
+        }
     }
 
-    cite {
-        font-style: italic;
+    figure {
+        border: none;
     }
+    border: none !important;
 
  }

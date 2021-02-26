@@ -28,13 +28,15 @@ According to Gartner, this is the year that 50% of the enterprises will spend mo
 Note the next figure you will see how popular the bot builder platform Dialogflow is. It has a user base of more than 1.6M, stated at the beginning of 2021. Dialogflow was previously called API.AI; Google acquired API.AI in September 2016 and renamed it to Dialogflow, making it part of Google Cloud. Dialogflow became so popular because of the outstanding underlying NLU machine learning models (like Natural Language Understanding, intent classification, and entity extraction) similar to the Google Assistant.
 
 
-![Dialogflow consumption overtime](dialogfloq-usage.png "Dialogflow consumption overtime")
+![Dialogflow consumption overtime](dialogflow-usage.png "Dialogflow consumption over time")
 
 
-<figure>
+<figure class="homecard">
 <blockquote cite="https://www.gartner.com/smarterwithgartner/gartner-top-strategic-predictions-for-2018-and-beyond/#:~:text=By%202021%2C%20more%20than%2050,Individual%20apps%20are%20out.&text=In%20the%20%E2%80%9Cpost%2Dapp%20era,the%20way%20apps%20are%20built.">
+<p>
 50% of enterprises will spend more on bots than traditional mobile app development by 2021
-<figurecaption>—<cite>Gartner</cite></figurecaption>
+</p>
+<figcaption>—<cite>Gartner</cite></figcaption>
 </blockquote>
 </figure>
 
@@ -64,11 +66,14 @@ As we all know, building conversational UIs is an ongoing process. When you capt
 
 So **conversation complexity** is one observation. The other perception I made is that **businesses want to be where their customers are**. And thus, their chatbots will need to connect to more channels to create **omnichannel** experiences. Instead of building a single chatbot, companies now want to develop complete conversational platforms fed by a data lake and automate processes with RPA. Think of complex use cases such as replacing your customer care or HR department by robots. Having overloaded call centers and employees burned out by undervalued monotonous tasks, automation through chatbots and virtual (voice) agents can trim huge business costs. Through conversational AI in contact centers, businesses can reduce call time, on-hold time and offer 24/7 availability while improving our processes by capturing analytics.
 
-<blockquote cite="https://www.juniperresearch.com/new-trending/analystxpress/july-2017/chatbot-conversations-to-deliver-8bn-cost-saving">
+<figure class="homecard">
+<blockquote cite="https://www.juniperresearch.com/new-trending/analystxpress/july-2017/chatbot-conversations-to-deliver-8bn-cost-saving"><p>
 Chatbots are expected to help cut business costs by more than 
 $8 billion per year by the year 2022
-<figurecaption>—<cite>Juniper Research</cite></figurecaption>
+</p>
+<figcaption>—<cite>Juniper Research</cite></figcaption>
 </blockquote>
+</figure>
 
 
 ## Were Dialogflow CX fits in
@@ -131,11 +136,15 @@ Besides, each new user will receive a **$600 credit for a free** trial of Dialog
 
 Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. 
 
-**When to use Dialogflow CX vs. Dialogflow Essentials? **
+**When to use Dialogflow CX vs. Dialogflow Essentials?**
 
 When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience when data regionalization is crucial for you (because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use. When you are a freelancer, start-up, or small business, when you are building a single chat or voice bot, for example, for the Google Assistant or building an FAQ bot, Dialogflow Essentials might be a better choice for you.
 
-<div class="card w-100 youtubeblock" >
+<p>
+<a target="_blank" rel="noreferrer noopener" href="https://dialogflow.cloud.google.com/cx/projects?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_">Try out the new Dialogflow CX Console</a>
+</p>
+
+<div class="card w-100 youtubeblock" style="margin-top: 20px;">
     <div class="shadow-lg">
     <div class="embed-responsive embed-responsive-16by9">
         <iframe id="youtubeFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/E96x7t4PmOw" allowfullscreen></iframe>
