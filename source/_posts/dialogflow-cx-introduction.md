@@ -1,9 +1,29 @@
+---
+title: An introduction to Dialogflow CX
+description: Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience when data regionalization is crucial for you (because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use.
+tags:
+  - Dialogflow CX
+  - Dialogflow CX for beginners
+  - Dialogflow CX vs. Dialogflow Essentials
+  - Dialogflow Customer Experience
+  - Dialogflow CX pricing
+  - Bot builder
+  - Chatbot development suite
+categories:
+  - Chatbots
+featured: dialogflow-cx-flows
+date: 2021-02-26 10:00:00
+
+---
+
 # Introducing Dialogflow CX
 
 
 ## The popularity of Conversational AI
 
 According to Gartner, this is the year that 50% of the enterprises will spend more money on bot development than traditional mobile app development! At Google, we have made a similar observation. Through Google Cloud, we work a lot with enterprise customers, we get lots of questions about our conversational AI tools for building chatbots and voice bots, and we help companies build these. This includes bots for the apparent channels such as websites, iOS, Android mobile apps, and social media like Facebook Messenger, Twitter, Slack, Whatsapp, Line etc. but also: building virtual agents in contact centers!
+
+<!--more-->
 
 Note the next figure you will see how popular the bot builder platform Dialogflow is. It has a user base of more than 1.6M, stated at the beginning of 2021. Dialogflow was previously called API.AI; Google acquired API.AI in September 2016 and renamed it to Dialogflow, making it part of Google Cloud. Dialogflow became so popular because of the outstanding underlying NLU machine learning models (like Natural Language Understanding, intent classification, and entity extraction) similar to the Google Assistant.
 
