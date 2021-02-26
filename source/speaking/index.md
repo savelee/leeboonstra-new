@@ -20,6 +20,41 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 2021
 ----
 
+* ### Google I/O 2021
+
+ TBA | **Online`** | [Website](https://events.google.com/io/) | Build a voice bot for Android with Dialogflow and Flutter
+
+* ### CodeMotion Tech Conference (English Edition) 2021
+
+ 18 May | **Online`** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
+
+<script type='application/ld+json'> 
+{
+"@context": "http://www.schema.org",
+"@type": "Event",
+"name": "CodeMotion Tech Conference 2021",
+"url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
+"performer": "Lee Boonstra",
+"description":"CodeMotion Tech Conference & Workshops",
+"startDate": "2021-05-18T15:20+01:00",
+"endDate": "2021-05-20T17:00+01:00",
+"image": "https://www.leeboonstra.com/images/profile.jpg",
+"offers": {
+    "@type": "Offer",
+    "description": "Register for free",
+    "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
+    "price": "60.00",
+    "priceCurrency": "EUR",
+    "availability": "http://schema.org/OnlineOnly",
+    "validFrom": "2021-02-01T09:30+01:00"
+  },
+"location" : 
+{"@type" : "VirtualLocation",
+"url" : "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring"}}
+</script>
+
+
+
 * ### DDMA Voice - Digital talk about Chat & Voice Analytics
 
  25 Mar | **Online`** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
