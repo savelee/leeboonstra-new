@@ -12,9 +12,9 @@ Note the next figure you will see how popular the bot builder platform Dialogflo
 
 
 <figure>
-<blockquote>
+<blockquote cite="https://www.gartner.com/smarterwithgartner/gartner-top-strategic-predictions-for-2018-and-beyond/#:~:text=By%202021%2C%20more%20than%2050,Individual%20apps%20are%20out.&text=In%20the%20%E2%80%9Cpost%2Dapp%20era,the%20way%20apps%20are%20built.">
 50% of enterprises will spend more on bots than traditional mobile app development by 2021
-<figurecaption>Gartner</figurecaption>
+<figurecaption>—<cite>Gartner</cite></figurecaption>
 </blockquote>
 </figure>
 
@@ -44,10 +44,10 @@ As we all know, building conversational UIs is an ongoing process. When you capt
 
 So **conversation complexity** is one observation. The other perception I made is that **businesses want to be where their customers are**. And thus, their chatbots will need to connect to more channels to create **omnichannel** experiences. Instead of building a single chatbot, companies now want to develop complete conversational platforms fed by a data lake and automate processes with RPA. Think of complex use cases such as replacing your customer care or HR department by robots. Having overloaded call centers and employees burned out by undervalued monotonous tasks, automation through chatbots and virtual (voice) agents can trim huge business costs. Through conversational AI in contact centers, businesses can reduce call time, on-hold time and offer 24/7 availability while improving our processes by capturing analytics.
 
-<blockquote>
+<blockquote cite="https://www.juniperresearch.com/new-trending/analystxpress/july-2017/chatbot-conversations-to-deliver-8bn-cost-saving">
 Chatbots are expected to help cut business costs by more than 
 $8 billion per year by the year 2022
-<figurecaption>Juniper Research</figurecaption>
+<figurecaption>—<cite>Juniper Research</cite></figurecaption>
 </blockquote>
 
 
