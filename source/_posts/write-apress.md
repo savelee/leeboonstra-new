@@ -7,11 +7,11 @@ date: 2021-02-26 11:45:17
 hidden: true
 ---
 
-# The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platform
-
-## Build Advanced Enterprise Chatbots, Voice, and Telephony Agents on Google Cloud Platform
+Build Advanced Enterprise Chatbots, Voice, and Telephony Agents on Google Cloud Platform
 
 *Written by an expert Google developer advocate who works closely with the Dialogflow product team.*
+
+<!-- more --> 
 
 Build enterprise chatbots for web, social media, voice assistants, IoT, and telephony contact centers with Google's Dialogflow conversational AI technology. This book will explain how to get started with conversational AI using Google and how enterprise users can use Dialogflow as part of Google Cloud Platform. It will cover the core concepts such as Dialogflow essentials, deploying chatbots on web and social media channels, and building voice agents including advanced tips and tricks such as intents, entities, and working with context. 
 
@@ -22,7 +22,7 @@ After reading this book, you will understand how to build cross-channel enterpri
 <a href="
 https://www.apress.com/gp/book/9781484270134">Find on Apress. ISBN 978-1-4842-7014-1 & ISBN 978-1-4842-7013-4</a>
 
-<!-- more --> 
+
 
 
 ​​What You Will Learn

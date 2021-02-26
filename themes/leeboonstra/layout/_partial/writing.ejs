@@ -4,8 +4,8 @@
         <h1><%-page.title %></h1>
         <p>Beside writing this blog, I’ve also published my work elsewhere.</p>
     
-        <% site.categories.findOne({name: 'Writing'}).posts.forEach(function(post) { %>
-        <div class="card w-25 p-2 float-md-left" >
+        <% site.categories.findOne({name: 'Writing'}).posts.sort('date', -1).forEach(function(post) { %>
+        <div class="card w-100 p-2 float-md-left" >
           <div class="shadow-sm">
             <div class="card-body">
               
