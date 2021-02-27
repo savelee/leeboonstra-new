@@ -16,11 +16,6 @@ date: 2021-02-26 10:00:00
 
 ---
 
-# Introducing Dialogflow CX
-
-
-## The popularity of Conversational AI
-
 According to Gartner, this is the year that 50% of the enterprises will spend more money on bot development than traditional mobile app development! At Google, we have made a similar observation. Through Google Cloud, we work a lot with enterprise customers, we get lots of questions about our conversational AI tools for building chatbots and voice bots, and we help companies build these. This includes bots for the apparent channels such as websites, iOS, Android mobile apps, and social media like Facebook Messenger, Twitter, Slack, Whatsapp, Line etc. but also: building virtual agents in contact centers!
 
 <!--more-->
@@ -86,7 +81,7 @@ The conversation is long-running, the dialogue is large and can have many turn-t
 
 ![Advanced dialogues](advanced-dialogues.png "Advanced dialogues contain reusable intents and flows, and can branch of in many outcomes")
 
-Creating a virtual (voice) agent for a contact center or creating an automated bot platform is far more complicated where it reaches the borders of Dialogflow Essentials. Sure, when you have a large team of developers, they can tailor-made a solution on top of Dialogflow ES, as enterprises have been doing so in the past. But that means that you have to develop and maintain additional software rather than focussing on designing conversations. 
+Creating a virtual (voice) agent for a contact center or creating an automated bot platform is far more complicated where it reaches the borders of Dialogflow Essentials. Sure, when you have a large team of developers, they can tailor-made a solution on top of Dialogflow ES, as users have been doing so in the past. But that means that you have to develop and maintain additional software rather than focussing on designing conversations. 
 
 Until now... ...with the release of Dialogflow CX.
 
@@ -96,7 +91,6 @@ Until now... ...with the release of Dialogflow CX.
 Dialogflow CX empowers your team to accelerate creating enterprise-level conversational experiences through visual bot builders, reusable intents, and the ability to address multi-turn conversations.
 
 It allows you to quickly create agents with:
-
 
 *   Large and complex flows. Think of giant agent implementations with hundreds or thousands of intents.
 *   More than three turn-taking turns (keeping context) and conversations that branch off from each other in various outcomes.
@@ -127,7 +121,7 @@ A request is defined as any call to the Dialogflow service, whether direct with 
 
 With Dialogflow CX, you **pay per session**. A session is a conversation between an end-user and a Dialogflow agent. A session remains active, and its data is stored for 30 minutes after the last request is sent for the session. A session can be either a chat session or a voice session. 
 
-The pricing seems steep, but if you consider that you don't need a team of developers solving complex problems in fulfillment webhooks to facilitate large enterprise-scale bots plus, you don't need to pay extra for all additional features; Enterprise customers actually might be better off by using Dialogflow CX.
+The pricing seems expensive, but if you consider that you don't need a team of developers solving complex problems in fulfillment webhooks to facilitate large enterprise-scale bots plus, you don't need to pay extra for all additional features; Enterprise customers actually might be better off by using Dialogflow CX.
 
 Besides, each new user will receive a **$600 credit for a free** trial of Dialogflow CX. This credit is automatically activated upon using Dialogflow CX for the first time and expires after 12 months. This is a Dialogflow-specific extension of the Google Cloud [free trial](https://cloud.google.com/free/docs/gcp-free-tier#free-trial?utm\_source=blog&utm\_medium=partner&utm\_campaign=CDR\_lee\_aiml\_leedialogflowblog\_personal\_); this should be more than enough to play around with the tool and get started!
 
@@ -136,9 +130,11 @@ Besides, each new user will receive a **$600 credit for a free** trial of Dialog
 
 Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. 
 
-**When to use Dialogflow CX vs. Dialogflow Essentials?**
+**When to use Dialogflow Essentials vs. Dialogflow CX?**
 
-When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience when data regionalization is crucial for you (because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use. When you are a freelancer, start-up, or small business, when you are building a single chat or voice bot, for example, for the Google Assistant or building an FAQ bot, Dialogflow Essentials might be a better choice for you.
+When you are a freelancer, start-up, or small business, when you are building a single chat or voice bot, for example, for the Google Assistant or building an FAQ bot, Dialogflow Essentials might be a better choice for you, because of it's simplicity.
+
+When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience, when data regionalization is crucial for you (for example because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use.
 
 <p>
 <a target="_blank" rel="noreferrer noopener" href="https://dialogflow.cloud.google.com/cx/projects?utm_source=blog&utm_medium=partner&utm_campaign=CDR_lee_aiml_leedialogflowblog_personal_">Try out the new Dialogflow CX Console</a>
@@ -157,8 +153,8 @@ When you are an enterprise customer building a large & complex chatbot platform 
     {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "<%= post.title %>",
-    "description": "Video: <%= post.title %>",
+    "name": "An introduction to Dialogflow CX",
+    "description": "Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience when data regionalization is crucial for you (because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use.",
     "thumbnailUrl": [
         "https://img.youtube.com/vi/E96x7t4PmOw/default.jpg",
         "https://img.youtube.com/vi/E96x7t4PmOw/0.jpg",
@@ -167,8 +163,8 @@ When you are an enterprise customer building a large & complex chatbot platform 
         "https://img.youtube.com/vi/E96x7t4PmOw/hqdefault.jpg",
         "https://img.youtube.com/vi/E96x7t4PmOw/maxresdefault.jpg"
         ],
-    "uploadDate": "<%- post.date.toISOString() %>",
-    "contentUrl": "<%- url_for(post.path) %>",
-    "embedUrl": "https://www.youtube.com/embed/E96x7t4PmOw"
+    "uploadDate": "2020-11-10T08:00:00.000Z",
+    "contentUrl": "https://www.leeboonstra.dev/Chatbots/dialogflow-cx-introduction/",
+    "embedUrl": "https://www.youtube.com/embed/E96x7t4PmOw "
     }
 </script>

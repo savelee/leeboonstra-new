@@ -1,5 +1,5 @@
 ---
-title: Whitepaper The Ultimate Guide To Conversational Analytics - White paper
+title: The Ultimate Guide To Conversational Analytics - White paper
 categories: 
 - Writing
 class: Writing
