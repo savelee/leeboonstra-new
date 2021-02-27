@@ -10,12 +10,11 @@ I worked in the past as a technical trainer, now I am a developer advocate at Go
 
 Check out my Speaker Deck, for an overview of all my presentations: [Speaker Deck](https://speakerdeck.com/savelee/).
 
-Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
+Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
 
 <img src="/images/lee-fos.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
-
-<hr>
+<hr />
 
 2021
 ----
@@ -24,35 +23,46 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
  TBA | **Online`** | [Website](https://events.google.com/io/) | Build a voice bot for Android with Dialogflow and Flutter
 
-* ### CodeMotion Tech Conference (English Edition) 2021
+* ### Codemotion Tech Conference 2021 (English Edition)
 
  18 May | **Online`** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
 
 <script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "CodeMotion Tech Conference 2021",
-"url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
-"performer": "Lee Boonstra",
-"description":"CodeMotion Tech Conference & Workshops",
-"startDate": "2021-05-18T15:20+01:00",
-"endDate": "2021-05-20T17:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-    "@type": "Offer",
-    "description": "Register for free",
-    "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
-    "price": "60.00",
-    "priceCurrency": "EUR",
-    "availability": "http://schema.org/OnlineOnly",
-    "validFrom": "2021-02-01T09:30+01:00"
-  },
-"location" : 
-{"@type" : "VirtualLocation",
-"url" : "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring"}}
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Codemotion Tech Conference 2021",
+      "startDate": "2021-05-18T08:30-05:00",
+      "endDate": "2021-05-20T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring"
+      }],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "Codemotion Tech Conference 2021 (English Edition)",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
+        "price": "60.00",
+        "priceCurrency": "EUR",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2021-01-21T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Codemotion",
+        "url": "https://www.codemotion.com/"
+      }
+    }
 </script>
-
 
 
 * ### DDMA Voice - Digital talk about Chat & Voice Analytics
@@ -60,28 +70,40 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
  25 Mar | **Online`** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
 
 <script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Digital Talk",
-"url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
-"performer": "Lee Boonstra",
-"description":"Digital Talk",
-"startDate": "2021-03-25T15:20+01:00",
-"endDate": "2021-03-25T17:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-    "@type": "Offer",
-    "description": "Register for free",
-    "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
-    "price": "0.00",
-    "priceCurrency": "EUR",
-    "availability": "http://schema.org/OnlineOnly",
-    "validFrom": "2020-11-01T09:30+01:00"
-  },
-"location" : 
-{"@type" : "VirtualLocation",
-"url" : "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/"}}
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "DDMA Digital Talk: Conversational Analytics",
+      "startDate": "2021-03-25T15:30-05:00",
+      "endDate": "2021-03-25T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/"
+      }],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "DDMA Digital Talk about chat & voice bot analytics.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2021-01-21T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "DDMA",
+        "url": "https://ddma.nl/"
+      }
+    }
 </script>
 
 
@@ -98,47 +120,9 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
  24 Sept | **Online`** | [Website](https://fw.nu/1ntv) | The Next Generation of Conversational 
 
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Conversational Conference",
-"url": "https://www.frankwatching.com/conversationalconference/sprekers/",
-"performer": "Lee Boonstra",
-"description":"Conversational Conference",
-"startDate": "2020-09-24T09:00+01:00",
-"endDate": "2020-09-24T18:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"location" : 
-{"@type" : "VirtualLocation",
-"url" : "https://fw.nu/1ntv"}}</script>
-
-
 * ### OmniChannelX 2020
 
  11 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Improve your customer care by building an AI bot platform | **Save 50 Euro; use discount code: 50GOOG**
-
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "OmniChannelX 2020",
-"url": "https://omnichannelx.digital/",
-"performer": "Lee Boonstra",
-"description":"Improve your customer care by building an AI bot platform ",
-"startDate": "2020-06-10T09:00+01:00",
-"endDate": "2020-06-10T22:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-"@type": "Offer",
-"url": "https://omnichannelx.digital/",
-"availability": "http://schema.org/SoldOut",
-"validFrom": "2019-11-01T09:30+01:00"
-},
-"location" : 
-{"@type" : "VirtualLocation",
-"url" : "https://omnichannelx.digital/"}}</script>
-
 
 * ### VOICE Global 2020 (VoiceSummit.ai)
 
@@ -147,29 +131,6 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 * ### OmniChannelX 2020
 
  8 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Workshop: Hands-on: Create a TV guide action for the Google Assistant with Dialogflow and actions on Google  | **Save 50 Euro; use discount code: 50GOOG**
-
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "OmniChannelX 2020",
-"url": "https://omnichannelx.digital/",
-"performer": "Lee Boonstra",
-"description":"Improve your customer care by building an AI bot platform ",
-"startDate": "2020-06-08T09:00+01:00",
-"endDate": "2020-06-08T22:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-"@type": "Offer",
-"url": "https://omnichannelx.digital/",
-"availability": "http://schema.org/SoldOut",
-"validFrom": "2019-11-01T09:30+01:00"
-},
-"location" : 
-{"@type" : "VirtualLocation",
-"url" : "https://omnichannelx.digital/"}}
-</script>
-
 
 * ### WeAreDevelopers Live 2020
 
@@ -191,78 +152,13 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
   19 Feb | **Amsterdam Theater, NL** | [Website](https://www.frontenddeveloperlove.com/program) | Audio Streaming - Using Dialogflow & WebRTC for building your own Voice AIs
 
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Frontend Developer Love 2020",
-"url": "https://www.frontenddeveloperlove.com/",
-"performer": "Lee Boonstra",
-"description":"Audio Streaming - Using WebRTC for building your own Voice AIs",
-"startDate": "2020-02-19T14:00+01:00",
-"endDate": "2020-02-19T17:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"location": {
-"@type": "Place",
-"name": "Amsterdam Theatre",
-"address": {
-"addressLocality": "Amsterdam",
-"addressCountry": "NL"
-}
-}
-}</script>
-
 * ### Fourcast Women in Tech Event 2020
 
   11 Feb | **Google Brussels, BE** | [Website](https://www.fourcast.io/events/womenintech-brussels-11february2020) | Dialogflow, Actions on Google Workshop
 
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Fourcast Women in Tech Event 2020",
-"url": "https://www.fourcast.io/events/womenintech-brussels-11february2020",
-"performer": "Lee Boonstra",
-"description":"Dialogflow, Actions on Google Workshop",
-"startDate": "2020-02-11T13:00+01:00",
-"endDate": "2020-02-11T17:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"location": {
-"@type": "Place",
-"name": "Google BE",
-"address": {
-"addressLocality": "Brussels",
-"addressCountry": "BE"
-}
-}
-}</script>
-
-
 * ### Salesforce Service Innovation Summit 2020
 
   16 Jan | **Hilversum, NL** | [Website](https://www.salesforce.com/nl/events/service-innovation-summit/) | Future of Customer Care with Contact Center AI
-
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Salesforce Service Innovation Summit 2020",
-"url": "https://www.salesforce.com/nl/events/service-innovation-summit/",
-"performer": "Lee Boonstra",
-"description":"Future of Customer Care with Contact Center AI",
-"startDate": "2020-01-16T13:00+01:00",
-"endDate": "2020-01-16T17:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"location": {
-"@type": "Place",
-"name": "Grand Hotel",
-"address": {
-"addressLocality": "Hilversum",
-"addressCountry": "NL"
-}
-}
-}</script>
-
 
 2019
 ----
@@ -286,36 +182,6 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 * ### Women in Cloud - Amsterdam 2019
   
   4 November | **Google, Amsterdam** | [Website](https://events.withgoogle.com/women-in-cloud-ams19/#content) | Hosting the Google Cloud hackathon
-
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Women in Cloud, Amsterdam 2019",
-"url": "https://events.withgoogle.com/women-in-cloud-ams19/#content",
-"performer": "Lee Boonstra",
-"description":"Google Cloud hackathon",
-"startDate": "2019-11-4T09:00+01:00",
-"endDate": "2019-11-4T22:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-"@type": "Offer",
-"description": "Register for free",
-"url": "https://events.withgoogle.com/women-in-cloud-ams19/#content",
-"price": "0.00",
-"priceCurrency": "EUR",
-"availability": "http://schema.org/SoldOut",
-"validFrom": "2018-11-01T09:30+01:00"
-},
-"location": {
-"@type": "Place",
-"name": "Google",
-"address": {
-"addressLocality": "Amsterdam",
-"addressCountry": "NL"
-}
-}
-}</script>
 
 * ### Dare - Voice Emmerce
 
@@ -361,308 +227,39 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 
   2 May 2019 | **TQ, Amsterdam** | [Website](https://events.withgoogle.com/google-cloud-startup-roadshow-amsterdam/) | Google Cloud examples
 
-<script type='application/ld+json'> 
-{
-"@context": "http://www.schema.org",
-"@type": "Event",
-"name": "Startup Roadshow",
-"url": "https://events.withgoogle.com/google-cloud-startup-roadshow-amsterdam",
-"performer": "Lee Boonstra",
-"description":"Google Cloud session",
-"startDate": "2019-05-2T09:00+01:00",
-"endDate": "2019-05-2T18:00+01:00",
-"image": "https://www.leeboonstra.com/images/profile.jpg",
-"offers": {
-"@type": "Offer",
-"description": "Register for free",
-"url": "https://events.withgoogle.com/google-cloud-startup-roadshow-amsterdam",
-"price": "0.00",
-"priceCurrency": "EUR",
-"availability": "http://schema.org/SoldOut",
-"validFrom": "2018-11-01T09:30+01:00"
-},
-"location": {
-"@type": "Place",
-"name": "TQ",
-"address": {
-"addressLocality": "Amsterdam",
-"addressCountry": "NL"
-}
-}
-}</script>
-
 *   ### Verbond van Verzekeraars 
 
     15 April 2019 | **Google, Amsterdam** | [Website](https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend) | Google je beste vriend
-
-      <script type='application/ld+json'> 
-      {
-      "@context": "http://www.schema.org",
-      "@type": "Event",
-      "name": "Verbond van Verzekeraars: Google je beste vriend",
-      "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-      "performer": "Lee Boonstra",
-      "description":"AutoML session",
-      "startDate": "2019-04-15T14:00+01:00",
-      "endDate": "2019-04-15T17:30+01:00",
-      "image": "https://www.leeboonstra.com/images/profile.jpg",
-      "offers": {
-      "@type": "Offer",
-      "description": "Register for free",
-      "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-      "price": "0.00",
-      "priceCurrency": "EUR",
-      "availability": "http://schema.org/SoldOut",
-      "validFrom": "2018-11-01T09:30+01:00"
-      },
-      "location": {
-      "@type": "Place",
-      "name": "Google",
-      "address": {
-      "addressLocality": "Amsterdam",
-      "addressCountry": "NL"
-      }
-      }
-  }</script>
 
 *   ### Google Cloud Next 2019
 
   9 April 2019 | **Moscone Center, San Francisco USA** | [Website](https://cloud.withgoogle.com/next/sf/sessions?session=MLAI224) | Google Cloud Next, Customer Stories: AI in Financial Services
 
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Google Cloud Next 2019",
-        "url": "https://cloud.withgoogle.com/next/sf/sessions?session=MLAI224",
-        "performer": "Lee Boonstra",
-        "description":"Google Cloud Next, Customer Stories: AI in Financial Services",
-        "startDate": "2019-05-09T09:30+01:00",
-        "endDate": "2019-05-09T17:00+01:00",
-        "image": "https://techcrunch.com/wp-content/uploads/2018/07/google-cloud-next-2018-banner.png",
-        "offers": {
-          "@type": "Offer",
-          "description": "Google Cloud Next Tickets",
-          "url": "https://cloud.withgoogle.com/next/sf",
-          "price": "1699",
-          "priceCurrency": "USD",
-          "availability": "http://schema.org/InStock",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Moscone Center",
-          "address": {
-            "addressLocality": "San Francisco",
-            "addressCountry": "USA"
-          }
-        }
-      }</script>
-
 *   ### WTM Event: International Women's Day
   
     20 March 2019 | **Google, Amsterdam, NL** | [Website](https://www.meetup.com/en-AU/gdg-nl/events/259060131/) | WTM Event: Internation Women's Day
-
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "WTM Event: Internation Women's Day",
-        "url": "https://www.meetup.com/en-AU/gdg-nl/events/259060131/",
-        "performer": "Lee Boonstra",
-        "description":"AutoML session",
-        "startDate": "2019-03-20T17:30+01:00",
-        "endDate": "2019-03-20T21:30+01:00",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "offers": {
-          "@type": "Offer",
-          "description": "Register for free",
-          "url": "https://www.meetup.com/en-AU/gdg-nl/events/259060131/",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Google",
-          "address": {
-            "addressLocality": "Amsterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
 
 *   ### Verbond van Verzekeraars 
 
     6 March 2019 | **Google, Amsterdam** | [Website](https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend) | Google je beste vriend
 
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Verbond van Verzekeraars: Google je beste vriend",
-        "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-        "performer": "Lee Boonstra",
-        "description":"AutoML session",
-        "startDate": "2019-03-6T14:00+01:00",
-        "endDate": "2019-03-6T17:30+01:00",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "offers": {
-          "@type": "Offer",
-          "description": "Register for free",
-          "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Google",
-          "address": {
-            "addressLocality": "Amsterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
-
 *   ### Friends of Search
     
      6 Feb 2019 | **Kromhouthallen, Amsterdam, NL** | [Website](https://friendsofsearch.nl/) | Keynote: Google Assistant
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Friends of Search",
-        "url": "https://friendsofsearch.nl/",
-        "performer": "Lee Boonstra",
-        "description":"Keynote: Google Assistant",
-        "startDate": "2019-02-06T09:30+01:00",
-        "endDate": "2019-02-06T17:00+01:00",
-        "image": "https://friendsofsearch.nl/wp-content/uploads/sites/6/2016/12/Friends-of-Search-RGB.svg",
-        "offers": {
-          "@type": "Offer",
-          "description": "Friends of Search Tickets",
-          "url": "https://friendsofsearch.nl/tickets/",
-          "price": "498.27",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/InStock",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Kromhouthallen",
-          "address": {
-            "addressLocality": "Amsterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
 
 *   ### Verbond van Verzekeraars 
 
     20 Jan 2019 | **Google, Amsterdam, NL** | [Website](https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend) | Google je beste vriend
 
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Verbond van Verzekeraars: Google je beste vriend",
-        "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-        "performer": "Lee Boonstra",
-        "description":"AutoML session",
-        "startDate": "2019-01-20T14:00+01:00",
-        "endDate": "2019-01-20T17:30+01:00",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "offers": {
-          "@type": "Offer",
-          "description": "Register for free",
-          "url": "https://www.verzekeraars.nl/academy/activiteitenoverzicht/bijeenkomst-google-home-je-nieuwe-beste-vriend",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Google",
-          "address": {
-            "addressLocality": "Amsterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
 
 2018
 ----
 
 *   ### Startup Roadshow
     
-     11 Dec 2018 | **London, UK** | [Website](https://events.withgoogle.com/google-cloud-startup-roadshow-london/#content) | Build real world applications with Google Cloud.
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Startup Roadshow",
-        "url": "https://events.withgoogle.com/google-cloud-startup-roadshow-london/#content",
-        "startDate": "2018-12-11T09:30+00:00",
-        "endDate": "2018-12-11T17:30+00:00",
-        "performer": "Lee Boonstra",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "description":"Build real world applications with Google Cloud",
-        "offers": {
-          "@type": "Offer",
-          "description": "Startup Roadshow",
-          "url": "https://events.withgoogle.com/google-cloud-startup-roadshow-london/",
-          "price": "0.00",
-          "priceCurrency": "GBP",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Google Academy",
-          "address": {
-            "addressLocality": "London",
-            "addressCountry": "UK"
-          }
-        }
-      }</script>
-
 *   ### Schiphol Developers Group
     
     06 Dec 2018 | **Amsterdam, NL** | [Website](https://www.meetup.com/nl-NL/schiphol-developers/events/256537947/) | Machine Learning for JavaScript Developers
-
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Schiphol Developers Group",
-        "description":"Machine Learning for JavaScript Developers",
-        "performer":"Lee Boonstra",
-        "url": "https://www.meetup.com/nl-NL/schiphol-developers/events/256537947/",
-        "startDate": "2018-12-06T18:30+01:00",
-        "endDate": "2018-12-06T21:30+01:00",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "offers": {
-          "@type": "Offer",
-          "description": "Schiphol Developers Meetup",
-          "url": "https://www.meetup.com/nl-NL/schiphol-developers/events/256537947/",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-11-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "NetApp",
-          "address": {
-            "addressLocality": "Schipholrijk",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
 
 *   ### Dialogflow Day
     
@@ -671,195 +268,26 @@ Topics I speak about: **Chatbots, Google Assistant, Dialogflow, Machine Learning
 *   ### Google Cloud Summit Amsterdam
     
      28 Nov 2018 | **Zaandam, NL** | [Website](https://cloudplatformonline.com/2018-Summit-Amsterdam-EN-Home.html) | Keynote: AutoML Demo + Contact Center AI Breakout session
-      <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Google Cloud Summit Amsterdam",
-        "url": "https://cloudplatformonline.com/2018-Summit-Amsterdam-EN-Home.html",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "startDate": "2018-11-16T09:30+01:00",
-        "endDate": "2018-11-16T17:30+01:00",
-        "performer":"Lee Boonstra",
-        "description": "Keynote: AutoML Demo + Contact Center AI Breakout session",
-        "offers": {
-          "@type": "Offer",
-          "description": "Google Cloud Summit Amsterdam",
-          "url": "https://cloudplatformonline.com/2018-Summit-Amsterdam-EN-Home.html",
-          "price": "378.72",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-08-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Taets Gallery",
-          "address": {
-            "addressLocality": "Zaandam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
   
 *   ### KSF Jaarcongres 2018
     
     20 Nov 2018 | **Almere, NL** | [Website](https://klantenservicefederatie.nl/) | Session about Contact Center AI
-     <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "KSF Jaarcongres 2018",
-        "url": "https://klantenservicefederatie.nl/",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "startDate": "2018-11-20T12:30+01:00",
-        "endDate": "2018-11-20T17:30+01:00",
-        "performer": "Lee Boonstra",
-        "description":"Session about Contact Center AI",
-        "offers": {
-          "@type": "Offer",
-          "description": "KSF Jaarcongres 2018",
-          "url": "https://www.ksfjaarcongres.nl/",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-10-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "KSF",
-          "address": {
-            "addressLocality": "Almere",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>  
 
 *   ### FrontMania Conference 
     
     16 Nov 2018 | **Utrecht, NL** | [Website](https://frontmania.com/) | Keynote: Machine Learning for JavaScript developers
-
-    <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "FrontMania Conference",
-        "performer": "Lee Boonstra",
-        "description": "Keynote: Machine Learning for JavaScript developers",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "url": "https://frontmania.com/",
-        "startDate": "2018-11-16T09:30+01:00",
-        "endDate": "2018-11-16T17:30+01:00",
-        "offers": {
-          "@type": "Offer",
-          "description": "Front Mania 2018",
-          "url": "https://frontmania.com/",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-10-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Rabobank",
-          "address": {
-            "addressLocality": "Utrecht",
-            "addressCountry": "NL"
-          }
-        }
-      }</script> 
     
 *   ### Chatathon
     
     28 Oct 2018 | **Brussel, BE** | Chatbot hackathon - trainer
 
-     <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Chatbothon",
-        "description": "Chatbothon - trainer Google Assistant & Dialogflow",
-        "performer": "Lee Boonstra",
-        "startDate": "2018-10-28T09:30+01:00",
-        "endDate": "2018-10-28T17:30+01:00",
-        "url": "https://fourcast.io/events/",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "offers": {
-          "description": "Chatbot Hackathon 2018",
-          "url": "https://fourcast.io/events/",
-          "price": "0.00",
-          "priceCurrency": "EUR",
-          "availability": "http://schema.org/SoldOut",
-          "validFrom": "2018-08-01T09:30+01:00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "Google Brussel",
-          "address": {
-            "addressLocality": "Brussel",
-            "addressCountry": "BE"
-          }
-        }
-      }</script>
-
 *   ### GoDataFest 2018
     
     18 Oct 2018 | **Amsterdam, NL** | [Website](https://www.godatafest.com/) | Learn about Dialogflow and the Google Assistant
 
-    <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "GoDataFest 2018",
-        "description": "Learn about Dialogflow and the Google Assistant",
-        "performer": "Lee Boonstra",
-        "url": "https://www.godatafest.com/",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "startDate": "18/10/2018",
-        "endDate": "18/10/2018",
-        "offers": {
-          "@type": "Offer",
-          "description": "GoDataFest 2018",
-          "url": "https://www.godatafest.com/",
-          "price": "0.00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "GoDataDriven",
-          "address": {
-            "addressLocality": "Amsterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }</script>
-
 *   ### Google Cloud Next
     
     11 Oct 2018 | **London, UK** | Diversity at Google Panel
-
-    <script type='application/ld+json'> 
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Event",
-        "name": "Google Cloud Next 2018",
-        "description": "Diversity at Google Panel",
-        "image": "https://www.leeboonstra.com/images/profile.jpg",
-        "performer": "Lee Boonstra",
-        "startDate": "11/10/2018",
-        "endDate": "11/10/2018",
-        "offers": {
-          "@type": "Offer",
-          "description": "Google Cloud Next",
-          "price": "0.00"
-        },
-        "location": {
-          "@type": "Place",
-          "name": "ExCel",
-          "address": {
-            "addressLocality": "London",
-            "addressCountry": "UK"
-          }
-        }
-      }</script>
 
 *   ### YSE Digital Now
     
