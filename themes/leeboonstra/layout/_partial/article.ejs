@@ -142,24 +142,41 @@
               "contentUrl": "https://www.youtube.com/watch?v=<%= post.youtube %>",
               "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>"
             }
+
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Videos",
+                "item": "https://www.leeboonstra.dev/categories/Videos/"
+              },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<%= post.title %>",
+                "item": "https://www.leeboonstra.dev<%- url_for(post.path) %>"
+              }]
+            }
             </script>
         <%
         }
         if (item.name == "Chatbots") {
         %>
           <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "NewsArticle",
-              "headline": "<%- truncate(post.title, {length: 107, omission: '...'}) %>",
-              "image": [
-                "/images/thumb_<%- post.featured %>",
-                "/images/medium_<%- post.featured %>",
-                "/images/large_<%- post.featured %>"
-               ],
+              { "@context": "https://schema.org", 
+               "@type": "BlogPosting",
+               "headline": "<%- truncate(post.title, {length: 107, omission: '...'}) %>",
+               "image": [
+               "/images/thumb_<%- post.featured %>",
+               "/images/medium_<%- post.featured %>",
+               "/images/large_<%- post.featured %>"
+              ],
+               "url": "http://www.example.com",
                "datePublished": "<%- post.date.toISOString() %>",
+               "dateCreated": "<%- post.date.toISOString() %>",
                "dateModified": "<%- post.updated.toISOString() %>",
-               "abstract": "<%= post.description %>",
+               "description": "<%= post.description %>",
                "speakable":
                {
                 "@type": "SpeakableSpecification",
@@ -168,27 +185,24 @@
                   "/html/head/meta[@name='description']/@content"
                   ]
                 }
-            }
-          </script>
+               }
 
-          <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Chatbots",
-                "item": "https://www.leeboonstra.dev/categories/Chatbots/"
-              },{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "<%= post.title %>",
-                "item": "https://www.leeboonstra.dev<%- url_for(post.path) %>"
-              }]
-            }
+               {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Chatbots",
+                  "item": "https://www.leeboonstra.dev/categories/Chatbots/"
+                },{
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "<%= post.title %>",
+                  "item": "https://www.leeboonstra.dev<%- url_for(post.path) %>"
+                }]
+              }
           </script>
-
         <%
         }
         })

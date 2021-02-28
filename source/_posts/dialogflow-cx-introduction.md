@@ -5,6 +5,7 @@ tags:
   - Dialogflow CX
   - Dialogflow CX for beginners
   - Dialogflow CX vs. Dialogflow Essentials
+  - Dialogflow CX vs. Dialogflow ES
   - Dialogflow Customer Experience
   - Dialogflow CX pricing
   - Bot builder

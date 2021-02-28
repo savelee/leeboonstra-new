@@ -46,6 +46,10 @@
   <link rel="preload" href="/css/prism-atom-dark.css" as="style">
   <link rel="preload" href="/js/prism.js" as="script">
 
+  <% if (is_post() && config.generator_amp){ %>
+    <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path %>/amp/index.html">
+  <% } %>
+
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
