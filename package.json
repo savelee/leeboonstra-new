@@ -20,7 +20,6 @@
     "hexo-auto-canonical": "^0.1.1",
     "hexo-featured-image": "^0.4.3",
     "hexo-filter-responsive-images": "file:hexo-filter-responsive-images",
-    "hexo-generator-amp": "^3.2.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",
