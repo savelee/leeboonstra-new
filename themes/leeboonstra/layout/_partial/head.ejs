@@ -13,15 +13,16 @@
       title += ': ' + page.year;
     }
   } else if (is_category()){
-    title = 'Conversational AI Category: ' + page.category;
+    title = 'Conversational AI: ' + page.category;
   } else if (is_tag()){
-    title = 'Conversational AI Tag: ' + page.tag;
+    title = page.tag;
   }
 
   // keywords.
   var keyWords = config.keywords ? config.keywords : config.title;
   %>
   <title><% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
+  <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>" type="application/atom+xml">
   
   <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
   <meta name="keywords" content="<%= keyWords %>">
@@ -47,7 +48,7 @@
   <link rel="preload" href="/js/prism.js" as="script">
 
   <% if (is_post() && config.generator_amp){ %>
-    <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path %>/amp/index.html">
+    <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path %>amp/index.html">
   <% } %>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -61,7 +62,6 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
   <link rel="manifest" href="/manifest.json">  
-  <link rel="alternate" href="/atom.xml" title="LeeBoonstra.dev | Developer blog" type="application/atom+xml">
   
   <meta name="robots" content="all">
   <meta name="yandex-verification" content="adf3dcb0d559ea5a">
