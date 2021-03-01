@@ -39,7 +39,7 @@ https://cloud.google.com/dialogflow/docs/data-logging
 
 I've created some code snippets which you can use in your browser to use your laptop microphone. You can speak out a user utterance, and it will match the intent. When you open the debug console, you can browse through the results and see the **query text**, the spoken text Dialogflow captured' and transformed to text.
 
-Follow the [readme steps](https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Fdialogflow%2Fselfservicekiosk-audio-streaming), to download a service account key, setup Dialogflow and run an `npm install` from the examples folder. Once done, you can run the following command to run the script:
+Follow the [readme steps](https://github.com/dialogflow/selfservicekiosk-audio-streaming), to download a service account key, setup Dialogflow and run an `npm install` from the examples folder. Once done, you can run the following command to run the script:
 
 ```
 npm --EXAMPLE=1 --PORT=8080 --PROJECT_ID=[your-gcp-id] run start

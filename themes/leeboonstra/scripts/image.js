@@ -8,7 +8,7 @@ hexo.extend.filter.register('after_post_render', data => {
       var regex2 = new RegExp(/alt="(.*?)"/igm);
       var alt = regex2.exec(end);
       var altText = "";
-      if (alt[1]) {
+      if (alt && alt[1]) {
         altText = `alt="${alt[1]}" title="${alt[1]}" `;
       }
 
