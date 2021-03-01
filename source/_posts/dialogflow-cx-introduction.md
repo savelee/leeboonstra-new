@@ -1,6 +1,6 @@
 ---
 title: An introduction to bot builder platform Dialogflow CX
-description: Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. Developers and businesses can choose which bot building suite is the right tool for them. Dialogflow CX addresses the need for businesses to build more complex chat & contact center voice bots. Dialogflow Essentials is often choosen for it's simplicity.
+description: Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. Developers and businesses can choose which bot building platform is the right tool for them. Dialogflow CX addresses the need for businesses to build more complex chat & contact center voice bots. Dialogflow Essentials is often chosen for its simplicity.
 tags:
   - Dialogflow CX
   - Dialogflow CX for beginners
@@ -58,7 +58,7 @@ Thus chatbots, voice bots, phone gateways. You can all build it with the same to
 
 An **intent** categorizes a user's intention. For each Dialogflow ES agent, you can define many intents, where your combined intents can handle a complete conversation. Each intent can contain parameters and responses.
 
-Matching an intent is also known as **intent classification** or** intent matching**. This is the main concept in Dialogflow ES. Once an intent is matched it can return a response, gather parameters (entity extraction) or trigger webhook code (fulfillment), for example, to fetch data from a database.
+Matching an intent is also known as **intent classification** or **intent matching**. This is the main concept in Dialogflow ES. Once an intent is matched it can return a response, gather parameters (entity extraction) or trigger webhook code (fulfillment), for example, to fetch data from a database.
 
 When an end-user writes or says something in a chatbot, referred to as a **user expression** or **utterance**, Dialogflow ES matches the expression to your Dialogflow agent's best intent, based on the training phrases. The under the hood Dialogflow ES Machine Learning model was trained on those training phrases.
 
@@ -85,7 +85,7 @@ $8 billion per year by the year 2022
 
 Dialogflow Essentials has been praised for its simplicity. You can build a chatbot or voice bot quickly. These are chat and voice applications, where a short utterance matches one intent, with a few turn-taking turns. For example, a retail chat or voice app, where you can say: "_Put milk on my shopping list._" 
 
-Now imagine you are building a voice robot for the telephony helpdesk of a grocery store. This time, customers are not speaking a few sentences, no instead they speak with whole stories: "_Yesterday, right at opening time, I bought milk at So-And-So Store together with my 4-month-old baby, and when I came home, and I wanted to put the milk in the refrigerator, I noticed that the date is past the expiration date. I opened the carton and noticed the odd smell, but the taste was fine_." Suddenly it becomes much more tricky to match the intent. For a human, it can become challenging to understand the intention; for an AI, this is difficult too! Because are we talking about _buying milk_, _bad products_, or_ requesting a refund_? 
+Now imagine you are building a voice robot for the telephony helpdesk of a grocery store. This time, customers are not speaking a few sentences, no instead they speak with whole stories: "_Yesterday, right at opening time, I bought milk at So-And-So Store together with my 4-month-old baby, and when I came home, and I wanted to put the milk in the refrigerator, I noticed that the date is past the expiration date. I opened the carton and noticed the odd smell, but the taste was fine_." Suddenly it becomes much more tricky to match the intent. For a human, it can become challenging to understand the intention; for an AI, this is difficult too! Because are we talking about _buying milk_, _bad products_, or _requesting a refund_? 
 
 The conversation is long-running, the dialogue is large and can have many turn-taking turns, where we need to remember the context—branched off in hundreds of possible outcomes. And look, I am not even mentioning the technical complexity of dealing with multiple speakers, interruptions, background noises, etc.
 
@@ -108,11 +108,9 @@ It allows you to quickly create agents with:
 *   Working with teams collaborating on large implementations.
 *   Native Contact Center features such as DTMF, one-click telephony partner integration, barge-in, live agent hand-off.
 *   Agents were additional languages, and regionalization (for example GDPR) are important.
+*   Flows with various outcomes and repeatable parts. For example, filing taxes. Usually this requires you to fill out lots of forms, where questions jump to each other. - If you would build a chatbot for this use-case, Dialogflow CX would be great for this, because of the reusable flows, intents and branching of answers.
 
-
-![Dialogflow CX Flow](dialogflow-cx-flows.png "Dialogflow CX Flow in the Visual Flow Builder")
-
-Flows with various outcomes and repeatable parts. For example, filing taxes. Usually this requires you to fill out lots of forms, where questions jump to each other. - If you would build a chatbot for this use-case, Dialogflow CX would be great for this, because of the reusable flows, intents and branching of answers.
+![Dialogflow CX Flow](dialogflow-cx-flows.png "A Dialogflow CX Flow in the Visual Flow Builder")
 
 Dialogflow CX has advanced their NLU. Even though Dialogflow ES is popular because of the outstanding NLU results, we saw a notable quality improvement by basing our NLU on the BERT language model.
 
@@ -139,7 +137,7 @@ Dialogflow CX is a separate product that will coexist with Dialogflow Essentials
 
 <h3><a name="DFESvsDFCX">Dialogflow CX vs. Dialogflow Essentials: when to use which tool</a></h3>
 
-When you are a freelancer, start-up, or small business, when you are building a single chat or voice bot, for example, for the Google Assistant or building an FAQ bot, Dialogflow Essentials might be a better choice for you. **This tool is often choosen for it's simplicity**.
+When you are a freelancer, start-up, or small business, when you are building a single chat or voice bot, for example, for the Google Assistant or building an FAQ bot, Dialogflow Essentials might be a better choice for you. **This tool is often chosen for its simplicity**.
 
 When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience, when data regionalization is crucial for you (for example because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use. **This tool addresses the need for businesses to build more complex chat & contact center voice bots.**
 
