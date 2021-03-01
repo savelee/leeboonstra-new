@@ -18,4 +18,5 @@ It seems that most organizations that use chat and / or voice bots still make li
 
 Do you use chat or voice to communicate with customers? Then it is important that you have your conversational analytics in order and you collect the right data. This is the only way you can optimize your channel as well as possible and improve the customer experience. In this white paper, the DDMA Committee Voice tells you all about it. Download it now from: https://ddma.nl/ca/
 
+<!-- more --> 
 
