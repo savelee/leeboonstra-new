@@ -22,19 +22,19 @@
   var keyWords = config.keywords ? config.keywords : config.title;
   %>
   <title><% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
-  <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>" type="application/atom+xml"/>
   
-  <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
-  <meta name="keywords" content="<%= keyWords %>">
+  <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
+  <meta name="keywords" content="<%= keyWords %>"/>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="640">
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="MobileOptimized" content="640"/>
   
   <%- autoCanonical(config, page) %>
 
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa"/>
 
   <%
     var dateObj = new Date();
@@ -49,45 +49,45 @@
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-  <link rel="manifest" href="/manifest.json">  
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"/>
+  <link rel="manifest" href="/manifest.json"/>  
   
-  <meta name="robots" content="all">
-  <meta name="yandex-verification" content="adf3dcb0d559ea5a">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="robots" content="all"/>
+  <meta name="yandex-verification" content="adf3dcb0d559ea5a"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 
-  <link href="//plus.google.com/117712452932146916020" rel="author">
-  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.jpg">
-  <link rel="profile" href="//gmpg.org/xfn/11">
-  <link rel="pingback" href="//www.leeboonstra.dev">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>">
+  <link href="https://plus.google.com/117712452932146916020" rel="author"/>
+  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.jpg"/>
+  <link rel="profile" href="https://gmpg.org/xfn/11"/>
+  <link rel="pingback" href="https://www.leeboonstra.dev"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
   <meta property="og:url" content="https://www.leeboonstra.dev/">
-  <meta property="og:site_name" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>">
-  <meta property="og:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
-  <meta property="og:locale" content="en">
-  <meta property="og:image" content="//www.leeboonstra.dev/images/screen.jpg">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>">
-  <meta name="twitter:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>">
-  <meta name="twitter:image" content="//www.leeboonstra.dev/images/screen.jpg">
-  <meta name="twitter:card" content="//www.leeboonstra.dev/images/screen.jpg">
-  <meta name="twitter:creator" content="@ladysign">
+  <meta property="og:site_name" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
+  <meta property="og:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
+  <meta property="og:locale" content="en"/>
+  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.jpg">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@leeboonstra" />
+  <meta name="twitter:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
+  <meta name="twitter:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
+  <meta name="twitter:image" content="https://www.leeboonstra.dev/images/screen.jpg"/>
+  <meta name="twitter:creator" content="@ladysign"/>
 
   <link rel="preconnect" href="platform.twitter.com" crossorigin />
   <link rel="preconnect" href="syndication.twitter.com" crossorigin />
-  <link rel="preconnect" href="youtube.com">
-  <link rel="preconnect" href="www.google-analytics.com">
-  <link rel="preconnect" href="platform.linkedin.com">
-  <link rel="preconnect" href="github.githubassets.com">
-  <link rel="preconnect" href="gist.github.com">
+  <link rel="preconnect" href="youtube.com"/>
+  <link rel="preconnect" href="www.google-analytics.com"/>
+  <link rel="preconnect" href="platform.linkedin.com"/>
+  <link rel="preconnect" href="github.githubassets.com"/>
+  <link rel="preconnect" href="gist.github.com" />
 
   <meta itemprop="mainEntityOfPage" content="https://www.leeboonstra.dev" />
   <meta itemprop="author" content="Lee Boonstra" />
