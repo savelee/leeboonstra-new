@@ -13,12 +13,77 @@
     },
     {
       "source": "/Bots/:post*",
-      "destination": "/Chatbots/:post",
+      "destination": "/chatbots/:post",
+      "type": 301
+    },
+    {
+      "source": "/Chatbots/:post*",
+      "destination": "/chatbots/:post",
+      "type": 301
+    },
+    {
+      "source": "/categories/Chatbots/",
+      "destination": "/categories/chatbots/",
+      "type": 301
+    },
+    {
+      "source": "/Machine-Learning/:post*",
+      "destination": "/machine-learning/:post",
+      "type": 301
+    },
+    {
+      "source": "/Machine-Learning/",
+      "destination": "/categories/machine-learning/",
+      "type": 301
+    },
+    {
+      "source": "/categories/Machine-Learning/",
+      "destination": "/categories/machine-learning/",
+      "type": 301
+    },
+    {
+      "source": "/Abstract/:post*",
+      "destination": "/abstract/:post",
+      "type": 301
+    },
+    {
+      "source": "/abstract/",
+      "destination": "/categories/abstract/",
+      "type": 301
+    },
+    {
+      "source": "/categories/Abstract/",
+      "destination": "/categories/abstract/",
+      "type": 301
+    },
+    {
+      "source": "/Videos/:post*",
+      "destination": "/videos/:post",
+      "type": 301
+    },
+    {
+      "source": "/categories/Videos/",
+      "destination": "/categories/videos/",
+      "type": 301
+    },
+    {
+      "source": "/Videos/",
+      "destination": "/categories/videos/",
+      "type": 301
+    },
+    {
+      "source": "/Writing/:post*",
+      "destination": "/writing/:post",
+      "type": 301
+    },
+    {
+      "source": "/categories/Writing/",
+      "destination": "/categories/writing/",
       "type": 301
     },
     {
       "source": "/Chatbots/",
-      "destination": "/categories/Chatbots/",
+      "destination": "/categories/chatbots/",
       "type": 301
     },
     {
@@ -55,7 +120,13 @@
           "value" : "max-age=31557600"
         } ]
     }, {
-      "source" : "**/*.@(html|htm|xml|css)",
+        "source" : "**/*.@(html|htm)",
+        "headers" : [ {
+          "key" : "Cache-Control",
+          "value" : "no-cache"
+        } ]
+    }, {
+      "source" : "**/*.@(xml|css)",
       "headers" : [ {
         "key" : "Cache-Control",
         "value" : "max-age=86400"
