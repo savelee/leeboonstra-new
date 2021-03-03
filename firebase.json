@@ -95,7 +95,42 @@
       "source": "/writer/",
       "destination": "/writing/",
       "type": 301
+    },
+    {
+      "source": "/tags/Dialogflow-CX-pricing/",
+      "destination": "/tags/dialogflow-cx-pricing/",
+      "type": 301
+    },
+    {
+      "source": "/tags/Dialogflow-CX-vs.-Dialogflow-ES/",
+      "destination": "/tags/dialogflow-cx-vs.-dialogflow-es/",
+      "type": 301
+    },  
+    {
+      "source": "/tags/Dialogflow-CX-vs.-Dialogflow-Essentials/",
+      "destination": "/tags/dialogflow-cx-vs.-dialogflow-essentials/",
+      "type": 301
     },    
+    {
+      "source": "/tags/Dialogflow-CX-for-beginners/",
+      "destination": "/tags/dialogflow-cx-for-beginners/",
+      "type": 301
+    }, 
+    {
+      "source": "/tags/Dialogflow-CX/",
+      "destination": "/tags/dialogflow-cx/",
+      "type": 301
+    }, 
+    {
+      "source": "/tags/Bot-builder/",
+      "destination": "/tags/bot-builder/",
+      "type": 301
+    },  
+    {
+      "source": "/tags/Chatbot-development-suite/",
+      "destination": "/tags/chatbot-development-suite/",
+      "type": 301
+    }, 
     {
       "source": "/about-me/",
       "destination": "/about/",
