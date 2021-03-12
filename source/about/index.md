@@ -20,6 +20,8 @@ She is also a published author. She wrote [a book for O’Reilly on mobile web a
 
 Besides writing and her work at Google, she is an active member of the [DDMA Voice Committee](https://ddma.nl/commissies/voice/) in the Netherlands. This task force aims to increase the belief in the ‘voice channel’ by showing brands and publishers its opportunities for marketing, sales, and service and, therefore, to give it a permanent place in the digital transformation.
 
+With so many roles, there is one title that she is the proudest of: being the mother of her newborn; Rebel.
+
 Web: https://www.leeboonstra.dev
 Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
 

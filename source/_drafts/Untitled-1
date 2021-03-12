@@ -1,0 +1,74 @@
+Making use of the GRPC APIs in Dart / Flutter
+
+Let's make use of the Dialogflow RPC APIs.
+
+Create a folder _proto on your harddrive, in this folder clone the following repositories. These are the repositories you will use each time you generate:
+
+git clone https://github.com/googleapis/googleapis
+git clone https://github.com/protocolbuffers/protobuf
+
+Also create a _generated folder inside the _proto folder.
+
+You will need to have the following tools installed on your machine:
+
+Obviously Dart & Flutter
+Protoc = https://grpc.io/docs/protoc-installation/
+Dart plugin:
+ 
+Install the protocol compiler plugin for Dart (protoc-gen-dart) using the following command:
+$ pub global activate protoc_plugin
+ 
+Update your PATH so that the protoc compiler can find the plugin:
+ 
+$ export PATH="$PATH:$HOME/.pub-cache/bin"
+
+Compile the files:
+protoc --dart_out=grpc:_generated googleapis/google/cloud/dialogflow/cx/v3/*.proto
+protoc --dart_out=grpc:_generated googleapis/google/cloud/dialogflow/cx/v3beta1/*.proto
+protoc --dart_out=grpc:_generated googleapis/google/cloud/dialogflow/v2/*.proto 
+protoc --dart_out=grpc:_generated googleapis/google/cloud/dialogflow/v2beta1/*.proto
+
+When working with the Dialogflow gRPC API, I will also need these.
+I figured out that I need these, because of the warnings in my Android Studio, while using the Dialogflow dart files.
+
+protoc --dart_out=grpc:_generated googleapis/google/longrunning/*.proto
+protoc --dart_out=grpc:_generated googleapis/google/rpc/*.proto
+protoc --dart_out=grpc:_generated googleapis/google/type/*.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/any.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/empty.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/duration.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/fieldmask.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/struct.proto
+protoc --dart_out=grpc:_generated protobuf/src/google/protobuf/timestamp.proto
+
+We can now copy these generated dart files to our lib/generated folder in Dart.
+Note: make sure that the generated dart files from the protobuf folder are merged with the dart files from googleapis. So your folder structure will look like this:
+
+lib/
+lib/generated/
+lib/generated/google/
+lib/generated/google/cloud/…
+lib/generated/google/longrunning/..
+lib/generated/google/protobuf/..
+lib/generated/google/rpc/..
+lib/generated/google/type/..
+
+Once the generated files are in your Android project. You can start using the RPC API. You can find the RPC reference documentation online:
+https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.Sessions
+
+For example, it's possible now to make use of SessionsClient(), it will import the following dart files:
+
+import 'package:flutter_dialogflow_agent/generated/google/cloud/dialogflow/v2/audio_config.pb.dart';
+import 'package:flutter_dialogflow_agent/generated/google/cloud/dialogflow/v2/session.pb.dart'
+
+
+
+
+The idea of building a Dialogflow plugin is:
+
+Get access to the credentials.json service account
+Create a SessionClient, which exists of:
+UUID
+projectId
+SessionPath with Scope
+Make the detectIntent and streamingDetectIntent calls
