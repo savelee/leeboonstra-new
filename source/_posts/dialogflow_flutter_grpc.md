@@ -15,7 +15,7 @@ date: 2021-03-14 12:00:00
 
 ---
 
-Learn how to use the gRPC API in Google Cloud. E.g., Dart & Flutter on Google Cloud, to stream audio data with Dialogflow on native mobile apps.
+Learn how to use the gRPC API in Google Cloud. My usecase is to use Dart & Flutter on Google Cloud, to stream audio data with Dialogflow for native mobile Android & iOS apps.
 
 <!--more-->
 
@@ -91,7 +91,7 @@ Follow the steps from [https://grpc.io/docs/protoc-installation/](https://grpc.i
 **Note: On macOS, this will install protoc to /usr/local/bin/protoc. Make sure you have version 3.15 or higher installed. (run protoc --version). Else remove protoc and re-install.**
 
 ```
-brew reinstall protobuf_
+brew reinstall protobuf
 ```
 
 By default this will work for Java, Python, JS, PHP, Ruby, C#, and Objective C.
