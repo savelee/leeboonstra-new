@@ -1,6 +1,6 @@
 ---
 title: How to integrate Dialogflow with your Flutter app
-description: Google Cloud, Dialogflow gRPC APIs The Hidden Manual for building a Flutter Dart integration. Learn how to use the gRPC API in Google Cloud. E.g., Dart & Flutter on Google Cloud, to stream audio data with Dialogflow on native mobile apps.
+description: The Hidden Manual for building a gRPC Flutter Dart integration. Learn how to use the gRPC API in Google Cloud. E.g., Dart & Flutter on Google Cloud, to stream audio data with Dialogflow on native mobile apps.
 tags:
   - gRPC
   - Using gRPC APIs in Google Cloud
@@ -16,6 +16,8 @@ featured: dialogflow_flutter
 date: 2021-03-14 12:00:00
 
 ---
+
+The Hidden Manual for building a gRPC Flutter Dart integration.
 
 Learn how to use the gRPC API in Google Cloud. My usecase is to use Dart & Flutter on Google Cloud, to stream audio data with Dialogflow for native mobile Android & iOS apps.
 
