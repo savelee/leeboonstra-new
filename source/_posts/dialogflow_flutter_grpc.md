@@ -8,6 +8,8 @@ tags:
   - Flutter on GCP
   - Dialogflow gRPC
   - Dialogflow Flutter package
+  - grpc vs rest
+  - grpc advantages and disadvantages
 categories:
   - APIs
 featured: dialogflow_flutter
