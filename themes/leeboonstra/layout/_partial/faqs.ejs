@@ -7,10 +7,11 @@
         <dl>
         <% site.categories.findOne({name: 'FAQs'}).posts.sort('title', 1).forEach(function(post) { %>
           <dt itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h2 itemprop="name">
-              <a href="<%- url_for(post.path) %>"><%-post.title-%></a></h2>
+            <h2>
+              <a href="<%- url_for(post.path) %>" itemprop="name"><%-post.title-%></a>
+            </h2>
           </dt>
-          <dd itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
               <%- post.excerpt %>
             </div>
