@@ -142,7 +142,8 @@
               "contentUrl": "https://www.youtube.com/watch?v=<%= post.youtube %>",
               "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>"
             }
-
+          </script>
+          <script type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
@@ -159,10 +160,17 @@
               }]
             }
             </script>
-        <%
-        }
-        if (item.name == "Chatbots") {
-        %>
+        <% } if (item.name == "FAQs") { %>
+          <script type="application/ld+json">
+            { "@type": "Question",
+            "name": "<%= post.title %>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<%= post.description %>"
+            }
+          }
+          </script>
+        <% } if (item.name == "Chatbots") { %>
           <script type="application/ld+json">
               { "@context": "https://schema.org", 
                "@type": "BlogPosting",
@@ -186,7 +194,8 @@
                   ]
                 }
                }
-
+              </script>
+              <script type="application/ld+json">
                {
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
