@@ -21,11 +21,48 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 
 * ### Google I/O 2021
 
- TBA | **Online`** | [Website](https://events.google.com/io/) | Build a voice bot for Android with Dialogflow and Flutter
+ 20 May | **Online** | [Website](https://events.google.com/io/) | Build a voice bot for Android with Dialogflow and Flutter
+
+ <script type='application/ld+json'> 
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Google I/O 2021",
+      "startDate": "2021-05-18T08:30-05:00",
+      "endDate": "2021-05-20T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://events.google.com/io/"
+      }],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "Google I/O 2021 - Build a voice bot for Android with Dialogflow and Flutter workshop",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://events.google.com/io/",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2021-01-21T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Google",
+        "url": "https://events.google.com/io/"
+      }
+    }
+</script>
 
 * ### Codemotion Tech Conference 2021 (English Edition)
 
- 18 May | **Online`** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
+ 19 May | **Online** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
 
 <script type='application/ld+json'> 
     {
@@ -67,7 +104,7 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 
 * ### DDMA Voice - Digital talk about Chat & Voice Analytics
 
- 25 Mar | **Online`** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
+ 25 Mar | **Online** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
 
 <script type='application/ld+json'> 
     {
