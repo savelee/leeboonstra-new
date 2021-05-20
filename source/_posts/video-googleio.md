@@ -3,15 +3,16 @@ title: Build voice bots for mobile with Dialogflow and Flutter
 description: In this Workshop, we'll walk through a Codelab that will show you how to build a mobile FAQ bot which can answer most common questions about the tool Dialogflow. End users can interact with the text interface or stream a voice interaction via the built-in microphone of a mobile device.
 categories:
   - Videos
-date: 2019-10-17 10:45:17
+date: 2021-5-20 11:15:00
 youtube: O7JfSF3CJ84
 hidden: true
-alias: /developer/video-allianz/
+alias: /developer/googleio-flutter-dialogflow/
 tags:
   - Dialogflow
   - Speech to Text
   - Flutter
   - Android
+  - Voice Bot
 ---
 
 
