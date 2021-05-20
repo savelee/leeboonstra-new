@@ -21,7 +21,7 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 
 * ### Google I/O 2021
 
- 20 May 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/) | Build a voice bot for Android with Dialogflow and Flutter
+ 20 May 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
 
  <script type='application/ld+json'> 
     {
@@ -55,7 +55,7 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
       "organizer": {
         "@type": "Organization",
         "name": "Google",
-        "url": "https://events.google.com/io/"
+        "url": "https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en"
       }
     }
 </script>

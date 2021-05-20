@@ -1,5 +1,5 @@
 ---
-title: Apress - The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platform Book
+title: Apress - The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platform
 categories: 
 - Writing
 class: Writing
@@ -7,7 +7,9 @@ date: 2021-02-26 11:45:17
 hidden: true
 ---
 
-Build Advanced Enterprise Chatbots, Voice, and Telephony Agents on Google Cloud Platform
+![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](apress-book.jpg)
+
+The Definitive Guide to Conversational AI with Dialogflow and Google Cloud
 Written by an expert Google developer advocate who works closely with the Dialogflow product team.
 
 Build enterprise chatbots for web, social media, voice assistants, IoT, and telephony contact centers with Google's Dialogflow conversational AI technology. This book will explain how to get started with conversational AI using Google and how enterprise users can use Dialogflow as part of Google Cloud Platform. It will cover the core concepts such as Dialogflow essentials, deploying chatbots on web and social media channels, and building voice agents including advanced tips and tricks such as intents, entities, and working with context. 
