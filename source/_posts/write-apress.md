@@ -7,8 +7,6 @@ date: 2021-02-26 11:45:17
 hidden: true
 ---
 
-![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](apress-book.jpg)
-
 The Definitive Guide to Conversational AI with Dialogflow and Google Cloud
 Written by an expert Google developer advocate who works closely with the Dialogflow product team.
 
@@ -17,6 +15,8 @@ Build enterprise chatbots for web, social media, voice assistants, IoT, and tele
 The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platform also explains how to build multilingual chatbots, orchestrate sub chatbots into a bigger conversational platform, use virtual agent analytics with popular tools, such as BigQuery or Chatbase, and build voice bots. It concludes with coverage of more advanced use cases, such as building fulfillment functionality, building your own integrations, securing your chatbots, and building your own voice platform with the Dialogflow SDK and other Google Cloud machine learning APIs.
 
 After reading this book, you will understand how to build cross-channel enterprise bots with popular Google tools such as Dialogflow, Google Cloud AI, Cloud Run, Cloud Functions, and Chatbase.
+
+![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](/images/apress-book.jpg)
 
 <a href="https://www.apress.com/gp/book/9781484270134">Find on Apress. ISBN 978-1-4842-7014-1 & ISBN 978-1-4842-7013-4</a>
 
