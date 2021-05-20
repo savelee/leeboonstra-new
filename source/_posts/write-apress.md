@@ -1,5 +1,5 @@
 ---
-title: Apress - The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platform
+title: Apress - The Definitive Guide to Conversational AI with Dialogflow and Google Cloud
 categories: 
 - Writing
 class: Writing
