@@ -26,6 +26,8 @@ Today, I am excited to announce with you that my book:
 
 ISBN 978–1–4842–7014–1 & ISBN 978–1–4842–7013–4
 
+<!--more-->
+
 ![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](/images/0_dialogflow-book.png)
 
 It's a book that covers all the conversational AI technology at Google Cloud & Google. Like, **Dialogflow Essentials**, **Dialogflow CX**, **Google Assistant** and **Contact Center AI**. But it also covers Google Cloud technology such as BigQuery for advanced Chatbot analytics, how to build your own integration channels with **Cloud Run**, **GKE**, **Compute Engine** or **Cloud Functions**. And it covers other Machine Learning APIs such **Natural Language Processing**.
