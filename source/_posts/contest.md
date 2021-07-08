@@ -17,7 +17,7 @@ tags:
   - Qwiklabs Dialogflow
 categories:
   - Chatbots
-featured: dialogflow-cx-flows
+featured: prizes1
 date: 2021-12-01 10:00:00
 
 ---
@@ -84,6 +84,9 @@ _Always wanted to dive into Dialogflow CX? Register now on the event website, yo
 Good luck and have fun!
 
 https://events.withgoogle.com/dialogflow-cx-competition-global/
+
+![Prizes Track 1: Design a Conversational Flow](/images/prizes1.png)
+![Prizes Track 2: Build a Dialogflow CX integration](/images/prizes2.png)
 
 <!--
 <script type="application/ld+json">
