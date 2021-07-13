@@ -28,7 +28,7 @@ Google Cloud recently released Dialogflow CX, a bot-building platform for buildi
 
 To have a reason to play around with the tool, you can join the competition. Developers and UX Designers can register from July the 12th, by visiting the event website: 
 
-https://events.withgoogle.com/dialogflow-cx-competition-global/
+[https://events.withgoogle.com/dialogflow-cx-competition-global/](https://events.withgoogle.com/dialogflow-cx-competition-global/?utm_source=leeboonstra_blog&utm_medium=site&utm_campaign=cx_competition)
 
 <!--more-->
 
@@ -83,7 +83,7 @@ _Always wanted to dive into Dialogflow CX? Register now on the event website, yo
 
 Good luck and have fun!
 
-https://events.withgoogle.com/dialogflow-cx-competition-global/
+[https://events.withgoogle.com/dialogflow-cx-competition-global/](https://events.withgoogle.com/dialogflow-cx-competition-global/?utm_source=leeboonstra_blog&utm_medium=site&utm_campaign=cx_competition)
 
 ![Prizes Track 1: Design a Conversational Flow](/images/prizes1.png)
 ![Prizes Track 2: Build a Dialogflow CX integration](/images/prizes2.png)
