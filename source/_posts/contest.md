@@ -88,23 +88,23 @@ Good luck and have fun!
 ![Prizes Track 1: Design a Conversational Flow](/images/prizes1.png)
 ![Prizes Track 2: Build a Dialogflow CX integration](/images/prizes2.png)
 
-<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A5vYauokWuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "An introduction to Dialogflow CX",
-    "description": "Dialogflow CX is a separate product that will coexist with Dialogflow Essentials. When you are an enterprise customer building a large & complex chatbot platform or contact center customer experience when data regionalization is crucial for you (because of GDPR) or your conversation requires lots of turn-taking turns and dialogue branches, Dialogflow CX is the tool to use.",
+    "name": "Who doesn't love a contest? Developer advocates Priyanka & Lee will discuss the upcoming Dialogflow CX competition. Learn how to join, get trained in Dialogflow CX, work on open-source conversational components, walk a way with free swag and win cool prizes!",
     "thumbnailUrl": [
-        "https://img.youtube.com/vi/E96x7t4PmOw/default.jpg",
-        "https://img.youtube.com/vi/E96x7t4PmOw/0.jpg",
-        "https://img.youtube.com/vi/E96x7t4PmOw/sddefault.jpg",
-        "https://img.youtube.com/vi/E96x7t4PmOw/mqdefault.jpg",
-        "https://img.youtube.com/vi/E96x7t4PmOw/hqdefault.jpg",
-        "https://img.youtube.com/vi/E96x7t4PmOw/maxresdefault.jpg"
+        "https://img.youtube.com/vi/A5vYauokWuQ/default.jpg",
+        "https://img.youtube.com/vi/A5vYauokWuQ/0.jpg",
+        "https://img.youtube.com/vi/A5vYauokWuQ/sddefault.jpg",
+        "https://img.youtube.com/vi/A5vYauokWuQ/mqdefault.jpg",
+        "https://img.youtube.com/vi/A5vYauokWuQ/hqdefault.jpg",
+        "https://img.youtube.com/vi/A5vYauokWuQ/maxresdefault.jpg"
         ],
-    "uploadDate": "2020-11-10T08:00:00.000Z",
-    "contentUrl": "https://www.leeboonstra.dev/Chatbots/dialogflow-cx-introduction/",
-    "embedUrl": "https://www.youtube.com/embed/E96x7t4PmOw "
+    "uploadDate": "2021-07-19T08:00:00.000Z",
+    "contentUrl": "https://www.leeboonstra.dev/chatbots/contest/",
+    "embedUrl": "https://www.youtube.com/embed/A5vYauokWuQ"
     }
-</script>-->
+</script>
