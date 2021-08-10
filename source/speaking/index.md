@@ -19,6 +19,14 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 2021
 ----
 
+* ### Serverless Toronto
+
+ 14 Sep 6PM (CEST) | **Online** | [Website](https://www.meetup.com/Serverless-Toronto/events/279233610/) | Get started with Dialogflow & Contact Center AI on Google Cloud
+
+* ### Business Messenger Office Hours
+
+ 13 Jul | **Online** | About my book and the Dialogflow CX competition
+
 * ### Google I/O 2021
 
  20 May 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
