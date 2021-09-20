@@ -3,7 +3,7 @@ title: Get started with Dialogflow & Contact Center AI on Google Cloud
 description: Google ConversationalAI expert Lee Boonstra explains how to build Enterprise Chatbots and Telephony (CcaaS CallCenter) Agents using Dialogflow, CCAI and other GoogleCloud Serverless services. Courtesy of ServerlessTO.
 categories:
   - Videos
-date: 2020-09-18 10:45:17
+date: 2021-09-18 10:45:17
 youtube: apyr6dgx52Q
 hidden: true
 alias: /developer/video-serverless-to/
