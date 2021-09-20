@@ -19,6 +19,10 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 2021
 ----
 
+* ### NEXT 2021
+
+ Oct 12 - Oct 14 | **Online** | [Website](https://cloud.withgoogle.com/next/catalog#ai-ml) | Various Conversational AI sessions / demos
+
 * ### Conferência Bots Brasil 2021
   
  Sept 30 - Oct 2 | **Online** | [Website](https://www.linkedin.com/events/confer-nciabotsbrasil20216832435125100318720/) | How to setup your conversational analytics
