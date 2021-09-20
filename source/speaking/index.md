@@ -19,17 +19,25 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 2021
 ----
 
+* ### Conferência Bots Brasil 2021
+  
+ Sept 30 - Oct 2 | **Online** | [Website](https://www.linkedin.com/events/confer-nciabotsbrasil20216832435125100318720/) | How to setup your conversational analytics
+
+* ### Voice Lunch
+  
+ Sept 28 12pm (EDT)| **Online** | [Website](https://voicelunch.com/) | Voice Lunch with Lee Boonstra
+
 * ### Serverless Toronto
 
- 14 Sep 6PM (CEST) | **Online** | [Website](https://www.meetup.com/Serverless-Toronto/events/279233610/) | Get started with Dialogflow & Contact Center AI on Google Cloud
+ Sep 14 6PM (CEST) | **Online** | [Website](https://www.meetup.com/Serverless-Toronto/events/279233610/) | Get started with Dialogflow & Contact Center AI on Google Cloud
 
 * ### Business Messenger Office Hours
 
- 13 Jul | **Online** | About my book and the Dialogflow CX competition
+ Jul 13 | **Online** | About my book and the Dialogflow CX competition
 
 * ### Google I/O 2021
 
- 20 May 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
+ May 20 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
 
  <script type='application/ld+json'> 
     {
@@ -70,7 +78,7 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 
 * ### Codemotion Tech Conference 2021 (English Edition)
 
- 19 May | **Online** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
+ May 19 | **Online** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
 
 <script type='application/ld+json'> 
     {
@@ -112,7 +120,7 @@ Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conver
 
 * ### DDMA Voice - Digital talk about Chat & Voice Analytics
 
- 25 Mar | **Online** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
+ Mar 25 | **Online** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
 
 <script type='application/ld+json'> 
     {
