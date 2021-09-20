@@ -16,11 +16,11 @@ Lee has worn different hats in the past 17 years. She began her career as an eng
 
 A developer advocate’s role is to bridge the Google engineering team and the developer community. Her job is to give feedback to both parties, equally, in both ways. Developer relations at Google falls under engineering, and it includes writing public open-source code, writing technical documentation, public speaking, and creating (video) content.
 
-She is also a published author. She wrote [a book for O’Reilly on mobile web applications](https://www.amazon.com/_/dp/144936652X?tag=oreilly20-20), and currently, she is writing the Google Conversational AI book for [Apress](https://www.apress.com/gp).
+She is also a published author. She wrote the book [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.amazon.com/Definitive-Guide-Conversational-Dialogflow-Google/dp/1484270134/ref=asc_df_1484270134/) for Apress and [Hands-On Sencha Touch 2](https://www.amazon.com/Hands-Sencha-Touch-Real-World-Approach/dp/144936652X/ref=sr_1_1) for O'Reilly.
 
 Besides writing and her work at Google, she is an active member of the [DDMA Voice Committee](https://ddma.nl/commissies/voice/) in the Netherlands. This task force aims to increase the belief in the ‘voice channel’ by showing brands and publishers its opportunities for marketing, sales, and service and, therefore, to give it a permanent place in the digital transformation.
 
-With so many roles, there is one title that she is the proudest of: being the mother of her newborn; Rebel.
+With so many roles, there is one title that she is the proudest of: being the mother of her baby; Rebel.
 
 Web: https://www.leeboonstra.dev
 Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
