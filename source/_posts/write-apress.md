@@ -33,6 +33,10 @@ Who This Book Is For
 
 Everyone who is interested in building chatbots for the web, social media, voice assistants, or contact centers.
 
+![Signing books](/images/lee-signing-books.png)
+
+FWW: All royalities of my book, will go to charity; "Stichting Meer Dan Gewenst".
+
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",

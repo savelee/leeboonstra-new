@@ -1,9 +1,9 @@
 ---
-title: 'Google Cloud Talks'
+title: Google Cloud Talks
 description: Session 1 Build your own conversational AI with Dialogflow and Speech APIs 
 categories:
   - Videos
-date: 2020-05-265 10:45:17
+date: 2020-05-26 10:45:17
 youtube: TfvIBNJcTSc
 hidden: true
 alias: /developer/googlecloudtalks/

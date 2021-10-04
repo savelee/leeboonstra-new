@@ -29,4 +29,4 @@ ML fairness is a critical consideration in machine learning development. This se
 
 This session will enable developers to proactively think about fairness in product development.
 
-
+You can find a video of this talk here: [https://talks.codemotion.com/machine-learning-fairness---what-can-we-](https://talks.codemotion.com/machine-learning-fairness---what-can-we-)
