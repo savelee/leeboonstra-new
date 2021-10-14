@@ -13,7 +13,7 @@ Below is a list of my publications:
 *   Articles on cloud.google.com
     -----------------------------
 
-    10-2021 | **Google** | [Next Reaction: Monitor your conversations, get started with CCAI Insights](https://cloud.google.com/blog/)
+    10-2021 | **Google** | [Next Reaction: Monitor your conversations, get started with CCAI Insights](https://cloud.google.com/blog/topics/developers-practitioners/next-reaction-monitor-your-conversations-get-started-ccai-insights)
     01-2019 | **Google** | [A simple blueprint for building AI-powered customer service on GCP](https://cloud.google.com/blog/products/ai-machine-learning/simple-blueprint-for-building-ai-powered-customer-service-on-gcp)
 
 *   Various official Sencha blogs
