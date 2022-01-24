@@ -9,7 +9,8 @@ hidden: true
 ---
 
 * Articles on cloud.google.com
-<small>10-2021 | Google | [Next Reaction: Monitor your conversations, get started with CCAI Insights](https://cloud.google.com/blog/topics/developers-practitioners/next-reaction-monitor-your-conversations-get-started-ccai-insights)
+<small>01-2022 | Google | [Podcast: Monitor your conversations, get started with CCAI Insights](https://share.transistor.fm/s/3d5e9321)</small>
+<small>10-2021 | Google | [Next Reaction: Monitor your conversations, get started with CCAI Insights](https://cloud.google.com/blog/topics/developers-practitioners/next-reaction-monitor-your-conversations-get-started-ccai-insights)</small>
 
 <small>01-2019 | Google | [A simple blueprint for building AI-powered customer service on GCP](https://cloud.google.com/blog/products/ai-machine-learning/simple-blueprint-for-building-ai-powered-customer-service-on-gcp)</small>
 
