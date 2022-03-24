@@ -10,11 +10,151 @@ I worked in the past as a technical trainer, now I am a developer advocate at Go
 
 Check out my Speaker Deck, for an overview of all my presentations: [Speaker Deck](https://speakerdeck.com/savelee/).
 
-Topics I speak about: **Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
+Topics I speak about: **Conversational AI, Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
 
 <img src="/images/lee-fos.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
 <hr />
+
+2022
+----
+
+* ### Teqnation Keynote
+
+May 12 | **DeFabrique, Utrecht, NL** | [Website](https://teqnation.com/timetable-2022/) | Keynote: Machine Learning Fairness
+
+<script type='application/ld+json'> 
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Teqnation",
+      "startDate": "2022-05-12T08:30-05:00",
+      "endDate": "2022-05-12T17:30-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "DeFabrique",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Westkanaaldijk 7",
+          "addressLocality": "Utrecht",
+          "postalCode": "3542 DA",
+          "addressCountry": "NL"
+        }
+      },
+      ],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "TEQnation 2022 - The Mulitrack Developer Conference - Code | Innovate. ML Fairness Keynote",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.eventbrite.nl/e/teqnation-conference-2022-tickets-262497666587",
+        "price": "135",
+        "priceCurrency": "EUR",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2022-03-24T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Teqnation",
+        "url": "https://teqnation.com/timetable-2022/"
+      }
+    }
+</script>
+
+
+* ### Cloud Innovators Community
+
+ Apr 7 | **Online** | [Website](https://cloud.google.com/innovators) | Conversational AI discussion on Kumospace - Google Developer Relations Engineer: Lee Boonstra
+
+<script type='application/ld+json'> 
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Cloud Innovators",
+      "startDate": "2022-04-07T08:30-05:00",
+      "endDate": "2022-04-07T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://cloud.google.com/innovators"
+      }],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "Conversational AI discussion on Kumospace - Google Developer Relations Engineer: Lee Boonstra",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://cloud.google.com/innovators",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2022-03-24T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Google",
+        "url": "https://cloud.google.com/innovators"
+      }
+    }
+</script>
+
+* ### Cloud Innovator Hive
+
+ Mar 30 | **Online** | [Website](https://google.brandlive.com/innovators-hive-2022/en) | Cloud Innovator Hive: Building an Omnichannel Platform
+
+
+ <script type='application/ld+json'> 
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Cloud Innovator Hive",
+      "startDate": "2022-03-30T08:30-05:00",
+      "endDate": "2022-03-30T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://google.brandlive.com/innovators-hive-2022/en"
+      }],
+      "image": [
+        "https://www.leeboonstra.dev/images/profile.jpg"
+       ],
+      "description": "Cloud Innovator Hive: Building an Omnichannel Platform",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://google.brandlive.com/innovators-hive-2022/en",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2022-03-24T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Google",
+        "url": "https://google.brandlive.com/innovators-hive-2022/en"
+      }
+    }
+</script>
+
+* ### Voice Lunch
+
+ Feb 14 | **Online** | [Website](https://www.linkedin.com/company/voicelunch/) | Ask me Anything VoiceLunch - Google Developer Relations Engineer: Lee Boonstra
 
 2021
 ----

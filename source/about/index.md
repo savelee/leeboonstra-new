@@ -6,7 +6,7 @@ nocomments: true
 layout: about
 ---
 
-Senior Developer Relations Engineer
+Senior Developer Relations Engineer, <a href="https://cloud.google.com/conversational-ai/docs">Conversational AI</a>, Google
 
 <b>Google</b>
 
@@ -34,7 +34,7 @@ Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
     <h1>
      I love <span style="color:#e36803">creating</span> instead of just consuming technology.
      </h1>
-    <figcaption>&mdash;Lee Boonstra<br><em>Developer Advocate, Google</em></h4></figcaption>
+    <figcaption>&mdash;Lee Boonstra<br><em>Developer Relations Engineer, Google</em></h4></figcaption>
   </blockquote>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
