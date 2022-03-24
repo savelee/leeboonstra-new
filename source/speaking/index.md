@@ -21,9 +21,9 @@ Topics I speak about: **Conversational AI, Chatbots, Dialogflow, CCAI, Contact C
 
 * ### Teqnation Keynote
 
-May 12 | **DeFabrique, Utrecht, NL** | [Website](https://teqnation.com/timetable-2022/) | Keynote: Machine Learning Fairness
+ May 12 | **DeFabrique, Utrecht, NL** | [Website](https://teqnation.com/timetable-2022/) | Keynote: Machine Learning Fairness
 
-<script type='application/ld+json'> 
+ <script type='application/ld+json'> 
     {
       "@context": "https://schema.org",
       "@type": "Event",

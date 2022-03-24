@@ -1,6 +1,6 @@
 ---
 title: What is Google Cloud Conversational AI?
-description:  Google Cloud Conversational AI is a collection of conversational AI tools, solutions and APIs, both designers and developers can use. https://cloud.google.com/conversational-ai/docs
+description: Google Cloud Conversational AI is a collection of conversational AI tools, solutions and APIs, both designers and developers can use. https://cloud.google.com/conversational-ai/docs
 categories: 
 - FAQs
 class: FAQ
