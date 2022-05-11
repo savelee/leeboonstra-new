@@ -18,8 +18,6 @@ Lee has been at Google since 2017. She is a conversational AI expert and has hel
 
 Lee has worn different hats in the past 20 years. She began her career as an engineer developing websites and apps for famous brands and large enterprises such as ING Bank, KLM, and Heineken. She worked for Sencha Inc. as a lead technical trainer and curriculum creator before moving to Google as a sales engineer, developer advocate and software engineer.
 
-She is also a published author. She wrote the book [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.amazon.com/Definitive-Guide-Conversational-Dialogflow-Google/dp/1484270134/ref=asc_df_1484270134/) for Apress and [Hands-On Sencha Touch 2](https://www.amazon.com/Hands-Sencha-Touch-Real-World-Approach/dp/144936652X/ref=sr_1_1) for O’Reilly.
-
 <blockquote class="blockquote">
 "I'm good at explaining engineering to beginners and explaining to engineers where to begin."
 </blockquote>
