@@ -1,20 +1,24 @@
 ---
 title: Biography Lee Boonstra
-subtitle: Applied AI Engineer and Senior Developer Advocate, Developer Relations Engineer
-description: Lee Boonstra is a conversational AI, senior developer advocate and applied AI engineer at Google. In this role, she is focusing on Dialogflow, Contact Center AI & Speech technology. She is a public speaker and a published author for O'Reilly and Apress.
+subtitle: Software Engineer & Advocate, Office of the CTO, Google
+description: Lee Boonstra is a software engineer and advocate for the Cloud office of the CTO at Google, a diverse team of highly experienced engineers and technologists, working on behalf of the Cloud CEO, whose mission is to foster market-disrupting collaborative innovation between Google and the world's most ambitious organizations. Expertise in AI & Voice, Lee is a public speaker and a published author for O'Reilly and Apress.
 nocomments: true
 layout: about
 ---
 
-Senior Developer Relations Engineer, <a href="https://cloud.google.com/conversational-ai/docs">Conversational AI</a>, Google
+Software Engineer & Advocate for the <a href="https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/">Office of the CTO</a>
 
 <b>Google</b>
 
-[Lee Boonstra](https://plus.google.com/117712452932146916020) has been at Google since 2017. Lee is a conversational AI expert and has helped many businesses develop AI-powered chatbots and voice assistants at an enterprise scale. They are building smart AI platforms on the Google Cloud Platform using Dialogflow for intent detection and natural language processing, speech recognition technology, and contact center technology.
+[Lee Boonstra](https://plus.google.com/117712452932146916020) is a software engineer for the Cloud office of the CTO at Google.
 
-Lee has worn different hats in the past 20 years. Lee began her career as an engineer developing websites and apps for famous brands and large enterprises such as ING Bank, KLM, and Heineken. Lee worked for Sencha Inc. as a lead technical trainer and curriculum creator before moving to Google as a developer advocate (developer relations engineer).
+The Office of the CTO (OCTO) is a diverse team of highly experienced engineers and technologists, working on behalf of the Cloud CEO, whose mission is to foster market-disrupting collaborative innovation between Google and the world's most ambitious organizations. The customers we engage have hard technical problems and strong brand identities. In 2022, the OCTO team is starting an incubation/acceleration program (called the "Applied Innovation Factory") to test the boundaries on ideas that could cause strategic shifts in industry and GCP's business. We seek impact in everything from futuristic computing issues to AI and Voice technology.
 
-A developer advocate’s role is to bridge the Google engineering team and the developer community. Her job is to give feedback to both parties, equally, in both ways. Developer relations at Google falls under engineering, and it includes writing public open-source code, writing technical documentation, public speaking, and creating (video) content.
+Lee has been at Google since 2017. She is a conversational AI expert and has helped many businesses develop AI-powered chatbots and voice assistants at an enterprise scale. They are building intelligent AI, contact center platforms on the Google Cloud Platform using our Conversational AI tools.
+
+Lee has worn different hats in the past 20 years. She began her career as an engineer developing websites and apps for famous brands and large enterprises such as ING Bank, KLM, and Heineken. She worked for Sencha Inc. as a lead technical trainer and curriculum creator before moving to Google as a sales engineer, developer advocate and software engineer.
+
+She is also a published author. She wrote the book [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.amazon.com/Definitive-Guide-Conversational-Dialogflow-Google/dp/1484270134/ref=asc_df_1484270134/) for Apress and [Hands-On Sencha Touch 2](https://www.amazon.com/Hands-Sencha-Touch-Real-World-Approach/dp/144936652X/ref=sr_1_1) for O’Reilly.
 
 <blockquote class="blockquote">
 "I'm good at explaining engineering to beginners and explaining to engineers where to begin."
@@ -34,7 +38,7 @@ Twitter: <a href="https://twitter.com/ladysign">@ladysign</a>
     <h1>
      I love <span style="color:#e36803">creating</span> instead of just consuming technology.
      </h1>
-    <figcaption>&mdash;Lee Boonstra<br><em>Developer Relations Engineer, Google</em></h4></figcaption>
+    <figcaption>&mdash;Lee Boonstra<br><em>SWE, Google</em></h4></figcaption>
   </blockquote>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
