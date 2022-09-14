@@ -12,6 +12,30 @@
 }
 
 @font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora-Regular.eot');
+    src: url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lora-Regular.woff2') format('woff2'),
+        url('../fonts/Lora-Regular.woff') format('woff'),
+        url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Regular.eot');
+    src: url('../fonts/Lexend-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lexend-Regular.woff2') format('woff2'),
+        url('../fonts/Lexend-Regular.woff') format('woff'),
+        url('../fonts/Lexend-Regular.svg#Lexend-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'consolas';
     src: local('consolas'), local('consolas'),
          url('../fonts/Consolas?#iefix') format('embedded-opentype'),

@@ -1,6 +1,6 @@
 /* Main SCSS File */
 $enable-responsive-font-sizes: true;
-$font-family-base: 'AbhayaLibre-Regular';
+$font-family-base: 'Lora';
 
 @import "./_colors.scss";
 @import "./bootstrap.scss";
@@ -35,7 +35,6 @@ html {
     margin: 15px 0 15px;
 }
 
-
 .footer {
     background: #222;
     color: #fff;
@@ -48,6 +47,7 @@ html {
     }
 
     ul {
+        font-family: 'Lexend';
         margin-left: -20px;
         li {
             font-size: 1rem;
@@ -172,12 +172,19 @@ header {
     color: #fff;
 }
 
+.w-75 .h1 {
+    font-size: 28px;
+}
+
+.w-25 .h1 {
+    font-size: 18px;
+}
+
 .card {
-    .h1 {
-        font-size: 22px;
-    }
+
     .card-header {
         font-size: 80%;
+        font-family: 'Lexend';
     }
     .card-foot {
         margin: 20px;
@@ -199,6 +206,7 @@ header {
 
     .header {
         font-size: 80%;
+        font-family: 'Lexend';
         margin-bottom: 30px;
 
         * {
@@ -212,8 +220,9 @@ header {
     .lead,
     p {
         &:first-of-type {
-            font-size: 1.6rem;
-            line-height: 1.5;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            font-family: 'Lexend';
         }    
     }
 
@@ -415,7 +424,7 @@ footer.row {
  
  /* Blockquote header */
  .blockquote h1 {
-     font-family: 'Abril Fatface', cursive;
+     font-family: 'Abril Fatface';
      position: relative; /* for pseudos */
      color: #030303;
      font-size: 2.5rem;
@@ -526,4 +535,9 @@ footer.row {
     }
     border: none !important;
 
+ }
+
+ .h1,
+ .blogcontent .h1 {
+    font-family: 'bebas';
  }
