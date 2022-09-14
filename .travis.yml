@@ -24,4 +24,4 @@ script:
   - cd ../../../
   - workbox generateSW workbox-config.js
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN2
+  - firebase deploy --token $FIREBASE_TOKEN3

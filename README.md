@@ -71,9 +71,14 @@ We will use Firebase for static hosting.
 ```
 npm install -g firebase-tools
 firebase login
-Firebase login:ci
-Firebase init (hosting; public)
+firebase login:ci
+firebase init (hosting; public)
 ```
+
+When problems with pushing to firebase, refresh
+the token with firebase login:ci
+add it to travis repo settings.
+and update the .travis.yml
 
 https://medium.com/@bartwijnants/continuous-deployment-to-firebase-hosting-using-travis-ci-e7d9c798ead4
 
