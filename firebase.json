@@ -1,171 +1,189 @@
 {
   "hosting": {
-    "public": "./public",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [ {
+    "redirects": [
+      {
       "source": "/developer/category/:post*",
       "destination": "/categories/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Bots/:post*",
       "destination": "/chatbots/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Chatbots/:post*",
       "destination": "/chatbots/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/categories/Chatbots/",
       "destination": "/categories/chatbots/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Machine-Learning/:post*",
       "destination": "/machine-learning/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Machine-Learning/",
       "destination": "/categories/machine-learning/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/categories/Machine-Learning/",
       "destination": "/categories/machine-learning/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Abstract/:post*",
       "destination": "/abstract/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/abstract/",
       "destination": "/categories/abstract/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/categories/Abstract/",
       "destination": "/categories/abstract/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Videos/:post*",
       "destination": "/videos/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/categories/Videos/",
       "destination": "/categories/videos/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Videos/",
       "destination": "/categories/videos/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Writing/:post*",
       "destination": "/writing/:post",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/categories/Writing/",
       "destination": "/categories/writing/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/Chatbots/",
       "destination": "/categories/chatbots/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/speaker/",
       "destination": "/speaking/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/writer/",
       "destination": "/writing/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/tags/Dialogflow-CX-pricing/",
       "destination": "/chatbots/dialogflow-cx-pricing/",
       "type": 301
-    },
-    {
+      },
+      {
       "source": "/tags/Dialogflow-CX-vs.-Dialogflow-ES/",
       "destination": "/chatbots/dialogflow-cx-vs.-dialogflow-es/",
       "type": 301
-    },  
-    {
+      },
+      {
       "source": "/tags/Dialogflow-CX-vs.-Dialogflow-Essentials/",
       "destination": "/chatbots/dialogflow-cx-vs.-dialogflow-essentials/",
       "type": 301
-    },    
-    {
+      },
+      {
       "source": "/tags/Dialogflow-CX-for-beginners/",
       "destination": "/chatbots/dialogflow-cx-for-beginners/",
       "type": 301
-    }, 
-    {
+      },
+      {
       "source": "/tags/Dialogflow-CX/",
       "destination": "/chatbots/dialogflow-cx/",
       "type": 301
-    }, 
-    {
+      },
+      {
       "source": "/tags/Bot-builder/",
       "destination": "/tags/bot-builder/",
       "type": 301
-    },  
-    {
+      },
+      {
       "source": "/tags/Chatbot-development-suite/",
       "destination": "/tags/chatbot-development-suite/",
       "type": 301
-    }, 
-    {
+      },
+      {
       "source": "/about-me/",
       "destination": "/about/",
       "type": 301
-    }],
-    "headers": [ {
-      "source" : "**/*.@(eot|otf|svg|ttf|ttc|woff2|woff|font.css)",
-      "headers" : [ {
-        "key" : "Access-Control-Allow-Origin",
-        "value" : "*"
-      } ]
-    }, {
-      "source" : "**/*.@(jpg|jpeg|ttf|svg|woff|woff2|webp|eot|ico|gif|js|png)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=31557600"
-      } ]
-    }, {
-        "source" : "**/prism-atom-dark.css",
-        "headers" : [ {
-          "key" : "Cache-Control",
-          "value" : "max-age=31557600"
-        } ]
-    }, {
-        "source" : "**/*.@(html|htm)",
-        "headers" : [ {
-          "key" : "Cache-Control",
-          "value" : "no-cache"
-        } ]
-    }, {
-      "source" : "**/*.@(xml|css)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=86400"
-      } ]
-    }]
+      }
+      ],
+      "headers": [
+      {
+      "source": "**/*.@(eot|otf|svg|ttf|ttc|woff2|woff|font.css)",
+      "headers": [
+      {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+      }
+      ]
+      },
+      {
+      "source": "**/*.@(jpg|jpeg|ttf|svg|woff|woff2|webp|eot|ico|gif|js|png)",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "max-age=31557600"
+      }
+      ]
+      },
+      {
+      "source": "**/prism-atom-dark.css",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "max-age=31557600"
+      }
+      ]
+      },
+      {
+      "source": "**/*.@(html|htm)",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "no-cache"
+      }
+      ]
+      },
+      {
+      "source": "**/*.@(xml|css)",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "max-age=86400"
+      }
+      ]
+      }
+      ]
   }
 }
