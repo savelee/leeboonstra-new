@@ -11,6 +11,7 @@ before_install:
   - npm install -g webpack-cli
   - npm install -g webpack
   - npm install -g workbox-cli
+  - npm install hexo-cli -g
   - npm install -g hexo
   - npm install
 install:
