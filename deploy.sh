@@ -11,6 +11,6 @@ hexo clean
 hexo generate
 hexo deploy
 cd themes/leeboonstra/design
-#npm install
+#npm install --force
 cd ../../../
 workbox generateSW workbox-config.js

@@ -13,12 +13,11 @@ before_install:
   - npm install -g workbox-cli
   - npm install hexo-cli -g
   - npm install -g hexo
-  - npm install
+  - npm install --force
 install:
-  - npm install
+  - npm install --force
 script:
   - hexo clean
-  - hexo generate
   - hexo deploy
   - cd themes/leeboonstra/design
   - npm install
