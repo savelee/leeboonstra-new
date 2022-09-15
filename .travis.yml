@@ -11,10 +11,9 @@ before_install:
   - npm install -g webpack-cli
   - npm install -g webpack
   - npm install -g workbox-cli
-  - npm install js-yaml@4.0.0
+  - npm install js-yaml@latest
   - npm install hexo-cli -g
-  - npm install -g hexo
-  - npm install --force
+  - npm install -g hexo@6.0.0
 install:
   - npm install --force
 script:
