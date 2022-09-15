@@ -1,3 +1,8 @@
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN3"
+  project: "leeboonstra-dev-7d578"
 language: node_js
 node_js:
   - "12"
