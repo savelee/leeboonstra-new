@@ -60,7 +60,7 @@
   "description": "Generate multiple version of images for responsive Hexo blogs",
   "devDependencies": {
     "@ava/babel": "^1.0.0",
-    "ava": "^3.0",
+    "ava": "^5.2",
     "hexo": "^5.1.1",
     "hexo-test-utils": "^0.4.1"
   },
