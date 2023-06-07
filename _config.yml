@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dialogflow & Conversational AI blog by Software Engineer Lee Boonstra
-subtitle: Hi my name is Lee. I'm a software engineer, advocate, a writer, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
-description: Conversational AI Blog of SWE Lee Boonstra. Writes about Dialogflow, Chatbots, NLP and AI in Contact Centers.
-keywords: Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding
+title: Generative AI & Conversational AI blog by Google Software Engineer Lee Boonstra
+subtitle: Hi my name is Lee. I'm a software engineer tech lead, advocate, a writer, innovator, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
+description: Conversational AI Blog of SWE Tech Lead Lee Boonstra. Writes about Dialogflow, Chatbots, NLP and AI in Contact Centers.
+keywords: Generative AI, PaLM, Bard, LaMDA, LLM, Large Language Models, Vertex AI, Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding
 author: Lee Boonstra
 language: en
 timezone: Europe/Amsterdam
@@ -19,7 +19,6 @@ nav:
   Abstracts: abstracts/
   Writing: writing/
   Videos: videos/
-  FAQs: faqs/
 rss: /atom.xml
 
 # URL

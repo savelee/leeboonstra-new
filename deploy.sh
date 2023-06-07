@@ -5,7 +5,7 @@
 #npm install -g webpack
 #npm install -g workbox-cli
 #npm install -g hexo
-#npm install
+npm install
 
 hexo clean
 hexo generate
@@ -14,3 +14,6 @@ cd themes/leeboonstra/design
 #npm install --force
 cd ../../../
 workbox generateSW workbox-config.js
+
+firebase login -reauth
+firebase deploy --only hosting

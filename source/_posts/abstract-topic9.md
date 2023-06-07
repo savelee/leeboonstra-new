@@ -1,31 +1,40 @@
 ---
-title: 'How to set up your conversational analytics'
+title: 'Let's be honest, how does LLM and Generative AI really work?'
 categories:
   - Abstract
 class: Abstracts
-date: 2020-09-18 11:45:17
-alias: /developer/analytics/
+date: 2023-06-10 11:45:17
+alias: /developer/generativeai/
 hidden: true
 tags:
-  - chatbots
-  - voicebots
-  - callbots
-  - analytics
-  - Dialogflow
-  - Dashboards
-  - Looker
-  - Insights
+  - Generative AI
+  - Large Language Models
+  - LLMs
+  - Bard
+  - PaLM
+  - LaMDA
+  - ChatGPT
+  - Conversational AI
 ---
 
-**Type**: Keynote / Breakout Talk
-**Time**: 20min - 50min
+**Type**: Keynote Talk
+**Time**: 20min - 45min
 **Level**: Beginners
-**Audience**: Decision makers, Conversational AI practitioners, Developers
+**Audience**: This talk is intended for a general audience, including beginners and those with some familiarity with artificial intelligence.
 
 <!--more-->
 
-It appears that most organizations employing conversational platforms, like chatbots and voicebots, rarely use analytics. This is a missed opportunity since a well-designed and smart use of analytics can be crucial to improving the customer experience. 
+*A non-technical explanation of the inner workings of Generative AI*
 
-In this session Lee Boonstra, Developer Advocate for Conversational AI @ Google, and author of the book: [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.apress.com/gp/book/9781484270134) will guide you through all the different kinds of data you can consider monitoring in your conversational analytics. 
+Everyone is talking about it: Generative AI and Large Language Models. To really understand what you can do with them, how to refine them for your own use, but also what the dangers are, it helps to understand how these models work.
 
-You will learn how to collect data from your voice and chatbots, and more importantly: how to translate all of your collected data into actual actions to improve conversational implementations.
+LLMs are trained on massive datasets of text and code, and can generate text, translate languages, write different kinds of creative content, and answer your questions in an informative way. 
+
+In this talk, Lee Boonstra, Software Engineer Tech Lead and advocate will provide a beginner's guide to LLMs and generative AI technology. She explains what these technologies are, how they work, and what they can be used for. Let's be honest and also discuss the potential risks and benefits of these technologies, and how we can ensure that they are used for good and not for harm.
+
+* Introduction to LLMs and generative AI technology
+* How LLMs and generative AI technology work
+* Use cases for LLMs and generative AI technology
+* Risks and benefits of LLMs and generative AI technology
+* The future of LLMs and generative AI technology
+
