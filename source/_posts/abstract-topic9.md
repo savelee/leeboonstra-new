@@ -1,9 +1,9 @@
 ---
-title: 'Let's be honest, how does LLM and Generative AI really work?'
+title: "Let's be honest, how does LLM and Generative AI really work?"
 categories:
   - Abstract
 class: Abstracts
-date: 2023-06-10 11:45:17
+date: 2023-06-05 11:45:17
 alias: /developer/generativeai/
 hidden: true
 tags:
@@ -24,7 +24,7 @@ tags:
 
 <!--more-->
 
-*A non-technical explanation of the inner workings of Generative AI*
+<h2>A non-technical explanation of the inner workings of Generative AI</h2>
 
 Everyone is talking about it: Generative AI and Large Language Models. To really understand what you can do with them, how to refine them for your own use, but also what the dangers are, it helps to understand how these models work.
 
