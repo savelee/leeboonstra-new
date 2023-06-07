@@ -67,7 +67,5 @@ Firebase is a mobile and web application development platform by Google.
 We will use Firebase for static hosting.
 
 ```
-hexo deploy
-firebase login -reauth
-firebase deploy --only hosting
+. deploy.sh
 ```
