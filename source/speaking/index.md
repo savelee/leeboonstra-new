@@ -16,6 +16,23 @@ Topics I speak about: **Conversational AI, Chatbots, Dialogflow, CCAI, Contact C
 
 <hr />
 
+2023
+----
+
+<!--* ### DevWorld Conference
+
+  Sept 28 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | TBD Generative AI-->
+
+<!--* ### iBestuur Exec Conference
+
+  Sept 13 | **Fokker Terminal, The Hague, NL** [Website](https://www.ibestuurcongres.nl/2023) | TBD Generative AI-->
+
+* ### AI Advantage
+
+  Jun 1 | **AMAZE, Amsterdam, NL** | [Website](https://google-ads.brandlive.com/AI-Advantage/en) | Keynote: Generative AI
+
+
+
 2022
 ----
 

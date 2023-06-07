@@ -22,4 +22,4 @@ machine learning models, based on structured historial data in BigQuery.
 "Predicting the Waiting Time at the Airport".
 
 <!--more-->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rM6pyTkpfrA?start=5463" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rM6pyTkpfrA?t=5463" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
