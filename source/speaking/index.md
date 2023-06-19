@@ -10,7 +10,7 @@ I worked in the past as a technical trainer, now I am a developer advocate at Go
 
 Check out my Speaker Deck, for an overview of all my presentations: [Speaker Deck](https://speakerdeck.com/savelee/).
 
-Topics I speak about: **Conversational AI, Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
+Topics I speak about: **Generative AI, Conversational AI, Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
 
 <img src="/images/lee-fos.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
@@ -19,13 +19,15 @@ Topics I speak about: **Conversational AI, Chatbots, Dialogflow, CCAI, Contact C
 2023
 ----
 
-<!--* ### DevWorld Conference
+* ### DevWorld Conference
 
-  Sept 28 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | TBD Generative AI-->
+  Sept 28 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | Large Language Models
 
-<!--* ### iBestuur Exec Conference
+  <img src="/images/lee-devworld23.png" class="img-fluid border" alt="Lee @ DevWorld" loading="lazy">
 
-  Sept 13 | **Fokker Terminal, The Hague, NL** [Website](https://www.ibestuurcongres.nl/2023) | TBD Generative AI-->
+* ### iBestuur Exec Conference
+
+  Sept 13 | **Fokker Terminal, The Hague, NL** [Website](https://www.ibestuurcongres.nl/2023/sessies) | Generative AI
 
 * ### AI Advantage
 
