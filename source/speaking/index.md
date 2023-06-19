@@ -23,7 +23,7 @@ Topics I speak about: **Generative AI, Conversational AI, Chatbots, Dialogflow, 
 
   Sept 28 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | Large Language Models
 
-  <img src="/images/lee-devworld23.png" class="img-fluid border" alt="Lee @ DevWorld" loading="lazy">
+  <img src="/images/leedevworld23.png" class="img-fluid border" alt="Lee @ DevWorld" loading="lazy">
 
 * ### iBestuur Exec Conference
 
