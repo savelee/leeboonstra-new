@@ -1,29 +1,28 @@
 ---
-title: Public Speaking, Conferences and Events Conversational AI
-description: Public speaking & events, topics include; Dialogflow, Chatbots, Customer Care, Contact Centers, Machine Learning, Conversational AI, Diversity
+title: Public Speaking, Keynotes, Conferences and Events
+description: Public speaking & events, topics include; Prompt Engineering, Google AI, Conversational AI, LLMs, Voice Technology
 event: true
 nocomments: true
 layout: speaking
 ---
 
-I worked in the past as a technical trainer, now I am a developer advocate at Google on Conversational AI. I'm a public speaker at conferences and events. Below is a list of upcoming and past sessions.
+Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chatbots, Contact Centers, NLU, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+.
 
-Check out my Speaker Deck, for an overview of all my presentations: [Speaker Deck](https://speakerdeck.com/savelee/).
-
-Topics I speak about: **Generative AI, Conversational AI, Chatbots, Dialogflow, CCAI, Contact Centers, NLU, Conversational AI, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+, Women in Tech**
-
-<img src="/images/lee-fos.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
+<img src="/images/leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
 <hr />
 
-2023
+2024
 ----
+
+* ### TBA: Google Cloud Next Benelux
 
 * ### DevWorld Conference
 
-  Sept 28 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | Large Language Models
+  Mar 1 | **RAI, Amsterdam, NL** [Website](https://devworldconference.com/) | Large Language Models
 
-  <img src="/images/leedevworld23.png" class="img-fluid border" alt="Lee @ DevWorld" loading="lazy">
+2023
+----
 
 * ### iBestuur Exec Conference
 

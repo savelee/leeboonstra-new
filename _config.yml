@@ -5,8 +5,8 @@
 # Site
 title: Generative AI & Conversational AI blog by Google Software Engineer Lee Boonstra
 subtitle: Hi my name is Lee. I'm a software engineer tech lead, advocate, a writer, innovator, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
-description: Conversational AI Blog of SWE Tech Lead Lee Boonstra. Writes about Dialogflow, Chatbots, NLP and AI in Contact Centers.
-keywords: Generative AI, PaLM, Bard, LaMDA, LLM, Large Language Models, Vertex AI, Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding
+description: Conversational AI Blog of SWE Tech Lead Lee Boonstra. Writes about Generative AI, Prompt Engineering, Dialogflow, Chatbots, NLP and AI in Contact Centers.
+keywords: Generative AI, Gemini, Google AI, LLM, PaLM, Bard, ChatGPT, GPT, GPT4, LLaMA, Transformers, LaMDA, LLM, Large Language Models, Vertex AI, Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding, OpenAI, Claude
 author: Lee Boonstra
 language: en
 timezone: Europe/Amsterdam

@@ -326,7 +326,7 @@ header {
         border: 5px solid #fff;
         overflow: hidden;
         margin-left: calc(50% - 50px);
-
+        object-position: -5px 0px !important;
         img {
             height: 100px;
             width: 100px;
