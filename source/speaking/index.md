@@ -532,9 +532,6 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
     
     4 April 2018 | **Amsterdam, NL** | Learn about DevOps at Google
     
-
-<img src="/images/leenext2019.jpg" class="img-fluid border" alt="Lee Boonstra, Googler and public speaker." loading="lazy" />
-
 2017
 ----
 

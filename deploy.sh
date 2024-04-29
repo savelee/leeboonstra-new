@@ -15,5 +15,5 @@ cd themes/leeboonstra/design
 cd ../../../
 workbox generateSW workbox-config.js
 
-firebase login -reauth
+firebase login --reauth
 firebase deploy --only hosting
