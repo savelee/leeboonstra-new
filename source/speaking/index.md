@@ -15,7 +15,43 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
 2024
 ----
 
-* ### TBA: Google Cloud Next Benelux
+* ### Google Cloud Summit Benelux 2024
+
+  Jun 5 & 6 | **Theater, Amsterdam, NL** [Website](https://cloudonair.withgoogle.com/events/benelux-summit-24) | Keynote
+
+  <script type='application/ld+json'> 
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Google Cloud Summit Benelux 2024",
+      "startDate": "2024-06-05T08:30-05:00",
+      "endDate": "2024-06-06T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": [{
+        "@type": "VirtualLocation",
+        "url": "https://cloudonair.withgoogle.com/events/benelux-summit-24"
+      }],
+      "description": "Keynote",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://cloud.google.com/innovators",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "http://schema.org/OnlineOnly",
+        "validFrom": "2024-06-05T12:00"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Lee Boonstra"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Google",
+        "url": "https://cloudonair.withgoogle.com/events/benelux-summit-24"
+      }
+    }
+  </script>
 
 * ### DevWorld Conference
 
@@ -39,288 +75,55 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
 
 * ### Teqnation Keynote
 
- May 12 | **DeFabrique, Utrecht, NL** | [Website](https://teqnation.com/timetable-2022/) | Keynote: Machine Learning Fairness
-
- <script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Teqnation",
-      "startDate": "2022-05-12T08:30-05:00",
-      "endDate": "2022-05-12T17:30-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "DeFabrique",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Westkanaaldijk 7",
-          "addressLocality": "Utrecht",
-          "postalCode": "3542 DA",
-          "addressCountry": "NL"
-        }
-      },
-      ],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "TEQnation 2022 - The Mulitrack Developer Conference - Code | Innovate. ML Fairness Keynote",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.eventbrite.nl/e/teqnation-conference-2022-tickets-262497666587",
-        "price": "135",
-        "priceCurrency": "EUR",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2022-03-24T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Teqnation",
-        "url": "https://teqnation.com/timetable-2022/"
-      }
-    }
-</script>
-
+  May 12 | **DeFabrique, Utrecht, NL** | [Website](https://teqnation.com/timetable-2022/) | Keynote: Machine Learning Fairness
 
 * ### Cloud Innovators Community
 
- Apr 7 | **Online** | [Website](https://cloud.google.com/innovators) | Conversational AI discussion on Kumospace - Google Developer Relations Engineer: Lee Boonstra
-
-<script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Cloud Innovators",
-      "startDate": "2022-04-07T08:30-05:00",
-      "endDate": "2022-04-07T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://cloud.google.com/innovators"
-      }],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "Conversational AI discussion on Kumospace - Google Developer Relations Engineer: Lee Boonstra",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://cloud.google.com/innovators",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2022-03-24T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Google",
-        "url": "https://cloud.google.com/innovators"
-      }
-    }
-</script>
+  Apr 7 | **Online** | [Website](https://cloud.google.com/innovators) | Conversational AI discussion on Kumospace - Google Developer Relations Engineer: Lee Boonstra
 
 * ### Cloud Innovator Hive
 
- Mar 30 | **Online** | [Website](https://google.brandlive.com/innovators-hive-2022/en) | Cloud Innovator Hive: Building an Omnichannel Platform
-
-
- <script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Cloud Innovator Hive",
-      "startDate": "2022-03-30T08:30-05:00",
-      "endDate": "2022-03-30T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://google.brandlive.com/innovators-hive-2022/en"
-      }],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "Cloud Innovator Hive: Building an Omnichannel Platform",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://google.brandlive.com/innovators-hive-2022/en",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2022-03-24T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Google",
-        "url": "https://google.brandlive.com/innovators-hive-2022/en"
-      }
-    }
-</script>
+  Mar 30 | **Online** | [Website](https://google.brandlive.com/innovators-hive-2022/en) | Cloud Innovator Hive: Building an Omnichannel Platform
 
 * ### Voice Lunch
 
- Feb 14 | **Online** | [Website](https://www.linkedin.com/company/voicelunch/) | Ask me Anything VoiceLunch - Google Developer Relations Engineer: Lee Boonstra
+  Feb 14 | **Online** | [Website](https://www.linkedin.com/company/voicelunch/) | Ask me Anything VoiceLunch - Google Developer Relations Engineer: Lee Boonstra
 
 2021
 ----
 
 * ### NEXT 2021
 
- Oct 12 - Oct 14 | **Online** | [Website](https://cloud.withgoogle.com/next/catalog#ai-ml) | Various Conversational AI sessions / demos
+  Oct 12 - Oct 14 | **Online** | [Website](https://cloud.withgoogle.com/next/catalog#ai-ml) | Various Conversational AI sessions / demos
 
 * ### Conferência Bots Brasil 2021
   
- Sept 30 - Oct 2 | **Online** | [Website](https://www.linkedin.com/events/confer-nciabotsbrasil20216832435125100318720/) | How to setup your conversational analytics
+  Sept 30 - Oct 2 | **Online** | [Website](https://www.linkedin.com/events/confer-nciabotsbrasil20216832435125100318720/) | How to setup your conversational analytics
 
 * ### Voice Lunch
   
- Sept 28 12pm (EDT)| **Online** | [Website](https://voicelunch.com/) | Voice Lunch with Lee Boonstra
+  Sept 28 12pm (EDT)| **Online** | [Website](https://voicelunch.com/) | Voice Lunch with Lee Boonstra
 
 * ### Serverless Toronto
 
- Sep 14 6PM (CEST) | **Online** | [Website](https://www.meetup.com/Serverless-Toronto/events/279233610/) | Get started with Dialogflow & Contact Center AI on Google Cloud
+  Sep 14 6PM (CEST) | **Online** | [Website](https://www.meetup.com/Serverless-Toronto/events/279233610/) | Get started with Dialogflow & Contact Center AI on Google Cloud
 
 * ### Business Messenger Office Hours
 
- Jul 13 | **Online** | About my book and the Dialogflow CX competition
+  Jul 13 | **Online** | About my book and the Dialogflow CX competition
 
 * ### Google I/O 2021
 
- May 20 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
-
- <script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Google I/O 2021",
-      "startDate": "2021-05-18T08:30-05:00",
-      "endDate": "2021-05-20T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://events.google.com/io/"
-      }],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "Google I/O 2021 - Build a voice bot for Android with Dialogflow and Flutter workshop",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://events.google.com/io/",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2021-01-21T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Google",
-        "url": "https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en"
-      }
-    }
-</script>
+  May 20 10:15AM (GMT) Stream 3 | **Online** | [Website](https://events.google.com/io/program/speakers/?id=dc24d751-0b8a-4b08-b617-a9aa3e847f75&lng=en) | Build a voice bot for Android with Dialogflow and Flutter
 
 * ### Codemotion Tech Conference 2021 (English Edition)
 
- May 19 | **Online** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
-
-<script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Codemotion Tech Conference 2021",
-      "startDate": "2021-05-18T08:30-05:00",
-      "endDate": "2021-05-20T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring"
-      }],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "Codemotion Tech Conference 2021 (English Edition)",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring",
-        "price": "60.00",
-        "priceCurrency": "EUR",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2021-01-21T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Codemotion",
-        "url": "https://www.codemotion.com/"
-      }
-    }
-</script>
+  May 19 | **Online** | [Website](https://events.codemotion.com/conferences/online/2021/online-tech-conference-spring) | Build a voice bot for Android with Dialogflow and Flutter & ML Fairness
 
 
 * ### DDMA Voice - Digital talk about Chat & Voice Analytics
 
- Mar 25 | **Online** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
-
-<script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "DDMA Digital Talk: Conversational Analytics",
-      "startDate": "2021-03-25T15:30-05:00",
-      "endDate": "2021-03-25T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/"
-      }],
-      "image": [
-        "https://www.leeboonstra.dev/images/profile.jpg"
-       ],
-      "description": "DDMA Digital Talk about chat & voice bot analytics.",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2021-01-21T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "DDMA",
-        "url": "https://ddma.nl/"
-      }
-    }
-</script>
-
+  Mar 25 | **Online** | [Website](https://ddma.nl/events/digital-talk-chat-voice-bot-analytics/) | Digital Talk about chat & voice bot analytics.
 
 <hr>
 
@@ -329,15 +132,15 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
 
 * ### Google DevFest
 
- 19 Nov | **Online** | [Website](https://gdg.community.dev/devfest/) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
+  19 Nov | **Online** | [Website](https://gdg.community.dev/devfest/) | Accelerate building enterprise level conversational experiences. Building chat and voice bots next gen with Dialogflow CX 
 
 * ### Conversational Conference by Frank Watching
 
- 24 Sept | **Online`** | [Website](https://fw.nu/1ntv) | The Next Generation of Conversational 
+  24 Sept | **Online`** | [Website](https://fw.nu/1ntv) | The Next Generation of Conversational 
 
 * ### OmniChannelX 2020
 
- 11 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Improve your customer care by building an AI bot platform | **Save 50 Euro; use discount code: 50GOOG**
+  11 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Improve your customer care by building an AI bot platform | **Save 50 Euro; use discount code: 50GOOG**
 
 * ### VOICE Global 2020 (VoiceSummit.ai)
 
@@ -345,7 +148,7 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
 
 * ### OmniChannelX 2020
 
- 8 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Workshop: Hands-on: Create a TV guide action for the Google Assistant with Dialogflow and actions on Google  | **Save 50 Euro; use discount code: 50GOOG**
+  8 June | **Online** | [Website](https://omnichannelx.digital/2020-programme-omnichannel-conference/) | Workshop: Hands-on: Create a TV guide action for the Google Assistant with Dialogflow and actions on Google  | **Save 50 Euro; use discount code: 50GOOG**
 
 * ### WeAreDevelopers Live 2020
 
