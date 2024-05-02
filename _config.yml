@@ -10,6 +10,7 @@ keywords: Generative AI, Gemini, Google AI, LLM, PaLM, Bard, ChatGPT, GPT, GPT4,
 author: Lee Boonstra
 language: en
 timezone: Europe/Amsterdam
+favicon: /favicon.png
 
 #Header
 nav:
@@ -217,42 +218,3 @@ related_posts:
       - console.cloud.google.com
       - google.com
       - leeboonstra.dev
-
-# hexo-generator-amp
-# The following settings is the quick start options.
-
-# generator_amp:
-#   templateDir:  amp-template
-#   assetDistDir: amp-dist
-#   google_analytics: 'UA-85081556-1'
-#   logo:
-#     path:   logo.png
-#     width:  600
-#     height: 60
-#   substituteTitleImage:
-#     path:   screen.jpg
-#     width:  500
-#     height: 348
-#   warningLog: false   # To display warning, please set true.
-#   theme:                                        #(optional) Sample AMP template's option
-#     menu:                                      #(optional) Sample AMP template's menu option
-#       Home: /
-#       Bio: /about/
-#       Speaking: speaking/
-#       Abstracts: abstracts/
-#       Writing: writing/
-#       Videos: videos/
-#     share_button:                              #(optional) Share button option
-#       twitter: true                            #(optional) Enable Twitter share button
-#       facebook: true                           #(optional) Enable Facebook share button
-#       google: true                             #(optional) Enable Goolge+ share button
-#       hatena: true                             #(optional) Enable Hatena share button
-#       tumblr: true                             #(optional) Enable Tumblr share button
-#     category_posts: true                       #(optional) Enable category posts
-#     category_posts_detailed: true              #(optional) Enable detailed category posts
-#     latests: true                              #(optional) Enable latests posts
-#     list_limts: 5                              #(optional) This option limit the number of display in the above lists (default:5)
-#     authorLink:                                #(optional) Enable footer profile link
-#       twitter_id: ladysign
-#       youtube_channel: UCD5s-CQx3FoMnSnUE1N6CJQ
-#       github_id: savelee
