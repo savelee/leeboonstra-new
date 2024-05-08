@@ -31,5 +31,8 @@
     "hexo-tag-embed": "^1.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-uglify": "^2.0.0"
+  },
+  "devDependencies": {
+    "workbox-cli": "^7.1.0"
   }
 }
