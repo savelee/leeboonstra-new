@@ -16,4 +16,4 @@ cd ../../../
 workbox generateSW workbox-config.js
 
 firebase login --reauth
-firebase deploy --only hosting
+firebase deploy --only hosting --project leeboonstra-dev-7d578

@@ -54,6 +54,8 @@ sitemap:
 archive_type: 'monthly'
 show_count: true
 
+rename_case: lower
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
