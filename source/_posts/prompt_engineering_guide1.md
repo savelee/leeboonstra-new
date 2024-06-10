@@ -11,14 +11,14 @@ tags:
   - Real-world
 categories:
   - Prompt Engineering
-featured: promptengineering1.jpeg
+featured: promptengineering1
 date: 2024-06-10 12:00:00
 ---
 Prompt engineering for business applications isn't as simple as asking a question. It's a complex process that requires careful planning and continuous refinement, especially when you want your model to do things like summarize reports, extract insights from conversations, or answer questions based on a large knowledge base. Over the past couple of years, as a Software Engineer for the innovation factory within Google Cloud Office of the CTO, I've been knee-deep in prompt engineering for major business use cases, working on large innovation projects for a selection of clients, including automating drive-thru orders at Wendy's.
 
 <!--more-->
 
-<img src="/images/promptengineering1.jpeg" alt="Demystifying Prompt Engineering for the Enterprise" />
+<img src="/images/large_promptengineering1.png" alt="Demystifying Prompt Engineering for the Enterprise" />
 
 Through these projects, I've learned that crafting effective prompts is an iterative journey, not a one-and-done task. Writing instructions and constraints that work together seamlessly takes time and effort, especially when dealing with unexpected scenarios. But the payoff is huge. In this blog series, I'm sharing my practical learnings with you. We'll dive into the challenges of prompt engineering, explore different models and configurations, and learn how to write prompts that get the job done. Whether you're a seasoned pro or just starting out, I hope this guide helps you unlock the power of AI for a use case beyond the generation of a to-do list.
 

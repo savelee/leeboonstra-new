@@ -33,6 +33,7 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
-    "workbox-cli": "^7.1.0"
+    "workbox-cli": "^7.1.0",
+    "hexo-images": "^1.0.1"
   }
 }
