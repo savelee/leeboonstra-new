@@ -8,50 +8,12 @@ layout: speaking
 
 Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chatbots, Contact Centers, NLU, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+.
 
-<img src="/images/leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
+<img src="/images/large_leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
 <hr />
 
 2024
 ----
-
-* ### Google Cloud Summit Benelux 2024
-
-  Jun 5 & 6 | **Theater, Amsterdam, NL** [Website](https://cloudonair.withgoogle.com/events/benelux-summit-24) | Keynote
-
-  <script type='application/ld+json'> 
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Google Cloud Summit Benelux 2024",
-      "startDate": "2024-06-05T08:30-05:00",
-      "endDate": "2024-06-06T17:00-05:00",
-      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": [{
-        "@type": "VirtualLocation",
-        "url": "https://cloudonair.withgoogle.com/events/benelux-summit-24"
-      }],
-      "description": "Keynote",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://cloud.google.com/innovators",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "http://schema.org/OnlineOnly",
-        "validFrom": "2024-06-05T12:00"
-      },
-      "performer": {
-        "@type": "Person",
-        "name": "Lee Boonstra"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Google",
-        "url": "https://cloudonair.withgoogle.com/events/benelux-summit-24"
-      }
-    }
-  </script>
 
 * ### DevWorld Conference
 
