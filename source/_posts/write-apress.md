@@ -16,7 +16,7 @@ The Definitive Guide to Conversational AI with Dialogflow and Google Cloud Platf
 
 After reading this book, you will understand how to build cross-channel enterprise bots with popular Google tools such as Dialogflow, Google Cloud AI, Cloud Run, Cloud Functions, and Chatbase.
 
-![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](/images/apress-book.jpg)
+![The Definitive Guide to Conversational AI with Dialogflow and Google Cloud](/images/large_apress-book.jpg)
 
 <a href="https://www.apress.com/gp/book/9781484270134">Find on Apress. ISBN 978-1-4842-7014-1 & ISBN 978-1-4842-7013-4</a>
 
@@ -33,7 +33,7 @@ Who This Book Is For
 
 Everyone who is interested in building chatbots for the web, social media, voice assistants, or contact centers.
 
-<img src="/images/lee-signing-books.png" width="500" />
+<img src="/images/large_lee-signing-books.png" width="500" />
 
 FWW: All royalities of my book, will go to charity; "Stichting Meer Dan Gewenst".
 

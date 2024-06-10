@@ -77,6 +77,6 @@ Below is a list of my publications:
 
 <hr>
 
-<img src="/images/leeboonstra-book.png" width="500" class="border img-fluid" alt="Lee Boonstra Author" loading="lazy"/>
+<img src="/images/large_leeboonstra-book.png" width="500" class="border img-fluid" alt="Lee Boonstra Author" loading="lazy"/>
 
 
