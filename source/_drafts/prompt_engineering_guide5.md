@@ -17,11 +17,13 @@ date: 2024-06-10 12:00:00
 
 Whether you are writing a prompt to let the LLM answer a question from a contract, summarize a report, classify user feedback, or extract order information, writing a prompt containing just one line with the question is likely insufficient. You will need to provide instructions, constraints, reasoning, and a few-shot examples, and you will set your expectations for the style and output format. Trust me, you will quickly end up with an extensive written prompt, which increases in size over the various iterations.
 
+Writing prompts can present challenges, particularly when instructions or constraints clash. For instance, an instruction to 'avoid hallucinations or fabrications' could hinder creativity or explanations in certain edge cases. This underscores the importance of adaptability in your prompt writing approach. When working with a test set of example user inputs, it's crucial to be flexible and ready to revisit and verify if recent prompt changes don't disrupt previously successful prompts. This adaptability is key to maintaining the effectiveness of your prompts.
+
 <!--more-->
 
 <img src="/images/large_promptengineering5.png" alt="The Art of Writing Effective Prompts" />
 
-Writing prompts can present challenges, particularly when instructions or constraints clash. For instance, an instruction to 'avoid hallucinations or fabrications' could hinder creativity or explanations in certain edge cases. This underscores the importance of adaptability in your prompt writing approach. When working with a test set of example user inputs, it's crucial to be flexible and ready to revisit and verify if recent prompt changes don't disrupt previously successful prompts. This adaptability is key to maintaining the effectiveness of your prompts.
+TIP: This chapter will share various techniques in a prompt written for an enterprise use case; it's the trick to combine multiple methods but still be concise enough. You can easily overload the model with too many tasks and instructions. When this happens, the model will ignore particular instructions or favor specific examples and instructions over others. Think about how you design your prompt. Is splitting the prompt into multiple prompts (API calls) better? Can you guide the model better with numbering? Did you provide enough examples?
 
 ## Providing Instructions and Constraints
 
@@ -41,9 +43,9 @@ Here's a quick example for instructions:
 
 ```
 <INSTRUCTIONS>
-- Write the answer in easy-to-understand English so a 12-year-old can understand.
-- Return only valid JSON responses with the previously provided JSON schemas.
-- Write the answer in a maximum of 2 paragraphs.
+1. Write the answer in easy-to-understand English so a 12-year-old can understand.
+2. Return only valid JSON responses with the previously provided JSON schemas.
+3. Write the answer in a maximum of 2 paragraphs.
 ```
 
 And here's an example for constraints:
@@ -141,8 +143,9 @@ TIP: Before feeding your JSON examples to a prompt, ensure they're valid. You ca
 
 If you're dealing with complex JSON objects, consider giving the prompt a JSON schema to work with. This helps the AI understand the expected structure and format of the output so you get consistent and reliable results. Have a look at the next example:
 
-
 {% gist 1a895577d179b23fae1eb5428ee1fe34 %}
+
+TIP: You might notice the ```json syntax used in the examples. Using this notation can make it easier later on to extract the JSON parts out of the response message, which can be handy for chaining an output into another prompt input. Note that there is no guarantee that the model won't add additional text before or after the JSON message. At least, this way, your JSON response won't break.
 
 ## Chain of Thought (COT) Prompting
 Chain of Thought (CoT) prompting is a great way to make LLMs better at reasoning. It's like teaching the model to think step-by-step instead of just jumping to a conclusion. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding as it's a challenge with a zero-shot chain of thought.

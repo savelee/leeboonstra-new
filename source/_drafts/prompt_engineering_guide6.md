@@ -24,13 +24,22 @@ Alright, we've covered a ton of ground in this blog series, from understanding t
 ## Combine all techniques
 When writing prompts for enterprise use cases, you should create a folder with each prompt as a single code file in a versioning system. These prompts can be many paragraphs long and will be changed over time. I've created a structure of a typical prompt structure. Each should be in its own paragraph. I gave short examples for each row, though the actual prompt should be more detailed with more examples and instructions.
 
+*It's also important to understand that you can overload a model with too many instructions or constraints. - They can clash, or a model can favor one instruction over another. At some point, when there are too many instructions, the model forgets about the others. Look into splitting up prompts into multiple prompts (API Calls) and a variety of examples, and guide the instructions step by step.*
+
 ## Prompt Structure Template
 
-### Role & Goal
-Explain the role and the goal for the model.
+### Role
+Explain the role and expertise of the model.
 
 ```
-Your expertise in reading legal contracts is crucial in our operations. 
+Act like a legal advisor. You have expertise in analyzing rental contracts.
+```
+
+### TASK
+Explain the task. Specify the task, concise in a few lines.
+
+```
+<TASK>
 Provide a 1 paragraph concise and simple-to-understand (non-legal) answers 
 for tenants who need help understanding this legal rental contract:
 ```
@@ -39,6 +48,7 @@ for tenants who need help understanding this legal rental contract:
 Insert the context in the prompt.
 
 ```
+<CONTEXT>
 ...
 [INSERT CONTRACT FROM GCS]
 ...
@@ -58,19 +68,10 @@ SCHEMA:
     "properties": {
         "answer": {
             "type": "string"
-        },
-        "citeSources": {
-            "type": "array",
-            "items": [
-                {
-                    "type": "string"
-                }
-            ]
         }
     },
     "required": [
-        "answer",
-        "citeSources"
+        "answer"
     ]
 }
 ```
@@ -80,16 +81,10 @@ Provide a list with instructions.
 
 ```
 <INSTRUCTIONS>
-- Write the answer in easy-to-understand English so a 12-year-old can 
+1. Write the answer in easy-to-understand English so a 12-year-old can 
 understand.
-- Return only valid JSON responses with the previously provided JSON schemas.
-- Encourage exploring various possibilities.
-- Consider all possible scenarios and outcomes related to the question, 
-especially when dealing with complex situations
-like partial destruction events.
-- In the event of a contract amendment where details are duplicated 
-but differ, the information specified in the amendment takes precedence 
-unless otherwise specified.
+2. Return only valid JSON responses with the previously provided JSON schemas.
+3. Encourage exploring various possibilities.
 ```
 
 ### Examples
@@ -97,21 +92,21 @@ Few Shots, Min 3–5 few-shots/reasoning examples.
 ```
 EXAMPLE OF REASONING:
 
-Now, answer the following question for the tenant:
+Question:
 How should gasoline be disposed?
 1. The contract does not specifically mention gasoline.
-2. Section 22 of the legal agreement states that all hazardous materials 
-must be disposed of properly. 
+2. Section 22 of the legal agreement states that all hazardous materials must be disposed of properly. 
 3. Gasoline is a hazardous material.
+
+Conclusion:
 4. Therefore, gasoline must be disposed of properly.
 
 RETURN:
+```json
 {
-    "answer": "Gasoline must be disposed of properly.",
-    "citeSources": [
-        "Section 22 of the legal agreement."
-    ]
+    "answer": "Gasoline must be disposed of properly."
 }
+```
 ```
 
 ### <CONSTRAINTS>
@@ -121,10 +116,9 @@ Provide a list with constraints. (but favor instructions over constraints).
 <CONSTRAINTS>
 - Refrain from using sarcasm in your response.
 - Do not include any personally identifiable information.
-- Do not hallucinate or create confusion.
 ```
 
-### Question/Task
+### Question
 End with the actual question/task.
 
 ```
