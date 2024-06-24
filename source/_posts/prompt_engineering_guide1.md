@@ -39,4 +39,6 @@ All these projects had the same things in common:
 * Carefully balancing instructions and constraints
 * Documenting everything
 
-So, if you're working with clients, helping them use GenAI effectively, or just curious about how I use LLMs in the real world, this guide is for you. Over the next 6 weeks, I'm sharing my practical learnings, not just generating creative poems stuff. Remember, what works for one project might not work for another - it's all about adapting and experimenting. Stay tuned!
+So, if you're working with clients, helping them use GenAI effectively, or just curious about how I use LLMs in the real world, this guide is for you. Over the next 6 weeks, I'm sharing my practical learnings, not just generating creative poems stuff. Remember, what works for one project might not work for another - it's all about adapting and experimenting. 
+
+Read the next blog post in this series: [The Foundation Understanding LLMs and Prompt Engineering, and Why It All Matters](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide2/)

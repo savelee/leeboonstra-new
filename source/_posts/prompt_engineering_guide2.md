@@ -12,10 +12,14 @@ tags:
 categories:
   - Prompt Engineering
 featured: promptengineering2
-date: 2024-06-10 12:00:00
+date: 2024-06-16 12:00:00
 ---
 
 Let's get down to basics and talk about how Large Language Models (LLMs) actually work. Think of them like prediction machines. There's nothing factual; everything is statistical. It generates text, one word after another (well, technically it's not a word, but it's a token; multiple tokens may form a word), and then tries to guess what the next word should be. They're trained on massive amounts of data, so they get pretty good at figuring out how words relate to each other.
+
+*This is the 2nd blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
+
+* Blog 1: [Demystifying Prompt Engineering for the Enterprise](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide1/)
 
 <!--more-->
 
