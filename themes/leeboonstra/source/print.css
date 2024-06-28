@@ -2,14 +2,26 @@
   body {
     color: #000;
     background: #fff;
+    max-width: 563px;
+    text-align: left;
+    margin: 1in;
   }
 
   a, a:visited {
     color: #000;
     text-decoration: underline;
+    content: "\A" attr(href); /* \A is a Unicode line break character */
+    white-space: pre; /* Preserve line breaks in generated content */
+    display: block; /* Make the URL occupy a separate line */
+    font-size: smaller; /* Optional: Adjust font size for the URL */
+    color: #555;       /* Optional: Adjust color for the URL */
   }
 
-  nav, footer, .IN-widget, .twitter-share-button, .shadow, .badge { display: none; } /* Hide navigation and footer */
+  img {
+    max-width: 600px;
+  }
+
+  nav, footer, .IN-widget, .disclaimer, .twitter-share-button, .shadow, .badge { display: none; } /* Hide navigation and footer */
   a::after {
     content: " (" attr(href) ")";
   }
