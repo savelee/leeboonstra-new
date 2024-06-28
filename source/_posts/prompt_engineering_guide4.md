@@ -12,10 +12,16 @@ tags:
 categories:
   - Prompt Engineering
 featured: promptengineering4
-date: 2024-06-10 12:00:00
+date: 2024-07-01 12:00:00
 ---
 
 Let's be real; documenting stuff isn't the most exciting part of any job. But when it comes to prompt engineering, it's an absolute lifesaver. I know it can feel like extra work, but trust me, it'll save you from major headaches later on.
+
+*This is the 4th blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
+
+* Blog 1: [Demystifying Prompt Engineering for the Enterprise](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide1/)
+* Blog 2: [The Foundation Understanding LLMs and Prompt Engineering, and Why It All Matters](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide2/)
+* Blog 3: [Beyond the Basics How to Choose and Configure Your LLM for Maximum Impact](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide3/)
 
 <!--more-->
 

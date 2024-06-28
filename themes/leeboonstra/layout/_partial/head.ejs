@@ -43,7 +43,8 @@
     var d = y + "-" + m;
   %>
 
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" media="screen" href="/main.css">
+  <link rel="stylesheet" media="print" href="/print.css">
   <link rel="preload" href="/css/prism-atom-dark.css" as="style">
   <link rel="preload" href="/js/prism.js" as="script">
 
@@ -75,7 +76,6 @@
   <meta name="twitter:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
   <meta name="twitter:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
   <meta name="twitter:image" content="https://www.leeboonstra.dev/images/screen.jpg"/>
-  <meta name="twitter:creator" content="@ladysign"/>
 
   <link rel="preconnect" href="platform.twitter.com" crossorigin />
   <link rel="preconnect" href="syndication.twitter.com" crossorigin />

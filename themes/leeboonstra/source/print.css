@@ -1,0 +1,16 @@
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a, a:visited {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  nav, footer, .IN-widget, .twitter-share-button, .shadow, .badge { display: none; } /* Hide navigation and footer */
+  a::after {
+    content: " (" attr(href) ")";
+  }
+}

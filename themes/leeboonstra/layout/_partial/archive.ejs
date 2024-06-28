@@ -1,13 +1,4 @@
-
-    <div class="card w-100 p-2 float-md-left tall">
-      <div class="shadow-sm">
-        <div class="card-body homecard">
-          <h1>Lee's Engineering Blog</h1>
-          <p>Tutorials, Guides and Blogs about Prompt Engineering, LLMs, Conversational AI, Chatbots, Voice Bots, Dialogflow CX.</p>
-        </div>
-      </div>
-    </div>
-    
+  
   <% page.posts.each(function(post, i){ %>
   
     <% if (i== 0) { %>
@@ -16,5 +7,4 @@
         <%- partial('article', {post: post, index: true, highlight: false}) %>
     <% }%>
 
-   
  <% })%>
