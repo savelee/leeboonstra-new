@@ -3,11 +3,12 @@ title: Press
 categories: 
 - Writing
 class: Writing
-date: 2023-05-17 11:45:17
+date: 2024-11-12 11:45:17
 alias: /developer/press/
 hidden: true
 ---
 
+* 11-2024 | [Kaggle: Whitepaper Prompt Engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
 * 06-2023 | [Emerce: Generatieve AI en Large Language Models: de risico’s, de AVG en je aansprakelijkheid](https://www.emerce.nl/achtergrond/generatieve-ai-en-large-language-models-de-risicos-de-avg-en-je-aansprakelijkheid)
 * 06-2023 | [Generative AI and Large Language Models: What are the possible dangers, and how can they be used compliantly?](https://ddma.nl/kennisbank/generative-ai-and-large-language-models-what-are-the-possible-dangers-and-how-can-they-be-used-compliantly/)
 * 06-2023 | [Emerce: Generatieve AI en Large Language Models: wat is het en hoe werkt het?](https://www.emerce.nl/achtergrond/generatieve-ai-en-large-language-models-wat-is-het-en-hoe-werkt-het)
