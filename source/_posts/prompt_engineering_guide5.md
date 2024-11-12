@@ -12,12 +12,19 @@ tags:
 categories:
   - Prompt Engineering
 featured: promptengineering5
-date: 2024-06-10 12:00:00
+date: 2024-07-08 12:00:00
 ---
 
 Whether you are writing a prompt to let the LLM answer a question from a contract, summarize a report, classify user feedback, or extract order information, writing a prompt containing just one line with the question is likely insufficient. You will need to provide instructions, constraints, reasoning, and a few-shot examples, and you will set your expectations for the style and output format. Trust me, you will quickly end up with an extensive written prompt, which increases in size over the various iterations.
 
 Writing prompts can present challenges, particularly when instructions or constraints clash. For instance, an instruction to 'avoid hallucinations or fabrications' could hinder creativity or explanations in certain edge cases. This underscores the importance of adaptability in your prompt writing approach. When working with a test set of example user inputs, it's crucial to be flexible and ready to revisit and verify if recent prompt changes don't disrupt previously successful prompts. This adaptability is key to maintaining the effectiveness of your prompts.
+
+*This is the 5th blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
+
+* Blog 1: [Demystifying Prompt Engineering for the Enterprise](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide1/)
+* Blog 2: [The Foundation Understanding LLMs and Prompt Engineering, and Why It All Matters](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide2/)
+* Blog 3: [Beyond the Basics How to Choose and Configure Your LLM for Maximum Impact](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide3/)
+* Blog 4: [Documenting Your Prompts A Best Practice for Success](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide4/)
 
 <!--more-->
 
@@ -192,4 +199,4 @@ TIP: In Chain of Thought prompting, the reasoning process is crucial. Placing th
 
 TIP: Chain of Thought prompting is based on greedy decoding, predicting the next word in a sequence based on the highest probability assigned by the language model. Generally speaking, when using reasoning, to come up with the final answer, there's likely one single correct answer. Therefore the temperature should always set to 0.
 
-In the next post, we'll dive into some best practices that I've found super useful in business applications. See you next time!
+In the next post, we'll dive into some best practices that I've found super useful in business applications. See you next week!

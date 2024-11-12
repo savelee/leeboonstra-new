@@ -12,10 +12,18 @@ tags:
 categories:
   - Prompt Engineering
 featured: promptengineering6
-date: 2024-06-10 12:00:00
+date: 2024-07-15 10:00:00
 ---
 
 Alright, we've covered a ton of ground in this blog series, from understanding the basics of LLMs and prompt engineering to diving deep into specific techniques and strategies. Now, it's time to bring it all together and share some of the best practices I've learned while working on real-world enterprise projects.
+
+*This is the last blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
+
+* Blog 1: [Demystifying Prompt Engineering for the Enterprise](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide1/)
+* Blog 2: [The Foundation Understanding LLMs and Prompt Engineering, and Why It All Matters](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide2/)
+* Blog 3: [Beyond the Basics How to Choose and Configure Your LLM for Maximum Impact](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide3/)
+* Blog 4: [Documenting Your Prompts A Best Practice for Success](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide4/)
+* Blog 5: [The Art Of Writing Effective Prompts](https://www.leeboonstra.dev/prompt-engineering/prompt_engineering_guide5/)
 
 <!--more-->
 
@@ -102,11 +110,11 @@ Conclusion:
 4. Therefore, gasoline must be disposed of properly.
 
 RETURN:
-```json
+\`\`\`json
 {
     "answer": "Gasoline must be disposed of properly."
 }
-```
+\`\`\`
 ```
 
 ### <CONSTRAINTS>
