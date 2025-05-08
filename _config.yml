@@ -17,7 +17,6 @@ nav:
   Home: /
   Bio: about/
   Speaking: speaking/
-  Abstracts: abstracts/
   Writing: writing/
   Videos: videos/
 rss: /atom.xml
@@ -121,7 +120,7 @@ hide_posts:
   noindex: false
 
 # Miscellaneous
-google_analytics: 'UA-85081556-1'
+google_analytics: 'G-BBBHKHEDYB'
 
 feed:
   type: atom

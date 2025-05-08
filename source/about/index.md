@@ -18,9 +18,7 @@ Software Engineer & Advocate for the <a href="https://blog.google/products/googl
 
 Their expertise in Conversational AI and Voice technology, alongside (Generative) AI, has led to recognition as a respected public keynote speaker and published author for O'Reilly and Apress. 
 
-Lee wrote the book [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.amazon.com/Definitive-Guide-Conversational-Dialogflow-Google/dp/1484270134/ref=asc_df_1484270134/) for Apress and [Hands-On Sencha Touch 2](https://www.amazon.com/Hands-Sencha-Touch-Real-World-Approach/dp/144936652X/ref=sr_1_1) for O'Reilly.
-
-Lee Boonstra's commitment to the tech industry extends beyond their work at Google. They are an active member of the [DDMA Voice Committee](https://ddma.nl/commissies/voice/) in the Netherlands, a task force dedicated to showcasing the opportunities of the 'voice channel' for marketing, sales, and service. Their involvement in this committee underscores their dedication to shaping the future of the industry.
+Lee wrote the book [The Definitive Guide to Conversational AI with Dialogflow & Google Cloud](https://www.amazon.com/Definitive-Guide-Conversational-Dialogflow-Google/dp/1484270134/ref=asc_df_1484270134/) for Apress and [Hands-On Sencha Touch 2](https://www.amazon.com/Hands-Sencha-Touch-Real-World-Approach/dp/144936652X/ref=sr_1_1) for O'Reilly. And lately Google's [Prompt Engineering Whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)
 
 With so many roles, there is one title they are the proudest of being a parent of their toddler, Rebel.
 

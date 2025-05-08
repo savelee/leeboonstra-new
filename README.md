@@ -14,7 +14,10 @@ A fast, simple & powerful blog framework.
 https://hexo.io/
 
 ```
-npm install -g hexo
+brew reinstall vips
+npm uninstall hexo
+npm install
+npm install hexo-images --save-dev --force
 hexo init
 hexo clean
 hexo generate

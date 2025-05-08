@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.2.0"
+    "version": "7.3.0"
   },
   "dependencies": {
     "hexo": "^7.0.0",
@@ -33,7 +33,7 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
-    "workbox-cli": "^7.1.0",
-    "hexo-images": "^1.0.1"
+    "hexo-images": "^1.0.1",
+    "workbox-cli": "^7.1.0"
   }
 }

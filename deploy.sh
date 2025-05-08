@@ -15,5 +15,6 @@ cd themes/leeboonstra/design
 cd ../../../
 workbox generateSW workbox-config.js
 
+#sudo npm install -g firebase-tools
 firebase login --reauth
 firebase deploy --only hosting --project leeboonstra-dev-7d578
