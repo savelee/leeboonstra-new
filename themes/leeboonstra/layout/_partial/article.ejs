@@ -1,7 +1,7 @@
  <% if (index){ %>
     <% if (highlight){ %>
-    <div class="card w-75 p-2 float-md-left tall">
-      <div class="shadow-sm">
+    <div class="col-9">
+    <div class="card shadow-sm p-2 float-md-left tall" style="width: calc(100% - 1rem); margin-right: 1rem;">
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/large_<%- post.featured %>.webp" media="(min-width: 1000px)">
@@ -21,18 +21,18 @@
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary">Continue Reading</a>
         </div>
-      </div>
     </div>
-    <div class="card w-25 p-2 float-md-left tall">
-    <div class="shadow-sm">
-      <div class="card-body">
+    </div>
+    <div class="col-3">
+    <div class="cardfloat-md-left tall shadow-sm h-100">
+      <div class="card-body h-100">
         <%- partial('_partial/profile') %>
       </div>
     </div>
+    </div>
   </div>
     <% } else { %>   
-    <div class="card w-25 p-2 float-md-left">
-      <div class="shadow-sm">
+    <div class="card w-25 p-2 float-md-left shadow-sm">
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/thumb_<%- post.featured %>.webp">
@@ -54,7 +54,6 @@
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary">Continue Reading</a>
         </div>
-      </div>
     </div>
     <% }%>
  <% } else { %>
@@ -64,7 +63,7 @@
         <h1><%= post.title %></h1>
         <div class="header">
           <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
-          <span>by Lee Boonstra in </span><%- partial('post/category') %>
+          <%- partial('post/category') %>
 
           <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
           <script type="IN/Share" data-url="<%- post.permalink %>"></script>
@@ -215,7 +214,6 @@
         %>
         
       </div>
-    </div>
 </div>
  <% } %>
 
