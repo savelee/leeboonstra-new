@@ -1,27 +1,33 @@
-#sudo apt-get install libpng-dev
-#sudo apt-get install nasm
-#npm install -g firebase-tools
-#npm install -g webpack-cli
-#npm install -g webpack
-#npm install -g workbox-cli
-#npm install -g hexo
+#!/bin/bash
+
+# Deploy Script - Production Deployment with Firebase
+echo "🚀 Starting production deployment..."
+
+# Install dependencies
+echo "📦 Installing dependencies..."
 npm install
+
+# Clean previous build
+echo "🧹 Cleaning previous build..."
 hexo clean
 
-
-npm run build # it will run hexo generate AND then automatically run the image copying script
-hexo generate # it will generate the site, and then the image copying will happen automatically
-#npm run server # it will also run the image copying as part of the build process
-
-hexo deploy #This deploys to your configured deployment target
+# Compile Sass to CSS
+echo "🎨 Compiling Sass to CSS..."
 cd themes/leeboonstra/design
-#npm install --force
+npm run sass
 cd ../../../
+
+# Generate Hexo site
+echo "🏗️  Generating Hexo site..."
+hexo generate
+
+# Generate Service Worker
+echo "⚙️  Generating Service Worker..."
 workbox generateSW workbox-config.js
 
-#sudo npm install -g firebase-tools
+# Deploy to Firebase
+echo "🔥 Deploying to Firebase..."
 firebase login --reauth
 firebase deploy --only hosting --project leeboonstra-dev-7d578
 
-
-#npm run server
+echo "✅ Deployment completed successfully!"

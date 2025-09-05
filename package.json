@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate && node scripts/copy-images.js",
+    "build": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && hexo generate && node scripts/copy-images.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server",
-    "copy-images": "node scripts/copy-images.js"
+    "server": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && hexo server",
+    "copy-images": "node scripts/copy-images.js",
+    "sass": "cd themes/leeboonstra/design && npm run sass",
+    "sass:watch": "cd themes/leeboonstra/design && npm run watch",
+    "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
+    "firebase:login": "firebase login --reauth",
+    "firebase:build": "npm run build && workbox generateSW workbox-config.js && npm run firebase:deploy"
   },
   "hexo": {
     "version": "7.3.0"

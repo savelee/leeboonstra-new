@@ -1,7 +1,7 @@
 const path = require('path');
 //var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //var extractPlugin = new ExtractTextPlugin({
 //   filename: 'main.css'
@@ -17,7 +17,7 @@ module.exports = {
 	  },
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, '../source')
+		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
 		rules: [
@@ -34,17 +34,12 @@ module.exports = {
 		{
 			test: /\.scss$/,
 			use: [
+				MiniCssExtractPlugin.loader,
 				{
-				  loader: "file-loader",
+				  loader: "css-loader",
 				  options: {
-					name: "main.css"
+					url: false
 				  }
-				},
-				{
-				  loader: "extract-loader"
-				},
-				{
-				  loader: "css-loader?-url"
 				},
 				{
 				  loader: "postcss-loader"
@@ -70,10 +65,10 @@ module.exports = {
 	},
 	optimization: {
 	minimizer: [
-		new OptimizeCSSAssetsPlugin({
-		cssProcessorPluginOptions: {
-			preset: ['default', { discardComments: { removeAll: true } }],
-		}
+		new CssMinimizerPlugin({
+			minimizerOptions: {
+				preset: ['default', { discardComments: { removeAll: true } }],
+			}
 		})
 	],
 	},
