@@ -17,6 +17,22 @@
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
             <div class="card-text"><%-post.excerpt-%></div> 
+
+            <script type="application/ld+json">
+              {
+                  "@context": "https://schema.org",
+                  "@type": "Blog",
+                  "name": "Generative AI, MLOps, and Conversational AI Blog by Lee Boonstra",
+                  "url": "https://www.leeboonstra.dev/",
+                  "author": {
+                      "@type": "Person",
+                      "name": "Lee Boonstra",
+                      "url": "https://www.leeboonstra.dev/about/"
+                  },
+                  "description": "Google SWE Lee Boonstra, author of the viral Prompt Engineering whitepaper, shares insights on building and scaling production AI systems. Explore advanced topics in MLOps, generative AI, and research engineering from a big tech perspective."
+              }
+              </script>
+            
         </div>
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary">Continue Reading</a>
