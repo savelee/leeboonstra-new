@@ -19,6 +19,16 @@ html {
     display: none;
 }
 
+.card-body h1 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.tall .card-body h1 {
+    font-size: 1.8rem;
+    line-height: 1.9;
+}
+
 .card {
     border: none;
 }
@@ -94,18 +104,7 @@ header {
     }
 
     .headertop {
-        background: #f8f9fa;
         text-align: left;
-        color: #000;
-
-        svg {
-            color: #000;
-        }
-
-        a {
-            color: #000;
-        }
-
         
         .navbar-toggler {
             display: none;

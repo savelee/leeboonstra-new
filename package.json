@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && hexo server",
     "copy-images": "node scripts/copy-images.js",
-    "sass": "cd themes/leeboonstra/design && npm run sass",
+    "sass": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && copy themes\\leeboonstra\\design\\dist\\main.css themes\\leeboonstra\\source\\main.css && npx hexo generate",
     "sass:watch": "cd themes/leeboonstra/design && npm run watch",
     "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
     "firebase:login": "firebase login --reauth",
