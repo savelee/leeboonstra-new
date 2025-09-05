@@ -78,25 +78,25 @@ highlight:
   line_number: false
   auto_detect: false
 
-# Image generation
-responsive_images:
-  priority: 1
-  pattern: 'images/**.+(png|webp|jpg)'
-  sizes:
-    small:
-      width: 200
-      quality: 60
-    medium:
-      width: 500
-      quality: 65
-    large:
-      width: 750
-      quality: 75
-    thumb:
-      width: 270
-      height: 100
-      fit: cover
-      quality: 50
+# Image generation - disabled for Windows ARM64 compatibility
+# responsive_images:
+#   priority: 1
+#   pattern: 'images/**.+(png|webp|jpg|jpeg)'
+#   sizes:
+#     small:
+#       width: 200
+#       quality: 60
+#     medium:
+#       width: 500
+#       quality: 65
+#     large:
+#       width: 750
+#       quality: 75
+#     thumb:
+#       width: 270
+#       height: 100
+#       fit: cover
+#       quality: 50
 
 # Pagination
 ## Set per_page to 0 to disable pagination

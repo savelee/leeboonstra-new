@@ -1,0 +1,66 @@
+{
+    "name": "hexo-images",
+    "version": "1.0.1",
+    "description": "Toolset to opimize images for Hexo static site generator",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sergeyzwezdin/hexo-images.git"
+    },
+    "files": [
+        "index.js",
+        "lib/"
+    ],
+    "keywords": [
+        "hexo",
+        "filter",
+        "generator",
+        "image",
+        "images",
+        "responsive",
+        "picture"
+    ],
+    "author": "Sergey Zwezdin <sergey@zwezdin.com> (https://zwezdin.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sergeyzwezdin/hexo-images/issues"
+    },
+    "homepage": "https://github.com/sergeyzwezdin/hexo-images#readme",
+    "peerDependencies": {
+        "hexo": "^4.2.0 || ^5.2.0 || ^6.0.0 || ^7.0.0",
+        "hexo-util": "^2.4.0",
+        "chalk": "^4.0.0",
+        "pretty-hrtime": "^1.0.3"
+    },
+    "dependencies": {
+        "hexo-front-matter": "^2.0.0",
+        "image-size": "^0.9.3",
+        "minimatch": "^3.0.4",
+        "rimraf": "^5.0.0",
+        "svg-dimensions": "^1.0.2"
+    },
+    "optionalDependencies": {
+        "handbrake-js": "^5.0.2",
+        "imagemin": "^7.0.1",
+        "imagemin-advpng": "^6.0.0",
+        "imagemin-guetzli": "^3.0.0",
+        "imagemin-jpeg-recompress": "^7.0.0",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "imagemin-pngout": "^5.0.0",
+        "imagemin-pngquant": "^9.0.1",
+        "imagemin-svgo": "^8.0.0",
+        "imagemin-webp": "^6.0.0",
+        "node-video-lib": "^2.2.0",
+        "sharp": "^0.33.5",
+        "smartcrop-sharp": "^2.0.8"
+    },
+    "devDependencies": {
+        "chalk": "^4.1.0",
+        "hexo-util": "^2.4.0",
+        "pretty-hrtime": "^1.0.3"
+    }
+}

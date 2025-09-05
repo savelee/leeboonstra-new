@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo generate && node scripts/copy-images.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "copy-images": "node scripts/copy-images.js"
   },
   "hexo": {
     "version": "7.3.0"
@@ -15,7 +16,6 @@
     "hexo": "^7.0.0",
     "hexo-auto-canonical": "^0.1.1",
     "hexo-featured-image": "^0.4.3",
-    "hexo-filter-responsive-images": "file:hexo-filter-responsive-images",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -33,7 +33,7 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
-    "hexo-images": "^1.0.1",
-    "workbox-cli": "^7.1.0"
+    "workbox-cli": "^7.1.0",
+    "firebase-tools": "^13.0.0"
   }
 }
