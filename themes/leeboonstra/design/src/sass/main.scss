@@ -22,11 +22,42 @@ html {
 .card-body h1 {
     font-size: 1.3rem;
     line-height: 1.4;
+    background-color: white;
+    font-family: "Lexend";
 }
 
 .tall .card-body h1 {
     font-size: 1.8rem;
     line-height: 1.9;
+}
+
+.sidebar {
+    background-color: white;
+    border-radius: 10px;
+}
+
+// Add space between main content and w-25 cards
+.row[style*="clear: both"] {
+    /* height: 2rem; */
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+// Expand layout for larger screens
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .row {
+        max-width: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
 }
 
 .card {
@@ -81,7 +112,7 @@ html {
 body {
     font-size: 21px;
     line-height: 1.4;
-    background-color: rgba(0,0,0,.03);
+    background-color: #e9ecef;
 }
 
 .lead {
