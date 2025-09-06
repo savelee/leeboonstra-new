@@ -16,7 +16,7 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
-            <div class="card-text"><%-post.excerpt-%></div> 
+            <div class="card-text"><%- strip_html(post.excerpt) %></div> 
 
             <script type="application/ld+json">
               {
@@ -62,9 +62,9 @@
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
           <% if (highlight){ %>
-            <p class="card-text"><%- truncate(post.excerpt, {length: 300, omission: '...'}) %></p> 
+            <div class="card-text"><%- truncate(strip_html(post.excerpt), {length: 300, omission: '...'}) %></div> 
           <% } else { %>
-          <p class="card-text"><%- truncate(post.excerpt, {length: 100, omission: '...'}) %></p>
+          <div class="card-text"><%- truncate(strip_html(post.excerpt), {length: 100, omission: '...'}) %></div>
           <% }%>
         </div>
         <div class="card-foot">

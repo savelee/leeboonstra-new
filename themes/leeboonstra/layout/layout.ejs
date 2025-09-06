@@ -11,4 +11,7 @@
     <%- partial('_widget/pagination', {type: 'page'}) %>
   <% } %>
 
+  <!-- Clearfix to prevent footer from floating next to content when there are fewer posts -->
+  <div class="clearfix"></div>
+
 <%- partial('_partial/footer') %>

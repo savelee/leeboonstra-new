@@ -1240,6 +1240,17 @@ footer.row {
     margin-right: 0 !important;
 }
 
+// Clearfix utility and footer spacing
+.clearfix {
+    clear: both;
+    margin-top: 2rem;
+}
+
+footer {
+    clear: both;
+    margin-top: 2rem;
+}
+
 /* Modern text balloon styling */
 .blockquote-wrapper {
     margin: 2rem 0;
