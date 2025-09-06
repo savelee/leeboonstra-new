@@ -93,8 +93,71 @@ html {
     background: none;
 }
 
-.photocol img {
-    margin: 10px 0 10px;
+.photocol {
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        
+        .card-body {
+            padding: 1.5rem;
+            height: auto; // Fix for Biography and Speaking pages
+        }
+        
+        .card-title {
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f8f9fa;
+            padding-bottom: 0.5rem;
+        }
+        
+        ul {
+            li {
+                a {
+                    color: #007bff; // Default color
+                    transition: color 0.2s ease;
+                    
+                    &:hover {
+                        color: #0056b3;
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    img {
+        margin: 10px 0 10px;
+        transition: transform 0.2s ease;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// Page-specific sidebar link colors
+.Biography .photocol .card ul li a {
+    color: $red;
+    
+    &:hover {
+        color: darken($red, 20%);
+        text-decoration: underline !important;
+    }
+}
+
+.Public .photocol .card ul li a {
+    color: $orange;
+    
+    &:hover {
+        color: darken($orange, 20%);
+        text-decoration: underline !important;
+    }
 }
 
 .blogcontent img {
@@ -157,7 +220,7 @@ html {
 
 .disclaimer {
     font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
-    text-transform: uppercase;
+    font-style: italic;
     font-size: 1rem;
     padding: 0 20px;
 }
