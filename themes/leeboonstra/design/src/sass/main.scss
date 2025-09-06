@@ -1,6 +1,6 @@
 /* Main SCSS File */
 $enable-responsive-font-sizes: true;
-$font-family-base: 'Lora';
+$font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
 
 @import "./_colors.scss";
 @import "./bootstrap.scss";
@@ -20,15 +20,33 @@ html {
 }
 
 .card-body h1 {
-    font-size: 1.3rem;
-    line-height: 1.4;
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
     background-color: white;
-    font-family: "Lexend";
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.col-3 h1 {
+    font-size: 1.25rem;
 }
 
 .tall .card-body h1 {
-    font-size: 1.8rem;
-    line-height: 1.9;
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.tall .card-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 .sidebar {
@@ -51,6 +69,13 @@ html {
     
     .row {
         max-width: none;
+    }
+    
+    .blogcontent {
+        width: 100%;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -84,21 +109,49 @@ html {
     padding: 50px;
 
     a {
-        color: #fff;
+        color: #fff !important;
+        text-decoration: none;
+        
+        &:hover {
+            color: #ccc !important;
+            text-decoration: underline;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff !important;
+    }
+
+    h4 {
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+        font-size: 1.5rem !important;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        color: #fff !important;
+        margin-bottom: 1rem !important;
     }
 
     ul {
-        font-family: 'Lexend';
+        font-family: 'Source Serif Pro', Georgia, serif;
         margin-left: -20px;
+        color: #fff;
+        
         li {
             font-size: 1rem;
             padding: 5px 0;
+            color: #fff;
             
             span {
                 margin: auto 5px;
                 font-size: 0.9rem;
+                color: #fff;
             }
         }
+    }
+
+    p {
+        color: #fff !important;
     }
 }
 
@@ -110,14 +163,88 @@ html {
 }
 
 body {
-    font-size: 21px;
-    line-height: 1.4;
+    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 400;
     background-color: #e9ecef;
+    color: #333;
+}
+
+// Modern magazine-style typography hierarchy
+h1, .h1 {
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+h2, .h2 {
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+h3, .h3 {
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+h4, .h4 {
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h5, .h5 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    color: #333;
+}
+
+h6, .h6 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+p, .lead {
+    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
 .lead {
-    font-size: 28px;
-    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 header {
@@ -153,9 +280,12 @@ header {
     }
 
     .navbar-brand {
-        font-family: bebas, Impact;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
         text-transform: uppercase;
         vertical-align: middle;
+        letter-spacing: 0.05em;
     }
 
     ul {
@@ -170,14 +300,15 @@ header {
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
-        font-family: 'bebas';
-        font-family: bebas, Impact;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-weight: 400;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 16px;
         border-right: 1px solid #ccc;
         padding: 0;
         margin: 0;
         vertical-align: middle;
+        letter-spacing: 0.05em;
         
         &.home:hover {
             background: $primary !important;
@@ -199,22 +330,31 @@ header {
     }
 }
 
-.badge a {
-    color: #fff;
+.badge {
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    vertical-align: baseline;
+    
+    a {
+        color: #fff;
+    }
 }
 
-.w-75 .h1 {
-    font-size: 28px;
-}
-
-.w-25 .h1 {
-    font-size: 18px;
+time {
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    vertical-align: baseline;
 }
 
 .card {
 
     .card-header {
-        font-size: 80%;
         font-family: 'Lexend';
     }
     .card-foot {
@@ -226,77 +366,528 @@ header {
         font-size: 100%;
     }
 
-    .card-body {
-        font-size: 80%;
-    }
 }
 
 .blogcontent {
-
+    // Card layout similar to homepage tall card
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 2rem;
+    margin-bottom: 2rem;
     word-break: break-word;
+    width: 100%;
+    max-width: none;
+
+    .article-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .date {
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #666;
+        margin-bottom: 0.5rem;
+        display: block;
+        
+        time {
+            font-size: 1rem;
+        }
+    }
 
     .header {
         font-size: 80%;
-        font-family: 'Lexend';
-        margin-bottom: 30px;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
 
         * {
             position: relative;
         }
 
+        .date {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+        }
+
         .IN-widget {
-            top: -8px;
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+            
+            button {
+                background: #0077b5 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 0.25rem !important;
+                padding: 0.375rem 0.75rem !important;
+                font-size: 0.9rem !important;
+                font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+                font-weight: 400 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em !important;
+                cursor: pointer !important;
+                transition: all 0.2s ease !important;
+                line-height: 1 !important;
+                height: auto !important;
+                min-height: 1.5rem !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                
+                xdoor-icon {
+                    display: flex !important;
+                    align-items: center !important;
+                    margin-right: 0.25rem !important;
+                }
+                
+                &:hover {
+                    background: #005885 !important;
+                    transform: translateY(-1px) !important;
+                }
+            }
+        }
+
+        .twitter-share-button {
+            background: #1da1f2 !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 0.25rem !important;
+            padding: 0.375rem 0.75rem !important;
+            font-size: 0.9rem !important;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+            font-weight: 400 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            vertical-align: middle !important;
+            transition: all 0.2s ease !important;
+            height: auto !important;
+            min-height: 1.5rem !important;
+            
+            &:hover {
+                background: #0d8bd9 !important;
+                transform: translateY(-1px) !important;
+                text-decoration: none !important;
+                color: white !important;
+            }
         }
     }
+    
+    h1, .h1 {
+        font-family: 'Roboto Slab', Georgia, serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+        color: #000;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    
+    h2, .h2 {
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+    
+    h3, .h3 {
+        font-family: 'Roboto Slab', Georgia, serif !important;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 0.875rem;
+        color: #000;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    
+    h4, .h4 {
+        font-family: 'Roboto Slab', Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    h5, .h5 {
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 0.625rem;
+        color: #333;
+    }
+    
+    h6, .h6 {
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    
     .lead,
     p {
+        font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: #333;
+        
         &:first-of-type {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            font-family: 'Lexend';
+            font-size: 1.3rem;
+            line-height: 1.7;
+            font-weight: 600;
         }    
     }
 
-    h2, .h2 {
-        margin-top: 40px;
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;   
-    }
-
     blockquote {
-        p,
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        border-left: 4px solid $primary;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        color: #555;
+        line-height: 1.6;
+        
         p {
             &:first-of-type {
                 font-size: 1.3rem;
-                line-height: 1.5;
-                color: #484848;
+                line-height: 1.6;
+                color: #555;
                 font-style: italic;
-            }    
+            }
         }
     }
+}
 
+// Biography-specific blockquote styling
+.Biography .blogcontent blockquote {
+    border-left: 4px solid $red;
+    
+    code {
+        background-color: #f8f9fa;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-size: 0.9em;
+        color: #e83e8c;
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    }
+    
+    pre {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 2rem 0;
+        width: 100%;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+        code {
+            background: none;
+            padding: 0;
+            color: #333;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    }
+    
+    // Hexo-prism code block styling
+    figure.highlight {
+        background-color: #2d3748;
+        border-radius: 0.5rem;
+        margin: 2rem 0;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        
+        // Language label
+        &::before {
+            content: attr(class);
+            display: block;
+            background-color: #1a202c;
+            color: #a0aec0;
+            padding: 0.5rem 1rem;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #4a5568;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+            background: transparent;
+            margin-top: 2.5rem; // Make room for language label
+            
+            tbody {
+                tr {
+                    td {
+                        padding: 0;
+                        border: none;
+                        vertical-align: top;
+                        
+                        &.code {
+                            width: 100%;
+                            
+                            pre {
+                                background: transparent;
+                                color: #e2e8f0;
+                                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                                font-size: 0.9rem;
+                                line-height: 1.4;
+                                margin: 0;
+                                padding: 1.5rem;
+                                border: none;
+                                box-shadow: none;
+                                overflow-x: auto;
+                                
+                                // Fix br tag spacing
+                                br {
+                                    line-height: 1.4;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                
+                                .line {
+                                    display: block;
+                                    min-height: 1.4em;
+                                    padding: 0;
+                                    margin: 0;
+                                    line-height: 1.4;
+                                    
+                                    // Syntax highlighting colors for hexo-prism
+                                    .token {
+                                        &.keyword { color: #c792ea; }
+                                        &.string { color: #c3e88d; }
+                                        &.number { color: #f78c6c; }
+                                        &.comment { color: #676e95; font-style: italic; }
+                                        &.function { color: #82aaff; }
+                                        &.variable { color: #f07178; }
+                                        &.operator { color: #89ddff; }
+                                        &.punctuation { color: #89ddff; }
+                                        &.class-name { color: #ffcb6b; }
+                                        &.tag { color: #f07178; }
+                                        &.attr { color: #c792ea; }
+                                        &.attr-value { color: #c3e88d; }
+                                        &.property { color: #c792ea; }
+                                        &.boolean { color: #c792ea; }
+                                        &.null { color: #c792ea; }
+                                        &.title { 
+                                            &.function_ { color: #82aaff; }
+                                        }
+                                        &.params { color: #f07178; }
+                                        &.language_ { color: #f07178; }
+                                    }
+                                    
+                                    // Direct span classes (hexo-prism format)
+                                    .attr { color: #c792ea; }
+                                    .punctuation { color: #89ddff; }
+                                    .string { color: #c3e88d; }
+                                    .number { color: #f78c6c; }
+                                    .keyword { color: #c792ea; }
+                                    .function { color: #82aaff; }
+                                    .variable { color: #f07178; }
+                                    .operator { color: #89ddff; }
+                                    .comment { color: #676e95; font-style: italic; }
+                                    .class-name { color: #ffcb6b; }
+                                    .tag { color: #f07178; }
+                                    .attr-name { color: #c792ea; }
+                                    .attr-value { color: #c3e88d; }
+                                    .title {
+                                        &.function_ { color: #82aaff; }
+                                    }
+                                    .params { color: #f07178; }
+                                    .language_ { color: #f07178; }
+                                    .property { color: #c792ea; }
+                                }
+                            }
+                        }
+                        
+                        // Line numbers (if enabled)
+                        &.gutter {
+                            background-color: #1a202c;
+                            color: #a0aec0;
+                            padding: 1.5rem 0.5rem;
+                            text-align: right;
+                            user-select: none;
+                            border-right: 1px solid #4a5568;
+                            
+                            pre {
+                                padding: 0;
+                                font-size: 0.8rem;
+                                line-height: 1.6;
+                                
+                                .line {
+                                    padding: 0.1rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     figure,
     img {
-        padding: .25rem;
+        padding: 0;
         background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: .25rem;
+        border: 1px solid #e9ecef;
+        border-radius: 0.5rem;
         max-width: 100%;
+        width: 100%;
         height: auto;
+        margin: 2rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: block;
     }
-
-    pre,
+    
+    // Modern image handling
+    img {
+        max-height: 60vh; // Limit height to 60% of viewport height
+        object-fit: cover; // Maintain aspect ratio while filling container
+        object-position: center; // Center the image within its container
+        
+        // Responsive breakpoints for different image sizes
+        @media (max-width: 768px) {
+            max-height: 50vh; // Smaller on mobile
+        }
+        
+        @media (min-width: 1200px) {
+            max-height: 70vh; // Larger on desktop
+        }
+    }
+    
+    figure {
+        padding: 1rem;
+        background-color: #f8f9fa;
+        
+        img {
+            margin: 0;
+            border: none;
+            box-shadow: none;
+            border-radius: 0.25rem;
+            max-height: 50vh; // Slightly smaller for images with captions
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        figcaption {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+    }
+    
     figure .code {
-        max-width: 720px;
+        width: 100%;
+        max-width: none;
+    }
+    
+    ul, ol {
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+    
+    table {
+        width: 100%;
+        margin: 1.5rem 0;
+        border-collapse: collapse;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
     }
 
     .badge {
         vertical-align: middle;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.9rem;
+        vertical-align: baseline;
     }
 }
+
+// Ensure blog content takes full width like homepage
+@media (min-width: 768px) {
+    .blogcontent {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blogcontent {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 
 .photocol {
     h3 { 
@@ -306,22 +897,74 @@ header {
 }
 
 .pagination {
-    margin-top: 20px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
     .page-number,
     .extend {
-        position: relative;
-        display: block;
-        padding: .5rem .75rem;
-        margin-left: -1px;
-        line-height: 1.25;
-        color: #fff;;
-        background-color: $primary;
-        border: 1px solid #000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem 0.75rem;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #333;
+        background-color: #fff;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
         text-decoration: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
 
         &:hover {
-            background-color: darken($primary, 10%);
+            background-color: $primary;
+            color: #fff;
+            border-color: $primary;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
         }
+
+        &.current {
+            background-color: $primary;
+            color: #fff;
+            border-color: $primary;
+            font-weight: 400;
+        }
+
+        &.space {
+            background: none;
+            border: none;
+            cursor: default;
+            
+            &:hover {
+                background: none;
+                color: #333;
+                border: none;
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.writing {
+    // Ensure writing container has same width as homepage
+    @media (min-width: 1400px) {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media (min-width: 1600px) {
+        max-width: 1600px;
     }
 }
 
@@ -441,11 +1084,112 @@ footer.row {
     margin-right: 0 !important;
 }
 
-/* center the blockquote in the page */
+/* Modern text balloon styling */
 .blockquote-wrapper {
-    height: 100vh;
-    margin-top: 20px;
- }
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .blockquote {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        h1 {
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0;
+            padding: 30px 40px;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border: 3px solid $red;
+            border-radius: 25px;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(234, 67, 53, 0.15);
+            
+            span {
+                color: $red;
+                font-weight: 400;
+            }
+            
+            /* Speech bubble tail */
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -20px;
+                left: 80px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid $red;
+                z-index: 2;
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -17px;
+                left: 82px;
+                width: 0;
+                height: 0;
+                border-left: 18px solid transparent;
+                border-right: 18px solid transparent;
+                border-top: 18px solid #fff;
+                z-index: 3;
+            }
+        }
+        
+        figcaption {
+            margin-top: 40px;
+            text-align: center;
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.1rem;
+            color: $red;
+            font-style: italic;
+            font-weight: 600;
+            
+            em {
+                display: block;
+                margin-top: 5px;
+                font-size: 0.9rem;
+                color: #666;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+/* Side-by-side blockquotes styling for Biography page */
+.Biography .blogcontent {
+    .blockquote-wrapper:nth-of-type(1) {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+    }
+    
+    .blockquote-wrapper:nth-of-type(2) {
+        display: inline-block;
+        margin-left: 2%;
+        vertical-align: top;
+    }
+    
+    /* Responsive: stack on mobile */
+    @media (max-width: 768px) {
+        .blockquote-wrapper:nth-of-type(1),
+        .blockquote-wrapper:nth-of-type(2) {
+            display: block;
+            width: 100%;
+            margin: 2rem 0;
+        }
+    }
+}
  
  /* Blockquote main style */
  .blockquote h4 {
@@ -454,44 +1198,50 @@ footer.row {
  }
  
  /* Blockquote header */
- .blockquote h1 {
-     font-family: 'Abril Fatface';
-     position: relative; /* for pseudos */
-     color: #030303;
-     font-size: 2.5rem;
-     font-weight: normal;
-     line-height: 1;
-     margin: 0;
-     border: 2px solid #030303;
-     border: solid 2px;
-     border-radius:20px;
-     padding: 25px;
- }
+.blockquote h1 {
+    font-family: 'Roboto Slab', Georgia, serif;
+    position: relative; /* for pseudos */
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    border: 2px solid $red;
+    border-radius: 20px;
+    padding: 25px;
+    background: #fff;
+    text-transform: none;
+    letter-spacing: 0;
+    
+    span {
+        color: $red;
+    }
+}
  
  /* Blockquote right double quotes */
- .blockquote h1:after {
-     content:"";
-     position: absolute;
-     border: 2px solid #030303;
-     border-radius: 0 50px 0 0;
-     width: 60px;
-     height: 60px;
-     bottom: -62px;
-     left: 50px;
-     border-bottom: none;
-     border-left: none;
-     z-index: 3; 
- }
+.blockquote h1:after {
+    content:"";
+    position: absolute;
+    border: 2px solid $red;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -62px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3; 
+}
  
- .blockquote h1:before {
-     content:"";
-     position: absolute;
-     width: 80px;
-     border: 6px solid #292a2b;
-     bottom: -3px;
-     left: 50px;
-     z-index: 2;
- }
+.blockquote h1:before {
+    content:"";
+    position: absolute;
+    width: 80px;
+    border: 6px solid $red;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
  
  /* increase header size after 600px */
  @media all and (min-width: 600px) {
@@ -502,20 +1252,20 @@ footer.row {
  
  }
  
- /* Blockquote subheader */
- .blockquote h4,
- .Biography .blockquote figcaption {
-     position: relative;
-     color: $primary;
-     font-size: 1.3rem;
-     font-weight: 400;
-     line-height: 1.2;
-     margin: 0;
-     padding-top: 15px;
-     z-index: 1;
-     margin-left:150px;
-     padding-left:12px;
- }
+/* Blockquote subheader */
+.blockquote h4,
+.Biography .blockquote figcaption {
+    position: relative;
+    color: $red;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 1;
+    margin-left:150px;
+    padding-left:12px;
+}
  
   
  .blockquote h4:first-letter {

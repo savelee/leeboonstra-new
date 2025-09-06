@@ -6,15 +6,18 @@ nocomments: true
 layout: about
 ---
 
-Software Engineer & Advocate for the <a href="https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/">Office of the CTO</a>
+AI Software Engineer & Advocate for the <a href="https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/">Office of the CTO</a>, Google.
 
-<b>Google</b>
+Lee Boonstra's  tech journey began in 2007 and is a testament to their adaptability and diverse skill set. They have donned various hats, from software engineer, prompt engineer to mobile web developer to technical trainer, and developer advocate. With under their belt; strong programming skills, understanding of modern (ML) architectures, and experience working in large distributed systems, they have gained invaluable experience from their many years at Google. Now, they hold the role of software engineer tech lead at the Cloud office of the CTO, a diverse team of highly experienced engineers and technologists working on behalf of the Google Cloud CEO, whose mission is to foster market-disrupting collaborative innovation between Google and the world's most ambitious organizations as part of the innovation factory.
 
-[Lee Boonstra](https://plus.google.com/117712452932146916020)'s  tech journey began in 2007 and is a testament to their adaptability and diverse skill set. They have donned various hats, from software engineer, prompt engineer to mobile web developer to technical trainer, and developer advocate. With under their belt; strong programming skills, understanding of modern (ML) architectures, and experience working in large distributed systems, they have gained invaluable experience from their many years at Google. Now, they hold the role of software engineer tech lead at the Cloud office of the CTO, a diverse team of highly experienced engineers and technologists working on behalf of the Google Cloud CEO, whose mission is to foster market-disrupting collaborative innovation between Google and the world's most ambitious organizations as part of the innovation factory.
-
-<blockquote class="blockquote">
-"I'm good at explaining engineering to beginners and explaining to engineers where to begin."
-</blockquote>
+<div class="blockquote-wrapper">
+  <blockquote class="blockquote">
+    <h1>
+     "I'm good at explaining engineering to beginners and explaining to engineers where to begin.
+     </h1>
+    <figcaption>&mdash;Lee Boonstra<br><em>SWE, Google</em></h4></figcaption>
+  </blockquote>
+</div>
 
 Their expertise in Conversational AI and Voice technology, alongside (Generative) AI, has led to recognition as a respected public keynote speaker and published author for O'Reilly and Apress. 
 
@@ -25,7 +28,7 @@ With so many roles, there is one title they are the proudest of being a parent o
 <div class="blockquote-wrapper">
   <blockquote class="blockquote">
     <h1>
-     I love <span style="color:#e36803">creating</span> instead of just consuming technology.
+     I love <span style="color:#ea4335">creating</span> instead of just consuming technology.
      </h1>
     <figcaption>&mdash;Lee Boonstra<br><em>SWE, Google</em></h4></figcaption>
   </blockquote>

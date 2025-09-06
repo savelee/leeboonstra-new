@@ -49,7 +49,7 @@
     <div class="row" style="clear: both;"></div>
   </div>
     <% } else { %>   
-    <div class="card w-25 p-2 float-md-left shadow-sm">
+    <div class="card col-3 p-2 float-md-left shadow-sm">
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/thumb_<%- post.featured %>.webp">
@@ -75,19 +75,20 @@
  <% } else { %>
   <div class="container">
     <div class="row justify-content-md-center">
-      <article class="col-8 blogcontent">
-        <h1><%= post.title %></h1>
-        <div class="header">
-          <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
-          <%- partial('post/category') %>
+      <article class="col-12 blogcontent">
+        <div class="article-header">
+          <div class="header">
+            <%- partial('post/category') %>
 
-          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-          <script type="IN/Share" data-url="<%- post.permalink %>"></script>
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="<%- post.permalink %>"></script>
 
-          <a href="https://twitter.com/intent/tweet" 
-          class="twitter-share-button btn" data-text="<%-post.title-%> #Dialogflow #GCP by @ladysign" data-related="" data-lang="en" data-show-count="false">Tweet</a>
-
+            <a href="https://twitter.com/intent/tweet" 
+            class="twitter-share-button btn" data-text="<%-post.title-%> #leeboonstra #generativeai" data-related="" data-lang="en" data-show-count="false">Tweet</a>
+          </div>
         </div>
+        <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
+        <h1><%= post.title %></h1>
         <%- post.content %>
 
         <% if (page.related_posts && page.related_posts.length > 0) { %>
