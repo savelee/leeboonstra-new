@@ -1,10 +1,9 @@
 <div class="container videos">
     <div class="row justify-content-md-center">
-      <div class="col">
-        <h1><%-page.title-%></h1>
-  
+      <div class="col">  
         <div class="card w-100 youtubeblock" >
           <div class="shadow-lg">
+            <h1><%-page.title-%></h1>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe id="youtubeFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/A7DY5hKZ-AI" allowfullscreen></iframe>
             </div>
@@ -12,8 +11,7 @@
         </div>
 
         <% site.categories.findOne({name: 'Videos'}).posts.sort('date', -1).forEach(function(post) { %>
-          <div class="card w-25 p-2 float-md-left youtube">
-            <div class="shadow-sm">
+          <div class="card youtube shadow-sm">
               <img class="card-img-top" src="https://img.youtube.com/vi/<%-post.youtube-%>/mqdefault.jpg" alt="Watch on YouTube">
               <div class="card-body">
                 <p class="card-text"><%- truncate(post.title, {length: 65, omission: '...'}) %></p>
@@ -24,7 +22,6 @@
                   Watch
               </a>
               </div>
-            </div>
           </div>
 
         <script type="application/ld+json">

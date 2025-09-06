@@ -21,7 +21,7 @@ html {
 
 .card-body h1 {
     font-family: 'Roboto Slab', Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     font-weight: 600;
     line-height: 1.2;
     background-color: white;
@@ -156,7 +156,7 @@ html {
 }
 
 .disclaimer {
-    font-family: bebas, Impact;
+    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
     text-transform: uppercase;
     font-size: 1rem;
     padding: 0 20px;
@@ -174,9 +174,9 @@ body {
 // Modern magazine-style typography hierarchy
 h1, .h1 {
     font-family: 'Roboto Slab', Georgia, serif;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.1;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.7;
     margin-bottom: 1.25rem;
     color: #000;
     text-transform: none;
@@ -969,9 +969,37 @@ time {
 }
 
 .writing .card {
+    margin-bottom: 1rem;
+
+    h1 {
+        font-size: 2.25rem;
+    }
     h2 {
-        font-size: 1.5rem;
-        color: $primary;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        color: #000 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+    p {
+        font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+    ul {
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+        li {
+            margin-bottom: 0.5rem;
+        }
     }
     .date {
         color: $primary;
@@ -1016,23 +1044,91 @@ time {
 }
 
 .videos {
+    .card {
+        margin-bottom: 1rem;
+    }
+
     .youtubeblock {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
+        margin-right: 1rem;
 
         .shadow-lg {
             padding: 10px;
         }
     }
 
+    // Video cards grid layout
     .youtube {
+        margin-bottom: 1.5rem;
+        margin-right: 1rem; // Add spacing between cards
+        
+        // Ensure 4 cards per row on large screens
+        @media (min-width: 992px) {
+            flex: 0 0 calc(25% - 1rem); // 25% width minus full margin
+            max-width: calc(25% - 1rem);
+        }
+        
+        // 3 cards per row on medium screens
+        @media (min-width: 768px) and (max-width: 991px) {
+            flex: 0 0 calc(33.333% - 1rem);
+            max-width: calc(33.333% - 1rem);
+        }
+        
+        // 2 cards per row on small screens
+        @media (min-width: 576px) and (max-width: 767px) {
+            flex: 0 0 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
+        }
+        
+        // 1 card per row on extra small screens
+        @media (max-width: 575px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+            
         .card-body {
             height: 120px;
-            font-size: 80%;
+            padding: 1rem;
+            
+            .card-text {
+                font-family: 'Source Serif Pro', Georgia, serif;
+                line-height: 1.4;
+                color: #333;
+                margin: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
+        
         .foot {
             text-align: center;
             padding: 10px;
+            
+            .btn {
+                font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-size: 0.9rem;
+            }
         }
+    }
+    
+    // Container for video cards
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -1rem; // Compensate for card margins
+    }
+    
+    // Make the col container a flexbox container for video cards
+    .col {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -1rem; // Compensate for card margins
     }
 }
 
@@ -1045,9 +1141,6 @@ time {
     }
 }
 
-.Events .blogcontent ul li p {
-    font-size: 65%;
-}
 
 .social {
     margin: 0;
