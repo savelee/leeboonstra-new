@@ -1256,6 +1256,59 @@ footer {
     margin-top: 2rem;
 }
 
+// Article cards layout - same as videos layout
+.article-cards {
+    // Container for article cards
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -1rem; // Compensate for card margins
+    }
+    
+    // Make the col container a flexbox container for article cards
+    .col {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -1rem; // Compensate for card margins
+    }
+    
+    // Article cards grid layout - same as YouTube cards
+    .article-card {
+        margin-bottom: 1.5rem;
+        margin-right: 1rem; // Add spacing between cards
+        
+        // Ensure 4 cards per row on large screens
+        @media (min-width: 992px) {
+            flex: 0 0 calc(25% - 1rem); // 25% width minus full margin
+            max-width: calc(25% - 1rem);
+        }
+        
+        // 3 cards per row on medium screens
+        @media (min-width: 768px) and (max-width: 991px) {
+            flex: 0 0 calc(33.333% - 1rem);
+            max-width: calc(33.333% - 1rem);
+        }
+        
+        // 2 cards per row on small screens
+        @media (min-width: 576px) and (max-width: 767px) {
+            flex: 0 0 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
+        }
+        
+        // 1 card per row on extra small screens
+        @media (max-width: 575px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+    
+    // Ensure highlighted articles (first article) maintain their layout
+    .col-9, .col-3 {
+        flex: none; // Override flexbox for highlighted article layout
+    }
+}
+
 /* Modern text balloon styling */
 .blockquote-wrapper {
     margin: 2rem 0;

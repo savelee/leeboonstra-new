@@ -49,7 +49,7 @@
     <div class="row" style="clear: both;"></div>
   </div>
     <% } else { %>   
-    <div class="card col-3 p-2 float-md-left shadow-sm">
+    <div class="card article-card shadow-sm">
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/thumb_<%- post.featured %>.webp">
@@ -61,11 +61,7 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
-          <% if (highlight){ %>
-            <div class="card-text"><%- truncate(strip_html(post.excerpt), {length: 300, omission: '...'}) %></div> 
-          <% } else { %>
           <div class="card-text"><%- truncate(strip_html(post.excerpt), {length: 100, omission: '...'}) %></div>
-          <% }%>
         </div>
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary">Continue Reading</a>
