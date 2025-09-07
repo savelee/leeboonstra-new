@@ -26,11 +26,13 @@
   
   <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
   
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="HandheldFriendly" content="True"/>
-  <meta name="MobileOptimized" content="640"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   
   <%- autoCanonical(config, page) %>
 
@@ -273,20 +275,13 @@
     }
   </style>
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/apple-touch-icon-iphone-60x60.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-iphone-60x60.png"/>
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-ipad-76x76.png"/>
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-iphone-retina-120x120.png"/>
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-ipad-retina-152x152.png"/>
   <link rel="manifest" href="/manifest.json"/>  
   
   <meta name="robots" content="all"/>
   <meta name="yandex-verification" content="adf3dcb0d559ea5a"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 
-  <link href="https://plus.google.com/117712452932146916020" rel="author"/>
-  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.jpg"/>
+  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.png"/>
   <link rel="profile" href="https://gmpg.org/xfn/11"/>
   <link rel="pingback" href="https://www.leeboonstra.dev"/>
   <meta property="og:type" content="website"/>
@@ -295,7 +290,7 @@
   <meta property="og:site_name" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
   <meta property="og:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
   <meta property="og:locale" content="en"/>
-  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.jpg"/>
+  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.png"/>
 
   <link rel="preconnect" href="youtube.com"/>
   <link rel="preconnect" href="www.google-analytics.com"/>

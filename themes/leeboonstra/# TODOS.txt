@@ -1,6 +1,5 @@
 # TODOS
 
-3) create a new screen.png
 4) create a new site icon
 7) update to firebase hosting
 10) update the serviceworker.js
