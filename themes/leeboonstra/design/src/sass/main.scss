@@ -689,14 +689,52 @@ time {
         }
     }
     
-    // Hexo-prism code block styling
+    // Hexo-prism code block styling - VERY SPECIFIC RULES
     figure.highlight {
-        background-color: #2d3748;
-        border-radius: 0.5rem;
-        margin: 2rem 0;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        position: relative;
+        background-color: #2d3748 !important;
+        border-radius: 0.5rem !important;
+        margin: 2rem 0 !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+        position: relative !important;
+        
+        // Make sure the figure itself has the dark background
+        pre {
+            background-color: #2d3748 !important;
+            color: #e2e8f0 !important;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+            border: none !important;
+            padding: 1rem !important;
+            margin: 0 !important;
+        }
+        
+        // Override any prism CSS that might interfere
+        pre[class*="language-"] {
+            background-color: #2d3748 !important;
+            color: #e2e8f0 !important;
+        }
+        
+        // Target the table structure specifically
+        table {
+            background-color: #2d3748 !important;
+        }
+        
+        tbody {
+            background-color: #2d3748 !important;
+        }
+        
+        tr {
+            background-color: #2d3748 !important;
+        }
+        
+        td.code {
+            background-color: #2d3748 !important;
+        }
+        
+        td.code pre {
+            background-color: #2d3748 !important;
+            color: #e2e8f0 !important;
+        }
         
         // Language label
         &::before {
@@ -735,9 +773,9 @@ time {
                             width: 100%;
                             
                             pre {
-                                background: transparent;
-                                color: #e2e8f0;
-                                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                                background: transparent !important;
+                                color: #e2e8f0 !important;
+                                font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
                                 font-size: 0.9rem;
                                 line-height: 1.4;
                                 margin: 0;
@@ -762,48 +800,48 @@ time {
                                     
                                     // Syntax highlighting colors for hexo-prism
                                     .token {
-                                        &.keyword { color: #c792ea; }
-                                        &.string { color: #c3e88d; }
-                                        &.number { color: #f78c6c; }
-                                        &.comment { color: #676e95; font-style: italic; }
-                                        &.function { color: #82aaff; }
-                                        &.variable { color: #f07178; }
-                                        &.operator { color: #89ddff; }
-                                        &.punctuation { color: #89ddff; }
-                                        &.class-name { color: #ffcb6b; }
-                                        &.tag { color: #f07178; }
-                                        &.attr { color: #c792ea; }
-                                        &.attr-value { color: #c3e88d; }
-                                        &.property { color: #c792ea; }
-                                        &.boolean { color: #c792ea; }
-                                        &.null { color: #c792ea; }
+                                        &.keyword { color: #c792ea !important; }
+                                        &.string { color: #c3e88d !important; }
+                                        &.number { color: #f78c6c !important; }
+                                        &.comment { color: #676e95 !important; font-style: italic; }
+                                        &.function { color: #82aaff !important; }
+                                        &.variable { color: #f07178 !important; }
+                                        &.operator { color: #89ddff !important; }
+                                        &.punctuation { color: #89ddff !important; }
+                                        &.class-name { color: #ffcb6b !important; }
+                                        &.tag { color: #f07178 !important; }
+                                        &.attr { color: #c792ea !important; }
+                                        &.attr-value { color: #c3e88d !important; }
+                                        &.property { color: #c792ea !important; }
+                                        &.boolean { color: #c792ea !important; }
+                                        &.null { color: #c792ea !important; }
                                         &.title { 
-                                            &.function_ { color: #82aaff; }
+                                            &.function_ { color: #82aaff !important; }
                                         }
-                                        &.params { color: #f07178; }
-                                        &.language_ { color: #f07178; }
+                                        &.params { color: #f07178 !important; }
+                                        &.language_ { color: #f07178 !important; }
                                     }
                                     
                                     // Direct span classes (hexo-prism format)
-                                    .attr { color: #c792ea; }
-                                    .punctuation { color: #89ddff; }
-                                    .string { color: #c3e88d; }
-                                    .number { color: #f78c6c; }
-                                    .keyword { color: #c792ea; }
-                                    .function { color: #82aaff; }
-                                    .variable { color: #f07178; }
-                                    .operator { color: #89ddff; }
-                                    .comment { color: #676e95; font-style: italic; }
-                                    .class-name { color: #ffcb6b; }
-                                    .tag { color: #f07178; }
-                                    .attr-name { color: #c792ea; }
-                                    .attr-value { color: #c3e88d; }
+                                    .attr { color: #c792ea !important; }
+                                    .punctuation { color: #89ddff !important; }
+                                    .string { color: #c3e88d !important; }
+                                    .number { color: #f78c6c !important; }
+                                    .keyword { color: #c792ea !important; }
+                                    .function { color: #82aaff !important; }
+                                    .variable { color: #f07178 !important; }
+                                    .operator { color: #89ddff !important; }
+                                    .comment { color: #676e95 !important; font-style: italic; }
+                                    .class-name { color: #ffcb6b !important; }
+                                    .tag { color: #f07178 !important; }
+                                    .attr-name { color: #c792ea !important; }
+                                    .attr-value { color: #c3e88d !important; }
                                     .title {
-                                        &.function_ { color: #82aaff; }
+                                        &.function_ { color: #82aaff !important; }
                                     }
-                                    .params { color: #f07178; }
-                                    .language_ { color: #f07178; }
-                                    .property { color: #c792ea; }
+                                    .params { color: #f07178 !important; }
+                                    .language_ { color: #f07178 !important; }
+                                    .property { color: #c792ea !important; }
                                 }
                             }
                         }
@@ -1543,7 +1581,37 @@ footer {
 
  }
 
- .h1,
- .blogcontent .h1 {
-    font-family: 'bebas';
- }
+.h1,
+.blogcontent .h1 {
+   font-family: 'bebas';
+}
+
+// GLOBAL OVERRIDE FOR HEXO-PRISM CODE BLOCKS - MAXIMUM SPECIFICITY
+figure.highlight,
+figure.highlight *,
+figure.highlight table,
+figure.highlight tbody,
+figure.highlight tr,
+figure.highlight td,
+figure.highlight td.code,
+figure.highlight pre,
+figure.highlight pre[class*="language-"] {
+    background-color: #2d3748 !important;
+    color: #e2e8f0 !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+figure.highlight {
+    border-radius: 0.5rem !important;
+    margin: 2rem 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    position: relative !important;
+}
+
+figure.highlight pre {
+    border: none !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    background: transparent !important;
+}

@@ -28,6 +28,7 @@
   
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="HandheldFriendly" content="True"/>
   <meta name="MobileOptimized" content="640"/>
   
@@ -46,6 +47,108 @@
   <link rel="stylesheet" media="print" href="/print.css">
   <link rel="preload" href="/css/prism-atom-dark.css" as="style">
   <link rel="preload" href="/js/prism.js" as="script">
+  <link rel="stylesheet" href="/css/prism-atom-dark.css">
+  <style>
+    /* Custom hexo-prism dark theme */
+    figure.highlight {
+      background-color: #2d3748 !important;
+      border-radius: 0.5rem !important;
+      margin: 2rem 0 !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+      position: relative !important;
+    }
+    
+    figure.highlight table,
+    figure.highlight tbody,
+    figure.highlight tr,
+    figure.highlight td,
+    figure.highlight td.code {
+      background-color: #2d3748 !important;
+      border: none !important;
+      margin: 0 !important;
+    }
+    
+    figure.highlight pre {
+      background-color: #2d3748 !important;
+      color: #e2e8f0 !important;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+      border: none !important;
+      margin: 0 !important;
+    }
+    
+         /* Preserve Prism.js syntax highlighting colors */
+         figure.highlight pre .keyword,
+         figure.highlight pre .function,
+         figure.highlight pre .title.function_ {
+           color: #c792ea !important;
+         }
+         
+         figure.highlight pre .string,
+         figure.highlight pre .attr-value {
+           color: #c3e88d !important;
+         }
+         
+         figure.highlight pre .number {
+           color: #f78c6c !important;
+         }
+         
+         figure.highlight pre .comment {
+           color: #676e95 !important;
+           font-style: italic;
+         }
+         
+         figure.highlight pre .variable,
+         figure.highlight pre .variable.language_ {
+           color: #f07178 !important;
+         }
+         
+         figure.highlight pre .operator,
+         figure.highlight pre .punctuation {
+           color: #89ddff !important;
+         }
+         
+         figure.highlight pre .class-name {
+           color: #ffcb6b !important;
+         }
+         
+         figure.highlight pre .tag {
+           color: #f07178 !important;
+         }
+         
+         figure.highlight pre .attr-name,
+         figure.highlight pre .property {
+           color: #c792ea !important;
+         }
+    
+    figure.highlight pre {
+      padding: 1rem !important;
+      background: transparent !important;
+    }
+    
+    figure.highlight::before {
+      content: attr(class);
+      display: block;
+      background-color: #1a202c;
+      color: #a0aec0;
+      padding: 0.5rem 1rem;
+      font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #4a5568;
+      position: relative;
+      z-index: 0;
+    }
+    
+    figure.highlight table {
+      margin-top: 0;
+    }
+    
+    figure.highlight pre {
+      padding: 1rem !important;
+    }
+  </style>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon-iphone-60x60.png">
