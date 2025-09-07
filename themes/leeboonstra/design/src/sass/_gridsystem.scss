@@ -3,6 +3,33 @@
     .card {
         width: 100% !important;
     }
+    
+    // Force sidebar to stack below main content on small screens
+    .col-3 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 1rem;
+        order: 2; // Force sidebar to appear after main content
+    }
+    
+    .col-9 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        order: 1; // Force main content to appear first
+    }
+    
+    // Remove float on small screens
+    .float-md-left {
+        float: none !important;
+    }
+    
+    // Ensure the container uses flexbox for proper ordering
+    .container .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 
     footer .col {
         flex-basis: unset;

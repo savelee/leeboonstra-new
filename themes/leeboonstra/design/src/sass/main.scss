@@ -61,6 +61,34 @@ html {
     width: 100%;
 }
 
+
+// Force responsive sidebar behavior with higher specificity
+@media (max-width: 767.98px) {
+    .container.main.article-cards .row .col-3 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 1rem !important;
+        order: 2 !important;
+    }
+    
+    .container.main.article-cards .row .col-9 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        order: 1 !important;
+    }
+    
+    .container.main.article-cards .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .container.main.article-cards .row .float-md-left {
+        float: none !important;
+    }
+}
+
 // Expand layout for larger screens
 @media (min-width: 1400px) {
     .container {
