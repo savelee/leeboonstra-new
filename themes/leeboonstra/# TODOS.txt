@@ -1,6 +1,4 @@
 # TODOS
 
-4) create a new site icon
 7) update to firebase hosting
-10) update the serviceworker.js
 11) update page descriptions and tags
