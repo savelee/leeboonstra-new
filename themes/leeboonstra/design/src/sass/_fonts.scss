@@ -128,18 +128,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'AbhayaLibre-Regular';
-    src: local('AbhayaLibre-Regular'), local('AbhayaLibre-Regular'),
-         url('/fonts/AbhayaLibre-Regular-webfont?#iefix') format('embedded-opentype'),
-         url('/fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
-         url('/fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
-         url('/fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 pre,
 code,
 .code {

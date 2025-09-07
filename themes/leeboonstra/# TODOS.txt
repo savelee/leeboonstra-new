@@ -1,14 +1,7 @@
 # TODOS
 
-1) replace image profile
-2) make sure the manifest.json uses that profile image
 3) create a new screen.png
 4) create a new site icon
-5) update the biography
-6) remove some viddeos
 7) update to firebase hosting
-8) remove unused fonts
-9) update the readme.md
 10) update the serviceworker.js
 11) update page descriptions and tags
-12) update stackoverflow: https://stackoverflow.com/users/12742880/lee-boonstra

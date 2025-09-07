@@ -1,4 +1,4 @@
-<div class="container about">
+<div class="container about<% if (page.layout === 'about' || page.layout === 'bio') { %> Biography<% } %>">
     <div class="row justify-content-md-center">
       <div class="col-8 blogcontent">
   
@@ -77,10 +77,11 @@
   
     <!-- Resume Section Row -->
     <div class="resume">
+ 
     <div class="row justify-content-md-center mt-4">
       <div class="col-14">
         
-        <div class="card shadow h-100">
+        <div class="card  h-100">
           <div class="card-body">
             <h1 class="card-title text-3xl font-bold section-title mb-4">My Resume</h1>
             <div class="mb-4">

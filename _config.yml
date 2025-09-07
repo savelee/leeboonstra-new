@@ -74,7 +74,7 @@ prism_plugin:
   line_number: true    # enable line numbers
   no_assets: false
 highlight: 
-  enable: false
+  enable: true
   line_number: false
   auto_detect: false
 
