@@ -54,6 +54,7 @@
     
     // Navigation links styling for mobile
     .navbar-nav {
+        background: none;
         .nav-item {
             .nav-link {
                 .icon {
@@ -275,12 +276,13 @@ body.menu-open {
             
             .nav-item {
                 margin-bottom: 0;
-                border-radius: 4px;
+                border-radius: 0;
                 overflow: visible;
                 width: calc(100% / 6);
                 text-align: center;
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                margin: 0 2px;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 0;
                 position: relative;
                 
                 // Add gradient overlay for subtle tab effect
@@ -292,7 +294,7 @@ body.menu-open {
                     right: 0;
                     bottom: 0;
                     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-                    border-radius: 4px;
+                    border-radius: 0;
                     pointer-events: none;
                     z-index: 1;
                 }
@@ -344,37 +346,77 @@ body.menu-open {
                 }
                 
                 // Active state styling
-                &.active .nav-link {
-                    background: $primary;
-                    color: #fff;
+                &.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $primary;
+                        color: #fff;
+                    }
                 }
                 
-                &.iconWriting.active .nav-link {
-                    background: $blue;
+                &.iconWriting.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $blue;
+                    }
                 }
                 
-                &.iconVideos.active .nav-link {
-                    background: $green;
+                &.iconVideos.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $green;
+                    }
                 }
                 
-                &.iconSpeaking.active .nav-link {
-                    background: $orange;
+                &.iconSpeaking.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $orange;
+                    }
                 }
                 
-                &.iconAbstracts.active .nav-link {
-                    background: $green;
+                &.iconAbstracts.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $green;
+                    }
                 }
                 
-                &.iconChat.active .nav-link {
-                    background: $lightblue;
+                &.iconChat.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $lightblue;
+                    }
                 }
                 
-                &.iconBio.active .nav-link {
-                    background: $red;
+                &.iconBio.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $red;
+                    }
                 }
                 
-                &.iconFAQs.active .nav-link {
-                    background: $lightblue;
+                &.iconFAQs.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    
+                    .nav-link {
+                        background: $lightblue;
+                    }
                 }
                 
                 .nav-link {
