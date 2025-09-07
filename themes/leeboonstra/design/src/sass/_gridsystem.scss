@@ -293,8 +293,17 @@
 
 
     .navbar {
-        width: 100%;
-        position: relative;
+        width: 100% !important;
+        position: relative !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        background: transparent !important;
+        overflow: visible !important;
+        transition: none !important;
+        padding-top: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
       }
       
       .navbar a {

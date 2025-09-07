@@ -11,12 +11,9 @@ npm install
 echo "🧹 Cleaning previous build..."
 hexo clean
 
-# Compile Sass to CSS and JavaScript
-echo "🎨 Compiling Sass to CSS and JavaScript..."
-cd themes/leeboonstra/design
-npm run sass
-npm run build-js
-cd ../../../
+# Build all assets (Sass, JavaScript, copy files)
+echo "🎨 Building all assets..."
+npm run build:assets
 
 # Generate Hexo site
 echo "🏗️  Generating Hexo site..."

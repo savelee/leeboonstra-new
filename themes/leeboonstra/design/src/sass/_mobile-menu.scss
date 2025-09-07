@@ -1,6 +1,8 @@
 // Modern Mobile Menu Styles
 // This file contains all the modern mobile menu styling
 
+@import "./_colors.scss";
+
 // Mobile menu overlay
 .menu-overlay {
     position: fixed;
@@ -232,15 +234,163 @@ body.menu-open {
     }
 }
 
-// Hide mobile menu on larger screens
+// Hide mobile menu on larger screens and restore desktop navbar
 @include media-breakpoint-up(md) {
     .menu-overlay {
         display: none;
     }
     
     .navbar {
+        // Reset mobile menu styles for desktop
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        background: transparent !important;
+        overflow: visible !important;
+        transition: none !important;
+        padding-top: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        
         .menu-close-btn {
             display: none;
+        }
+        
+        // Restore desktop navbar styling
+        .navbar-nav {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+            .nav-item {
+                margin-bottom: 0;
+                border-radius: 0;
+                overflow: visible;
+                width: calc(100% / 6);
+                text-align: center;
+                
+                &:hover {
+                    background-color: transparent;
+                    transform: none;
+                }
+                
+                // Apply color scheme hover effects
+                &.iconHome:hover .nav-link {
+                    background: $primary;
+                    color: #fff;
+                }
+                
+                &.iconWriting:hover .nav-link {
+                    background: $blue;
+                    color: #fff;
+                }
+                
+                &.iconVideos:hover .nav-link {
+                    background: $green;
+                    color: #fff;
+                }
+                
+                &.iconSpeaking:hover .nav-link {
+                    background: $orange;
+                    color: #fff;
+                }
+                
+                &.iconAbstracts:hover .nav-link {
+                    background: $green;
+                    color: #fff;
+                }
+                
+                &.iconChat:hover .nav-link {
+                    background: $lightblue;
+                    color: #fff;
+                }
+                
+                &.iconBio:hover .nav-link {
+                    background: $red;
+                    color: #fff;
+                }
+                
+                &.iconFAQs:hover .nav-link {
+                    background: $lightblue;
+                    color: #fff;
+                }
+                
+                // Active state styling
+                &.active .nav-link {
+                    background: $primary;
+                    color: #fff;
+                }
+                
+                &.iconWriting.active .nav-link {
+                    background: $blue;
+                }
+                
+                &.iconVideos.active .nav-link {
+                    background: $green;
+                }
+                
+                &.iconSpeaking.active .nav-link {
+                    background: $orange;
+                }
+                
+                &.iconAbstracts.active .nav-link {
+                    background: $green;
+                }
+                
+                &.iconChat.active .nav-link {
+                    background: $lightblue;
+                }
+                
+                &.iconBio.active .nav-link {
+                    background: $red;
+                }
+                
+                &.iconFAQs.active .nav-link {
+                    background: $lightblue;
+                }
+                
+                .nav-link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 10px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    transition: all 0.3s ease;
+                    height: 100%;
+                    min-height: 60px;
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                    
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 0;
+                        margin-bottom: 5px;
+                        fill: currentColor;
+                        display: block;
+                    }
+                    
+                    span {
+                        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 1.2;
+                    }
+                }
+            }
         }
     }
 }
