@@ -10,7 +10,16 @@ $pink: #AD1457;
 // Default homepage styling when body has no specific class
 .headertop {
     background: $primary;
-    color: #fff;
+    color: #fff !important;
+}
+
+// Default navbar styling - handled in mobile-menu.scss with media queries
+
+
+
+// Default nav-link styling (non-active)
+.navbar-light .navbar-nav .nav-link {
+    color: #666 !important;
 }
 
 // Override Bootstrap navbar-light text colors ONLY for active states
@@ -19,32 +28,45 @@ $pink: #AD1457;
     color: #fff !important;
 }
 
-.active,
-.nav-link:hover,
-header .nav-item.active {
+// Only apply background to nav-item, not nav-link directly
+.nav-item.active {
     background: $primary;
-    color: #fff !important;
+    
+    .nav-link {
+        color: #fff !important;
+    }
 }
 
-.nav-link:hover {
+// Hover effects only on nav-item level
+.nav-item:hover {
     background: $primary;
-    .headertop {
-        background: $primary;
+    
+    .nav-link {
         color: #fff !important;
     }
 }
 
 
 .Conferences {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $orange;
-        color: #fff !important;
-        .headertop {
-            background: $orange;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $orange;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $orange !important;
+        color: #fff !important;
     }
 
     a {
@@ -56,15 +78,25 @@ header .nav-item.active {
 }
 
 .Videos {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $green;
-        color: #fff !important;
-        .headertop {
-            background: $green;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $green;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $green !important;
+        color: #fff !important;
     }
 
     .btn {
@@ -79,15 +111,25 @@ header .nav-item.active {
 }
 
 .Writing {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $blue;
-        color: #fff !important;
-        .headertop {
-            background: $blue;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $blue;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $blue !important;
+        color: #fff !important;
     }
 
     time,
@@ -104,15 +146,25 @@ header .nav-item.active {
 }
 
 .Abstracts {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $green;
-        color: #fff !important;
-        .headertop {
-            background: $green;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $green;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $green !important;
+        color: #fff !important;
     }
 
     a {
@@ -137,15 +189,25 @@ header .nav-item.active {
 .FAQ,
 .FAQs,
 .Contact {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $lightblue;
-        color: #fff !important;
-        .headertop {
-            background: $lightblue;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $lightblue;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $lightblue !important;
+        color: #fff !important;
     }
 
     a {
@@ -157,15 +219,25 @@ header .nav-item.active {
 }
 
 .Biography {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $red;
-        color: #fff !important;
-        .headertop {
-            background: $red;
+        
+        .nav-link {
             color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $red;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $red !important;
+        color: #fff !important;
     }
 
     a {

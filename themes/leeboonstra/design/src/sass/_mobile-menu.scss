@@ -17,6 +17,11 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.navbar-light .navbar-nav {
+    background: none;
+}
+
+
 // Modern mobile navbar
 .navbar {
     // Close button styling
@@ -266,13 +271,31 @@ body.menu-open {
             justify-content: center;
             align-items: center;
             width: 100%;
+            background: #fff;
             
             .nav-item {
                 margin-bottom: 0;
-                border-radius: 0;
+                border-radius: 4px;
                 overflow: visible;
                 width: calc(100% / 6);
                 text-align: center;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 0 2px;
+                position: relative;
+                
+                // Add gradient overlay for subtle tab effect
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+                    border-radius: 4px;
+                    pointer-events: none;
+                    z-index: 1;
+                }
                 
                 &:hover {
                     background-color: transparent;
@@ -367,6 +390,8 @@ body.menu-open {
                     transition: all 0.3s ease;
                     height: 100%;
                     min-height: 60px;
+                    position: relative;
+                    z-index: 2;
                     
                     &:hover {
                         color: #fff;
@@ -375,8 +400,7 @@ body.menu-open {
                     .icon {
                         width: 24px;
                         height: 24px;
-                        margin-right: 0;
-                        margin-bottom: 5px;
+                        margin: 0 auto 8px auto;
                         fill: currentColor;
                         display: block;
                     }
@@ -385,9 +409,10 @@ body.menu-open {
                         font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
                         text-transform: uppercase;
                         letter-spacing: 0.05em;
-                        font-size: 14px;
                         text-align: center;
                         line-height: 1.2;
+                        margin: 0;
+                        flex-shrink: 0;
                     }
                 }
             }
