@@ -349,6 +349,7 @@ body.menu-open {
                 &.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $primary;
@@ -359,6 +360,7 @@ body.menu-open {
                 &.iconWriting.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $blue;
@@ -368,6 +370,7 @@ body.menu-open {
                 &.iconVideos.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $green;
@@ -377,6 +380,7 @@ body.menu-open {
                 &.iconSpeaking.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $orange;
@@ -386,6 +390,7 @@ body.menu-open {
                 &.iconAbstracts.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $green;
@@ -395,6 +400,7 @@ body.menu-open {
                 &.iconChat.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $lightblue;
@@ -404,6 +410,7 @@ body.menu-open {
                 &.iconBio.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $red;
@@ -413,6 +420,7 @@ body.menu-open {
                 &.iconFAQs.active {
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;
+                    box-shadow: none !important;
                     
                     .nav-link {
                         background: $lightblue;
