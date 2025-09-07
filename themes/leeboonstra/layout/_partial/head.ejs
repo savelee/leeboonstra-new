@@ -120,6 +120,82 @@
          figure.highlight pre .property {
            color: #c792ea !important;
          }
+         
+         /* NUCLEAR OPTION - Force responsive images with maximum specificity */
+         @media (max-width: 600px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 200px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             box-sizing: border-box !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         @media (max-width: 480px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 150px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             height: auto !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             box-sizing: border-box !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         @media (max-width: 320px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 100px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             height: auto !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             box-sizing: border-box !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         /* Override any conflicting styles */
+         .blogcontent img[src*="large_promptengineering6.png"] {
+           margin: 1rem auto !important;
+           max-height: 200px !important;
+           width: 100% !important;
+           max-width: 100% !important;
+           object-fit: cover !important;
+           object-position: center !important;
+         }
     
     figure.highlight pre {
       padding: 1rem !important;
