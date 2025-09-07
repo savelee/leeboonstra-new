@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && hexo generate && node scripts/copy-images.js",
+    "build": "cd themes/leeboonstra/design && npm run sass && npm run build-js && cd ../../../ && hexo generate && node scripts/copy-images.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && hexo server",
+    "server": "cd themes/leeboonstra/design && npm run sass && npm run build-js && cd ../../../ && hexo server",
     "copy-images": "node scripts/copy-images.js",
     "sass": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && copy themes\\leeboonstra\\design\\dist\\main.css themes\\leeboonstra\\source\\main.css && npx hexo generate",
     "sass:watch": "cd themes/leeboonstra/design && npm run watch",

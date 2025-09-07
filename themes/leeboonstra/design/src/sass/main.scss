@@ -6,6 +6,7 @@ $font-family-base: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
 @import "./bootstrap.scss";
 @import "./_gridsystem.scss";
 @import "./_fonts.scss";
+@import "./_mobile-menu.scss";
 
 html {
     overflow-x: hidden;
@@ -359,14 +360,31 @@ header {
             display: none;
             margin-left: 0;
             margin-bottom: 5px;
-            padding: .25rem !important;
-            background: #000;
-            border-radius: 1px;
+            padding: 12px !important;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
             margin: 4px;
-        }
-        .navbar-toggler:hover {
-            border: none;
-            outline: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.4);
+                transform: scale(1.05);
+            }
+            
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3);
+            }
+            
+            .icon {
+                width: 24px;
+                height: 24px;
+                fill: #fff;
+                transition: all 0.3s ease;
+            }
         }
     }
 
@@ -395,7 +413,6 @@ header {
         font-weight: 400;
         text-transform: uppercase;
         font-size: 16px;
-        border-right: 1px solid #ccc;
         padding: 0;
         margin: 0;
         vertical-align: middle;

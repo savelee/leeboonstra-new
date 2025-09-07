@@ -11,10 +11,11 @@ npm install
 echo "🧹 Cleaning previous build..."
 hexo clean
 
-# Compile Sass to CSS
-echo "🎨 Compiling Sass to CSS..."
+# Compile Sass to CSS and JavaScript
+echo "🎨 Compiling Sass to CSS and JavaScript..."
 cd themes/leeboonstra/design
 npm run sass
+npm run build-js
 cd ../../../
 
 # Generate Hexo site
