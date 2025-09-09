@@ -24,7 +24,7 @@ When it comes to prompt engineering, the choice of language model (LLM) is cruci
 
 <!--more-->
 
-<img src="/images/large_promptengineering3.png" alt="Beyond the Basics: How to Choose and Configure Your LLM for Maximum Impact" />
+<img src="/images/promptengineering3.png" alt="Beyond the Basics: How to Choose and Configure Your LLM for Maximum Impact" />
 
 Here are some considerations for choosing a model that fits with your use-case:
 

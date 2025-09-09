@@ -25,7 +25,7 @@ Let's be real; documenting stuff isn't the most exciting part of any job. But wh
 
 <!--more-->
 
-<img src="/images/large_promptengineering4.png" alt="Documenting Your Prompts: A Best Practice for Success" />
+<img src="/images/promptengineering4.png" alt="Documenting Your Prompts: A Best Practice for Success" />
 
 Given how much prompt outputs can change across different models, sampling settings, and even different versions of the same model, it's super important to document everything. You might get a response with slightly different wording or formatting, even with the exact same prompt, so keeping good records is key for future work.
 

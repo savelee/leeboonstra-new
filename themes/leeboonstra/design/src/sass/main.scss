@@ -16,6 +16,100 @@ html {
             box-sizing: border-box;
 }
 
+// GLOBAL IMAGE CONTAINMENT - MAXIMUM SPECIFICITY
+img,
+picture,
+picture img,
+.card img,
+.card picture,
+.card picture img,
+.card .card-img-top,
+.card .card-body img,
+.card .card-body picture,
+.card .card-body picture img,
+.blogcontent img,
+.blogcontent picture,
+.blogcontent picture img,
+.article-content img,
+.article-content picture,
+.article-content picture img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    position: relative !important;
+    
+    // Responsive heights
+    @media (max-width: 480px) {
+        max-height: 150px !important;
+    }
+    
+    @media (min-width: 481px) and (max-width: 576px) {
+        max-height: 200px !important;
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+        max-height: 250px !important;
+    }
+    
+    @media (min-width: 769px) and (max-width: 992px) {
+        max-height: 300px !important;
+    }
+    
+    @media (min-width: 993px) and (max-width: 1199px) {
+        max-height: 350px !important;
+    }
+    
+    @media (min-width: 1200px) {
+        max-height: 500px !important;
+    }
+    
+    @media (min-width: 1400px) {
+        max-height: 600px !important;
+    }
+}
+
+// Card-specific image constraints (smaller than main content)
+.card img,
+.card picture,
+.card picture img,
+.card .card-img-top,
+.card .card-body img,
+.card .card-body picture,
+.card .card-body picture img {
+    @media (max-width: 480px) {
+        max-height: 120px !important;
+    }
+    
+    @media (min-width: 481px) and (max-width: 576px) {
+        max-height: 180px !important;
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+        max-height: 200px !important;
+    }
+    
+    @media (min-width: 769px) and (max-width: 992px) {
+        max-height: 250px !important;
+    }
+    
+    @media (min-width: 993px) and (max-width: 1199px) {
+        max-height: 300px !important;
+    }
+    
+    @media (min-width: 1200px) {
+        max-height: 400px !important;
+    }
+    
+    @media (min-width: 1400px) {
+        max-height: 450px !important;
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -175,6 +269,8 @@ html {
 
 .card {
     border: none;
+    overflow: hidden !important; // Prevent any content from breaking out
+    max-width: 100% !important;
 }
 
 .col {
@@ -531,6 +627,53 @@ time {
     &.tall .card-body {
         height: 100%;
         font-size: 100%;
+    }
+    
+    // Ensure card body contains all content
+    .card-body {
+        overflow: hidden !important;
+        max-width: 100% !important;
+    }
+    
+    // Specific rules for card images
+    .card-img-top {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        
+        // Responsive heights for card images
+        @media (max-width: 480px) {
+            max-height: 120px !important;
+        }
+        
+        @media (min-width: 481px) and (max-width: 576px) {
+            max-height: 180px !important;
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+            max-height: 200px !important;
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            max-height: 250px !important;
+        }
+        
+        @media (min-width: 993px) and (max-width: 1199px) {
+            max-height: 300px !important;
+        }
+        
+        @media (min-width: 1200px) {
+            max-height: 400px !important;
+        }
+        
+        @media (min-width: 1400px) {
+            max-height: 450px !important;
+        }
     }
 
 }
@@ -998,76 +1141,235 @@ time {
     .col,
     .card,
     .card-body,
+    .card-img-top,
     .article-content {
-        overflow-x: hidden; // Prevent horizontal overflow
-        max-width: 100%;
+        overflow: hidden !important; // Prevent any overflow
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    // Additional specific rules for card containers
+    .card {
+        overflow: hidden !important;
+        max-width: 100% !important;
+        
+        * {
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+    }
+    
+    // ULTRA-AGGRESSIVE image containment rules
+    .card img,
+    .card .card-img-top,
+    .card picture,
+    .card picture img,
+    .card .card-body img,
+    .card .card-body picture,
+    .card .card-body picture img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        position: relative !important;
+        
+        // Force containment at all breakpoints
+        @media (max-width: 480px) {
+            max-height: 120px !important;
+        }
+        
+        @media (min-width: 481px) and (max-width: 576px) {
+            max-height: 180px !important;
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+            max-height: 200px !important;
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            max-height: 250px !important;
+        }
+        
+        @media (min-width: 993px) and (max-width: 1199px) {
+            max-height: 300px !important;
+        }
+        
+        @media (min-width: 1200px) {
+            max-height: 400px !important;
+        }
+        
+        @media (min-width: 1400px) {
+            max-height: 450px !important;
+        }
+    }
+    
+    // Global image containment rules - maximum specificity
+    img,
+    .blogcontent img,
+    .card img,
+    .article-content img,
+    .photocol img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        margin: 1.5rem 0 !important;
+        
+        // Mobile-first approach - constrained on small screens
+        @media (max-width: 480px) {
+            max-height: 150px !important;
+            margin: 1rem 0 !important;
+        }
+        
+        @media (min-width: 481px) and (max-width: 576px) {
+            max-height: 200px !important;
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+            max-height: 250px !important;
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            max-height: 300px !important;
+        }
+        
+        @media (min-width: 993px) and (max-width: 1199px) {
+            max-height: 350px !important;
+        }
+        
+        // Desktop - allow larger images, but still prevent breaking out
+        @media (min-width: 1200px) {
+            max-height: 500px !important; // Larger on desktop
+        }
+        
+        // Large desktop - even larger images
+        @media (min-width: 1400px) {
+            max-height: 600px !important; // Even larger on big screens
+        }
     }
     
     // Modern image handling - responsive with smart cropping
     img {
         width: 100% !important;
         max-width: 100% !important;
-        height: auto;
-        max-height: 300px; // Much smaller default height
-        object-fit: cover; // Crop from center to maintain aspect ratio
-        object-position: center; // Center the crop area
+        height: auto !important;
+        object-fit: cover !important; // Crop from center to maintain aspect ratio
+        object-position: center !important; // Center the crop area
+        display: block !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
         
-        // Responsive breakpoints for different screen sizes
+        // Mobile-first approach - constrained on small screens
         @media (max-width: 480px) {
-            max-height: 150px; // Very small on tiny screens
-            margin: 1rem 0;
+            max-height: 150px !important; // Very small on tiny screens
+            margin: 1rem 0 !important;
         }
         
         @media (min-width: 481px) and (max-width: 576px) {
-            max-height: 200px; // Small on mobile
+            max-height: 200px !important; // Small on mobile
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
-            max-height: 250px; // Small on tablet
+            max-height: 250px !important; // Small on tablet
         }
         
         @media (min-width: 769px) and (max-width: 992px) {
-            max-height: 300px; // Medium on small desktop
+            max-height: 300px !important; // Medium on small desktop
         }
         
         @media (min-width: 993px) and (max-width: 1199px) {
-            max-height: 350px; // Larger on medium desktop
+            max-height: 350px !important; // Larger on medium desktop
         }
         
         @media (min-width: 1200px) {
-            max-height: 400px; // Largest on big desktop
+            max-height: 500px !important; // Larger on desktop
         }
         
-        // Ensure images don't break out of containers
-        box-sizing: border-box;
+        @media (min-width: 1400px) {
+            max-height: 600px !important; // Even larger on big screens
+        }
         
-        // Additional containment for card layouts
+        // Additional containment for card layouts (still smaller than main content)
         .card & {
-            max-height: 250px; // Smaller in cards
-            margin: 1rem 0;
+            margin: 1rem 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
             
             @media (max-width: 480px) {
-                max-height: 120px;
-                margin: 0.5rem 0;
+                max-height: 120px !important;
+                margin: 0.5rem 0 !important;
             }
             
             @media (min-width: 481px) and (max-width: 576px) {
-                max-height: 180px;
+                max-height: 180px !important;
+            }
+            
+            @media (min-width: 577px) and (max-width: 768px) {
+                max-height: 200px !important;
+            }
+            
+            @media (min-width: 769px) and (max-width: 992px) {
+                max-height: 250px !important;
+            }
+            
+            @media (min-width: 993px) and (max-width: 1199px) {
+                max-height: 300px !important;
+            }
+            
+            @media (min-width: 1200px) {
+                max-height: 400px !important; // Still smaller than main content
+            }
+            
+            @media (min-width: 1400px) {
+                max-height: 450px !important;
             }
         }
         
         // Ensure images in article content are properly contained
         .article-content & {
-            max-height: 300px; // Reasonable height for article images
-            margin: 1.5rem 0;
+            margin: 1.5rem 0 !important;
             
             @media (max-width: 480px) {
-                max-height: 150px;
-                margin: 1rem 0;
+                max-height: 150px !important;
+                margin: 1rem 0 !important;
             }
             
             @media (min-width: 481px) and (max-width: 576px) {
-                max-height: 200px;
+                max-height: 200px !important;
+            }
+            
+            @media (min-width: 577px) and (max-width: 768px) {
+                max-height: 250px !important;
+            }
+            
+            @media (min-width: 769px) and (max-width: 992px) {
+                max-height: 300px !important;
+            }
+            
+            @media (min-width: 993px) and (max-width: 1199px) {
+                max-height: 350px !important;
+            }
+            
+            @media (min-width: 1200px) {
+                max-height: 500px !important;
+            }
+            
+            @media (min-width: 1400px) {
+                max-height: 600px !important;
             }
         }
     }
@@ -1081,13 +1383,12 @@ time {
             border: none;
             box-shadow: none;
             border-radius: 0.25rem;
-            max-height: 250px; // Smaller height for images with captions
             object-fit: cover; // Crop from center to maintain aspect ratio
             object-position: center;
             width: 100% !important;
             max-width: 100% !important;
             
-            // Responsive heights for figures
+            // Responsive heights for figures - smaller than main content
             @media (max-width: 480px) {
                 max-height: 120px;
             }
@@ -1096,8 +1397,24 @@ time {
                 max-height: 180px;
             }
             
-            @media (min-width: 1200px) {
+            @media (min-width: 577px) and (max-width: 768px) {
+                max-height: 200px;
+            }
+            
+            @media (min-width: 769px) and (max-width: 992px) {
+                max-height: 250px;
+            }
+            
+            @media (min-width: 993px) and (max-width: 1199px) {
                 max-height: 300px;
+            }
+            
+            @media (min-width: 1200px) {
+                max-height: 400px; // Larger on desktop
+            }
+            
+            @media (min-width: 1400px) {
+                max-height: 450px; // Even larger on big screens
             }
         }
         
@@ -1390,6 +1707,7 @@ time {
                 margin: 0;
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
+                line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
