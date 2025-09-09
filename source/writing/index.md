@@ -1,6 +1,6 @@
 ---
 title: Writing Generative AI, LLM, Dialogflow, Conversational AI & CCAI articles
-description: Lee Boonstra is a published writer and author for O'Reilly and Apress. Checkout articles Lee wrote else where.
+description: Lee Boonstra is a published writer and author for O'Reilly and Apress, and the viral Prompting Whitepaper for Kaggle and Google. Checkout articles Lee wrote else where.
 date: 2023-07-06 20:46:06
 nocomments: true
 layout: writing
