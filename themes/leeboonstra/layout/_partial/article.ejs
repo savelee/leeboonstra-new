@@ -16,215 +16,7 @@
         </div>
         <div class="card-body">
           <%- partial('post/title', {class_name: 'article-title'}) %>
-            <div class="card-text"><%- strip_html(post.excerpt) %></div> 
-
-            <script type="application/ld+json">
-              {
-                  "@context": "https://schema.org",
-                  "@type": "Blog",
-                  "name": "Generative AI, MLOps, and Conversational AI Blog by Lee Boonstra",
-                  "url": "https://www.leeboonstra.dev/",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Lee Boonstra",
-                    "jobTitle": "AI Software Engineer, Tech Lead",
-                    "description": "An AI Software Engineer and Tech Lead at Google, a respected public keynote speaker, and the author of several books and a viral whitepaper on Prompt Engineering. Their expertise spans a wide range of AI/ML technologies and programming languages. Lee uses they/them pronouns.",
-                    "pronouns": "they/them",
-                    "birthDate": "1983-06-16",
-                    "gender": "non-binary",
-                    "url": "https://www.leeboonstra.dev",
-                    "sameAs": [
-                      "https://www.linkedin.com/in/leeboonstra/",
-                      "https://github.com/savelee"
-                    ],
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Amsterdam",
-                      "addressCountry": "NL"
-                    },
-                    "alumniOf": {
-                      "@type": "CollegeOrUniversity",
-                      "name": "Saxion University of Applied Sciences"
-                    },
-                    "worksFor": [
-                      {
-                        "@type": "Organization",
-                        "name": "Google",
-                        "description": "Senior Developer Advocate & Applied AI Engineer (2019-2022)"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Google Netherlands",
-                        "description": "Customer Engineer (2017-2019)"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Sencha Inc.",
-                        "description": "Sales Engineer, EMEA (2014-2016)"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Sencha Inc.",
-                        "description": "Lead Technical Trainer, EMEA (2012-2014)"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "eFocus (Valtech)",
-                        "description": "Lead Front-end Developer (2009-2012)"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Accenture",
-                        "description": "Senior Java Developer (2007-2009)"
-                      }
-                    ],
-                    "knowsLanguage": [
-                      "Dutch",
-                      "English",
-                      "German"
-                    ],
-                    "knowsAbout": [
-                      "AI/ML",
-                      "LLMs",
-                      "GenAI",
-                      "NLP",
-                      "Chatbots",
-                      "Prompt Engineering",
-                      "Gemini",
-                      "ChatGPT",
-                      "TTS",
-                      "SST",
-                      "Whisper",
-                      "RAG",
-                      "Vector Embedding",
-                      "Dialogflow",
-                      "Contact Center AI",
-                      "Data Analysis",
-                      "Machine Learning",
-                      "Hugging Face",
-                      "Kaggle",
-                      "PyTorch",
-                      "TensorFlow",
-                      "Finetuning Models",
-                      "Python",
-                      "Pandas",
-                      "Node.js",
-                      "PHP",
-                      "Java",
-                      "JavaScript",
-                      "TypeScript",
-                      "HTML5",
-                      "SASS",
-                      "CSS3",
-                      "SQL",
-                      "NoSQL",
-                      "MongoDB",
-                      "MySQL",
-                      "Neo4j",
-                      "Firebase",
-                      "OpenAI",
-                      "Anthropic",
-                      "Meta",
-                      "Grok",
-                      "Bard",
-                      "PaLM",
-                      "LaMDA",
-                      "ChromaDB",
-                      "Google Cloud",
-                      "Cloud Platforms",
-                      "Docker",
-                      "Kubernetes",
-                      "MVC",
-                      "MVVM",
-                      "OOP",
-                      "CI/CD",
-                      "UML",
-                      "Agile",
-                      "Scrum",
-                      "Jira",
-                      "Git",
-                      "Cli tools",
-                      "gRPC",
-                      "REST",
-                      "Flutter",
-                      "Angular",
-                      "React",
-                      "Ext.js",
-                      "Sencha Touch"
-                    ],
-                    "performerIn": {
-                      "@type": "EventSeries",
-                      "name": "Public Keynote Speaker",
-                      "description": "A respected public keynote speaker, having presented at over 50 large conferences, including Google I/O and Google Cloud Next, to audiences of up to 5,000 people."
-                    },
-                    "hasCredential": {
-                      "@type": "EducationalOccupationalCredential",
-                      "credentialCategory": "Bachelor of Science",
-                      "name": "Information and Communication Technology"
-                    },
-                    "memberOf": [
-                      {
-                        "@type": "Organization",
-                        "name": "Google"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Google Cloud"
-                      },
-                      {
-                        "@type": "Organization",
-                        "name": "Kaggle"
-                      }
-                    ]
-                  },
-                  "hasPart": [
-                    {
-                      "@type": "Book",
-                      "name": "Hands-on Sencha Touch 2",
-                      "publisher": "O'Reilly",
-                      "isbn": "9781449366520",
-                      "author": {
-                        "@type": "Person",
-                        "name": "Lee Boonstra"
-                      }
-                    },
-                    {
-                      "@type": "Book",
-                      "name": "The Definitive Guide to Conversational AI with Dialogflow and Google Cloud",
-                      "publisher": "Apress",
-                      "isbn": [
-                        "978-1-4842-7014-1",
-                        "978-1-4842-7013-4"
-                      ],
-                      "author": {
-                        "@type": "Person",
-                        "name": "Lee Boonstra"
-                      }
-                    },
-                    {
-                      "@type": "CreativeWork",
-                      "name": "Google Prompt Engineering Whitepaper",
-                      "description": "Authored the Google Prompt Engineering whitepaper, which went viral and was a collaboration for Google/Kaggle.",
-                      "author": {
-                        "@type": "Person",
-                        "name": "Lee Boonstra"
-                      }
-                    },
-                    {
-                      "@type": "CreativeWork",
-                      "name": "End-to-end GenAI speech solution for Wendy's",
-                      "description": "Designed and implemented an end-to-end GenAI speech solution for Wendy's to automate drive-thru orders.",
-                      "author": {
-                        "@type": "Person",
-                        "name": "Lee Boonstra"
-                      }
-                    }
-                  ]
-                },
-                "description": "Google SWE Lee Boonstra, author of the viral Prompt Engineering whitepaper, shares insights on building and scaling production AI systems. Explore advanced topics in MLOps, generative AI, and research engineering from a big tech perspective."
-              }
-              </script>
-            
+            <div class="card-text"><%- strip_html(post.excerpt) %></div>             
         </div>
         <div class="card-foot">
           <a href="<%- url_for(post.path) %>" class="btn btn-primary">Continue Reading</a>
@@ -278,6 +70,195 @@
         <span class="date"><%- partial('post/date', {class_name: 'article-date', date_format: 'MMM Do YYYY'}) %></span>
         <h1><%= post.title %></h1>
         <%- post.content %>
+
+        <script type="application/ld+json">
+          { "@context": "http://schema.org", 
+          "@type": "BlogPosting",
+          "headline": "<%- post.title %>",
+          "genre": "technology", 
+          "datePublished": "<%- post.date.toISOString() %>",
+          "dateCreated": "<%- post.date.toISOString()  %>",
+          "dateModified": "<%- post.updated.toISOString() %>",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Lee Boonstra",
+            "logo": "<%- config.url %>/images/screen.png"
+          },
+          "description": "<%- post.description %>",
+          "mainEntityOfPage": "<%- post.permalink %>",
+          "image": "<%- config.url %>/images/screen.png",
+          "articleBody": "<%- post.content %>",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra",
+            "jobTitle": "AI Software Engineer, Tech Lead",
+            "description": "An AI Software Engineer and Tech Lead at Google, a respected public keynote speaker, and the author of several books and a viral whitepaper on Prompt Engineering. Their expertise spans a wide range of AI/ML technologies and programming languages. Lee uses they/them pronouns.",
+            "pronouns": "they/them",
+            "birthDate": "1983-06-16",
+            "gender": "non-binary",
+            "url": "https://www.leeboonstra.dev",
+            "sameAs": [
+              "https://www.linkedin.com/in/leeboonstra/",
+              "https://github.com/savelee"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amsterdam",
+              "addressCountry": "NL"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Saxion University of Applied Sciences"
+            },
+            "worksFor": [
+              {
+                "@type": "Organization",
+                "name": "Google",
+                "description": "Senior Developer Advocate & Applied AI Engineer (2019-2022)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Google Netherlands",
+                "description": "Customer Engineer (2017-2019)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Sencha Inc.",
+                "description": "Sales Engineer, EMEA (2014-2016)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Sencha Inc.",
+                "description": "Lead Technical Trainer, EMEA (2012-2014)"
+              },
+              {
+                "@type": "Organization",
+                "name": "eFocus (Valtech)",
+                "description": "Lead Front-end Developer (2009-2012)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Accenture",
+                "description": "Senior Java Developer (2007-2009)"
+              }
+            ],
+            "knowsLanguage": [
+              "Dutch",
+              "English",
+              "German"
+            ],
+            "knowsAbout": [
+              "AI/ML",
+              "LLMs",
+              "GenAI",
+              "NLP",
+              "Chatbots",
+              "Prompt Engineering",
+              "Gemini",
+              "ChatGPT",
+              "TTS",
+              "SST",
+              "Whisper",
+              "RAG",
+              "Vector Embedding",
+              "Dialogflow",
+              "Contact Center AI",
+              "Data Analysis",
+              "Machine Learning",
+              "Hugging Face",
+              "Kaggle",
+              "PyTorch",
+              "TensorFlow",
+              "Finetuning Models",
+              "Python",
+              "Pandas",
+              "Node.js",
+              "PHP",
+              "Java",
+              "JavaScript",
+              "TypeScript",
+              "HTML5",
+              "SASS",
+              "CSS3",
+              "SQL",
+              "NoSQL",
+              "MongoDB",
+              "MySQL",
+              "Neo4j",
+              "Firebase",
+              "OpenAI",
+              "Anthropic",
+              "Meta",
+              "Grok",
+              "Bard",
+              "PaLM",
+              "LaMDA",
+              "ChromaDB",
+              "Google Cloud",
+              "Cloud Platforms",
+              "Docker",
+              "Kubernetes",
+              "MVC",
+              "MVVM",
+              "OOP",
+              "CI/CD",
+              "UML",
+              "Agile",
+              "Scrum",
+              "Jira",
+              "Git",
+              "Cli tools",
+              "gRPC",
+              "REST",
+              "Flutter",
+              "Angular",
+              "React",
+              "Ext.js",
+              "Sencha Touch"
+            ],
+            "performerIn": {
+              "@type": "EventSeries",
+              "name": "Public Keynote Speaker",
+              "description": "A respected public keynote speaker, having presented at over 50 large conferences, including Google I/O and Google Cloud Next, to audiences of up to 5,000 people."
+            },
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Bachelor of Science",
+              "name": "Information and Communication Technology"
+            },
+            "memberOf": [
+              {
+                "@type": "Organization",
+                "name": "Google"
+              },
+              {
+                "@type": "Organization",
+                "name": "Google Cloud"
+              },
+              {
+                "@type": "Organization",
+                "name": "Kaggle"
+              }
+            ]
+          }
+          }
+  
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.leeboonstra.dev/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "<%- post.title %>",
+              "item": "<%- post.permalink %>"
+            }]
+          }
+          </script>
 
         <% if (page.related_posts && page.related_posts.length > 0) { %>
 
