@@ -1,6 +1,6 @@
 ---
 title: Documenting Your Prompts A Best Practice for Success
-description: Let’s be real; documenting stuff isn’t the most exciting part of any job. But when it comes to prompt engineering, it’s an absolute lifesaver. I know it can feel like extra work, but trust me, it’ll…
+description: Let’s be real; AI documenting stuff isn’t the most exciting part of any job. But when it comes to prompt engineering, it’s an absolute lifesaver. I know it can feel like extra work, but trust me, it’ll…
 tags:
   - Large Language Models
   - Prompt Engineering
@@ -15,7 +15,7 @@ featured: promptengineering4
 date: 2024-07-01 12:00:00
 ---
 
-Let's be real; documenting stuff isn't the most exciting part of any job. But when it comes to prompt engineering, it's an absolute lifesaver. I know it can feel like extra work, but trust me, it'll save you from major headaches later on.
+Let's be real; documenting stuff isn't the most exciting part of any job. But when it comes to prompt engineering and AI Agents, it's an absolute lifesaver. I know it can feel like extra work, but trust me, it'll save you from major headaches later on.
 
 *This is the 4th blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
 

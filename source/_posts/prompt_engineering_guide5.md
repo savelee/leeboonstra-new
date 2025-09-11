@@ -15,7 +15,7 @@ featured: promptengineering5
 date: 2024-07-08 12:00:00
 ---
 
-Whether you are writing a prompt to let the LLM answer a question from a contract, summarize a report, classify user feedback, or extract order information, writing a prompt containing just one line with the question is likely insufficient. You will need to provide instructions, constraints, reasoning, and a few-shot examples, and you will set your expectations for the style and output format. Trust me, you will quickly end up with an extensive written prompt, which increases in size over the various iterations.
+Whether you are writing a prompt to let the LLM or AI answer a question from a contract, summarize a report, classify user feedback, or extract order information, writing a prompt containing just one line with the question is likely insufficient. You will need to provide instructions, constraints, reasoning, and a few-shot examples, and you will set your expectations for the style and output format. Trust me, you will quickly end up with an extensive written prompt, which increases in size over the various iterations.
 
 Writing prompts can present challenges, particularly when instructions or constraints clash. For instance, an instruction to 'avoid hallucinations or fabrications' could hinder creativity or explanations in certain edge cases. This underscores the importance of adaptability in your prompt writing approach. When working with a test set of example user inputs, it's crucial to be flexible and ready to revisit and verify if recent prompt changes don't disrupt previously successful prompts. This adaptability is key to maintaining the effectiveness of your prompts.
 

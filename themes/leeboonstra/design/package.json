@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node sass-to-css.js && parcel index.html --open",
-    "build": "node sass-to-css.js && parcel build src/js/index.js --out-dir dist --out-file bundle.js",
-    "build-js": "parcel build src/js/index.js --out-dir dist --out-file bundle.js",
+    "build": "node sass-to-css.js && parcel build src/js/index.js --out-dir dist --out-file bundle.js --no-source-maps",
+    "build-js": "parcel build src/js/index.js --out-dir dist --out-file bundle.js --no-source-maps",
     "watch": "node sass-to-css.js && node -e \"require('fs').watchFile('src/sass/main.scss', () => { console.log('Sass file changed, recompiling...'); require('./sass-to-css.js'); }); console.log('Watching for Sass changes...');\"",
     "sass": "node sass-to-css.js"
   },

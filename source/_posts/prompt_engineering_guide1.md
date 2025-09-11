@@ -14,7 +14,7 @@ categories:
 featured: promptengineering1
 date: 2024-06-10 12:00:00
 ---
-Prompt engineering for business applications isn't as simple as asking a question. It's a complex process that requires careful planning and continuous refinement, especially when you want your model to do things like summarize reports, extract insights from conversations, or answer questions based on a large knowledge base. Over the past couple of years, as a Software Engineer for the innovation factory within Google Cloud Office of the CTO, I've been knee-deep in prompt engineering for major business use cases, working on large innovation projects for a selection of clients, including automating drive-thru orders at Wendy's.
+Prompt engineering for AI business applications isn't as simple as asking a question. It's a complex process that requires careful planning and continuous refinement, especially when you want your model to do things like summarize reports, extract insights from conversations, or answer questions based on a large knowledge base. Over the past couple of years, as a Software Engineer for the innovation factory within Google Cloud Office of the CTO, I've been knee-deep in prompt engineering, AI and Machine Learning for major business use cases, working on large innovation projects for a selection of clients, including automating drive-thru orders at Wendy's.
 
 <!--more-->
 

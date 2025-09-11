@@ -25,7 +25,7 @@ Let's get down to basics and talk about how Large Language Models (LLMs) actuall
 
 <img src="/images/promptengineering2.png" alt="The Foundation: Understanding LLMs and Prompt Engineering, And Why It All Matters" />
 
-When you give an LLM a prompt, you're basically giving it instructions on how to do this word prediction thing. Good prompt engineering is all about crafting those instructions really well. It's like giving someone directions - the more precise and more specific you are, the better the chances they'll end up where you want them to.
+When you give an LLM or AI Agent a prompt, you're basically giving it instructions on how to do this word prediction thing. Good prompt engineering is all about crafting those instructions really well. It's like giving someone directions - the more precise and more specific you are, the better the chances they'll end up where you want them to.
 
 In the world of GenAI and natural language processing, a prompt is the input you give to the model to get a response. You can use these prompts to make the LLM do all sorts of actions:
 

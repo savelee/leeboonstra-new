@@ -1,0 +1,19 @@
+# ads.txt file for leeboonstra.com
+# This file helps prevent ad fraud by listing authorized digital sellers
+# 
+# Format: <Field #1>, <Field #2>, <Field #3>, <Field #4>
+# Field #1: Domain name of the advertising system
+# Field #2: Publisher's Account ID
+# Field #3: Type of Account/Relationship
+# Field #4: Certification Authority ID (optional)
+#
+# For more information, visit: https://iabtechlab.com/ads-txt/
+
+# Example entries (replace with your actual ad network information):
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# google.com, pub-0000000000000000, RESELLER, f08c47fec0942fa0
+
+# If you're not currently using ads, you can leave this file empty
+# or add a comment explaining your ad policy
+
+# Last updated: 2025-01-27

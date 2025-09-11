@@ -15,7 +15,7 @@ featured: promptengineering3
 date: 2024-06-24 12:00:00
 ---
 
-When it comes to prompt engineering, the choice of language model (LLM) is crucial. Each prompt should be carefully optimized for the specific LLM you're using, whether it's one of the Gemini language models in Vertex AI, GPT, Claude, or an open-source model like LLaMA. It's important to note that a prompt that was optimized for TextBison won't necessarily work in Gemini. This principle holds true not just across different models but also between different versions of the same model.
+When it comes to AI prompt engineering, the choice of language model (LLM) is crucial. Each prompt should be carefully optimized for the specific LLM you're using, whether it's one of the Gemini language models in Vertex AI, GPT, Claude, or an open-source model like LLaMA. It's important to note that a prompt that was optimized for TextBison won't necessarily work in Gemini. This principle holds true not just across different models but also between different versions of the same model.
 
 *This is the 3rd blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
 

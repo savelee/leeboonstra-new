@@ -15,7 +15,7 @@ featured: promptengineering6
 date: 2024-07-15 10:00:00
 ---
 
-Alright, we've covered a ton of ground in this blog series, from understanding the basics of LLMs and prompt engineering to diving deep into specific techniques and strategies. Now, it's time to bring it all together and share some of the best practices I've learned while working on real-world enterprise projects.
+Alright, we've covered a ton of ground in this AI Prompt Engineering blog series, from understanding the basics of LLMs and prompt engineering to diving deep into specific techniques and strategies. Now, it's time to bring it all together and share some of the best practices I've learned while working on real-world enterprise projects.
 
 *This is the last blog of the series: Prompt engineering for business applications. Prompt Engineering is complex and requires careful planning and refinement to achieve desired results from AI models. As a software engineer @Google with experience in prompt engineering for major businesses, I will share practical learnings in a blog series to help others unlock the power of AI beyond simple tasks.*
 
