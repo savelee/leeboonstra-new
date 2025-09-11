@@ -1,18 +1,24 @@
 <% if (post.link){ %>
-  <h1 itemprop="headline">
-    <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%- truncate(post.title, {length: 45, omission: '...'}) %></a>
-  </h1>
+  <% if (post.featured){ %>
+    <h1 class="hidden">Blog:Learn Machine Learning from a Google Artificial Intelligence Engineer</h1>
+    <h2 itemprop="headline" class="h1">
+      <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%- post.title %></a>
+    </h2>
+  <% } else { %>
+    <h2><a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%- truncate(post.title, {length: 40, omission: '...'}) %></a></h2>
+   <% } %>
 <% } else if (post.title){ %>
   <% if (index){ %>
-    <h1 itemprop="headline">
+    <% if (highlight){ %>
+    <h1 class="hidden">Blog: Learn Machine Learning from a Google AI Engineer</h1>
+    <h2 itemprop="headline" class="h1">
       <a class="<%= class_name %>" href="<%- url_for(post.path) %>">
-        <% if (highlight){ %>
           <%- post.title %>
-        <% } else { %>
-          <%- truncate(post.title, {length: 40, omission: '...'}) %>
-        <% } %>
       </a>
     </h1>
+    <% } else { %>
+      <h2><a class="<%= class_name %> h1" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%- truncate(post.title, {length: 40, omission: '...'}) %></a></h2>
+    <% } %>
   <% } else { %>
     <h1 class="<%= class_name %>" itemprop="headline">
       <%- truncate(post.title, {length: 45, omission: '...'}) %>
