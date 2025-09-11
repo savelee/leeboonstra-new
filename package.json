@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node build-tools/build-assets.js && hexo generate && node scripts/copy-images.js && node scripts/minify-assets.js",
+    "build": "node build-tools/build-assets.js && hexo generate && node scripts/resize-images.js && node scripts/minify-assets.js",
     "build:assets": "node build-tools/build-assets.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
@@ -11,7 +11,7 @@
     "dev": "node build-tools/build-assets.js && hexo server",
     "copy-images": "node scripts/copy-images.js",
     "minify": "node scripts/minify-assets.js",
-    "process-images": "node scripts/process-images.js",
+    "resize-images": "node scripts/resize-images.js",
     "sass": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && copy themes\\leeboonstra\\design\\dist\\main.css themes\\leeboonstra\\source\\main.css && npx hexo generate",
     "sass:watch": "cd themes/leeboonstra/design && npm run watch",
     "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
@@ -44,7 +44,7 @@
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "firebase-tools": "^14.0.0",
-    "jimp": "^1.6.0",
+    "pngjs": "^7.0.0",
     "terser": "^5.44.0",
     "workbox-cli": "^7.3.0"
   }
