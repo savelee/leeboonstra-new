@@ -1,4 +1,4 @@
-<div class="container about">
+<div class="container about<% if (page.layout === 'about' || page.layout === 'bio') { %> Biography<% } %>">
     <div class="row justify-content-md-center">
       <div class="col-8 blogcontent">
   
@@ -28,7 +28,155 @@
           "author": {
             "@type": "Person",
             "name": "Lee Boonstra",
-            "url": "https://www.leeboonstra.dev/about/"
+            "jobTitle": "AI Software Engineer, Tech Lead",
+            "description": "An AI Software Engineer and Tech Lead at Google, a respected public keynote speaker, and the author of several books and a viral whitepaper on Prompt Engineering. Their expertise spans a wide range of AI/ML technologies and programming languages. Lee uses they/them pronouns.",
+            "pronouns": "they/them",
+            "birthDate": "1983-06-16",
+            "gender": "non-binary",
+            "url": "https://www.leeboonstra.dev",
+            "sameAs": [
+              "https://www.linkedin.com/in/leeboonstra/",
+              "https://github.com/savelee"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amsterdam",
+              "addressCountry": "NL"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Saxion University of Applied Sciences"
+            },
+            "worksFor": [
+              {
+                "@type": "Organization",
+                "name": "Google",
+                "description": "Senior Developer Advocate & Applied AI Engineer (2019-2022)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Google Netherlands",
+                "description": "Customer Engineer (2017-2019)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Sencha Inc.",
+                "description": "Sales Engineer, EMEA (2014-2016)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Sencha Inc.",
+                "description": "Lead Technical Trainer, EMEA (2012-2014)"
+              },
+              {
+                "@type": "Organization",
+                "name": "eFocus (Valtech)",
+                "description": "Lead Front-end Developer (2009-2012)"
+              },
+              {
+                "@type": "Organization",
+                "name": "Accenture",
+                "description": "Senior Java Developer (2007-2009)"
+              }
+            ],
+            "knowsLanguage": [
+              "Dutch",
+              "English",
+              "German"
+            ],
+            "knowsAbout": [
+              "AI/ML",
+              "LLMs",
+              "GenAI",
+              "NLP",
+              "Chatbots",
+              "Prompt Engineering",
+              "Gemini",
+              "ChatGPT",
+              "TTS",
+              "SST",
+              "Whisper",
+              "RAG",
+              "Vector Embedding",
+              "Dialogflow",
+              "Contact Center AI",
+              "Data Analysis",
+              "Machine Learning",
+              "Hugging Face",
+              "Kaggle",
+              "PyTorch",
+              "TensorFlow",
+              "Finetuning Models",
+              "Python",
+              "Pandas",
+              "Node.js",
+              "PHP",
+              "Java",
+              "JavaScript",
+              "TypeScript",
+              "HTML5",
+              "SASS",
+              "CSS3",
+              "SQL",
+              "NoSQL",
+              "MongoDB",
+              "MySQL",
+              "Neo4j",
+              "Firebase",
+              "OpenAI",
+              "Anthropic",
+              "Meta",
+              "Grok",
+              "Bard",
+              "PaLM",
+              "LaMDA",
+              "ChromaDB",
+              "Google Cloud",
+              "Cloud Platforms",
+              "Docker",
+              "Kubernetes",
+              "MVC",
+              "MVVM",
+              "OOP",
+              "CI/CD",
+              "UML",
+              "Agile",
+              "Scrum",
+              "Jira",
+              "Git",
+              "Cli tools",
+              "gRPC",
+              "REST",
+              "Flutter",
+              "Angular",
+              "React",
+              "Ext.js",
+              "Sencha Touch"
+            ],
+            "performerIn": {
+              "@type": "EventSeries",
+              "name": "Public Keynote Speaker",
+              "description": "A respected public keynote speaker, having presented at over 50 large conferences, including Google I/O and Google Cloud Next, to audiences of up to 5,000 people."
+            },
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Bachelor of Science",
+              "name": "Information and Communication Technology"
+            },
+            "memberOf": [
+              {
+                "@type": "Organization",
+                "name": "Google"
+              },
+              {
+                "@type": "Organization",
+                "name": "Google Cloud"
+              },
+              {
+                "@type": "Organization",
+                "name": "Kaggle"
+              }
+            ]
           }
           }
           </script>
@@ -51,26 +199,263 @@
   
       </div>
       <div class="col-4 photocol">
+        <div class="card shadow sidebar">
+          <div class="card-body">
+            <h3 class="card-title">Photo's</h3>
+            <a href="/images/large_leeboonstra_new.jpg">
+              <picture>
+                <source srcset="/images/small_leeboonstra_new.webp 200w">
+                <img src="/images/small_leeboonstra_new.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Developer Relations Engineer and public speaker." />
+              </picture>
+            </a>
 
-          <h3>Photo's</h3>
-          <a href="/images/large_leeboonstra_new.jpg">
-            <picture>
-              <source srcset="/images/small_leeboonstra_new.webp 200w">
-              <img src="/images/small_leeboonstra_new.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Developer Relations Engineer and public speaker." />
-            </picture>
-          </a>
-
-
-          <h3>Social Links</h3>
-          <ul>
-            <li><a href="https://github.com/savelee/" target="_blank" rel="noreferrer noopener">Github (savelee)</a></li>
-            <li><a href="https://www.leeboonstra.dev" target="_blank" rel="noreferrer noopener">Blog (www.leeboonstra.dev)</a></li>
-            <li><a href="https://www.linkedin.com/in/leeboonstra/" target="_blank" rel="noreferrer noopener">LinkedIn (leeboonstra)</a></li>
-            <li><a href="https://www.leeboonstra.dev/speaker" target="_blank" rel="noreferrer noopener">Past speaking events</a></li>
-            <li><a href="https://www.leeboonstra.dev/videos" target="_blank" rel="noreferrer noopener">Videos of me</a></li>
-            <li><a href="https://www.leeboonstra.dev/images/lee.boonstra-resume.pdf" target="_blank">Download my resume</a></li>
-          </ul>
-
+            <h3 class="card-title mt-4">Social Links</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="https://github.com/savelee/" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Github (savelee)</a></li>
+              <li class="mb-2"><a href="https://www.amazon.com/stores/Lee-Boonstra/author/B098GCTG91?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Amazon Author Page</a></li>
+              <li class="mb-2"><a href="https://www.linkedin.com/in/leeboonstra/" target="_blank" rel="noreferrer noopener" class="text-decoration-none">LinkedIn (leeboonstra)</a></li>
+              <li class="mb-2"><a href="https://www.leeboonstra.dev/speaker" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Past speaking events</a></li>
+              <li class="mb-2"><a href="https://www.leeboonstra.dev/videos" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Videos of me</a></li>
+              <li class="mb-2"><a href="https://www.leeboonstra.dev/images/lee.boonstra-resume.pdf" target="_blank" class="text-decoration-none">Download my resume</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  
+    <!-- Resume Section Row -->
+    <div class="resume">
+ 
+    <div class="row justify-content-md-center mt-4">
+      <div class="col-14">
+        
+        <div class="card  h-100">
+          <div class="card-body">
+            <h1 class="card-title text-3xl font-bold section-title mb-4">My Resume</h1>
+            <div class="mb-4">
+              <a href="https://www.linkedin.com/in/leeboonstra/" target="_blank" class="text-blue-600">
+                <span class="font-medium">Let's connect on LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Experience -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Experience</h2>
+                <p>
+                  20 years of experience in the tech industry. More than 5 years experience in the areas of AI & machine learning.
+                </p>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2022-present</span>
+                            <h4 class="chip-title">AI Software Engineer, Tech Lead, Global Office of the CTO, Innovation Factory</h4>
+                            <ul class="chip-list">
+                                <li>Designed and implemented an end-to-end GenAI speech solution for Wendy's to automate drive-thru orders.</li>
+                                <li>Co-authored an Invention Disclosure for "Scalable High-Accuracy Transactional Agents".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2019-2022</span>
+                            <h4 class="chip-title">Senior Developer Advocate & Applied AI Engineer, Google</h4>
+                            <ul class="chip-list">
+                                <li>Spoke at over 50 large conferences, including Google Cloud Next and Google I/O, to audiences from 10 to 5,000.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2017-2019</span>
+                            <h4 class="chip-title">Customer Engineer, Google Netherlands</h4>
+                            <ul class="chip-list">
+                                <li>Provided technical solutions for major clients including ING and Rabobank.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2014-2016</span>
+                            <h4 class="chip-title">Sales Engineer, EMEA, Sencha Inc.</h4>
+                            <ul class="chip-list">
+                                <li>Customer-facing work for clients like BMW, CERN, and Thales.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2012-2014</span>
+                            <h4 class="chip-title">Lead Technical Trainer, EMEA, Sencha Inc.</h4>
+                            <ul class="chip-list">
+                                <li>Trained customers at EMC, Nielsen, McAfee, and NASDAQ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2009-2012</span>
+                            <h4 class="chip-title">Lead Front-end Developer, eFocus (Valtech)</h4>
+                            <ul class="chip-list">
+                                <li>Team lead for a team of 5, working with clients like Heineken and Philips.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="experience-chip">
+                            <span class="chip-date">2007-2009</span>
+                            <h4 class="chip-title">Senior Java Developer, Accenture</h4>
+                            <ul class="chip-list">
+                                <li>Worked as a consultant for clients including KLM/Air France, KPN, Liberty Global.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Education</h2>
+                <div class="education-chip">
+                    <span class="chip-date">2004-2008</span>
+                    <h4 class="chip-title">Saxion University of Applied Sciences</h4>
+                    <p class="chip-text">Bachelor of Science in Information and Communication Technology</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Technical Skills</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="skill-chip">
+                            <h4 class="chip-title">AI / ML</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">LLMs</span>
+                                <span class="skill-tag">Gemini</span>
+                                <span class="skill-tag">Gemma</span>
+                                <span class="skill-tag">Claude</span>
+                                <span class="skill-tag">GPT</span>
+                                <span class="skill-tag">Llama</span>
+                                <span class="skill-tag">GenAI</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Chatbots</span>
+                                <span class="skill-tag">Prompt Engineering</span>
+                                <span class="skill-tag">Gemini</span>
+                                <span class="skill-tag">ChatGPT</span>
+                                <span class="skill-tag">TTS</span>
+                                <span class="skill-tag">SST</span>
+                                <span class="skill-tag">Whisper</span>
+                                <span class="skill-tag">RAG</span>
+                                <span class="skill-tag">Vector Embedding</span>
+                                <span class="skill-tag">Dialogflow</span>
+                                <span class="skill-tag">Contact Center AI</span>
+                                <span class="skill-tag">Data Analysis</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Hugging Face</span>
+                                <span class="skill-tag">Kaggle</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">Finetuning Models</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="skill-chip">
+                            <h4 class="chip-title">Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">SASS</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">NoSQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Neo4j</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">ChromaDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="skill-chip">
+                            <h4 class="chip-title">Frameworks & Tools</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Google Cloud</span>
+                                <span class="skill-tag">Cloud Platforms</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">MVC</span>
+                                <span class="skill-tag">MVVM</span>
+                                <span class="skill-tag">OOP</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">UML</span>
+                                <span class="skill-tag">Agile</span>
+                                <span class="skill-tag">Scrum</span>
+                                <span class="skill-tag">Jira</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Cli tools</span>
+                                <span class="skill-tag">gRPC</span>
+                                <span class="skill-tag">REST</span>
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Angular</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Ext.js</span>
+                                <span class="skill-tag">Sencha Touch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Publications</h2>
+                <div class="publications-chip">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                       <li>Authored the viral <strong>Prompt Engineering Whitepaper</strong> for Google/Kaggle.
+                            <br><span class="text-sm text-gray-500">(2025) | <a href="https://www.kaggle.com/whitepaper-prompt-engineering" target="_blank" class="text-blue-500">View on Kaggle</a></span>
+                        </li>
+                
+                      <li>Book Author: <strong>The Definitive Guide To Conversational AI</strong> (Apress)
+                            <br><span class="text-sm text-gray-500">ISBN 978-1-4842-7014-1 & 978-1-4842-7013-4 (2021) | <a href="https://link.springer.com/book/10.1007/978-1-4842-7014-1" target="_blank" class="text-blue-500">View on Springer</a></span>
+                        </li>
+                        <li>Book Author: <strong>Hands-on Sencha Touch 2: A real world app approach</strong> (O'Reilly)
+                            <br><span class="text-sm text-gray-500">(2013)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Spoken Languages -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Spoken Languages</h2>
+                <div class="languages-chip">
+                    <div class="language-item">
+                        <span class="language-name">Dutch</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">German</span>
+                        <span class="language-level">Conversational</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+

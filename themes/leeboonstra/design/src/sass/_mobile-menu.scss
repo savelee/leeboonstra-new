@@ -1,0 +1,471 @@
+// Modern Mobile Menu Styles
+// This file contains all the modern mobile menu styling
+
+@import "./_colors.scss";
+
+// Mobile menu overlay
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-light .navbar-nav {
+    background: none;
+}
+
+
+// Modern mobile navbar
+.navbar {
+    // Close button styling
+    .menu-close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        display: none; // Hidden by default, shown on mobile
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+        
+        .icon-close {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+    }
+    
+    // Navigation links styling for mobile
+    .navbar-nav {
+        background: none;
+        .nav-item {
+            .nav-link {
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 16px;
+                    fill: currentColor;
+                    transition: all 0.3s ease;
+                }
+                
+                span {
+                    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+    }
+}
+
+// Body scroll lock when menu is open
+body.menu-open {
+    overflow: hidden;
+    
+    .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Mobile-specific styles (xs and sm breakpoints)
+@include media-breakpoint-up(xs) {
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        overflow-x: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding-top: 80px;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        
+        // Menu open state
+        &.menu-open {
+            width: 320px;
+        }
+        
+        // Show close button on mobile
+        .menu-close-btn {
+            display: block;
+        }
+        
+        // Navigation links styling
+        .navbar-nav {
+            padding: 0 20px;
+            
+            .nav-item {
+                margin-bottom: 8px;
+                border-radius: 12px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transform: translateX(8px);
+                }
+                
+                &.active {
+                    background: #4285F4;
+                    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+                }
+                
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    padding: 16px 20px;
+                    text-decoration: none;
+                    color: #e0e0e0;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        overflow-x: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding-top: 80px;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        
+        // Menu open state
+        &.menu-open {
+            width: 320px;
+        }
+        
+        // Show close button on mobile
+        .menu-close-btn {
+            display: block;
+        }
+        
+        // Navigation links styling
+        .navbar-nav {
+            padding: 0 20px;
+            
+            .nav-item {
+                margin-bottom: 8px;
+                border-radius: 12px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transform: translateX(8px);
+                }
+                
+                &.active {
+                    background: #4285F4;
+                    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+                }
+                
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    padding: 16px 20px;
+                    text-decoration: none;
+                    color: #e0e0e0;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Hide mobile menu on larger screens and restore desktop navbar
+@include media-breakpoint-up(md) {
+    .menu-overlay {
+        display: none;
+    }
+    
+    .navbar {
+        // Reset mobile menu styles for desktop
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        background: transparent !important;
+        overflow: visible !important;
+        transition: none !important;
+        padding-top: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        
+        .menu-close-btn {
+            display: none;
+        }
+        
+        // Restore desktop navbar styling
+        .navbar-nav {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: #fff;
+            
+            .nav-item {
+                margin-bottom: 0;
+                border-radius: 0;
+                overflow: visible;
+                width: calc(100% / 6);
+                text-align: center;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 0;
+                position: relative;
+                
+                // Add gradient overlay for subtle tab effect
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+                    border-radius: 0;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+                
+                &:hover {
+                    background-color: transparent;
+                    transform: none;
+                }
+                
+                // Apply color scheme hover effects
+                &.iconHome:hover .nav-link {
+                    background: $primary;
+                    color: #fff;
+                }
+                
+                &.iconWriting:hover .nav-link {
+                    background: $blue;
+                    color: #fff;
+                }
+                
+                &.iconVideos:hover .nav-link {
+                    background: $green;
+                    color: #fff;
+                }
+                
+                &.iconSpeaking:hover .nav-link {
+                    background: $orange;
+                    color: #fff;
+                }
+                
+                &.iconAbstracts:hover .nav-link {
+                    background: $green;
+                    color: #fff;
+                }
+                
+                &.iconChat:hover .nav-link {
+                    background: $lightblue;
+                    color: #fff;
+                }
+                
+                &.iconBio:hover .nav-link {
+                    background: $red;
+                    color: #fff;
+                }
+                
+                &.iconFAQs:hover .nav-link {
+                    background: $lightblue;
+                    color: #fff;
+                }
+                
+                // Active state styling
+                &.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $primary;
+                        color: #fff;
+                    }
+                }
+                
+                &.iconWriting.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $blue;
+                    }
+                }
+                
+                &.iconVideos.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $green;
+                    }
+                }
+                
+                &.iconSpeaking.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $orange;
+                    }
+                }
+                
+                &.iconAbstracts.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $green;
+                    }
+                }
+                
+                &.iconChat.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $lightblue;
+                    }
+                }
+                
+                &.iconBio.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $red;
+                    }
+                }
+                
+                &.iconFAQs.active {
+                    border-left: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    box-shadow: none !important;
+                    
+                    .nav-link {
+                        background: $lightblue;
+                    }
+                }
+                
+                .nav-link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 10px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    transition: all 0.3s ease;
+                    height: 100%;
+                    min-height: 60px;
+                    position: relative;
+                    z-index: 2;
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                    
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 auto 8px auto;
+                        fill: currentColor;
+                        display: block;
+                    }
+                    
+                    span {
+                        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        text-align: center;
+                        line-height: 1.2;
+                        margin: 0;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Generative AI & Conversational AI blog by Google Software Engineer Lee Boonstra
+title: Google AI SWE Lee Boonstra's Gen AI, MLOps & Conv AI Blog
 subtitle: Hi my name is Lee. I'm a software engineer tech lead, advocate, a writer, innovator, a trainer and a public speaker.</span><br> <span>I create fixes & I fix headaches... Welcome to my dev blog.
-description: Conversational AI Blog of SWE Tech Lead Lee Boonstra. Writes about Generative AI, Prompt Engineering, Dialogflow, Chatbots, NLP and AI in Contact Centers.
+description: Google SWE Lee Boonstra, author of the viral Prompt Engineering whitepaper, shares insights on building and scaling production AI systems. Explore advanced topics in MLOps, generative AI, conversational AI, and research engineering from a big tech perspective.
 keywords: Generative AI, Gemini, Google AI, LLM, PaLM, Bard, ChatGPT, GPT, GPT4, LLaMA, Transformers, LaMDA, LLM, Large Language Models, Vertex AI, Dialogflow, Dialogue Flow, DialogueFlow, Dialog Flow, Chatbot platform, Bot Builder, Googler, Google developer advocate, O'Reilly Author, Writer, Apress Author, Applied AI Engineer, Contact Center AI, CCAI, Dialogflow CX, Dialogflow Essentials, Conversational AI, Speech, STT, TTS, NLP, NLU, NLP Tools, Google engineer, Conversational AI blog, Chatbot Case Studies, Voice bots, Voice Assistant, Google Assistant, Bot platform, Chat analytics, BERT, Chatbot with AI, Chatbot without coding, OpenAI, Claude
 author: Lee Boonstra
 language: en
@@ -71,32 +71,32 @@ future: true
 prism_plugin:
   mode: 'realtime'    # realtime/preprocess
   theme: 'atom-dark'
-  line_number: false    # default false
+  line_number: true    # enable line numbers
   no_assets: false
 highlight: 
-  enable: false
+  enable: true
   line_number: false
   auto_detect: false
 
-# Image generation
-responsive_images:
-  priority: 1
-  pattern: 'images/**.+(png|webp|jpg)'
-  sizes:
-    small:
-      width: 200
-      quality: 60
-    medium:
-      width: 500
-      quality: 65
-    large:
-      width: 750
-      quality: 75
-    thumb:
-      width: 270
-      height: 100
-      fit: cover
-      quality: 50
+# Image generation - disabled for Windows ARM64 compatibility
+# responsive_images:
+#   priority: 1
+#   pattern: 'images/**.+(png|webp|jpg|jpeg)'
+#   sizes:
+#     small:
+#       width: 200
+#       quality: 60
+#     medium:
+#       width: 500
+#       quality: 65
+#     large:
+#       width: 750
+#       quality: 75
+#     thumb:
+#       width: 270
+#       height: 100
+#       fit: cover
+#       quality: 50
 
 # Pagination
 ## Set per_page to 0 to disable pagination

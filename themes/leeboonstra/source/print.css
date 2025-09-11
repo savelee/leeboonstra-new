@@ -21,12 +21,45 @@
     display: none !important;
   }
 
+  blockquote { display: none; }
   img {
     max-width: 500px;
   }
 
-  nav, footer, .IN-widget, .disclaimer, .twitter-share-button, .header, .shadow, .badge { display: none; } /* Hide navigation and footer */
-  a::after {
-    content: "\A (" attr(href) ")";
+
+  /* Resume section visibility and styling - Force with maximum specificity */
+  .resume,
+  .Biography .resume,
+  div.resume,
+  .container.about.Biography .resume,
+  .container .resume,
+  body .resume,
+  html .resume {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
   }
+
+  .resume .skill-tag {
+    background: none !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .resume .chip-date, 
+  .resume .publication-type {
+    background: none !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  nav, footer, .IN-widget, .disclaimer, .twitter-share-button, .header, .shadow, .badge { display: none; } /* Hide navigation and footer */
+a::after {
+  content: "\A (" attr(href) ")";
 }
+
+}
+

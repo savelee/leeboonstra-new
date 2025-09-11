@@ -1,36 +1,117 @@
+// Import modern magazine-style fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+// Bebas Neue for navbar (condensed, bold display font)
 @font-face {
-    font-family: 'bebas';
-    src: url('../fonts/bebasneue-webfont.eot');
-    src: local('bebas'), local('bebas'),
-        url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/bebasneue-webfont.woff2') format('woff2'),
-        url('../fonts/bebasneue-webfont.woff') format('woff'),
-        url('../fonts/bebasneue-webfont.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Roboto Slab for H1 titles (slab serif, modern)
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lora';
-    src: url('../fonts/Lora-Regular.eot');
-    src: url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Lora-Regular.woff2') format('woff2'),
-        url('../fonts/Lora-Regular.woff') format('woff'),
-        url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg');
-    font-weight: normal;
+    font-family: 'Roboto Slab';
+    font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Lexend';
-    src: url('../fonts/Lexend-Regular.eot');
-    src: url('../fonts/Lexend-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Lexend-Regular.woff2') format('woff2'),
-        url('../fonts/Lexend-Regular.woff') format('woff'),
-        url('../fonts/Lexend-Regular.svg#Lexend-Regular') format('svg');
-    font-weight: normal;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Magazine-style body text - Source Serif Pro (similar to BreveText, readable serif)
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
@@ -38,22 +119,10 @@
 @font-face {
     font-family: 'consolas';
     src: local('consolas'), local('consolas'),
-         url('../fonts/Consolas?#iefix') format('embedded-opentype'),
-         url('../fonts/Consolas.woff2') format('woff2'),
-         url('../fonts/Consolas.woff') format('woff'),
-         url('../fonts/Consolas.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AbhayaLibre-Regular';
-    src: local('AbhayaLibre-Regular'), local('AbhayaLibre-Regular'),
-         url('../fonts/AbhayaLibre-Regular-webfont?#iefix') format('embedded-opentype'),
-         url('../fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
-         url('../fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
-         url('../fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype');
+         url('/fonts/Consolas?#iefix') format('embedded-opentype'),
+         url('/fonts/Consolas.woff2') format('woff2'),
+         url('/fonts/Consolas.woff') format('woff'),
+         url('/fonts/Consolas.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

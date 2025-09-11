@@ -1,10 +1,20 @@
-  
   <% page.posts.each(function(post, i){ %>
   
     <% if (i== 0) { %>
       <%- partial('article', {post: post, index: true, highlight: true}) %>
-    <% } else { %>
+    <% } %>
+  
+  <% })%>
+  
+  <!-- Clearfix to separate highlighted article from regular articles -->
+  <div class="clearfix"></div>
+  
+  <div class="col">
+    <% page.posts.each(function(post, i){ %>
+    
+      <% if (i > 0) { %>
         <%- partial('article', {post: post, index: true, highlight: false}) %>
-    <% }%>
+      <% }%>
 
- <% })%>
+   <% })%>
+  </div>

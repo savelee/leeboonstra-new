@@ -1,67 +1,135 @@
-$primary: #bb5808;
-$red: #C62828;
-$orange: #bb5808;
-$green: #00695C;
-$blue: #1565C0;
-$lightblue: rgba(29,161,242,1.00);
+$primary: #4285F4;
+$red: #EA4335;
+$orange: #FBBC04;
+$green: #34A853;
+$blue: #4285F4;
+$lightblue: #4285F4;
 $purple: #6A1B9A;
 $pink: #AD1457;
 
-.nav-link:hover {
+// Default homepage styling when body has no specific class
+.headertop {
     background: $primary;
-    .headertop {
-        background: $primary;
+    color: #fff !important;
+}
+
+// Default navbar styling - handled in mobile-menu.scss with media queries
+
+
+
+// Default nav-link styling (non-active)
+.navbar-light .navbar-nav .nav-link {
+    color: #666 !important;
+}
+
+// Override Bootstrap navbar-light text colors ONLY for active states
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff !important;
+}
+
+// Only apply background to nav-item, not nav-link directly
+.nav-item.active {
+    background: $primary;
+    
+    .nav-link {
+        color: #fff !important;
+    }
+}
+
+// Hover effects only on nav-item level
+.nav-item:hover {
+    background: $primary;
+    
+    .nav-link {
+        color: #fff !important;
     }
 }
 
 
 .Conferences {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
-        background: $red;
-        .headertop {
-            background: $red;
+    .nav-item.active {
+        background: $orange;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $orange;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $orange !important;
+        color: #fff !important;
     }
 
     a {
-        color: $red; 
+        color: $orange; 
         &:hover {
-            color: darken($red, 20%);
+            color: darken($orange, 20%);
         }
     }
 }
 
 .Videos {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
-        background: $purple;
-        .headertop {
-            background: $purple;
+    .nav-item.active {
+        background: $green;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $green;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $green !important;
+        color: #fff !important;
     }
 
     .btn {
-        background: $purple; 
-        border: darken($purple, 20%);
+        background: $green; 
+        border: darken($green, 20%);
         color: #fff;
         &:hover {
-            background: darken($purple, 20%);
+            background: darken($green, 20%);
             color: #fff;
         }
     }
 }
 
 .Writing {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $blue;
-        .headertop {
-            background: $blue;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $blue;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $blue !important;
+        color: #fff !important;
     }
 
     time,
@@ -78,13 +146,25 @@ $pink: #AD1457;
 }
 
 .Abstracts {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $green;
-        .headertop {
-            background: $green;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $green;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $green !important;
+        color: #fff !important;
     }
 
     a {
@@ -109,13 +189,25 @@ $pink: #AD1457;
 .FAQ,
 .FAQs,
 .Contact {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
+    .nav-item.active {
         background: $lightblue;
-        .headertop {
-            background: $lightblue;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $lightblue;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $lightblue !important;
+        color: #fff !important;
     }
 
     a {
@@ -127,19 +219,31 @@ $pink: #AD1457;
 }
 
 .Biography {
-    .active,
-    .nav-link:hover,
-    header .nav-item.active {
-        background: $orange;
-        .headertop {
-            background: $orange;
+    .nav-item.active {
+        background: $red;
+        
+        .nav-link {
+            color: #fff !important;
         }
+    }
+    
+    .nav-item:hover {
+        background: $red;
+        
+        .nav-link {
+            color: #fff !important;
+        }
+    }
+    
+    .headertop {
+        background: $red !important;
+        color: #fff !important;
     }
 
     a {
-        color: $orange; 
+        color: $red; 
         &:hover {
-            color: darken($orange, 20%);
+            color: darken($red, 20%);
         }
     }
 }

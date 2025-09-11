@@ -1,6 +1,6 @@
 <%- partial('_partial/head'), {}, {cache: true} %>
 
-  <div class="container main">    
+  <div class="container main article-cards">    
     <div class="row">
 
       <%- body %>
@@ -10,5 +10,8 @@
   <% if (page.total > 1){ %>
     <%- partial('_widget/pagination', {type: 'page'}) %>
   <% } %>
+
+  <!-- Clearfix to prevent footer from floating next to content when there are fewer posts -->
+  <div class="clearfix"></div>
 
 <%- partial('_partial/footer') %>

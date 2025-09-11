@@ -1,11 +1,19 @@
 <div class="container writing">
   <div class="row justify-content-md-center">
       <div class="col">
-        <h1><%-page.title %></h1>
-        <p>Beside writing this blog, I’ve also published my work elsewhere.</p>
     
+        <div class="card w-100 float-md-left" >
+          <div class="shadow-sm">
+            <div class="card-body">
+             
+              <h1><%-page.title %></h1>
+              <p>Beside writing this blog, I’ve also published my work elsewhere.</p>
+            </div>
+          </div>
+        </div>
+        
         <% site.categories.findOne({name: 'Writing'}).posts.sort('date', -1).forEach(function(post) { %>
-        <div class="card w-100 p-2 float-md-left" >
+        <div class="card w-100 float-md-left" >
           <div class="shadow-sm">
             <div class="card-body">
               

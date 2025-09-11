@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "node build-tools/build-assets.js && hexo generate && node scripts/copy-images.js",
+    "build:assets": "node build-tools/build-assets.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "node build-tools/build-assets.js && hexo server",
+    "dev": "node build-tools/build-assets.js && hexo server",
+    "copy-images": "node scripts/copy-images.js",
+    "sass": "cd themes/leeboonstra/design && npm run sass && cd ../../../ && copy themes\\leeboonstra\\design\\dist\\main.css themes\\leeboonstra\\source\\main.css && npx hexo generate",
+    "sass:watch": "cd themes/leeboonstra/design && npm run watch",
+    "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
+    "firebase:login": "firebase login --reauth",
+    "firebase:build": "npm run build && workbox generateSW workbox-config.js && npm run firebase:deploy"
   },
   "hexo": {
     "version": "7.3.0"
@@ -15,17 +23,16 @@
     "hexo": "^7.0.0",
     "hexo-auto-canonical": "^0.1.1",
     "hexo-featured-image": "^0.4.3",
-    "hexo-filter-responsive-images": "file:hexo-filter-responsive-images",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-hide-posts": "^0.4.3",
-    "hexo-pagination": "^3.0.0",
+    "hexo-pagination": "^4.0.0",
     "hexo-prism-plugin": "^2.3.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-embed": "^1.0.0",
@@ -33,7 +40,7 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
-    "hexo-images": "^1.0.1",
-    "workbox-cli": "^7.1.0"
+    "firebase-tools": "^14.0.0",
+    "workbox-cli": "^7.3.0"
   }
 }

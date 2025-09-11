@@ -25,13 +25,220 @@
   <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>" type="application/atom+xml"/>
   
   <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
-  <meta name="keywords" content="<%= keyWords %>"/>
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="HandheldFriendly" content="True"/>
-  <meta name="MobileOptimized" content="640"/>
   
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebPage",
+      "name": "Lee Boonstra's Profile",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Lee Boonstra",
+        "jobTitle": "AI Software Engineer, Tech Lead",
+        "description": "An AI Software Engineer and Tech Lead at Google, a respected public keynote speaker, and the author of several books and a viral whitepaper on Prompt Engineering. Their expertise spans a wide range of AI/ML technologies and programming languages. Lee uses they/them pronouns.",
+        "pronouns": "they/them",
+        "birthDate": "1983-06-16",
+        "gender": "non-binary",
+        "url": "https://www.leeboonstra.dev",
+        "sameAs": [
+          "https://www.linkedin.com/in/leeboonstra/",
+          "https://github.com/savelee"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Amsterdam",
+          "addressCountry": "NL"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Saxion University of Applied Sciences"
+        },
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Google",
+            "description": "Senior Developer Advocate & Applied AI Engineer (2019-2022)"
+          },
+          {
+            "@type": "Organization",
+            "name": "Google Netherlands",
+            "description": "Customer Engineer (2017-2019)"
+          },
+          {
+            "@type": "Organization",
+            "name": "Sencha Inc.",
+            "description": "Sales Engineer, EMEA (2014-2016)"
+          },
+          {
+            "@type": "Organization",
+            "name": "Sencha Inc.",
+            "description": "Lead Technical Trainer, EMEA (2012-2014)"
+          },
+          {
+            "@type": "Organization",
+            "name": "eFocus (Valtech)",
+            "description": "Lead Front-end Developer (2009-2012)"
+          },
+          {
+            "@type": "Organization",
+            "name": "Accenture",
+            "description": "Senior Java Developer (2007-2009)"
+          }
+        ],
+        "knowsLanguage": [
+          "Dutch",
+          "English",
+          "German"
+        ],
+        "knowsAbout": [
+          "AI/ML",
+          "LLMs",
+          "GenAI",
+          "NLP",
+          "Chatbots",
+          "Prompt Engineering",
+          "Gemini",
+          "ChatGPT",
+          "TTS",
+          "SST",
+          "Whisper",
+          "RAG",
+          "Vector Embedding",
+          "Dialogflow",
+          "Contact Center AI",
+          "Data Analysis",
+          "Machine Learning",
+          "Hugging Face",
+          "Kaggle",
+          "PyTorch",
+          "TensorFlow",
+          "Finetuning Models",
+          "Python",
+          "Pandas",
+          "Node.js",
+          "PHP",
+          "Java",
+          "JavaScript",
+          "TypeScript",
+          "HTML5",
+          "SASS",
+          "CSS3",
+          "SQL",
+          "NoSQL",
+          "MongoDB",
+          "MySQL",
+          "Neo4j",
+          "Firebase",
+          "OpenAI",
+          "Anthropic",
+          "Meta",
+          "Grok",
+          "Bard",
+          "PaLM",
+          "LaMDA",
+          "ChromaDB",
+          "Google Cloud",
+          "Cloud Platforms",
+          "Docker",
+          "Kubernetes",
+          "MVC",
+          "MVVM",
+          "OOP",
+          "CI/CD",
+          "UML",
+          "Agile",
+          "Scrum",
+          "Jira",
+          "Git",
+          "Cli tools",
+          "gRPC",
+          "REST",
+          "Flutter",
+          "Angular",
+          "React",
+          "Ext.js",
+          "Sencha Touch"
+        ],
+        "performerIn": {
+          "@type": "EventSeries",
+          "name": "Public Keynote Speaker",
+          "description": "A respected public keynote speaker, having presented at over 50 large conferences, including Google I/O and Google Cloud Next, to audiences of up to 5,000 people."
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Bachelor of Science",
+          "name": "Information and Communication Technology"
+        },
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          {
+            "@type": "Organization",
+            "name": "Google Cloud"
+          },
+          {
+            "@type": "Organization",
+            "name": "Kaggle"
+          }
+        ]
+      },
+      "hasPart": [
+        {
+          "@type": "Book",
+          "name": "Hands-on Sencha Touch 2",
+          "publisher": "O'Reilly",
+          "isbn": "9781449366520",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra"
+          }
+        },
+        {
+          "@type": "Book",
+          "name": "The Definitive Guide to Conversational AI with Dialogflow and Google Cloud",
+          "publisher": "Apress",
+          "isbn": [
+            "978-1-4842-7014-1",
+            "978-1-4842-7013-4"
+          ],
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Google Prompt Engineering Whitepaper",
+          "description": "Authored the Google Prompt Engineering whitepaper, which went viral and was a collaboration for Google/Kaggle.",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "End-to-end GenAI speech solution for Wendy's",
+          "description": "Designed and implemented an end-to-end GenAI speech solution for Wendy's to automate drive-thru orders.",
+          "author": {
+            "@type": "Person",
+            "name": "Lee Boonstra"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+
   <%- autoCanonical(config, page) %>
 
   <meta name="theme-color" content="#fafafa"/>
@@ -43,34 +250,252 @@
     var d = y + "-" + m;
   %>
 
-  <link rel="stylesheet" media="screen" href="/main.css">
+  <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
   <link rel="stylesheet" media="print" href="/print.css">
   <link rel="preload" href="/css/prism-atom-dark.css" as="style">
   <link rel="preload" href="/js/prism.js" as="script">
+  <link rel="stylesheet" href="/css/prism-atom-dark.css">
+  <style>
+    /* Custom hexo-prism dark theme */
+    figure.highlight {
+      background-color: #2d3748 !important;
+      border-radius: 0.5rem !important;
+      margin: 2rem 0 !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+      position: relative !important;
+    }
+    
+    figure.highlight table,
+    figure.highlight tbody,
+    figure.highlight tr,
+    figure.highlight td,
+    figure.highlight td.code {
+      background-color: #2d3748 !important;
+      border: none !important;
+      margin: 0 !important;
+    }
+    
+    figure.highlight pre {
+      background-color: #2d3748 !important;
+      color: #e2e8f0 !important;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+      border: none !important;
+      margin: 0 !important;
+    }
+    
+         /* Preserve Prism.js syntax highlighting colors */
+         figure.highlight pre .keyword,
+         figure.highlight pre .function,
+         figure.highlight pre .title.function_ {
+           color: #c792ea !important;
+         }
+         
+         figure.highlight pre .string,
+         figure.highlight pre .attr-value {
+           color: #c3e88d !important;
+         }
+         
+         figure.highlight pre .number {
+           color: #f78c6c !important;
+         }
+         
+         figure.highlight pre .comment {
+           color: #676e95 !important;
+           font-style: italic;
+         }
+         
+         figure.highlight pre .variable,
+         figure.highlight pre .variable.language_ {
+           color: #f07178 !important;
+         }
+         
+         figure.highlight pre .operator,
+         figure.highlight pre .punctuation {
+           color: #89ddff !important;
+         }
+         
+         figure.highlight pre .class-name {
+           color: #ffcb6b !important;
+         }
+         
+         figure.highlight pre .tag {
+           color: #f07178 !important;
+         }
+         
+         figure.highlight pre .attr-name,
+         figure.highlight pre .property {
+           color: #c792ea !important;
+         }
+         
+         /* NUCLEAR OPTION - Force responsive images with maximum specificity */
+         @media (max-width: 600px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 400px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             box-sizing: border-box !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         @media (max-width: 480px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 350px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             height: auto !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             box-sizing: border-box !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         @media (max-width: 320px) {
+           html body .container .row .col .card .card-body .article-content img[src*="large_promptengineering6.png"],
+           html body .container .row .col .card .card-body img[src*="large_promptengineering6.png"],
+           html body .container .row .col img[src*="large_promptengineering6.png"],
+           html body .container img[src*="large_promptengineering6.png"],
+           html body img[src*="large_promptengineering6.png"],
+           img[src*="large_promptengineering6.png"] {
+             max-height: 300px !important;
+             width: 100% !important;
+             max-width: 100% !important;
+             height: auto !important;
+             object-fit: cover !important;
+             object-position: center !important;
+             box-sizing: border-box !important;
+             display: block !important;
+             margin: 1rem auto !important;
+             vertical-align: top !important;
+             border-style: none !important;
+             overflow: visible !important;
+           }
+         }
+         
+         /* Override any conflicting styles */
+         .blogcontent img[src*="large_promptengineering6.png"] {
+           margin: 1rem auto !important;
+           max-height: 500px !important;
+           width: 100% !important;
+           max-width: 100% !important;
+           object-fit: cover !important;
+           object-position: center !important;
+         }
+         
+         /* Fix code block scrolling on small screens */
+         @media (max-width: 768px) {
+           figure.highlight {
+             overflow-x: auto !important;
+             -webkit-overflow-scrolling: touch !important;
+             display: block !important;
+           }
+           
+           figure.highlight table {
+             width: 100% !important;
+             min-width: 100% !important;
+             table-layout: auto !important;
+             display: block !important;
+           }
+           
+           figure.highlight tbody {
+             display: block !important;
+             width: 100% !important;
+           }
+           
+           figure.highlight tr {
+             display: block !important;
+             width: 100% !important;
+           }
+           
+           figure.highlight td.code {
+             display: block !important;
+             width: 100% !important;
+             overflow-x: auto !important;
+             -webkit-overflow-scrolling: touch !important;
+             padding: 0 !important;
+           }
+           
+           figure.highlight pre {
+             display: block !important;
+             width: max-content !important;
+             min-width: 100% !important;
+             overflow-x: auto !important;
+             -webkit-overflow-scrolling: touch !important;
+             white-space: pre !important;
+             word-wrap: normal !important;
+             word-break: normal !important;
+             margin: 0 !important;
+             padding: 1rem !important;
+           }
+         }
+    
+    figure.highlight pre {
+      padding: 1rem !important;
+      background: transparent !important;
+    }
+    
+    figure.highlight::before {
+      content: attr(class);
+      display: block;
+      background-color: #1a202c;
+      color: #a0aec0;
+      padding: 0.5rem 1rem;
+      font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #4a5568;
+      position: relative;
+      z-index: 0;
+    }
+    
+    figure.highlight table {
+      margin-top: 0;
+    }
+    
+    figure.highlight pre {
+      padding: 1rem !important;
+    }
+  </style>
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/apple-touch-icon-iphone-60x60.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-iphone-60x60.png"/>
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-ipad-76x76.png"/>
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-iphone-retina-120x120.png"/>
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-ipad-retina-152x152.png"/>
   <link rel="manifest" href="/manifest.json"/>  
   
   <meta name="robots" content="all"/>
   <meta name="yandex-verification" content="adf3dcb0d559ea5a"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 
-  <link href="https://plus.google.com/117712452932146916020" rel="author"/>
-  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.jpg"/>
+  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.png"/>
   <link rel="profile" href="https://gmpg.org/xfn/11"/>
   <link rel="pingback" href="https://www.leeboonstra.dev"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
-  <meta property="og:url" content="https://www.leeboonstra.dev/">
+  <meta property="og:url" content="https://www.leeboonstra.dev/"/>
   <meta property="og:site_name" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
   <meta property="og:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
   <meta property="og:locale" content="en"/>
-  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.jpg">
+  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.png"/>
 
   <link rel="preconnect" href="youtube.com"/>
   <link rel="preconnect" href="www.google-analytics.com"/>
@@ -78,19 +503,13 @@
   <link rel="preconnect" href="github.githubassets.com"/>
   <link rel="preconnect" href="gist.github.com" />
 
-  <meta itemprop="mainEntityOfPage" content="https://www.leeboonstra.dev" />
-  <meta itemprop="author" content="Lee Boonstra" />
-  <meta itemprop="creator" content="Lee Boonstra" />
-  <meta itemprop="publisher" content="Lee Boonstra" />
+  <link type="text/plain" rel="author" href="//www.leeboonstra.dev/humans.txt"/>
 
-  <link type="text/plain" rel="author" href="//www.leeboonstra.dev/humans.txt">
- 
   <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin />
-  <link rel="preload" href="/fonts/AbhayaLibre-Regular-webfont.woff2" as="font" crossorigin />
   <link rel="preload" href="/fonts/Consolas.woff2" as="font" crossorigin />
   
 </head>
-<body class="<%= page.title %> <%= page.class %>" style="background-color: #fcfcfcf0;">
+<body class="<%= page.title %> <%= page.class %>">
 
   <header class="shadow <%- is_home() ? 'home' : 'active' %>">
 
@@ -152,8 +571,18 @@
       </defs>
       </svg>
 
+    <!-- Menu overlay for mobile -->
+    <div class="menu-overlay"></div>
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+      <!-- Close button for mobile menu -->
+      <button class="menu-close-btn" type="button" aria-label="Close menu">
+        <svg class="icon icon-close" viewBox="0 0 24 24">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">

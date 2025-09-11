@@ -24,7 +24,49 @@
   <span class="text-muted">Disclaimer: The opinions stated here are my own, not those of my company. - 2025 &reg; Lee Boonstra</span>
 </div> 
 
-<script src="/bundle.js" async></script>
+<script src="/mobile-menu.js" async></script>
+<script src="/js/prism.js"></script>
+<script>
+// Add language classes to hexo-prism code blocks and trigger highlighting
+function initPrismHighlighting() {
+  // Find all figure.highlight elements
+  const codeBlocks = document.querySelectorAll('figure.highlight');
+  
+  codeBlocks.forEach(function(figure) {
+    const pre = figure.querySelector('pre');
+    if (pre) {
+      // Extract language from figure class (e.g., "highlight plaintext" -> "plaintext")
+      const className = figure.className;
+      const languageMatch = className.match(/highlight\s+(\w+)/);
+      const language = languageMatch ? languageMatch[1] : 'plaintext';
+      
+      // Add language class to pre element (preserve existing classes)
+      if (!pre.className.includes('language-' + language)) {
+        pre.className = pre.className + ' language-' + language;
+      }
+      
+      // Also add it to the code element if it exists
+      const code = pre.querySelector('code');
+      if (code) {
+        if (!code.className.includes('language-' + language)) {
+          code.className = code.className + ' language-' + language;
+        }
+      }
+    }
+  });
+  
+  // Trigger Prism highlighting after adding classes
+  if (typeof Prism !== 'undefined') {
+    Prism.highlightAll();
+  }
+}
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Small delay to ensure all scripts are loaded
+  setTimeout(initPrismHighlighting, 50);
+});
+</script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

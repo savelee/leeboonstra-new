@@ -3,6 +3,33 @@
     .card {
         width: 100% !important;
     }
+    
+    // Force sidebar to stack below main content on small screens
+    .col-3 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 1rem;
+        order: 2; // Force sidebar to appear after main content
+    }
+    
+    .col-9 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        order: 1; // Force main content to appear first
+    }
+    
+    // Remove float on small screens
+    .float-md-left {
+        float: none !important;
+    }
+    
+    // Ensure the container uses flexbox for proper ordering
+    .container .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 
     footer .col {
         flex-basis: unset;
@@ -26,7 +53,7 @@
         }
     }
 
-    .card.w-75{
+    .card.w-9{
         .card-img-top {
             height: 100px !important;
             object-fit: cover;
@@ -34,7 +61,7 @@
         }
     }
     
-    .card.w-50{
+    .card.col-3{
         .card-img-top {
             height: 100px !important;
             object-fit: cover;
@@ -57,11 +84,6 @@
 
     .photocol {
         display: none;
-    }
-
-    .blogcontent {
-        max-width: 100%;
-        flex: 0 0 100%
     }
 
     .main {
@@ -155,12 +177,6 @@
         display: none;
     }
 
-    .blogcontent {
-        max-width: 100%;
-        flex: 0 0 100%
-    }
-
-
     .navbar {
         height: 100%;
         width: 0;
@@ -233,11 +249,6 @@
         overflow: hidden;
     }
 
-    .main {
-        margin-top: 60px !important;
-    }
-    
-
     .writing .card {
         .card-body  {
             height: 300px;
@@ -274,20 +285,21 @@
 
     .photocol {
         display: block;
-
-        img {
-            width: 200px;
-        }
     }
 
-    .blogcontent {
-        max-width: 66.6667%;
-        flex: 0 0 66.6667%
-    }
 
     .navbar {
-        width: 100%;
-        position: relative;
+        width: 100% !important;
+        position: relative !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        background: transparent !important;
+        overflow: visible !important;
+        transition: none !important;
+        padding-top: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
       }
       
       .navbar a {
