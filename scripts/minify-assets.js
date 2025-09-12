@@ -8,9 +8,12 @@ console.log('🔧 Starting asset minification...');
 // Configuration
 const config = {
   js: {
-    inputDir: 'public/js',
-    outputDir: 'public/js',
-    files: [] // No unminified JS files to minify (prism.js was removed)
+    inputDir: 'public',
+    outputDir: 'public',
+    files: [
+      { input: 'js/prism.js', output: 'js/prism.min.js' },
+      { input: 'mobile-menu.js', output: 'mobile-menu.min.js' }
+    ]
   },
   css: {
     inputDir: 'public/css',
@@ -23,21 +26,21 @@ const config = {
 async function minifyJavaScript() {
   console.log('📦 Minifying JavaScript files...');
   
-  for (const file of config.js.files) {
-    const inputPath = path.join(config.js.inputDir, file);
-    const outputPath = path.join(config.js.outputDir, file.replace('.js', '.min.js'));
+  for (const fileConfig of config.js.files) {
+    const inputPath = path.join(config.js.inputDir, fileConfig.input);
+    const outputPath = path.join(config.js.outputDir, fileConfig.output);
     
     if (fs.existsSync(inputPath)) {
       try {
         const code = fs.readFileSync(inputPath, 'utf8');
         const result = await minifyJS(code, {
           compress: {
-            drop_console: false, // Keep console logs for debugging
+            drop_console: true, // Remove console logs for production
             drop_debugger: true,
-            pure_funcs: ['console.log', 'console.info', 'console.debug']
+            pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error']
           },
           mangle: {
-            toplevel: false // Don't mangle top-level names to avoid breaking Prism
+            toplevel: false // Don't mangle top-level names to avoid breaking functionality
           },
           format: {
             comments: false
@@ -45,7 +48,7 @@ async function minifyJavaScript() {
         });
         
         fs.writeFileSync(outputPath, result.code);
-        console.log(`✅ Minified: ${file} → ${path.basename(outputPath)}`);
+        console.log(`✅ Minified: ${fileConfig.input} → ${fileConfig.output}`);
         
         // Show size reduction
         const originalSize = fs.statSync(inputPath).size;
@@ -54,7 +57,7 @@ async function minifyJavaScript() {
         console.log(`   Size: ${(originalSize / 1024).toFixed(1)}KB → ${(minifiedSize / 1024).toFixed(1)}KB (${reduction}% reduction)`);
         
       } catch (error) {
-        console.error(`❌ Error minifying ${file}:`, error.message);
+        console.error(`❌ Error minifying ${fileConfig.input}:`, error.message);
       }
     } else {
       console.log(`⚠️ File not found: ${inputPath}`);
