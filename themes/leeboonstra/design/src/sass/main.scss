@@ -270,7 +270,15 @@ picture img,
         margin-right: auto;
 
         p {
-            max-width: 750px;
+            max-width: 65ch;
+        }
+
+        img {
+            max-width: 1200px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
