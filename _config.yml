@@ -98,6 +98,10 @@ highlight:
 #       fit: cover
 #       quality: 50
 
+# Disable hexo-images plugin to prevent automatic image processing
+images:
+  enable: false
+
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 5

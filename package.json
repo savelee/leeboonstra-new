@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node build-tools/build-assets.js && hexo generate && node scripts/resize-images.js && node scripts/minify-assets.js",
+    "build": "node build-tools/build-assets.js && hexo generate && node scripts/minify-assets.js",
     "build:assets": "node build-tools/build-assets.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "node build-tools/build-assets.js && hexo server",
+    "server": "hexo server",
     "dev": "node build-tools/build-assets.js && hexo server",
     "copy-images": "node scripts/copy-images.js",
     "minify": "node scripts/minify-assets.js",
