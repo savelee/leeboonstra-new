@@ -8,7 +8,7 @@ console.log('🖼️ Starting image resizing with external tools...');
 const imageSizes = {
     thumb: { width: 150, height: 150, quality: 80 },
     small: { width: 640, height: 800, quality: 85 },
-    medium: { width: 1024, height: 1280, quality: 90 },
+    medium: { width: 800, height: 1000, quality: 75 },
     large: { width: 1800, height: 2250, quality: 95 }
 };
 

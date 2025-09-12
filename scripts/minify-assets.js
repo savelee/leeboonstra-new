@@ -10,7 +10,7 @@ const config = {
   js: {
     inputDir: 'public/js',
     outputDir: 'public/js',
-    files: ['prism.js'] // Only minify unminified files
+    files: [] // No unminified JS files to minify (prism.js was removed)
   },
   css: {
     inputDir: 'public/css',

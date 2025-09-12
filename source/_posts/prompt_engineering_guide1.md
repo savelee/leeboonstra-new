@@ -18,7 +18,7 @@ Prompt engineering for AI business applications isn't as simple as asking a ques
 
 <!--more-->
 
-<img src="/images/promptengineering1.png" alt="Demystifying Prompt Engineering for the Enterprise" />
+<img src="/images/medium_promptengineering1.jpeg" alt="Demystifying Prompt Engineering for the Enterprise" />
 
 Through these projects, I've learned that crafting effective prompts is an iterative journey, not a one-and-done task. Writing instructions and constraints that work together seamlessly takes time and effort, especially when dealing with unexpected scenarios. But the payoff is huge. In this blog series, I'm sharing my practical learnings with you. We'll dive into the challenges of prompt engineering, explore different models and configurations, and learn how to write prompts that get the job done. Whether you're a seasoned pro or just starting out, I hope this guide helps you unlock the power of AI for a use case beyond the generation of a to-do list.
 
