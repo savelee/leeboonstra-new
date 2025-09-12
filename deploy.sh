@@ -21,7 +21,7 @@ hexo generate
 
 # Generate Service Worker
 echo "⚙️  Generating Service Worker..."
-workbox generateSW workbox-config.js
+npx workbox generateSW workbox-config.js
 
 # Deploy to Firebase
 echo "🔥 Deploying to Firebase..."

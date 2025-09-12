@@ -17,7 +17,7 @@
     "sass:watch": "cd themes/leeboonstra/design && npm run watch",
     "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
     "firebase:login": "firebase login --reauth",
-    "firebase:build": "npm run build && workbox generateSW workbox-config.js && npm run firebase:deploy"
+    "firebase:build": "npm run build && npx workbox generateSW workbox-config.js && npm run firebase:deploy"
   },
   "hexo": {
     "version": "7.3.0"

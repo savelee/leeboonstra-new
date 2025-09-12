@@ -1,9 +1,14 @@
 module.exports = {
   "globDirectory": "public/",
   "globPatterns": [
-    "**/*.{js,ico,ttf,woff,svg,woff2}",
-    "!**/main.css*", // Exclude main.css from precaching
-    "!**/mobile-menu.js*", // Exclude mobile-menu.js from precaching
+    "**/*.{js,ico,ttf,woff,svg,woff2}"
+  ],
+  "globIgnores": [
+    "**/node_modules/**/*",
+    "serviceworker.js",
+    "workbox-*.js",
+    "**/main.css*", // Exclude main.css from precaching
+    "**/mobile-menu.js*" // Exclude mobile-menu.js from precaching
   ],
   "swDest": "public/serviceworker.js",
   // Define runtime caching rules.
