@@ -28,7 +28,7 @@ Writing prompts can present challenges, particularly when instructions or constr
 
 <!--more-->
 
-<img src="/images/promptengineering5.png" alt="The Art of Writing Effective Prompts" />
+<img src="/images/medium_promptengineering5.jpeg" alt="The Art of Writing Effective Prompts" />
 
 TIP: This chapter will share various techniques in a prompt written for an enterprise use case; it's the trick to combine multiple methods but still be concise enough. You can easily overload the model with too many tasks and instructions. When this happens, the model will ignore particular instructions or favor specific examples and instructions over others. Think about how you design your prompt. Is splitting the prompt into multiple prompts (API calls) better? Can you guide the model better with numbering? Did you provide enough examples?
 

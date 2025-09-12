@@ -7,7 +7,7 @@
             <source srcset="/images/large_<%- post.featured %>.webp" media="(min-width: 1000px)">
             <source srcset="/images/medium_<%- post.featured %>.webp" media="(min-width: 500px)">
             <source srcset="/images/thumb_<%- post.featured %>.webp" media="(max-width: 499px)">
-            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.png" alt="<%-post.title-%>">
+            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
           </picture>
         <% } %>
         <div class="card-header">
@@ -37,7 +37,7 @@
         <% if (post.featured){ %>
           <picture>
             <source srcset="/images/thumb_<%- post.featured %>.webp">
-            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.png" alt="<%-post.title-%>">
+            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
           </picture>
         <% } %>
         <div class="card-header">

@@ -27,7 +27,7 @@ Alright, we've covered a ton of ground in this AI Prompt Engineering blog series
 
 <!--more-->
 
-<img src="/images/promptengineering6.png" alt="Best Practices for Prompt Engineering in the Enterprise" />
+<img src="/images/medium_promptengineering6.jpeg" alt="Best Practices for Prompt Engineering in the Enterprise" />
 
 ## Combine all techniques
 When writing prompts for enterprise use cases, you should create a folder with each prompt as a single code file in a versioning system. These prompts can be many paragraphs long and will be changed over time. I've created a structure of a typical prompt structure. Each should be in its own paragraph. I gave short examples for each row, though the actual prompt should be more detailed with more examples and instructions.

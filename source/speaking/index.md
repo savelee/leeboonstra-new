@@ -8,7 +8,7 @@ layout: speaking
 
 Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chatbots, Contact Centers, NLU, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+.
 
-<img src="/images/large_leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
+<img src="/images/medium_leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
 
 <hr />
 

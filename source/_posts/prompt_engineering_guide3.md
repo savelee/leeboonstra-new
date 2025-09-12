@@ -24,7 +24,7 @@ When it comes to AI prompt engineering, the choice of language model (LLM) is cr
 
 <!--more-->
 
-<img src="/images/promptengineering3.png" alt="Beyond the Basics: How to Choose and Configure Your LLM for Maximum Impact" />
+<img src="/images/medium_promptengineering3.jpeg" alt="Beyond the Basics: How to Choose and Configure Your LLM for Maximum Impact" />
 
 Here are some considerations for choosing a model that fits with your use-case:
 
