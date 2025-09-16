@@ -672,76 +672,32 @@ Create a git hook that suggests commit messages based on your staged changes:
 ```bash
 #!/bin/sh
 # Save as .git/hooks/prepare-commit-msg
-# AI-powered commit message hook for Windows (using PowerShell)
-
-# Only run for normal commits (not merges, rebases, etc.)
-if [ "$2" = "" ]; then
-    # Check if there are staged changes
-    if git diff --cached --quiet; then
-        exit 0
-    fi
-    
-    echo "🤖 Generating AI commit message suggestion..."
-    
-    # Use PowerShell to handle the Gemini CLI call
-    powershell.exe -ExecutionPolicy Bypass -Command "
-        \$changes = git diff --cached --name-status | Out-String
-        \$stats = git diff --cached --stat | Out-String
-        \$prompt = \"Analyze these git changes and suggest a concise, conventional commit message: \`n\$changes\`n\$stats\`nGenerate a single line commit message following conventional commit format (type(scope): description). Output only the commit message, no explanation.\"
-        
-        \$suggestion = & gemini -m gemini-1.5-flash \$prompt 2>&1
-        if (\$suggestion -match 'ApiError|status 429|RESOURCE_EXHAUSTED|exceeded your current quota') {
-            \$header = '# ⚠️ AI suggestion failed (quota limit), please write manually'
-        } else {
-            \$header = '# 🤖 AI Suggestion: ' + \$suggestion.Trim()
-        }
-        
-        \$existing = Get-Content '$1' -Raw -ErrorAction SilentlyContinue
-        \$newContent = \$header + \"`n#`n# You can edit or replace this suggestion`n#`n\" + \$existing
-        Set-Content -Path '$1' -Value \$newContent
-    "
-fi
+# AI-powered commit message hook - calls Windows PowerShell script
+powershell.exe -ExecutionPolicy Bypass -File "$(dirname "$0")/prepare-commit-msg.ps1" "$1" "$2"
 
 ```
 
-**How to use this hook:**
-1. Make your changes and stage them with `git add .`
-2. Run `git commit` (without a message)
-3. Your editor will open with an AI-generated commit message at the top
-4. **Save and close the editor** to use the AI suggestion, or edit it first
-5. If you close without saving, Git will abort the commit
-6. Test it in Github
-
-**Important Note:** Git hooks only work with command-line git, not with GUI tools like GitHub Desktop, VS Code's git integration, or other visual git clients. If you use GitHub Desktop, use the manual helper script below instead.
-
-**Manual Commit Message Helper Script:**
-Create a standalone PowerShell script for when you want AI help with commit messages (especially useful for GitHub Desktop users):
+Create a separate PowerShell file as `.git/hooks/prepare-commit-msg.ps1`:
 
 ```powershell
-# Save as ai-commit-helper.ps1
-# Usage: .\ai-commit-helper.ps1
+# AI-powered commit message generation for git hooks
+param($commitMsgFile, $commitSource)
 
-Write-Host "🤖 Analyzing your staged changes..." -ForegroundColor Green
-
-# Check if there are staged changes
-$stagedFiles = git diff --cached --name-only
-if (-not $stagedFiles) {
-    Write-Host "❌ No staged changes found. Use 'git add' to stage your changes first." -ForegroundColor Red
-    exit 1
-}
-
-# Get staged changes
-$changes = git diff --cached --name-status | Out-String
-$stats = git diff --cached --stat | Out-String
-
-Write-Host "📋 Staged changes:" -ForegroundColor Yellow
-Write-Host $changes
-
-# Generate commit message suggestion
-Write-Host "🤖 Generating commit message suggestion..." -ForegroundColor Green
-
-try {
-    $prompt = @"
+# Only run for normal commits (not merges, rebases, etc.)
+if ($commitSource -eq "") {
+    # Check if there are staged changes
+    $stagedChanges = git diff --cached --quiet
+    if ($LASTEXITCODE -eq 0) {
+        exit 0
+    }
+    
+    Write-Host "🤖 Generating AI commit message suggestion..."
+    
+    try {
+        $changes = git diff --cached --name-status | Out-String
+        $stats = git diff --cached --stat | Out-String
+        
+        $prompt = @"
 Analyze these git changes and suggest a concise, conventional commit message:
 
 $changes
@@ -750,31 +706,65 @@ $stats
 
 Generate a single line commit message following conventional commit format (type(scope): description). Output only the commit message, no explanation.
 "@
-    
-    $suggestion = & gemini -m gemini-1.5-flash $prompt 2>&1
-    
-    if ($suggestion -match 'ApiError|status 429|RESOURCE_EXHAUSTED|exceeded your current quota') {
-        Write-Host "⚠️ AI suggestion failed (quota limit). Please write manually." -ForegroundColor Yellow
-    } else {
-        Write-Host ""
-        Write-Host "🤖 AI Suggestion:" -ForegroundColor Cyan
-        Write-Host "   $($suggestion.Trim())" -ForegroundColor White
-        Write-Host ""
-        Write-Host "💡 Copy this message and paste it into GitHub Desktop, or use:" -ForegroundColor Yellow
-        Write-Host "   git commit -m `"$($suggestion.Trim())`"" -ForegroundColor Gray
         
-        # Copy to clipboard if possible
-        try {
-            $suggestion.Trim() | Set-Clipboard
-            Write-Host "📋 Message copied to clipboard!" -ForegroundColor Green
-        } catch {
-            # Clipboard not available, that's ok
+        $suggestion = & gemini -m gemini-1.5-flash $prompt 2>&1
+        
+        if ($suggestion -match 'ApiError|status 429|RESOURCE_EXHAUSTED|exceeded your current quota') {
+            $commitMessage = ""
+            $header = "# ⚠️ AI suggestion failed (quota limit), please write manually"
+        } else {
+            $commitMessage = $suggestion.Trim()
+            $header = "# 🤖 AI generated the message above - edit if needed"
         }
+        
+        $existing = ""
+        if (Test-Path $commitMsgFile) {
+            $existing = Get-Content $commitMsgFile -Raw
+        }
+        
+        $newContent = @"
+$commitMessage
+$header
+#
+# Please review and edit the commit message above
+#
+$existing
+"@
+        
+        Set-Content -Path $commitMsgFile -Value $newContent
+        
+    } catch {
+        $commitMessage = ""
+        $header = "# ⚠️ AI suggestion failed, please write manually"
+        $existing = ""
+        if (Test-Path $commitMsgFile) {
+            $existing = Get-Content $commitMsgFile -Raw
+        }
+        
+        $newContent = @"
+$commitMessage
+$header
+#
+$existing
+"@
+        Set-Content -Path $commitMsgFile -Value $newContent
     }
-} catch {
-    Write-Host "⚠️ AI suggestion failed. Please write commit message manually." -ForegroundColor Yellow
 }
 ```
+
+**How to use this hook:**
+1. Make your changes and stage them with `git add .`
+2. Run `git commit` (without a message)
+3. Your editor will open with an AI-generated commit message on the first line
+4. **Save and close the editor** to use the AI suggestion, or edit it first
+5. If you close without saving, Git will abort the commit
+
+**Key Points:**
+- The AI suggestion appears as the actual commit message (first line), not a comment
+- Comments below explain it's AI-generated and can be edited
+- Works with any text editor configured as your Git editor
+
+**Important Note:** Git hooks only work with command-line git, not with GUI tools like GitHub Desktop, VS Code's git integration, or other visual git clients.
 
 **GitHub Actions Integration (For teams):**
 While you can't automatically rewrite commit messages in GitHub Actions, you can analyze commit quality:
