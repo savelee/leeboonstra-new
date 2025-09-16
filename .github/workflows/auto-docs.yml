@@ -28,42 +28,40 @@ jobs:
           for attempt in {1..10}; do
             echo "📝 Documentation generation attempt $attempt of 10..."
             
-            if gemini "Create a simple project overview in Markdown format. Output only the overview, no conversation.
+            # Run Gemini CLI and capture result
+            gemini "Create a simple project overview in Markdown format. Output only the overview, no conversation.
 
             Analyze this codebase and create a brief summary with:
             1. Project name and purpose
             2. Main technology stack
             3. What this project does
             
-            Start with # and keep it concise." > docs/general.md 2>&1; then
-              # Check if file contains error messages instead of actual content
-              if grep -q "ApiError\|status 429\|RESOURCE_EXHAUSTED\|exceeded your current quota" docs/general.md; then
-                echo "⚠️ File contains API error messages, treating as failure"
-                false  # Force this attempt to be considered failed
-              elif [ -s docs/general.md ]; then
-                echo "✅ Documentation file created with valid content"
-                echo "✅ Documentation generated successfully on attempt $attempt"
-                break
-              else
-                echo "⚠️ Documentation file is empty, treating as failure"
-                false  # Force this attempt to be considered failed
-              fi
+            Start with # and keep it concise." > docs/general.md 2>&1
+            
+            # Check if we got valid content
+            if grep -q "ApiError\|status 429\|RESOURCE_EXHAUSTED\|exceeded your current quota" docs/general.md; then
+              echo "⚠️ File contains API error messages, attempt failed"
+            elif [ -s docs/general.md ]; then
+              echo "✅ Documentation file created with valid content"
+              echo "✅ Documentation generated successfully on attempt $attempt"
+              break
             else
-              echo "❌ Attempt $attempt failed"
-              echo "📄 Content of docs/general.md:"
-              cat docs/general.md || echo "File doesn't exist or is unreadable"
-              if [ $attempt -lt 10 ]; then
-                wait_time=$((attempt * 60))  # Wait 60, 120, 180, 240 seconds
-                echo "⏳ Waiting ${wait_time} seconds before retry..."
-                sleep $wait_time
-              else
-                echo "🚫 All attempts failed - creating minimal fallback documentation"
-                echo "# Project Documentation
-                
-                Documentation generation failed due to API rate limits. 
-                
-                Please check the repository files for more details." > docs/general.md
-              fi
+              echo "⚠️ Documentation file is empty, attempt failed"
+            fi
+            
+            # If we reach here, the attempt failed
+            echo "❌ Attempt $attempt failed"
+            if [ $attempt -lt 10 ]; then
+              wait_time=$((attempt * 60))  # Wait 60, 120, 180, 240 seconds
+              echo "⏳ Waiting ${wait_time} seconds before retry..."
+              sleep $wait_time
+            else
+              echo "🚫 All attempts failed - creating minimal fallback documentation"
+              echo "# Project Documentation
+              
+              Documentation generation failed due to API rate limits. 
+              
+              Please check the repository files for more details." > docs/general.md
             fi
           done
       
