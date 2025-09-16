@@ -1,11 +1,5 @@
 # Project: savelee/leeboonstra-new
 
-This repository contains the source for a personal blog built with the Hexo static site generator.
+This repository contains a personal blog built with the Hexo static site generator.
 
-**Technology Stack:**
-*   **Framework:** Hexo (Node.js)
-*   **Content:** Markdown
-*   **Deployment:** Firebase Hosting
-*   **CI/CD:** GitHub Actions
-
-The project includes configurations for themes, deployment automation, and local development scripts. The content is organized into posts, pages, and drafts within the `source` directory.
+The project uses Node.js and Markdown for content creation. It appears to be configured for automated builds and deployment via GitHub Actions and Firebase hosting. The presence of configuration files like `_config.yml` and theme/scaffold directories are characteristic of a Hexo project.
