@@ -3,7 +3,6 @@ name: Auto-Update Documentation
 on:
   push:
     branches: [master]
-    paths: ['src/**', 'lib/**']
 
 jobs:
   update-docs:
