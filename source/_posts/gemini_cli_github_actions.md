@@ -710,55 +710,70 @@ fi
 3. Your editor will open with an AI-generated commit message at the top
 4. **Save and close the editor** to use the AI suggestion, or edit it first
 5. If you close without saving, Git will abort the commit
+6. Test it in Github
 
 **Important Note:** Git hooks only work with command-line git, not with GUI tools like GitHub Desktop, VS Code's git integration, or other visual git clients. If you use GitHub Desktop, use the manual helper script below instead.
 
 **Manual Commit Message Helper Script:**
-Create a standalone script for when you want AI help with commit messages (especially useful for GitHub Desktop users):
+Create a standalone PowerShell script for when you want AI help with commit messages (especially useful for GitHub Desktop users):
 
-```bash
-#!/bin/bash
-# Save as git-ai-commit.sh
+```powershell
+# Save as ai-commit-helper.ps1
+# Usage: .\ai-commit-helper.ps1
 
-echo "🤖 Analyzing your staged changes..."
+Write-Host "🤖 Analyzing your staged changes..." -ForegroundColor Green
 
 # Check if there are staged changes
-if [ -z "$(git diff --cached --name-only)" ]; then
-    echo "❌ No staged changes found. Use 'git add' to stage your changes first."
+$stagedFiles = git diff --cached --name-only
+if (-not $stagedFiles) {
+    Write-Host "❌ No staged changes found. Use 'git add' to stage your changes first." -ForegroundColor Red
     exit 1
-fi
+}
 
 # Get staged changes
-CHANGES=$(git diff --cached --name-status)
-DIFF=$(git diff --cached)
+$changes = git diff --cached --name-status | Out-String
+$stats = git diff --cached --stat | Out-String
 
-echo "📋 Staged changes:"
-echo "$CHANGES"
-echo ""
+Write-Host "📋 Staged changes:" -ForegroundColor Yellow
+Write-Host $changes
 
-# Generate commit message suggestions
-echo "🤖 Generating commit message suggestions..."
-gemini "Analyze these git changes and provide 3 different commit message options:
+# Generate commit message suggestion
+Write-Host "🤖 Generating commit message suggestion..." -ForegroundColor Green
 
-Files changed:
-$CHANGES
+try {
+    $prompt = @"
+Analyze these git changes and suggest a concise, conventional commit message:
 
-Detailed changes:
-$DIFF
+$changes
 
-Provide 3 commit message options:
-1. A concise conventional commit message (type(scope): description)
-2. A more detailed descriptive message
-3. A technical/specific message for developers
+$stats
 
-Format as:
-Option 1: [message]
-Option 2: [message]  
-Option 3: [message]"
-
-echo ""
-echo "💡 Use one of these suggestions or modify as needed:"
-echo "   git commit -m \"your chosen message\""
+Generate a single line commit message following conventional commit format (type(scope): description). Output only the commit message, no explanation.
+"@
+    
+    $suggestion = & gemini -m gemini-1.5-flash $prompt 2>&1
+    
+    if ($suggestion -match 'ApiError|status 429|RESOURCE_EXHAUSTED|exceeded your current quota') {
+        Write-Host "⚠️ AI suggestion failed (quota limit). Please write manually." -ForegroundColor Yellow
+    } else {
+        Write-Host ""
+        Write-Host "🤖 AI Suggestion:" -ForegroundColor Cyan
+        Write-Host "   $($suggestion.Trim())" -ForegroundColor White
+        Write-Host ""
+        Write-Host "💡 Copy this message and paste it into GitHub Desktop, or use:" -ForegroundColor Yellow
+        Write-Host "   git commit -m `"$($suggestion.Trim())`"" -ForegroundColor Gray
+        
+        # Copy to clipboard if possible
+        try {
+            $suggestion.Trim() | Set-Clipboard
+            Write-Host "📋 Message copied to clipboard!" -ForegroundColor Green
+        } catch {
+            # Clipboard not available, that's ok
+        }
+    }
+} catch {
+    Write-Host "⚠️ AI suggestion failed. Please write commit message manually." -ForegroundColor Yellow
+}
 ```
 
 **GitHub Actions Integration (For teams):**
