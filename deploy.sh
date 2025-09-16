@@ -13,11 +13,17 @@ hexo clean
 
 # Build all assets (Sass, JavaScript, copy files)
 echo "🎨 Building all assets..."
+
+npm run resize-images
+npm run copy-images
 npm run build:assets
+
 
 # Generate Hexo site
 echo "🏗️  Generating Hexo site..."
 hexo generate
+
+npm run build
 
 # Generate Service Worker
 echo "⚙️  Generating Service Worker..."
