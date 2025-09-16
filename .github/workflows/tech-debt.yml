@@ -1,0 +1,43 @@
+name: Monthly Technical Debt Report
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'  # First day of every month
+
+jobs:
+  tech-debt-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+      
+      - name: Analyze Technical Debt
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          gemini --include-directories src,lib -p "
+          Perform a technical debt analysis:
+          1. Identify code smells and anti-patterns
+          2. Find duplicate code that should be refactored
+          3. Locate outdated dependencies and libraries
+          4. Suggest architectural improvements
+          5. Prioritize debt items by impact and effort
+          
+          Provide actionable recommendations with estimated effort.
+          " > tech-debt-report.md
+      
+      - name: Create Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('tech-debt-report.md', 'utf8');
+            
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Monthly Technical Debt Report - ${new Date().toLocaleDateString()}`,
+              body: report,
+              labels: ['technical-debt', 'maintenance']
+            });

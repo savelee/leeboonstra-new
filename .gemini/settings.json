@@ -1,0 +1,15 @@
+{
+  "selectedAuthType": "gemini-api-key",
+  "approvalMode": "yolo",
+  "allowedTools": [
+    "run_shell_command",
+    "glob",
+    "write_file",
+    "read_file", 
+    "edit_file",
+    "web_fetch",
+    "create_directory",
+    "list_directory",
+    "search_file_content"
+  ]
+}
