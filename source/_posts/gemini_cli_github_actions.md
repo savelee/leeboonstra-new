@@ -670,69 +670,51 @@ One of the most practical daily uses of Gemini CLI is generating better commit m
 Create a git hook that suggests commit messages based on your staged changes:
 
 ```bash
-#!/bin/bash
+#!/bin/sh
 # Save as .git/hooks/prepare-commit-msg
-# Make executable with: chmod +x .git/hooks/prepare-commit-msg
+# AI-powered commit message hook for Windows (using PowerShell)
 
-#!/bin/bash
-# AI-powered commit message suggestion hook
-
-# Check if we're on Windows and use PowerShell version
-if command -v powershell.exe >/dev/null 2>&1; then
-    # Use PowerShell version for Windows
-    powershell.exe -ExecutionPolicy Bypass -File "$(dirname "$0")/prepare-commit-msg.ps1" "$1" "$2"
-    exit $?
-fi
-
-# Fallback to bash version for Unix systems
 # Only run for normal commits (not merges, rebases, etc.)
 if [ "$2" = "" ]; then
-    # Get the diff of staged changes
-    STAGED_DIFF=$(git diff --cached --name-status)
-    
-    if [ -n "$STAGED_DIFF" ]; then
-        echo "🤖 Generating AI commit message suggestion..."
-        
-        # Use Gemini CLI to analyze changes and suggest commit message
-        SUGGESTED_MESSAGE=$(gemini "Analyze these git changes and suggest a concise, conventional commit message:
-
-$STAGED_DIFF
-
-$(git diff --cached --stat)
-
-Generate a single line commit message following conventional commit format (type(scope): description). Be specific about what changed. Examples:
-- feat(auth): add JWT token validation
-- fix(ui): resolve button alignment on mobile
-- docs(readme): update installation instructions
-- refactor(api): extract user validation logic
-
-Output only the commit message, no explanation.")
-
-        if [ $? -eq 0 ] && [ -n "$SUGGESTED_MESSAGE" ]; then
-            # Check if the suggestion contains errors
-            if echo "$SUGGESTED_MESSAGE" | grep -q "ApiError\|status 429\|RESOURCE_EXHAUSTED"; then
-                echo "# ⚠️ AI suggestion failed (quota limit), please write manually" > "$1.tmp"
-            else
-                echo "# 🤖 AI Suggestion: $SUGGESTED_MESSAGE" > "$1.tmp"
-            fi
-            echo "#" >> "$1.tmp"
-            echo "# You can edit or replace this suggestion" >> "$1.tmp"
-            echo "#" >> "$1.tmp"
-            cat "$1" >> "$1.tmp"
-            mv "$1.tmp" "$1"
-        else
-            echo "# ⚠️ AI suggestion failed, please write manually" > "$1.tmp"
-            echo "#" >> "$1.tmp"
-            cat "$1" >> "$1.tmp"
-            mv "$1.tmp" "$1"
-        fi
+    # Check if there are staged changes
+    if git diff --cached --quiet; then
+        exit 0
     fi
+    
+    echo "🤖 Generating AI commit message suggestion..."
+    
+    # Use PowerShell to handle the Gemini CLI call
+    powershell.exe -ExecutionPolicy Bypass -Command "
+        \$changes = git diff --cached --name-status | Out-String
+        \$stats = git diff --cached --stat | Out-String
+        \$prompt = \"Analyze these git changes and suggest a concise, conventional commit message: \`n\$changes\`n\$stats\`nGenerate a single line commit message following conventional commit format (type(scope): description). Output only the commit message, no explanation.\"
+        
+        \$suggestion = & gemini -m gemini-1.5-flash \$prompt 2>&1
+        if (\$suggestion -match 'ApiError|status 429|RESOURCE_EXHAUSTED|exceeded your current quota') {
+            \$header = '# ⚠️ AI suggestion failed (quota limit), please write manually'
+        } else {
+            \$header = '# 🤖 AI Suggestion: ' + \$suggestion.Trim()
+        }
+        
+        \$existing = Get-Content '$1' -Raw -ErrorAction SilentlyContinue
+        \$newContent = \$header + \"`n#`n# You can edit or replace this suggestion`n#`n\" + \$existing
+        Set-Content -Path '$1' -Value \$newContent
+    "
 fi
 
 ```
 
+**How to use this hook:**
+1. Make your changes and stage them with `git add .`
+2. Run `git commit` (without a message)
+3. Your editor will open with an AI-generated commit message at the top
+4. **Save and close the editor** to use the AI suggestion, or edit it first
+5. If you close without saving, Git will abort the commit
+
+**Important Note:** Git hooks only work with command-line git, not with GUI tools like GitHub Desktop, VS Code's git integration, or other visual git clients. If you use GitHub Desktop, use the manual helper script below instead.
+
 **Manual Commit Message Helper Script:**
-Create a standalone script for when you want AI help with commit messages:
+Create a standalone script for when you want AI help with commit messages (especially useful for GitHub Desktop users):
 
 ```bash
 #!/bin/bash
