@@ -23,15 +23,38 @@ jobs:
         run: |
           # Create docs directory if it doesn't exist
           mkdir -p docs
-          # Let Gemini CLI analyze the codebase and generate general project docs
-          gemini "Create a simple project overview in Markdown format. Output only the markdown, no conversation.
-
-          Analyze this codebase and create a brief summary with:
-          1. Project name and purpose
-          2. Main technology stack
-          3. What this project does
           
-          Start with # and keep it concise." > docs/general.md
+          # Retry logic for rate limiting
+          for attempt in {1..5}; do
+            echo "📝 Documentation generation attempt $attempt of 5..."
+            
+            if gemini "Create a simple project overview in Markdown format. Output only the markdown, no conversation.
+
+            Analyze this codebase and create a brief summary with:
+            1. Project name and purpose
+            2. Main technology stack
+            3. What this project does
+            
+            Start with # and keep it concise." > docs/general.md; then
+              echo "✅ Documentation generated successfully on attempt $attempt"
+              break
+            else
+              echo "❌ Attempt $attempt failed"
+              if [ $attempt -lt 5 ]; then
+                wait_time=$((attempt * 60))  # Wait 60, 120, 180, 240 seconds
+                echo "⏳ Waiting ${wait_time} seconds before retry..."
+                sleep $wait_time
+              else
+                echo "🚫 All attempts failed - creating minimal fallback documentation"
+                echo "# Project Documentation
+                
+                Documentation generation failed due to API rate limits. 
+                This is a Hexo static site blog project.
+                
+                Please check the repository files for more details." > docs/general.md
+              fi
+            fi
+          done
       
       - name: Commit updated docs
         run: |
