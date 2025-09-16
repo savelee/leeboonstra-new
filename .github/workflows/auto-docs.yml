@@ -28,15 +28,23 @@ jobs:
           for attempt in {1..10}; do
             echo "📝 Documentation generation attempt $attempt of 10..."
             
-            # Run Gemini CLI and capture result
-            gemini "Create a simple project overview in Markdown format. Output only the overview, no conversation.
-
-            Analyze this codebase and create a brief summary with:
-            1. Project name and purpose
-            2. Main technology stack
-            3. What this project does
+            # Run Gemini CLI with minimal analysis - just based on visible files
+            echo "Repository: ${{ github.repository }}" > project-info.txt
+            echo "Branch: ${{ github.ref_name }}" >> project-info.txt
+            echo "Files:" >> project-info.txt
+            ls -la | head -10 >> project-info.txt
             
-            Start with # and keep it concise." > docs/general.md 2>&1
+            gemini "Create a simple project documentation in Markdown format. Output only the markdown, no conversation.
+
+            Based on this basic information:
+            $(cat project-info.txt)
+            
+            Create a brief overview with:
+            1. Project name: ${{ github.repository }}
+            2. Repository type (appears to be a Hexo blog based on visible files)
+            3. Basic purpose and technology stack
+            
+            Start with # and keep it under 100 words." > docs/general.md 2>&1
             
             # Check if we got valid content
             if grep -q "ApiError\|status 429\|RESOURCE_EXHAUSTED\|exceeded your current quota" docs/general.md; then
