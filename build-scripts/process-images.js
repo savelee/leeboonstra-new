@@ -2,11 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { Jimp } = require('jimp');
 
-// Increase memory limit for large images
-Jimp.decoders['image/jpeg'] = (data) => {
-    return Jimp.decoders['image/jpeg'](data);
-};
-
 // Image size configurations
 const imageSizes = {
     thumb: { width: 150, height: 150 },
@@ -58,29 +53,20 @@ async function processImage(sourcePath, targetPath, targetSize, format = null) {
             const aspectRatio = originalWidth / originalHeight;
             if (aspectRatio > targetSize.width / targetSize.height) {
                 // Image is wider, scale by width
+                width = targetSize.width;
                 height = Math.round(targetSize.width / aspectRatio);
             } else {
                 // Image is taller, scale by height
                 width = Math.round(targetSize.height * aspectRatio);
+                height = targetSize.height;
             }
         }
         
-        // Resize the image
-        image.resize(width, height);
+        // Resize the image using the new API
+        image.resize({ w: width, h: height });
         
-        // Set quality based on format
-        if (format === 'jpeg' || path.extname(targetPath).toLowerCase() === '.jpg') {
-            image.quality(qualitySettings.jpeg);
-        } else if (format === 'webp') {
-            // Jimp doesn't support WebP directly, so we'll save as PNG for now
-            // and let the minification process handle WebP conversion if needed
-            image.quality(qualitySettings.png);
-        } else {
-            image.quality(qualitySettings.png);
-        }
-        
-        // Write the processed image
-        await image.writeAsync(targetPath);
+        // Write the processed image - quality is set during write for newer Jimp versions
+        await image.write(targetPath);
         
         return { success: true, width, height };
     } catch (error) {

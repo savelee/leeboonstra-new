@@ -18,7 +18,6 @@ npm run resize-images
 npm run copy-images
 npm run build:assets
 
-
 # Generate Hexo site
 echo "🏗️  Generating Hexo site..."
 hexo generate

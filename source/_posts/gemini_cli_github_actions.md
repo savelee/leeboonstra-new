@@ -13,7 +13,7 @@ tags:
 categories:
   - GenAI
 featured: gemini-screenshot
-date: 2025-09-13 12:00:00
+date: 2025-09-17 12:00:00
 ---
 
 While everyone's talking about AI coding assistants like Cursor, GitHub Copilot, and Windsurf, there's an incredibly powerful tool flying under the radar – [Gemini CLI](https://github.com/google-gemini/gemini-cli). As an AI Engineer at Google, I've discovered that Gemini CLI fills a completely different niche that's game-changing for automation, CI/CD pipelines, and headless operations.
@@ -24,26 +24,13 @@ This isn't just another API wrapper – it's a full-featured terminal-based AI a
 
 <img class="card-img-top" src="/images/large_gemini-screenshot.png" alt="Unleashing Gemini CLI Power in GitHub Actions and Beyond" style="object-fit: contain !important;">
 
-Don't get me wrong – Cursor with Gemini is fantastic for interactive 
-coding, real-time suggestions, and pair programming sessions. But 
-Gemini CLI? That's where the magic happens when you need AI that 
-works without human interaction, integrates into your automation 
-workflows, and handles complex multi-step tasks that go way beyond 
-code completion. It's like having an AI pair programmer that never 
-sleeps and can work across your entire development pipeline.
-Don't get me wrong – Cursor with Gemini is fantastic for interactive 
-coding, real-time suggestions, and pair programming sessions. But 
-Gemini CLI? That's where the magic happens when you need AI that 
-works without human interaction, integrates into your automation 
-workflows, and handles complex multi-step tasks that go way beyond 
-code completion. It's like having an AI pair programmer that never 
-sleeps and can work across your entire development pipeline.
+At first, I thought Gemini CLI was mainly for engineers who live in Vim and the command line – you know, the system engineers writing YAML files, infrastructure-as-code folks, or developers looking to replace code generation tools like Yeoman. And yeah, it's absolutely perfect for that crowd. But here's the thing: even if you're a VS Code or Cursor power user like me, Gemini CLI opens up possibilities that no IDE integration can touch.
+
+Don't get me wrong – Cursor with Gemini is fantastic for interactive coding, real-time suggestions, and pair programming sessions. But Gemini CLI? That's where the magic happens when you need AI that works without human interaction, integrates into your automation workflows, and handles complex multi-step tasks that go way beyond code completion. It's like having an AI pair programmer that never sleeps and can work across your entire development pipeline.
 
 ## Gemini CLI vs. IDE Integrations: Know When to Use What
 
-Before we dive into the technical stuff, let's talk about where each 
-tool shines. I use both daily, and they complement each other 
-perfectly:
+Before we dive into the technical stuff, let's talk about where each tool shines. I use both daily, and they complement each other perfectly:
 
 **Cursor IDE with Gemini Pro** is my go-to for:
 - Interactive coding sessions
@@ -54,7 +41,6 @@ perfectly:
 
 **Gemini CLI** is where I turn when I need:
 - **Headless automation** that runs without human interaction
-- **Non-interactive scripting** with structured JSON output
 - **Large codebase context** with multi-directory analysis
 - **Terminal-based AI workflows** that integrate into any pipeline
 - **Programmatic access** to Gemini's full capabilities
@@ -62,13 +48,7 @@ perfectly:
 
 ### The Best of Both Worlds: Gemini CLI Companion for VS Code
 
-Here's where things get even more interesting. Google has released 
-the [Gemini CLI Companion extension](https://marketplace.
-visualstudio.com/items?itemName=Google.
-gemini-cli-vscode-ide-companion) that bridges the gap between IDE 
-and CLI workflows. This extension gives Gemini CLI direct access to 
-your VS Code workspace while maintaining all its headless 
-capabilities.
+Here's where things get even more interesting. Google has released the <a href="https://marketplace.visualstudio.com/items?itemName=Google.gemini-cli-vscode-ide-companion" target="_blank">Gemini CLI Companion extension</a> that bridges the gap between IDE and CLI workflows. This extension gives Gemini CLI direct access to your VS Code workspace while maintaining all its headless capabilities.
 
 ## 1. Installing and Setting Up Gemini CLI
 
@@ -83,6 +63,8 @@ npm install -g @google/gemini-cli
 # macOS/Linux users can use Homebrew
 brew install gemini-cli
 ```
+
+For the best experience, use the latest version from GitHub. This guide uses Gemini CLI v5 preview-2, which includes the most recent tool capabilities and improvements. Always check the [official repository](https://github.com/google-gemini/gemini-cli) for the latest release.
 
 ### Authentication and API Keys
 
@@ -104,11 +86,6 @@ source ~/.bash_profile
 
 # Windows PowerShell
 $env:GEMINI_API_KEY="AIza..."
-```
-
-4. Test your setup:
-```bash
-gemini "Hello, can you hear me?"
 ```
 
 **Option 2: OAuth Login**
@@ -133,9 +110,15 @@ gemini "What type of project is this?"
 
 # Specify model for consistent behavior
 gemini -m gemini-1.5-flash "Generate a simple hello world example"
+
+# Include specific directories in analysis
+gemini --include-directories src,docs,tests,config
+
+# Focus on specific file types across the codebase
+gemini --include-directories . 
 ```
 
-**Important:** Use the latest version from the [official repository](https://github.com/google-gemini/gemini-cli) for the best experience.
+**TIP:** Use the latest version from the [official repository](https://github.com/google-gemini/gemini-cli) for the best experience.
 
 ## 2. YOLO Mode and Settings Configuration
 
@@ -150,6 +133,9 @@ gemini "Create a simple Node.js server"
 # With --yolo: Automatically creates files without asking
 gemini --yolo "Create a simple Node.js server"
 ```
+
+**`--auto-edit` Flag:**
+Similar to `--yolo` but specifically focused on file editing operations, automatically accepting proposed code changes without manual review.
 
 When to use --yolo vs when not to:
 
@@ -168,7 +154,9 @@ When to use --yolo vs when not to:
 
 ### Settings.json Configuration
 
-Create a global settings file to customize Gemini CLI behavior:
+Gemini CLI includes powerful built-in tools for file operations according to the [official tools documentation](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/index.md).
+
+Use the Gemini CLI `settings.json` to configure which tools are usable and available to your project:
 
 ```bash
 # Create settings directory
@@ -202,12 +190,15 @@ Example `~/.gemini/settings.json`:
 1. Command-line flags (highest priority)
 2. Environment variables
 3. Project settings (`.gemini/settings.json`)
-4. User settings (`~/.gemini/settings.json`)
+4. Global User settings (`~/.gemini/settings.json`)
 5. Default values (lowest priority)
 
 ## 3. Dependency Analysis Example
 
-One of Gemini CLI's most practical applications is automated dependency analysis. Here's how to generate a comprehensive dependency report:
+Now that we have Gemini CLI running, let's start with an easy
+example. Gemini CLI understands project structure and can maintain context across large codebases. 
+
+For example, here's how to generate a comprehensive dependency report of your coding project:
 
 ```bash
 # Analyze dependencies and save to file
@@ -260,7 +251,9 @@ This automated analysis helps you stay on top of dependencies without manually c
 
 ## 4. Code Generation: User Management App Example
 
-Gemini CLI excels at intelligent code scaffolding that goes far beyond traditional generators like Yeoman. Here's a complete example:
+Gemini CLI excels at intelligent code scaffolding that goes far beyond traditional generators like Yeoman. The advantage over static generators is that Gemini CLI adapts to your specific requirements and incorporates the latest best practices, not outdated templates.
+
+Here's a complete example:
 
 ```bash
 # Generate a complete user management app
@@ -292,9 +285,58 @@ TESTING:
 Create ALL files immediately with functional, visible forms."
 ```
 
-### Kubernetes and Terraform Examples
+I was using Windows, and the above generated app ran fine, and so did the test suite.
 
-Instead of showing full examples, here are two quick use cases where Gemini CLI shines:
+Test result:
+```bash
+> jest
+
+  console.log
+    Server is running on port 3000
+
+      at Server.log (server.js:103:13)
+
+ PASS  ./auth.test.js
+  Auth API Endpoints
+    POST /api/register
+      √ should register a new user successfully (81 ms)
+      √ should not register a user with a duplicate email (43 ms)
+    POST /api/login
+      √ should login an existing user and return a token (55 ms)
+      √ should not login with an incorrect password (51 ms)
+    GET /api/profile
+      √ should return user profile with a valid token (62 ms)
+      √ should not return profile without a token (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.633 s, estimated 1 s
+Ran all test suites.
+```
+
+As you can see, the more specific the prompt, the more likely your starter boilerplate app will work as designed. Though I have to say, it did take me a couple of tries to find the right prompt that would produce workable code. Also understand that running the prompt multiple times won't always give you the same output.
+
+<img class="card-img-top" src="/images/demo-express-app.png" alt="Generated App" style="object-fit: contain !important;">
+
+**Are you running into issues?**
+The free tier has strict limits (2 requests per minute for Gemini 2.5 Pro). You might see:
+```
+Error: You exceeded your current quota, please check your plan and billing details
+Attempt 3 failed with status 429. Retrying with backoff...
+```
+
+**Code Generation and Quota Consumption:**
+Code generation tasks like the user management app example are particularly quota-intensive because they require many sequential API calls - one for each file created, plus calls for planning, dependency management, and error handling. A single `--yolo` scaffolding command can easily consume 10-20 API calls.
+
+**Solutions:**
+- **Wait between requests**: Free tier allows only 2 requests per minute
+- **Use a faster model**: Try `gemini -m gemini-1.5-flash` (higher rate limits, lower cost)
+- **Upgrade to paid tier**: Essential for serious code generation work
+- **Batch your requests**: Combine multiple questions into one prompt when possible
+- **Be strategic**: Use Gemini CLI for complex scaffolding, simpler tools for basic tasks
+
+Here are some other ideas where you can use this. Instead of showing full examples, here are two quick use cases where Gemini CLI shines:
 
 **Kubernetes Manifests:**
 ```bash
@@ -306,74 +348,23 @@ gemini --yolo "Generate Kubernetes deployment manifests for a Node.js app that r
 gemini --yolo "Generate Terraform configuration for AWS that creates a VPC with public/private subnets, EKS cluster with proper security groups, ElastiCache Redis cluster, and Application Load Balancer with current best practices"
 ```
 
-The advantage over static generators is that Gemini CLI adapts to your specific requirements and incorporates latest best practices, not outdated templates.
+This beats any static generator because it adapts to your specific requirements and incorporates the latest best practices, not just outdated templates.
 
-## 5. GitHub Actions Integration
+So far, we haven't used Gemini CLI where it outbeats Agent IDE integration. So let's focus on headless integration next – this is where Gemini CLI shines.
 
-Here's where Gemini CLI really shines – automated workflows that run without human interaction. 
+## 5. Building GitHub Actions Integration: Combining the Tools
 
-### Setting Up Secrets
+Here's where we combine Gemini CLI's core capabilities with GitHub Actions to create powerful automation. Since Gemini CLI doesn't have built-in GitHub Actions integration, we'll build our own workflows that leverage its headless scripting capabilities.
 
-1. Go to your repository Settings → "Secrets and variables" → "Actions"
-2. Add `GEMINI_API_KEY` with your API key from [AI Studio](https://aistudio.google.com/apikey)
+For CI/CD environments, you'll want to store your API key securely:
 
-### Example 1: Automated Code Review
+1. Go to your repository settings
+2. Navigate to "Secrets and variables" → "Actions"  
+3. Add `GEMINI_API_KEY` with your API key from [AI Studio](https://aistudio.google.com/apikey)
 
-Create `.github/workflows/gemini-analysis.yml`:
+### Example: Documentation Generation
 
-```yaml
-name: Gemini CLI Code Analysis
-
-on:
-  pull_request:
-    types: [opened, synchronize]
-
-permissions:
-  contents: read
-  pull-requests: write
-
-jobs:
-  gemini-analysis:
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Gemini CLI
-        run: npm install -g @google/gemini-cli
-
-      - name: Analyze Changed Files
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          git diff --name-only origin/${{ github.base_ref }}..HEAD > changed_files.txt
-          gemini "Review these changed files for potential issues, security concerns, and improvements: $(cat changed_files.txt | tr '\n' ' ')" > review_output.txt
-
-      - name: Comment on PR
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const reviewOutput = fs.readFileSync('review_output.txt', 'utf8');
-            
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `## 🤖 Gemini CLI Analysis\n\n${reviewOutput}\n\n*Generated by Gemini CLI*`
-            });
-```
-
-### Example 2: Documentation Generation
+The below example will automatically generate documentation for your project in GitHub when pushing code to a branch. Here's how you do this:
 
 Create `.github/workflows/auto-docs.yml`:
 
@@ -413,11 +404,26 @@ jobs:
           git push
 ```
 
+Here's what happens under the hood. It:
+- Checks out the code
+- Installs Gemini CLI
+- Runs Gemini CLI analysis on the project
+- Creates the documentation in markdown format
+
+<img class="card-img-top" src="/images/demo-github-actions.png" alt="Github Actions with Gemini CLI integration to auto generate documentation" style="object-fit: contain !important;">
+
+
 ## 6. GitHub Hooks
+
+One of the most practical daily uses of Gemini CLI is generating better commit messages.
 
 Git hooks provide local automation that triggers on git events. Here's an AI-powered commit message generator:
 
-### Commit Message Hook
+### Example: Commit Message Hook
+
+**Note:** I am currently using Windows while drafting this blog post, therefore I had to do some extra steps to make sure that the hooks use PowerShell.
+
+The git hook itself is a shell script (`.git/hooks/prepare-commit-msg`) that starts with `#!/bin/sh`, but it calls PowerShell via `powershell.exe -ExecutionPolicy Bypass -File` to execute a separate PowerShell script. The actual logic is in a PowerShell script (`.git/hooks/prepare-commit-msg.ps1`).
 
 Create `.git/hooks/prepare-commit-msg`:
 
@@ -488,7 +494,7 @@ $existing
 3. Your editor opens with an AI-generated commit message
 4. Edit if needed and save
 
-**Note:** Git hooks only work with command-line git, not GUI tools.
+**NOTE:** Git hooks only work with command-line git, not GUI tools.
 
 ## 7. Conclusion
 
