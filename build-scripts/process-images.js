@@ -62,7 +62,7 @@ async function processImage(sourcePath, targetPath, targetSize, format = null) {
             }
         }
         
-        // Resize the image using the new API
+        // Resize the image using the correct API
         image.resize({ w: width, h: height });
         
         // Write the processed image - quality is set during write for newer Jimp versions

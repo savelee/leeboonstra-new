@@ -317,7 +317,7 @@ Ran all test suites.
 
 As you can see, the more specific the prompt, the more likely your starter boilerplate app will work as designed. Though I have to say, it did take me a couple of tries to find the right prompt that would produce workable code. Also understand that running the prompt multiple times won't always give you the same output.
 
-<img class="card-img-top" src="/images/demo-express-app.png" alt="Generated App" style="object-fit: contain !important;">
+<img class="card-img-top" src="/images/medium_demo-express-app.png" alt="Generated App" style="object-fit: contain !important;">
 
 **Are you running into issues?**
 The free tier has strict limits (2 requests per minute for Gemini 2.5 Pro). You might see:
@@ -410,7 +410,7 @@ Here's what happens under the hood. It:
 - Runs Gemini CLI analysis on the project
 - Creates the documentation in markdown format
 
-<img class="card-img-top" src="/images/demo-github-actions.png" alt="Github Actions with Gemini CLI integration to auto generate documentation" style="object-fit: contain !important;">
+<img class="card-img-top" src="/images/medium_demo-github-actions.png" alt="Github Actions with Gemini CLI integration to auto generate documentation" style="object-fit: contain !important;">
 
 
 ## 6. GitHub Hooks

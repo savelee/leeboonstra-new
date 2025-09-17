@@ -9,7 +9,6 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "dev": "node build-tools/build-assets.js && hexo server",
-    "copy-images": "node build-scripts/copy-images.js",
     "minify": "node scripts/minify-assets.js",
     "resize-images": "node build-scripts/resize-images.js",
     "process-images": "node build-scripts/process-images.js",
