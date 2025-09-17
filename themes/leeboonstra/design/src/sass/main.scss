@@ -464,6 +464,8 @@ h2, .h2 {
     letter-spacing: 0.03em;
 }
 
+
+
 h3, .h3 {
     font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
     font-size: 1.75rem;
@@ -656,6 +658,19 @@ time {
     .card-body {
         overflow: hidden !important;
         max-width: 100% !important;
+
+        h2 {
+            font-size: 1.7rem !important;
+            color: #4285f4 !important;
+        }
+
+        h2 a {
+            font-size: 100% !important;
+            color: #4285f4 !important;
+        }
+
+        font-size: 0.9rem !important;
+
     }
     
     // Specific rules for card images
@@ -664,7 +679,7 @@ time {
         max-width: 100% !important;
         height: auto !important;
         object-fit: cover !important;
-        object-position: center !important;
+        object-position: top !important;
         display: block !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
