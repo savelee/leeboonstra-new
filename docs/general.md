@@ -1,5 +1,5 @@
 # Project: savelee/leeboonstra-new
 
-This repository contains the source code for a personal blog. Based on the file structure, it is built using the Hexo static site generator.
+This repository contains a personal blog built with the Hexo static site generator. Based on the file structure (`_config.yml`, `scaffolds/`, `source/_posts`), it serves as a platform for publishing articles and posts.
 
-The project's purpose is to serve as a personal website or blog, likely containing articles, posts, and pages. The technology stack is primarily Node.js-based, utilizing the Hexo framework for content management and site generation. It includes configurations for deployment, potentially to Firebase, and uses GitHub Actions for CI/CD automation.
+The technology stack includes Hexo, Markdown for content creation, and likely Node.js for dependency management. The project is configured for automated deployment to Firebase Hosting via GitHub Actions, as indicated by `firebase.json` and `.github/workflows/firebase-deploy.yml`.
