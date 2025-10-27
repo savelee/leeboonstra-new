@@ -16,7 +16,7 @@ categories:
   - AI Development
   - Super Prompting
 featured: mini-me
-date: 2025-10-26 12:00:00
+date: 2025-10-27 12:00:00
 ---
 Welcome back to the technical blog series! We’re diving deep into the developer toolchain today. If you’ve been relying on AI assistants, you know the frustration: **context drift**. You ask the tool to refactor a service, but it only sees the single file you’re in, or you ask it to sumarize your text and it doesn't return you the final summary you were hoping for. 
 It misses the bigger picture—the architectural patterns, the coding standards, the project rules or in the case of creative writing, it misses your style, what makes it *"you"*.
@@ -26,13 +26,13 @@ It misses the bigger picture—the architectural patterns, the coding standards,
 ## We can fix this: Mini-Me super agent.
 We can build a customized, project-aware AI *"Mini-me Super Agent"* by writing what I call the **"Super-Prompt."** This is a master instruction set you inject with everything you do. We teach the AI: if you want to write code or blogs like me, you first have to become a little bit more like me.
 
-<img src="/images/mini-me.png" alt="Your AI mini-me super agent." style="object-fit: contain !important;" />
-
 It's like giving your assistant a detailed company handbook and style guide *before* you give them their first task. In this article, we'll set up the Gemini Command Line Interface (CLI) and the Gemini Code Assist VS Code extension, then build the Super-Prompts to tie it all together.
 
 Trust me on this one! It's going to be a lifesaver.
 
 <!--more-->
+
+<img src="/images/mini-me.png" alt="Your AI mini-me super agent." style="object-fit: contain !important;" />
 
 ## Using Gemini CLI and VS Code Assist together
 
