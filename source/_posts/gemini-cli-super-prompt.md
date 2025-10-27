@@ -16,7 +16,7 @@ categories:
   - AI Development
   - Super Prompting
 featured: mini-me
-date: 2025-10-27 12:00:00
+date: 2025-10-26 12:00:00
 ---
 Welcome back to the technical blog series! We’re diving deep into the developer toolchain today. If you’ve been relying on AI assistants, you know the frustration: **context drift**. You ask the tool to refactor a service, but it only sees the single file you’re in, or you ask it to sumarize your text and it doesn't return you the final summary you were hoping for. 
 It misses the bigger picture—the architectural patterns, the coding standards, the project rules or in the case of creative writing, it misses your style, what makes it *"you"*.
