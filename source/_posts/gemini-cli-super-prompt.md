@@ -158,7 +158,7 @@ The prompt that I used was:
 Create a python tool that scrapes a website, such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html which will create a csv file with title, artist and an m3u playlist file based on this csv file.
 ```
 
-<img src="/images/super_prompt_-r_esult.png" alt="Gemini Thinking/Output" style="object-fit: contain !important;" />
+<img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: contain !important;" />
 
 <img src="/images/final_solution.png" alt="Final Solution" style="object-fit: contain !important;" />
 
