@@ -87,7 +87,7 @@ Update the global `~/.gemini/settings.json` file to enable all kind of agent too
 where the `run_shell_command`is important, as you want your agent to auto run your code.
 Example:
 
-{% gist 7cb540b18da8cd6540b6a8e2e17840fe %}
+{% gist 1a5ebcc8d33c5fce7ed099ccf18dd97d %}
 
 ## Super-Prompts
 
@@ -124,13 +124,16 @@ Here's an example of the Project Spec prompt, you would create this file in your
 ```markdown
 # Project Overview
 
-This document outlines the technical stack, architecture, and scope for the **Agent Development Kit (ADK) Lee Boonstra agent**. The project provides a toolkit of agentic agents.
+This document outlines the technical stack, architecture, 
+and scope for the **Agent Development Kit (ADK) Lee Boonstra agent**. 
+The project provides a toolkit of agentic agents.
 
 ---
 
 ## Project Stack
 
-The project utilizes a modern web stack with a separation between the frontend client and the backend API server.
+The project utilizes a modern web stack with a separation 
+between the frontend client and the backend API server.
 
 ### Frontend (adk-web)
 - Compiled Angular web assets (do not touch these)
@@ -145,9 +148,12 @@ The project utilizes a modern web stack with a separation between the frontend c
 
 ## Architecture
 
-- **ADK Web (Client)**: The Angular frontend is the user-facing client, responsible for UI and user interaction. It communicates with the backend via **RESTful HTTP requests**.
-- **ADK API Server (Backend)**: The FastAPI application serves as the API gateway. It wraps the `google-adk` library, handling agent lifecycle, state, memory, and Google Cloud interfacing.
-- **Communication**: Frontend and backend communicate over a **REST API**. The system uses a **CORS policy** (via `--allow_origins` flag).
+- **ADK Web (Client)**: The Angular frontend is the user-facing client, 
+responsible for UI and user interaction. It communicates with the backend via **RESTful HTTP requests**.
+- **ADK API Server (Backend)**: The FastAPI application serves as the API gateway. 
+It wraps the `google-adk` library, handling agent lifecycle, state, memory, and Google Cloud interfacing.
+- **Communication**: Frontend and backend communicate over a **REST API**. 
+The system uses a **CORS policy** (via `--allow_origins` flag).
 
 ---
 ```

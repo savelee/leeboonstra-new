@@ -14,8 +14,8 @@ hexo clean
 # Build all assets (Sass, JavaScript, copy files)
 echo "🎨 Building all assets..."
 
-npm run process-images #use resize-images as backup using imagemagick
-npm run build:assets
+#npm run process-images #use resize-images as backup using imagemagick
+#npm run build:assets
 
 # Generate Hexo site
 echo "🏗️  Generating Hexo site..."
