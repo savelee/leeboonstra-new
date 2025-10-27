@@ -57,7 +57,7 @@ Got them? Perfect. Now, let's configure VS Code for maximum efficiency.
 
 Move that Gemini chat panel! By default, it takes up valuable space in your primary sidebar. Right-click its icon and select **"Move to > Secondary Panel."** With the panel docked on the other side you know have easy browsing access to the project files, without it it's gonna be a real pain, because you will likely add files to your context.
 
-<img src="/images/gemini-chatpanel.png" alt="Move that Gemini Chat Panel to the right." style="object-fit: contain !important;" />
+<img src="/images/gemini-chatpanel.png" alt="Move that Gemini Chat Panel to the right." style="object-fit: scale-down !important; max-height: 1000px" />
 
 ### 2. Activate "Super-Speed" Features
 
@@ -150,18 +150,6 @@ The project utilizes a modern web stack with a separation between the frontend c
 ---
 ```
 
-Here's a screenshot of a super-prompt-powered coding output in action.
-
-The prompt that I used was:
-
-```markdown
-Create a python tool that scrapes a website, such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html which will create a csv file with title, artist and an m3u playlist file based on this csv file.
-```
-
-<img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: contain !important;" />
-
-<img src="/images/final_solution.png" alt="Final Solution" style="object-fit: contain !important;" />
-
 ### Injecting Your Prompt into VS Code Assist
 
 The CLI reads the `GEMINI.md` automatically. But the VS Code *extension* needs to be told what persona to use.
@@ -172,6 +160,19 @@ Go to `Settings > Extensions > Gemini Code Assist`.
 3.  Paste the *contents* of your desired Super-Prompt (like the Coder's Mini-Me) into that setting.
 
 Now, both your CLI and your IDE assistant share the same brain!
+
+Here are screenshots of a super-prompt-powered coding output in action.
+
+The prompt that I used was:
+
+```markdown
+Create a python tool that scrapes a website, such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html which will create a csv file with title, artist and an m3u playlist file based on this csv file.
+```
+
+<img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: scale-down !important; max-height: 1000px" />
+
+<img src="/images/final_solution.png" alt="Final Solution" style="object-fit: contain !important;" />
+
 
 ## Context Filtering with `.geminiignore`
 
