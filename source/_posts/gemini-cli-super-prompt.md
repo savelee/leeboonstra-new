@@ -16,7 +16,7 @@ categories:
   - AI Development
   - Super Prompting
 featured: mini-me
-date: 2025-10-27 15:00:00
+date: 2025-10-27 12:00:00
 ---
 Welcome back to the technical blog series! We’re diving deep into the developer toolchain today. If you’ve been relying on AI assistants, you know the frustration: **context drift**. You ask the tool to refactor a service, but it only sees the single file you’re in, or you ask it to sumarize your text and it doesn't return you the final summary you were hoping for. 
 It misses the bigger picture—the architectural patterns, the coding standards, the project rules or in the case of creative writing, it misses your style, what makes it *"you"*.
@@ -87,7 +87,7 @@ Update the global `~/.gemini/settings.json` file to enable all kind of agent too
 where the `run_shell_command`is important, as you want your agent to auto run your code.
 Example:
 
-{% gist 7cb540b18da8cd6540b6a8e2e17840fe#settings.json %}
+{% gist 7cb540b18da8cd6540b6a8e2e17840fe %}
 
 ## Super-Prompts
 
@@ -105,7 +105,7 @@ Here’s a great starting point for your **global `~/.gemini/GEMINI.md` file**. 
 Here's an example of a super prompt for coding.
 Modify to match it your style.
 
-{% gist 7cb540b18da8cd6540b6a8e2e17840fe#GEMINI.md %}
+{% gist 7cb540b18da8cd6540b6a8e2e17840fe %}
 
 ### EXAMPLE 2: GLOBAL Super-Prompt 2: The Creative Writer's "Mini-Me"
 
@@ -113,7 +113,7 @@ What about creating writing? Like... a blog post? I use a *different* global pro
 Just replace the GEMINI.md with a new one. Here's an example of a super prompt for creative writing.
 Modify to match it your style.
 
-{ gist cdd999ba27efe8d3bf04cb11ce4751a8#GEMINI.md %}
+{% gist cdd999ba27efe8d3bf04cb11ce4751a8 %}
 
 ### EXAMPLE: PROJECT SPEC Super Prompt: The Project Ask.
 
@@ -182,7 +182,7 @@ it works similar like `.gitignore` or `.dockerignore`.
 
 Here's a great one to start with:
 
-{ gist a4bdf6bd839b0c820c59c648df7d35e1#.geminiignore %}
+{% gist a4bdf6bd839b0c820c59c648df7d35e1 %}
 
 ## Bonus: Give Your Agent Superpowers (Extensions)
 
