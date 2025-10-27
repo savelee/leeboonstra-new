@@ -1,11 +1,3 @@
 # Project: savelee/leeboonstra-new
 
-This repository contains the source code for a personal blog website. Based on the file structure, it appears to be built with the Hexo static site generator.
-
-The technology stack includes:
-- **Hexo** for site generation
-- **Node.js** for tooling and dependencies
-- **Markdown** for content
-- **Firebase** for hosting
-
-The site is configured with PWA features using Workbox and includes scripts for asset management and deployment. The content is organized in the `source/` directory, with blog posts located in `source/_posts/`.
+This repository contains the source code for a personal blog, built using the Hexo static site generator. The project is configured for Node.js and utilizes various scripts for building and asset management. Key features include a service worker for Progressive Web App (PWA) capabilities and deployment is handled through Firebase Hosting. The content is organized in Markdown files within the `source` directory, typical of a Hexo project structure.
