@@ -57,7 +57,7 @@ Got them? Perfect. Now, let's configure VS Code for maximum efficiency.
 
 Move that Gemini chat panel! By default, it takes up valuable space in your primary sidebar. Right-click its icon and select **"Move to > Secondary Panel."** With the panel docked on the other side you know have easy browsing access to the project files, without it it's gonna be a real pain, because you will likely add files to your context.
 
-<img src="/images/gemini-chatpanel.png" alt="Move that Gemini Chat Panel to the right." style="object-fit: scale-down !important; max-height: 1000px" />
+<img src="/images/gemini-chatpanel.png" alt="Move that Gemini Chat Panel to the right." style="object-fit: scale-down !important; max-height: 1000px !important;" />
 
 ### 2. Activate "Super-Speed" Features
 
@@ -110,14 +110,16 @@ Modify to match it your style.
 ### EXAMPLE 2: GLOBAL Super-Prompt 2: The Creative Writer's "Mini-Me"
 
 What about creating writing? Like... a blog post? I use a *different* global prompt when I'm in my creative writing projects. (Yes, you can swap them out!) This one is based on the very instructions I use for this series.
-Just replace the GEMINI.md with a new one. Here's an example of a super prompt for creative writing.
+Just replace the `GEMINI.md` with a new one.
+Here’s a great starting point for your **global `~/.gemini/GEMINI.md` file**. This tells the AI to act as a creative writer.
 Modify to match it your style.
 
 {% gist cdd999ba27efe8d3bf04cb11ce4751a8 %}
 
 ### EXAMPLE: PROJECT SPEC Super Prompt: The Project Ask.
 
-Here's an example of the Project Spec prompt
+Here's an example of the Project Spec prompt, you would create this file in your project directory:
+`my-app/.gemini/GEMINI.md`:
 
 ```markdown
 # Project Overview
@@ -169,7 +171,7 @@ The prompt that I used was:
 Create a python tool that scrapes a website, such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html which will create a csv file with title, artist and an m3u playlist file based on this csv file.
 ```
 
-<img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: scale-down !important; max-height: 1000px" />
+<img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: scale-down !important; max-height: 1000px !important" />
 
 <img src="/images/final_solution.png" alt="Final Solution" style="object-fit: contain !important;" />
 
