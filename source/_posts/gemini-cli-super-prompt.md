@@ -167,8 +167,11 @@ Here are screenshots of a super-prompt-powered coding output in action.
 
 The prompt that I used was:
 
-```markdown
-Create a python tool that scrapes a website, such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html which will create a csv file with title, artist and an m3u playlist file based on this csv file.
+```txt
+Create a python tool that scrapes a website, 
+such as https://www.setlist.fm/setlist/parkway-drive/2025/ziggo-dome-amsterdam-netherlands-235f8c6f.html 
+which will create a csv file with title, artist 
+and an m3u playlist file based on this csv file.
 ```
 
 <img src="/images/super_prompt_result.png" alt="Gemini Thinking/Output" style="object-fit: scale-down !important; max-height: 1000px !important" />
