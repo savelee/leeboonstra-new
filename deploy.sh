@@ -29,6 +29,6 @@ npx workbox generateSW workbox-config.js
 
 # Deploy to Firebase
 #echo "🔥 Deploying to Firebase..."
-#firebase login --reauth
-#firebase deploy --only hosting --project leeboonstra-dev-7d578
-#echo "✅ Deployment completed successfully!"
+firebase login --reauth
+firebase deploy --only hosting --project leeboonstra-dev-7d578
+echo "✅ Deployment completed successfully!"
