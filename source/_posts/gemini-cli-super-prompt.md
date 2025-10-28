@@ -18,13 +18,13 @@ categories:
 featured: mini-me
 date: 2025-10-27 12:00:00
 ---
-Welcome back to the technical blog series! We’re diving deep into the developer toolchain today. If you’ve been relying on AI assistants, you know the frustration: **context drift**. You ask the tool to refactor a service, but it only sees the single file you’re in, or you ask it to sumarize your text and it doesn't return you the final summary you were hoping for. 
+Welcome back to the technical blog series! We’re diving deep into the developer toolchain today. If you’ve been relying on AI assistants, you know the frustration: **context drift**. You ask the tool to refactor a service, but it only sees the single file you’re in, or you ask it to summarize your text and it doesn't return you the final summary you were hoping for. 
 It misses the bigger picture—the architectural patterns, the coding standards, the project rules or in the case of creative writing, it misses your style, what makes it *"you"*.
 
 **I'm gonna say it one more time. Your AI can't grasp your intent without knowing the full story. And it won't get that story without you crafting a *really* good prompt!**
 
 ## We can fix this: Mini-Me super agent.
-We can build a customized, project-aware AI *"Mini-me Super Agent"* by writing what I call the **"Super-Prompt."** This is a master instruction set you inject with everything you do. We teach the AI: if you want to write code or blogs like me, you first have to become a little bit more like me.
+We can build a customized, project-aware AI *"Mini-me Super Agent"* by writing what I call the **"Super-Prompt"**. This is a master instruction you inject with everything you do. We teach the AI: if you want to write code or blogs like me, you first have to become a little bit more like me.
 
 It's like giving your assistant a detailed company handbook and style guide *before* you give them their first task. In this article, we'll set up the Gemini Command Line Interface (CLI) and the Gemini Code Assist VS Code extension, then build the Super-Prompts to tie it all together.
 
@@ -84,7 +84,7 @@ A great workflow demands speed. You can't be clicking around. Go to `File > Pref
 ### 4. Enable Agent Tools
 
 Update the global `~/.gemini/settings.json` file to enable all kind of agent tools,
-where the `run_shell_command`is important, as you want your agent to auto run your code.
+where the `run_shell_command` is important, as you want your agent to auto run your code.
 Example:
 
 {% gist 1a5ebcc8d33c5fce7ed099ccf18dd97d %}
@@ -163,8 +163,10 @@ The system uses a **CORS policy** (via `--allow_origins` flag).
 The CLI reads the `GEMINI.md` automatically. But the VS Code *extension* needs to be told what persona to use.
 
 Go to `Settings > Extensions > Gemini Code Assist`.
-1.  Find the setting: **"Geminicodeassist: Custom Prompt"**.
-2.  Click **"Edit in settings.json"**.
+1.  Find the setting: **Geminicodeassist: Rules**.
+
+2. Paste the contents of your desired Super-Prompt (like the Coder's Mini-Me) into that setting.
+
 3.  Paste the *contents* of your desired Super-Prompt (like the Coder's Mini-Me) into that setting.
 
 Now, both your CLI and your IDE assistant share the same brain!
