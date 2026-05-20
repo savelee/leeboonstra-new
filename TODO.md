@@ -13,3 +13,4 @@
 - [x] Incorporate responsive image compilation and fallbacks into `start-app` Custom Skill and `technical_design.md`. <!-- id: 10 -->
 - [x] Create `generate-docs` skill: `.agents/skills/generate-docs/SKILL.md` <!-- id: 11 -->
 - [x] Create `push-github` skill: `.agents/skills/push-github/SKILL.md` <!-- id: 12 -->
+- [x] Refactor README.md to focus on Docs Site spin-up and Agentic Skills usage, migrating detailed Hexo/Workbox setup to docs/pipeline_hexo.md. <!-- id: 13 -->

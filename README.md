@@ -1,74 +1,74 @@
-# Setting up Hexo with Firebase Hosting & PWA Offline Caching
+# Lee Boonstra - Technical Portfolio & Personal Site
 
-## Sass
+Welcome to the codebase for Lee Boonstra's technical blog and portfolio site. This project is a modern static site built using **Hexo**, styled with a custom **SASS/Parcel** presentation layer, optimized for **PWA Offline Caching** using Workbox, and deployed via **Firebase Hosting**.
 
-```
-cd themes/leeboonstra/design
-npm run watch
-```
+---
 
-## Hexo
+## 📖 Documentation Site
 
-Hexo is a site generator for Node.js.
-A fast, simple & powerful blog framework.
-https://hexo.io/
+This repository features a comprehensive developer documentation site built using **MkDocs** with the Material theme. 
 
-```
-brew reinstall vips
-npm uninstall hexo
-npm install
-npm install hexo-images --save-dev --force
-hexo init
-hexo clean
-hexo generate
-hexo deploy
-npm run serviceWorker
-hexo server / hexo serve
-```
+### 🚀 How to Spin Up the Docs Site
 
-### Create a new post
+You can view and edit the documentation locally in two ways:
 
-`hexo new "My New Post"`
+#### Option A: MkDocs Interactive Development Server (Recommended for Editing)
+To run the hot-reloading documentation server:
+1. Initialize the Python virtual environment and install packages:
+   ```bash
+   uv venv
+   source .venv/bin/activate
+   uv pip install -r requirements.txt
+   ```
+2. Start the live-reloading MkDocs server:
+   ```bash
+   mkdocs serve
+   ```
+3. Open your browser and visit: `http://127.0.0.1:8000/`
 
-### Run server
+#### Option B: Compiled Documentation via Hexo Local Server
+To compile the MkDocs documentation directly into the Hexo source and serve it alongside the blog:
+1. Compile the docs:
+   ```bash
+   source .venv/bin/activate
+   mkdocs build
+   ```
+2. Run the Hexo development server:
+   ```bash
+   npm run dev
+   ```
+3. Access the compiled docs in the local blog at: `http://localhost:4000/docs/`
 
-`hexo server`
+---
 
-### Generate static files
+## 🤖 Developer Agentic Skills
 
-`hexo clean && hexo generate`
+This workspace is fully prepared for Spec-Driven Development using AI coding agents. It contains specialized agentic skills and developer manifest files located in the `.agents/` directory.
 
-### Deploy to remote sites
+### 🛠️ How to Use Agentic Skills
 
-`hexo deploy`
+When collaborating with a developer agent (like Jetski), you can instruct them to use specific workflows. The agent reads the instructions and execution manuals defined in these files to execute tasks safely and accurately.
 
-## Workbox Service Worker
+The following project-specific skills are available:
 
-```
-npm i workbox-cli
-workbox wizard 
-workbox generateSW workbox-config.js
-```
+| Skill Name | Description / Purpose | Key Commands Involved |
+| :--- | :--- | :--- |
+| **`start-app`** | Boots the local development environment, installs root & theme dependencies, pre-processes responsive images, and launches Hexo on port `4000`. | `npm install`, `npm run process-images`, `npm run dev` |
+| **`deploy-app`** | Builds site assets, compiles the production site, minifies CSS/JS, compiles the Workbox service worker, and deploys static files to Firebase. | `npm run firebase:build` or `./deploy.sh` |
+| **`generate-docs`** | Manages MkDocs compilation, environment setup (`uv venv`), and syncing compiled HTML into the Hexo theme assets for deployment. | `mkdocs build`, `mkdocs serve` |
+| **`push-github`** | Ensures clean git staging, enforces Conventional Commits, generates chronological summaries, and handles/delegates branch pushes safely. | `git status`, `git add`, `git push` |
 
-The serviceworker should be generated in public/serviceworker.js based on the public folder.
-And the themes/leeboonstra/design/js/index.js will need to be modified to load the service worker.
+To invoke or refer an agent to these skills, simply ask the agent:
+> *"Use the `start-app` skill to spin up the local server and verify the changes"*
+> *"Run the `deploy-app` skill to compile and push the latest build to Firebase"*
 
-Manually force the css, by updating the version number in:
-themes/leeboonstra/layout/_partial/head.ejb
-public/serviceworker.js & map
+For complete details on coding standards, architectural layouts, and the agent execution loop, review [.agents/AGENTS.md](file:///.agents/AGENTS.md).
 
-npm run serviceWorker
+---
 
+## 📁 Repository Architecture & Setup Manuals
 
-```hexo clean & hexo generate```
-Modify workbox-config.js, it should point to the public folder.
-
-
-## Deploy to Firebase
-
-Firebase is a mobile and web application development platform by Google.
-We will use Firebase for static hosting.
-
-```
-. deploy.sh
-```
+Detailed instructions regarding project dependencies, manual environment configuration, SASS stylesheet maintenance, and deployment pipelines are migrated to our official documentation site:
+- Detailed Hexo & PWA Setup: [docs/pipeline_hexo.md](file:///docs/pipeline_hexo.md)
+- Stylesheet SASS/JS Pipeline: [docs/pipeline_assets.md](file:///docs/pipeline_assets.md)
+- Technical Design & Schema Specs: [specs/technical_design.md](file:///specs/technical_design.md)

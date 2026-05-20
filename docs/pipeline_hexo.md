@@ -43,3 +43,53 @@ Our static site is hosted on **Firebase Hosting**. To compile and deploy in a si
 npm run firebase:build
 ```
 This builds the site, builds the Workbox PWA caching manifest (`workbox generateSW`), and uploads assets to Firebase Hosting.
+
+---
+
+## 5. Deep-Dive Environment Setup & Troubleshooting
+
+For manual setup, troubleshooting, or advanced configuration, refer to the following steps:
+
+### A. Manual Hexo Installation & Maintenance
+If you need to clean or reinstall the local environment:
+```bash
+# Reinstall system image processing library if needed (macOS example)
+brew reinstall vips
+
+# Clean cache and reinstall dependencies
+npm uninstall hexo
+npm install
+npm install hexo-images --save-dev --force
+
+# Reinitialize or generate static files manually
+npx hexo clean
+npx hexo generate
+```
+
+### B. Creating Articles / Posts
+To scaffold a new blog post page:
+```bash
+npx hexo new "My New Post"
+```
+This generates a new markdown file inside `source/_posts/` with pre-configured frontmatter metadata.
+
+---
+
+## 6. PWA Service Worker & Workbox Integration
+
+Offline support and asset caching are powered by **Workbox CLI**:
+```bash
+# Initialize workbox wizard (if restructuring configuration)
+npx workbox wizard 
+
+# Generate service worker manually
+npx workbox generateSW workbox-config.js
+```
+
+### Key Implementation Details:
+- **Service Worker Location**: The compiled service worker is deposited at `public/serviceworker.js` based on the contents of the compiled `public/` folder.
+- **PWA Hydration**: The client-side script at `themes/leeboonstra/design/js/index.js` contains the logic to register the service worker upon initial page load.
+- **Cache Busting**: If stylesheet/JS changes are not rendering immediately due to aggressive service worker caching, manually bust cache by incrementing the version tag in `themes/leeboonstra/layout/_partial/head.ejs` and regenerating assets:
+  ```bash
+  npm run serviceWorker
+  ```

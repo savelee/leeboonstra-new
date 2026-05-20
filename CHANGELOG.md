@@ -20,6 +20,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- **Documentation Restructuring**: Cleaned up `README.md` to focus exclusively on Docs Site setup and Custom Developer Agentic Skills usage, removing legacy Travis CI configurations and setup details.
+- **Hexo Operations Manual Migration**: Migrated complete Hexo setup, dependency installation, troubleshooting, and Workbox PWA caching commands from `README.md` to [docs/pipeline_hexo.md](file:///docs/pipeline_hexo.md).
+
 ### Added
 - **Press Releases Updates**: Added Google Cloud blog post on AI code reviews ("When AI writes the code, who reviews it?") to the top of the Lee Boonstra Press Releases section.
 - **Unified Build Script Automation**: Integrated the responsive image pre-processing (`process-images`) and asset minification into the standard `npm run build` workflow, ensuring consistent builds.
