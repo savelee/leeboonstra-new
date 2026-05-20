@@ -508,6 +508,40 @@
       ]
     }
   </script>
+  
+  <% if (is_post()) { %>
+  <!-- Dynamic GEO Metadata Block for Generative Search Engines -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "<%= page.permalink %>"
+      },
+      "headline": "<%= page.title.replace(/"/g, '\\"') %>",
+      "description": "<%= (page.description || page.excerpt || '').replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').substring(0, 250) %>...",
+      "datePublished": "<%= page.date.toISOString() %>",
+      "dateModified": "<%= (page.updated || page.date).toISOString() %>",
+      "author": {
+        "@type": "Person",
+        "name": "Lee Boonstra",
+        "@id": "https://www.leeboonstra.dev/#person"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Lee Boonstra",
+        "@id": "https://www.leeboonstra.dev/#person"
+      },
+      "keywords": "<%= page.tags.map(t => t.name).join(', ') %>",
+      "about": [
+        <%- page.tags.map(t => `{"@type": "Thing", "name": "${t.name.replace(/"/g, '\\"')}"}`).join(',\n        ') %>
+      ],
+      "articleBody": "<%= page.content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').trim() %>"
+    }
+  </script>
+  <% } %>
+
   <script type="application/ld+json">
         
     {

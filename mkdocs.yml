@@ -1,0 +1,81 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+site_name: "Lee Boonstra - Technical Architecture Docs"
+site_description: "System specifications, pipelines, and agent development documentation."
+site_author: "Lee Boonstra"
+
+# Compile directly into Hexo's theme source folder so Hexo copies it to public/docs
+site_dir: "themes/leeboonstra/source/docs"
+docs_dir: "docs"
+
+theme:
+  name: "material"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: "teal"
+      accent: "cyan"
+      toggle:
+        icon: "material/brightness-7"
+        name: "Switch to dark mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: "slate"
+      primary: "teal"
+      accent: "cyan"
+      toggle:
+        icon: "material/brightness-4"
+        name: "Switch to light mode"
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Technical Specifications: specs.md
+  - Agent Development:
+      - Overview: agent_development.md
+      - GEO Integration: geo_integration.md
+  - Local Run Manuals:
+      - Stylesheet Maintenance: pipeline_assets.md
+      - Hexo Site & Deployments: pipeline_hexo.md
+      - Pipeline Custom Functions: pipeline_functions.md

@@ -11,4 +11,4 @@ https://github.com/savelee/
 
     CSS3, Sass, HTML5, JavaScript
     Dialogflow,
-    Hexo Site generator, Firebase Hosting, Travis CI, Github
+    Hexo Site generator, Firebase Hosting, Github

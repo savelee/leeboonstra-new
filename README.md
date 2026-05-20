@@ -1,4 +1,4 @@
-# Setting up Hexo, with Travis CI & Firebase
+# Setting up Hexo with Firebase Hosting & PWA Offline Caching
 
 ## Sass
 

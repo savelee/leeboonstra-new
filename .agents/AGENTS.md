@@ -1,57 +1,63 @@
-# PERSONAL SKILLS CONTEXT (Lee Boonstra's Profile)
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-When responding to requests, assume the user (Lee Boonstra) is proficient in the following key areas, allowing you to use advanced terminology and patterns without extensive explanation:
-- **AI/ML:** Expertise in LLMs (Gemini, Gemma, Claude, GPT, Llama), GenAI, RAG, Prompt Engineering, Vector Embedding, and Finetuning.
-- **Data/Frameworks:** Highly proficient in Python/Pandas, Node.js/TypeScript, Angular, and foundational knowledge of React/Flutter.
-- **Data Stores:** Comfortable across SQL, NoSQL, MongoDB, MySQL, Neo4j, Firebase, and ChromaDB.
-- **Architecture:** Expert in Google Cloud, Docker, Kubernetes, OOP, CI/CD, gRPC, and REST.
+# 🤖 RUNTIME MANIFEST FOR DEVELOPER AGENTS
 
-**Conclusion:** Base all recommendations on the user having the senior-level capability to implement and architect complex, high-performance solutions across this diverse, enterprise-focused stack.
-
----
-
-# INSTRUCTIONS
-## STACK
-- **Google Cloud Platform:** (Vertex AI, BigQuery, Cloud Functions, Cloud Run, GKE, Secret Manager)
-- **Python 3.10+:** (**uv**, LangChain, LlamaIndex, FastAPI, Streamlit, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow)
-- **JavaScript/TypeScript:** (Node.js, Angular, TypeScript)
-- **SDKs:** (Google Cloud, Firebase SDK, LangChain, **ADK**, LlamaIndex, ChromaDB)
-- **Design/Tooling:** Material Design, SASS (`*.scss`), mkdocs
-
-## RULES
-- Use **Google Cloud** over other clouds.
-- Use **Vertex AI** solutions over Google AI Studio.
-- Use **Angular** over React.
-- Use **Material Design** for styling and components.
-- Use the version of the libraries as declared in `package.json` or `requirements.txt`.
-- For Python, strictly adhere to **PEP 8** coding standards (including maximum line length).
-- Use **4 spaces over tabs** for indentation in all code.
-- For TypeScript/JavaScript, use **Upper Camel Case** for class names and component names. Prefer classes over simple functions for stateful or complex components.
-- **Dependency Management:** All Python code must be developed and run within a virtual environment managed by **uv**. Global installation of packages (`pip install ...` without a virtual environment) is **strictly forbidden**. The standard commands are `uv venv` and `uv pip install -r requirements.txt`.
-- **Holistic Context:** When generating new code (e.g., adding a function, component, or service), you must first take the **full, existing project structure, architectural patterns, and imported dependencies** into account. Do not suggest solutions that introduce new, unnecessary libraries or conflict with established patterns unless explicitly requested.
+Welcome, Developer Agent. This workspace is designed for Spec-Driven Development. Adhere strictly to the configurations, schemas, and conventions outlined below.
 
 ---
 
-# ARCHITECTURAL PRINCIPLES
-All proposed solutions and code modifications must adhere to the following principles:
+## 1. Repository Architectural Layout
 
-- **Separation of Concerns (SoC):** Clearly separate UI/Presentation logic from Business logic from Data Access logic (e.g., using repository or service patterns).
-- **Loose Coupling:** Favor composition over inheritance. Design services and components to be independent and self-contained.
-- **Idempotency:** For API and function design, ensure that repeated calls do not change the state beyond the initial call (especially critical for Cloud Functions/Run).
-- **Observability:** All new components must include structured logging (JSON preferred), tracing hooks, and metrics endpoints (if applicable).
+- `source/_posts/`: Uncompiled raw Markdown blog posts.
+- `themes/leeboonstra/`: Core Presentation theme.
+  - `layout/`: Templating engine layouts driven by EJS.
+  - `scripts/`: Local Hexo extensions and pipeline filter modules.
+  - `source/`: Compiled stylesheet (`main.css`) and scripts location.
+  - `design/`: Source folder for style assets, comprising modular SASS files (`src/sass/`) and client-side scripts (`src/js/`).
+- `build-tools/build-assets.js`: The central asset compilation script. Handles Dart Sass compilation and JS packaging.
+- `build-scripts/process-images.js`: Jimp-based image pre-processor. Generates responsive scaled variants and WebP replicas inside `public/images/`.
+- `scripts/minify-assets.js`: Post-generation pipeline optimizer. Runs Terser (JS) and Clean-CSS (CSS) to compress client bundles.
 
 ---
 
-# READABILITY AND USABILITY
-**Readability must be favored over micro-optimization and micro-performance.** The code must be understandable by a peer engineer at a glance.
+## 2. Execution Commands Manual
 
-- **Descriptive Naming:** Avoid abbreviations and single-letter variables unless they are standard mathematical or indexing conventions (e.g., `i` for loop index). Names must clearly communicate their purpose and type.
-- **Python Naming Conventions:**
-    - Variables, functions, methods: `snake_case`.
-    - Classes: `PascalCase`.
-    - Constants/Global Configuration: `SCREAMING_SNAKE_CASE`.
-- **TypeScript Naming Conventions:**
-    - Variables, functions, methods: `camelCase`.
-    - Classes, Components, Interfaces: `PascalCase`.
-    - Constants: `SCREAMING_SNAKE_CASE`.
-- **Function/Method Size:** Adhere strictly to the **Single Responsibility Principle (SRP)**. Functions and methods should be short, doing one thing, and doing it well. If a function body exceeds 20 lines, suggest refactoring it into smaller, named helper methods.
+Always trigger workflows using these native npm scripts defined in `package.json`:
+- **Clean Build Assets**: `npm run clean`
+- **Local Development Server**: `npm run dev`
+- **Compile CSS/JS Assets**: `npm run build:assets`
+- **Responsive Image Generation**: `npm run process-images`
+- **Production Compiler Pipeline**: `npm run build`
+- **Production Firebase Deploy**: `npm run firebase:build`
+
+---
+
+## 3. Coding & Style Standards
+
+- **Python Standards**: Strictly comply with PEP 8 (4-space indents, max line length of 79 characters). Always execute commands within a virtual environment initialized by `uv venv`.
+- **TypeScript/JS Standards**: Follow Upper Camel Case (`PascalCase`) for components, interfaces, and classes. Use `camelCase` for methods and variables.
+- **Document All Public Interfaces**: Write JSDoc annotations for TypeScript/JS blocks and Google Style Docstrings for Python scripts.
+- **Licensing**: Every new file MUST begin with the standard Apache 2.0 License Boilerplate.
+
+---
+
+## 4. The Agent Operational Loop
+
+When executing non-trivial tasks, follow this step-by-step loop:
+1. **Read `TODO.md`**: Review current objectives and task lists.
+2. **Create Technical Plan**: Outline target files, design specs, and code architectures in a professional Proposal structure.
+3. **Seek Confirmation**: Wait for human verification before modifying code or executing terminal actions.
+4. **Implement Contiguous Edits**: Complete surgical code edits, writing thorough unit tests.
+5. **Document Changes**: Write a `docs/` README page for new features and append a changelog entry to `CHANGELOG.md` (Unreleased).
