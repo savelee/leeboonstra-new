@@ -9,29 +9,18 @@
         <%- page.content %>
 
         <script type="application/ld+json">
-          { "@context": "http://schema.org", 
-          "@type": "BlogPosting",
+        {
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
           "headline": "<%- page.title %>",
-          "genre": "technology", 
-          "datePublished": "<%- page.date.toISOString() %>",
-          "dateCreated": "<%- page.date.toISOString()  %>",
-          "dateModified": "<%- page.date.toISOString() %>",
-          "publisher": {
-            "@type": "Organization",
-            "name": "LeeBoonstra",
-            "logo": "<%- config.url %>/images/screen.png"
-          },
           "description": "<%- page.description %>",
-          "mainEntityOfPage": "<%- page.permalink %>",
-          "image": "<%- config.url %>/images/screen.png",
-          "articleBody": "<%- page.description %>",
-          "author": {
+          "mainEntity": {
             "@type": "Person",
             "name": "Lee Boonstra",
             "@id": "https://www.leeboonstra.dev/#person"
           }
-          }
-          </script>
+        }
+        </script>
           <script type="application/ld+json">
             {
              "@context": "https://schema.org/",

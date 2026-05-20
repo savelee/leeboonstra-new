@@ -40,7 +40,12 @@
              ],
             "uploadDate": "<%- post.date.toISOString() %>",
             "contentUrl": "<%- url_for(post.path) %>",
-            "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>"
+            "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>",
+            "creator": {
+              "@type": "Person",
+              "name": "Lee Boonstra",
+              "@id": "https://www.leeboonstra.dev/#person"
+            }
           }
           </script>
 

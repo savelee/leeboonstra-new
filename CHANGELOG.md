@@ -20,6 +20,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Optimized
+- **SEO & GEO Structured Data Mappings**: Standardized all global and local structured schema blocks to reference the authoritative central `Person` identifier (`https://www.leeboonstra.dev/#person`).
+- **Schema Graph Cleanup**: Removed redundant loop-nested Person and CreativeWork schema redeclarations inside `abstracts.ejs` and `article.ejs` to avoid redundant payloads.
+- **Structured Schema Precision**: Shifted the biography layout in `about.ejs` to an accurate `AboutPage` schema structure, and connected `VideoObject` items in `videos.ejs` back to the author profile.
+
 ### Changed
 - **Documentation Restructuring**: Cleaned up `README.md` to focus exclusively on Docs Site setup and Custom Developer Agentic Skills usage, removing legacy Travis CI configurations and setup details.
 - **Hexo Operations Manual Migration**: Migrated complete Hexo setup, dependency installation, troubleshooting, and Workbox PWA caching commands from `README.md` to [docs/pipeline_hexo.md](file:///docs/pipeline_hexo.md).
