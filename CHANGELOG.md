@@ -23,7 +23,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - **Unified Build Script Automation**: Integrated the responsive image pre-processing (`process-images`) and asset minification into the standard `npm run build` workflow, ensuring consistent builds.
 - **PWA Service Worker Precaching**: Verified robust service worker compilation using Workbox, caching core static assets for offline rendering capabilities.
-- **Custom Developer Customizations & Agent Setup**: Scaffolding of `.agents/AGENTS.md`, `start-app` custom skill, and `deploy-app` custom skill.
+- **Custom Developer Customizations & Agent Setup**: Scaffolding of `.agents/AGENTS.md`, `start-app` custom skill, `deploy-app` custom skill, `generate-docs` custom skill, and `push-github` custom skill.
 - **Comprehensive Testing Suite**: Configured Jest with unit test coverage metrics targeting asset compilation, responsive image scaling, and fallbacks.
 - **ESLint Syntax Verification**: Integrated a customized ESLint environment (`eslint.config.js`) to validate code styling and format conventions.
 - **Architectural Blueprint**: Authored the complete architectural specifications and pipeline designs in `specs/technical_design.md`.

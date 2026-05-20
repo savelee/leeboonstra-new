@@ -11,3 +11,5 @@
 - [x] Fix responsive image processing crash (unconditional copy logic). <!-- id: 8 -->
 - [x] Support high-resolution image decoding by adjusting Jimp decoder memory limits to 2048MB. <!-- id: 9 -->
 - [x] Incorporate responsive image compilation and fallbacks into `start-app` Custom Skill and `technical_design.md`. <!-- id: 10 -->
+- [x] Create `generate-docs` skill: `.agents/skills/generate-docs/SKILL.md` <!-- id: 11 -->
+- [x] Create `push-github` skill: `.agents/skills/push-github/SKILL.md` <!-- id: 12 -->
