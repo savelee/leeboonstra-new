@@ -11,16 +11,8 @@ npm install
 echo "🧹 Cleaning previous build..."
 hexo clean
 
-# Build all assets (Sass, JavaScript, copy files)
-echo "🎨 Building all assets..."
-
-#npm run process-images #use resize-images as backup using imagemagick
-#npm run build:assets
-
-# Generate Hexo site
-echo "🏗️  Generating Hexo site..."
-hexo generate
-
+# Build and Optimize site (Sass compile, Hexo generate, process images, minify assets)
+echo "🎨 Building and optimizing site assets..."
 npm run build
 
 # Generate Service Worker

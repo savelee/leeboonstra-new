@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node build-tools/build-assets.js && hexo generate && node scripts/minify-assets.js",
+    "build": "node build-tools/build-assets.js && hexo generate && npm run process-images && node scripts/minify-assets.js",
     "build:assets": "node build-tools/build-assets.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
@@ -16,7 +16,10 @@
     "sass:watch": "cd themes/leeboonstra/design && npm run watch",
     "firebase:deploy": "firebase deploy --only hosting --project leeboonstra-dev-7d578",
     "firebase:login": "firebase login --reauth",
-    "firebase:build": "npm run build && npx workbox generateSW workbox-config.js && npm run firebase:deploy"
+    "firebase:build": "npm run build && npx workbox generateSW workbox-config.js && npm run firebase:deploy",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "hexo": {
     "version": "7.3.0"
@@ -42,8 +45,11 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "clean-css-cli": "^5.6.3",
+    "eslint": "^10.4.0",
     "firebase-tools": "^14.0.0",
+    "jest": "^30.4.2",
     "jimp": "^1.6.0",
     "pngjs": "^7.0.0",
     "terser": "^5.44.0",

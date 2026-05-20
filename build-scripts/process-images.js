@@ -37,7 +37,7 @@ console.log(`Found ${imageFiles.length} image files to process...`);
 
 async function processImage(sourcePath, targetPath, targetSize, format = null) {
     try {
-        const image = await Jimp.read(sourcePath);
+        const image = await Jimp.read(sourcePath, { maxMemoryUsageInMB: 2048 });
         const originalWidth = image.bitmap.width;
         const originalHeight = image.bitmap.height;
         
@@ -93,6 +93,7 @@ async function processAllImages() {
         // Process each size variant
         for (const [sizeName, sizeConfig] of Object.entries(imageSizes)) {
             const targetPath = path.join(publicDir, `${sizeName}_${file}`);
+            const webpPath = path.join(publicDir, `${sizeName}_${baseName}.webp`);
             
             const result = await processImage(sourcePath, targetPath, sizeConfig);
             
@@ -103,17 +104,20 @@ async function processAllImages() {
                 
                 console.log(`  ✅ ${sizeName}: ${result.width}x${result.height} (${(stats.size / 1024).toFixed(1)}KB, ${sizeReduction}% reduction)`);
                 processedCount++;
+                
+                // Create WebP version (as PNG/JPEG for now, since Jimp doesn't support WebP encoding)
+                if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
+                    fs.copyFileSync(targetPath, webpPath);
+                }
             } else {
-                console.log(`  ❌ ${sizeName}: Failed - ${result.error}`);
+                console.log(`  ❌ ${sizeName}: Failed - ${result.error}. Gracefully falling back to original file.`);
                 errorCount++;
-            }
-            
-            // Create WebP version (as PNG for now, since Jimp doesn't support WebP)
-            if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
-                const webpPath = path.join(publicDir, `${sizeName}_${baseName}.webp`);
-                // For now, just copy the processed image as WebP
-                // In a real implementation, you'd convert to actual WebP format
-                fs.copyFileSync(targetPath, webpPath);
+                
+                // Robust fallback: copy original image to both targets so page renders successfully
+                fs.copyFileSync(sourcePath, targetPath);
+                if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
+                    fs.copyFileSync(sourcePath, webpPath);
+                }
             }
         }
     }

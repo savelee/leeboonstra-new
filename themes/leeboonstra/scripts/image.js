@@ -1,7 +1,7 @@
 'use strict';
 
 hexo.extend.filter.register('after_post_render', data => {
-    var regex = new RegExp(/(<p><img\b[^<>]*?src=['"].*?\/?.*?)([^.\/<>]*)(\.[^.\/<>]*?['"])([^><]*?\>)/igm);
+    var regex = /(<p><img\b[^<>]*?src=['"].*?\/?[^'"]*?)([^./<>]*)(\.[^./<>]*?['"])([^><]*?>)/igm;
 
     data.content = data.content.replace(regex, (_, start, name, ext, end) => {
 

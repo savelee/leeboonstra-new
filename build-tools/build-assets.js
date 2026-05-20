@@ -36,6 +36,12 @@ try {
         console.log('❌ CSS file not found at:', cssSource);
     }
 
+    // Ensure public/ directory exists before copying
+    const publicDir = path.join(__dirname, '../public');
+    if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+    }
+
     // Step 4: Copy mobile menu JS to public
     console.log('📋 Copying mobile menu JavaScript...');
     const jsSource = path.join(__dirname, '../themes/leeboonstra/design/dist/mobile-menu.js');
