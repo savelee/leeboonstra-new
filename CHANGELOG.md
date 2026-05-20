@@ -21,6 +21,14 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Bento Visual System Manual**: Created `docs/style_updates.md` detailing typographic rules, premium color palettes, and interactive card animations for the developer profile.
+
+### Changed
+- **Modern Bento Resume Chip Overhaul**: Redesigned core resume boxes (experience, education, skills, publications, and languages) into rounded white bento card modules featuring active hover translations and smooth CSS shadow transitions.
+- **Refined Color Schemes**: Swapped highly-saturated primary colors with high-fidelity, sophisticated tech-scene palettes (Cobalt, Deep Rose Crimson, Warm Amber, Emerald).
+- **Typographic Identity Restorations**: Reverted base and heading font-families to signature identity serif layouts (`Source Serif Pro`, `Bebas Neue`, `Roboto Slab`) while fully retaining the new slate-colored styling properties.
+
+### Added
 - **Cross-Platform SASS Asset Watcher**: Implemented a recursive, debounced asset-watching script (`build-tools/watch-assets.js`) that detects changes in SASS source files and automatically compiles and deploys them to the theme static source folder.
 
 ### Fixed
