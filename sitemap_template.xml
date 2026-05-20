@@ -11,6 +11,19 @@
   </url>
   {% endfor %}
 
+  {% for page in pages %}
+  <url>
+    <loc>{{ page.permalink | uriencode }}</loc>
+    {% if page.updated %}
+    <lastmod>{{ page.updated | formatDate }}</lastmod>
+    {% elif page.date %}
+    <lastmod>{{ page.date | formatDate }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+
   <url>
     <loc>{{ config.url | uriencode }}</loc>
     <lastmod>{{ sNow | formatDate }}</lastmod>

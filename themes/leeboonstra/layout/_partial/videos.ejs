@@ -31,16 +31,16 @@
             "name": "<%= post.title %>",
             "description": "Video: <%= post.title %>",
             "thumbnailUrl": [
-              "https://img.youtube.com/vi/<%= page.youtube %>/default.jpg",
-              "https://img.youtube.com/vi/<%= page.youtube %>/0.jpg",
-              "https://img.youtube.com/vi/<%= page.youtube %>/sddefault.jpg",
-              "https://img.youtube.com/vi/<%= page.youtube %>/mqdefault.jpg",
-              "https://img.youtube.com/vi/<%= page.youtube %>/hqdefault.jpg",
-              "https://img.youtube.com/vi/<%= page.youtube %>/maxresdefault.jpg"
+              "https://img.youtube.com/vi/<%= post.youtube %>/default.jpg",
+              "https://img.youtube.com/vi/<%= post.youtube %>/0.jpg",
+              "https://img.youtube.com/vi/<%= post.youtube %>/sddefault.jpg",
+              "https://img.youtube.com/vi/<%= post.youtube %>/mqdefault.jpg",
+              "https://img.youtube.com/vi/<%= post.youtube %>/hqdefault.jpg",
+              "https://img.youtube.com/vi/<%= post.youtube %>/maxresdefault.jpg"
              ],
             "uploadDate": "<%- post.date.toISOString() %>",
             "contentUrl": "<%- url_for(post.path) %>",
-            "embedUrl": "https://www.youtube.com/embed/<%= page.youtube %>"
+            "embedUrl": "https://www.youtube.com/embed/<%= post.youtube %>"
           }
           </script>
 

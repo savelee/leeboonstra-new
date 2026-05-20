@@ -27,8 +27,12 @@ All notable changes to this project will be documented in this file.
 - **Comprehensive Testing Suite**: Configured Jest with unit test coverage metrics targeting asset compilation, responsive image scaling, and fallbacks.
 - **ESLint Syntax Verification**: Integrated a customized ESLint environment (`eslint.config.js`) to validate code styling and format conventions.
 - **Architectural Blueprint**: Authored the complete architectural specifications and pipeline designs in `specs/technical_design.md`.
+- **Page-Level XML Sitemap Ingestion**: Modified the sitemap generator template to loop through custom static pages (`/about/`, `/speaking/`, etc.), ensuring comprehensive search indexing.
 
 ### Fixed
 - **High-Resolution Image Decoding**: Adjusted the Jimp memory boundary limit (`maxMemoryUsageInMB: 2048`) to prevent execution failures when decoding large photos.
 - **Robust Failure Fallbacks**: Handled Jimp processing failures gracefully by falling back to copying raw original source images directly to their target paths and WebP equivalents.
 - **Build Directory Resolution**: Added robust directory checks inside `build-assets.js` to create the destination `public/` output path when missing (e.g., on clean builds).
+- **Unified Semantic Schema Graphs**: Cleaned and unified metadata schemas across `about.ejs`, `writing.ejs`, and `head.ejs`, using direct authoritative Person `@id` bindings to prevent duplications and resolve custom property warnings.
+- **Video Indexing References**: Fixed invalid `page.youtube` references inside video layouts to map correct dynamic Youtube embed strings.
+- **Service Worker Policies**: Restructured Workbox caching rules in `workbox-config.js` to include core offline fallbacks, `NetworkFirst` for navigation paths, and `CacheFirst` for multiple image formats.

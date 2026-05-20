@@ -1,7 +1,9 @@
 module.exports = {
   "globDirectory": "public/",
   "globPatterns": [
-    "**/*.{js,ico,ttf,woff,svg,woff2}"
+    "**/*.{js,ico,ttf,woff,svg,woff2}",
+    "index.html",
+    "404.html"
   ],
   "globIgnores": [
     "**/node_modules/**/*",
@@ -14,8 +16,20 @@ module.exports = {
   // Define runtime caching rules.
   "runtimeCaching": [
     {
-      // Match any request that ends with .png, .jpg, .jpeg or .svg.
-      "urlPattern": /\.(?:webp)$/,
+      // Match navigation / page requests
+      "urlPattern": ({ request }) => request.mode === 'navigate',
+      "handler": 'NetworkFirst',
+      "options": {
+        "cacheName": 'pages-cache',
+        "expiration": {
+          "maxEntries": 50,
+          "maxAgeSeconds": 60 * 60 * 24 * 7 // 7 days
+        }
+      }
+    },
+    {
+      // Match any request that ends with images.
+      "urlPattern": /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
 
       // Apply a cache-first strategy.
       "handler": 'CacheFirst',
@@ -24,7 +38,7 @@ module.exports = {
         // Use a custom cache name.
         "cacheName": 'images',
 
-        // Only cache 10 images.
+        // Only cache 50 images.
         "expiration": {
           "maxEntries": 50
         },
