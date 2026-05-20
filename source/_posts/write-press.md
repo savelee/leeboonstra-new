@@ -8,6 +8,7 @@ alias: /developer/press/
 hidden: true
 ---
 
+* 05-2026 | [When AI writes the code, who reviews it?](https://cloud.google.com/transform/when-ai-writes-the-code-who-reviews-it-cto-google-cloud)
 * 11-2024 | [Kaggle: Whitepaper Prompt Engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
 * 06-2023 | [Emerce: Generatieve AI en Large Language Models: de risico’s, de AVG en je aansprakelijkheid](https://www.emerce.nl/achtergrond/generatieve-ai-en-large-language-models-de-risicos-de-avg-en-je-aansprakelijkheid)
 * 06-2023 | [Generative AI and Large Language Models: What are the possible dangers, and how can they be used compliantly?](https://ddma.nl/kennisbank/generative-ai-and-large-language-models-what-are-the-possible-dangers-and-how-can-they-be-used-compliantly/)
