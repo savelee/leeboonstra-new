@@ -20,3 +20,6 @@
 - [x] Support Mermaid diagrams in post markdown pages. <!-- id: 17 -->
 - [x] Resolve asset pipeline compilation failures (Parcel bundler Sass error). <!-- id: 18 -->
 - [x] Fix platform-specific shell commands in asset build pipeline and implement cross-platform assets watcher. <!-- id: 19 -->
+- [x] Rebuild career resume chips (experience, education, skills, publications, languages) into modern elevation-responsive white bento cards. <!-- id: 20 -->
+- [x] Retain original custom typography (Source Serif Pro, Bebas Neue, Roboto Slab) to preserve identity branding. <!-- id: 21 -->
+- [x] Upgrade global color schemes to high-fidelity premium developer jewel tones (Cobalt, Rose Red, Warm Amber, Emerald). <!-- id: 22 -->

@@ -80,3 +80,4 @@ nav:
       - Hexo Site & Deployments: pipeline_hexo.md
       - Pipeline Custom Functions: pipeline_functions.md
       - Post Formatting Manual: post_formatting.md
+      - Bento & Color Styling: style_updates.md
