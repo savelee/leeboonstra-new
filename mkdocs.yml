@@ -79,3 +79,4 @@ nav:
       - Stylesheet Maintenance: pipeline_assets.md
       - Hexo Site & Deployments: pipeline_hexo.md
       - Pipeline Custom Functions: pipeline_functions.md
+      - Mermaid Diagram Support: mermaid.md

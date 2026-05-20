@@ -21,15 +21,21 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Optimized
+- **SEO Targeting for AI/ML Careers**: Enhanced central `Person` schema metadata in `head.ejs`, injecting high-priority ML search terms (`Staff Machine Learning Engineer`, `PyTorch`, `vLLM`, `RLHF`, `DPO`, `Agentic Workflows`, `LangChain`, `GraphRAG`, `Antigravity`, `Vibe Coding`, `Gemini`, `OpenAI GPT`, `Claude`) to target recruiters at Meta, Microsoft, OpenAI, and Anthropic.
+- **Schema.org Job Mapping**: Re-focused global job titles from general relations to advanced applied engineering architectures.
 - **SEO & GEO Structured Data Mappings**: Standardized all global and local structured schema blocks to reference the authoritative central `Person` identifier (`https://www.leeboonstra.dev/#person`).
 - **Schema Graph Cleanup**: Removed redundant loop-nested Person and CreativeWork schema redeclarations inside `abstracts.ejs` and `article.ejs` to avoid redundant payloads.
 - **Structured Schema Precision**: Shifted the biography layout in `about.ejs` to an accurate `AboutPage` schema structure, and connected `VideoObject` items in `videos.ejs` back to the author profile.
+- **About Page Resume Enrichment**: Expanded the technical skills inventory and professional experience details in `about.ejs` to include modern agentic architectures (`LangChain`, `LangGraph`, `GraphRAG`), internal tools (`Antigravity`), and paradigm models, while fully preserving legacy listings.
 
 ### Changed
 - **Documentation Restructuring**: Cleaned up `README.md` to focus exclusively on Docs Site setup and Custom Developer Agentic Skills usage, removing legacy Travis CI configurations and setup details.
 - **Hexo Operations Manual Migration**: Migrated complete Hexo setup, dependency installation, troubleshooting, and Workbox PWA caching commands from `README.md` to [docs/pipeline_hexo.md](file:///docs/pipeline_hexo.md).
 
 ### Added
+- **Mermaid Diagram Support**: Integrated client-side dynamic loading of Mermaid diagrams on blog posts. The rendering searches for `mermaid` code blocks, converts them to `<div class="mermaid">`, and dynamically fetches the Mermaid JS bundle only when diagrams are detected to optimize load times.
+- **Mermaid Integration Documentation**: Created [docs/mermaid.md](file:///Users/leeboonstra/Documents/Github/leeboonstra-new/docs/mermaid.md) to describe usage and pipeline rendering mechanics, and registered it in `mkdocs.yml`.
+- **Technical Agent Blog Post**: Authored `source/_posts/vibe-coding-graphrag-workflows.md` which focuses on Vibe Coding, GraphRAG, and multi-agent systems utilizing Gemini, Claude, and OpenAI GPT models.
 - **Press Releases Updates**: Added Google Cloud blog post on AI code reviews ("When AI writes the code, who reviews it?") to the top of the Lee Boonstra Press Releases section.
 - **Unified Build Script Automation**: Integrated the responsive image pre-processing (`process-images`) and asset minification into the standard `npm run build` workflow, ensuring consistent builds.
 - **PWA Service Worker Precaching**: Verified robust service worker compilation using Workbox, caching core static assets for offline rendering capabilities.
@@ -40,6 +46,7 @@ All notable changes to this project will be documented in this file.
 - **Page-Level XML Sitemap Ingestion**: Modified the sitemap generator template to loop through custom static pages (`/about/`, `/speaking/`, etc.), ensuring comprehensive search indexing.
 
 ### Fixed
+- **Broken RSS/Atom Feed Generation**: Installed and configured `hexo-generator-feed` to dynamically compile `public/atom.xml` on every build, resolving the broken `/atom.xml` link and restoring standard feed discoverability.
 - **High-Resolution Image Decoding**: Adjusted the Jimp memory boundary limit (`maxMemoryUsageInMB: 2048`) to prevent execution failures when decoding large photos.
 - **Robust Failure Fallbacks**: Handled Jimp processing failures gracefully by falling back to copying raw original source images directly to their target paths and WebP equivalents.
 - **Build Directory Resolution**: Added robust directory checks inside `build-assets.js` to create the destination `public/` output path when missing (e.g., on clean builds).

@@ -15,3 +15,6 @@
 - [x] Create `push-github` skill: `.agents/skills/push-github/SKILL.md` <!-- id: 12 -->
 - [x] Refactor README.md to focus on Docs Site spin-up and Agentic Skills usage, migrating detailed Hexo/Workbox setup to docs/pipeline_hexo.md. <!-- id: 13 -->
 - [x] Optimize site SEO & GEO structured data mapping, standardizing global schema reference IDs and eliminating loop-nested duplications. <!-- id: 14 -->
+- [x] Optimize career SEO schema targeting with high-value AI/ML keywords. <!-- id: 15 -->
+- [x] Fix broken RSS/Atom feed link by installing and configuring `hexo-generator-feed`. <!-- id: 16 -->
+- [ ] Support Mermaid diagrams in post markdown pages. <!-- id: 17 -->

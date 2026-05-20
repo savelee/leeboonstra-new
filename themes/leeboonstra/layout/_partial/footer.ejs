@@ -21,11 +21,63 @@
     </div>
 </footer>
 <div class="disclaimer d-flex justify-content-end">
-  <span class="text-muted">Disclaimer: The opinions stated here are my own, not those of my company. - 2025 &reg; Lee Boonstra</span>
+  <span class="text-muted">Disclaimer: The opinions stated here are my own, not those of my company. - 2026 &reg; Lee Boonstra</span>
 </div> 
 
 <script src="/mobile-menu.min.js" async></script>
 <script src="/js/prism.min.js"></script>
+<script>
+// Detect and dynamically initialize Mermaid diagrams in blog posts
+function initMermaidDiagrams() {
+  const mermaidBlocks = document.querySelectorAll(
+    'figure.highlight.mermaid, figure.highlight.language-mermaid, pre.language-mermaid, code.language-mermaid, pre.mermaid, code.mermaid'
+  );
+  
+  if (mermaidBlocks.length > 0) {
+    const targets = [];
+    
+    mermaidBlocks.forEach(function(block) {
+      let container = block;
+      if (block.tagName === 'CODE') {
+        if (block.parentNode.tagName === 'PRE') {
+          container = block.parentNode;
+        }
+      }
+      if (targets.indexOf(container) === -1) {
+        targets.push(container);
+      }
+    });
+    
+    targets.forEach(function(container) {
+      const codeElem = container.querySelector('td.code pre, pre code, code');
+      const rawContent = codeElem ? codeElem.textContent : container.textContent;
+      
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.className = 'mermaid';
+      mermaidDiv.style.display = 'flex';
+      mermaidDiv.style.justifyContent = 'center';
+      mermaidDiv.style.margin = '2rem 0';
+      mermaidDiv.textContent = rawContent.trim();
+      
+      container.parentNode.replaceChild(mermaidDiv, container);
+    });
+    
+    // Dynamically load Mermaid JS from public CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+    script.onload = function() {
+      if (typeof mermaid !== 'undefined') {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'neutral',
+          securityLevel: 'loose'
+        });
+      }
+    };
+    document.body.appendChild(script);
+  }
+}
+</script>
 <script>
 // Add language classes to hexo-prism code blocks and trigger highlighting
 function initPrismHighlighting() {
@@ -63,6 +115,7 @@ function initPrismHighlighting() {
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
+  initMermaidDiagrams();
   // Small delay to ensure all scripts are loaded
   setTimeout(initPrismHighlighting, 50);
 });
