@@ -37,21 +37,25 @@ Stage only the required and appropriate files. Never run a blind `git add .` unl
 git add file1.py path/to/folder/
 ```
 
-### 3. Composing Conventional Commit Messages
-Compose a clear, high-quality commit message that conforms to standard formatting conventions:
+### 3. Composing Conventional Commit Messages with Work Summarization
+Compose a clear, high-quality commit message that conforms to standard formatting conventions. The message must detail the exact step-by-step actions and changes completed during the session.
 
 - **Format**: `<type>(<scope>): <short_description>`
 - **Types**: `feat` (features), `fix` (bug fixes), `docs` (documentation), `style` (formatting), `refactor` (code restructuring), `test` (adding/refactoring tests), `chore` (maintenance).
-- **Body**: Detail the Observation, Impact, and Proposal of the change.
+- **Body**: Document a complete list of chronological milestones and steps taken during development. Keep descriptions concise and action-oriented.
 - **Governance Tags**: Always append these two tags at the **very bottom** of the commit description:
   - `TAG=agy`
   - `CONV=<conversation_id>` (include if conversation ID is available)
 
-#### Commit Template Example:
+#### Commit Template Example with Step Summarization:
 ```text
-feat(auth): integrate Vertex AI authentication credentials
+feat(images): optimize responsive image pipeline and fallbacks
 
-Uses Application Default Credentials (ADC) to retrieve token scopes securely, replacing hardcoded API keys.
+Chronological steps taken during implementation:
+1. Configured Jimp memory boundaries (maxMemoryUsageInMB: 2048) to support decoding high-resolution assets.
+2. Implemented clean try-catch blocks in process-images.js to copy original files as fallbacks upon resize failure.
+3. Created a test suite in tests/image_filter.test.js to verify image tag injection templates.
+4. Updated TODO.md and CHANGELOG.md milestones to track pipeline integrations.
 
 TAG=agy
 CONV=54f4804e-1c3f-42a1-84d2-25659152a8de
