@@ -7,3 +7,5 @@ public/
 .images*/
 .deploy*/
 coverage/
+.venv/
+themes/leeboonstra/source/docs/
