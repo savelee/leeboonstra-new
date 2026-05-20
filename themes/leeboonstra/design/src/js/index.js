@@ -1,4 +1,3 @@
-require('../sass/main.scss')
 
 // YouTube functionality
 document.addEventListener('DOMContentLoaded', function() {

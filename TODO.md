@@ -17,4 +17,6 @@
 - [x] Optimize site SEO & GEO structured data mapping, standardizing global schema reference IDs and eliminating loop-nested duplications. <!-- id: 14 -->
 - [x] Optimize career SEO schema targeting with high-value AI/ML keywords. <!-- id: 15 -->
 - [x] Fix broken RSS/Atom feed link by installing and configuring `hexo-generator-feed`. <!-- id: 16 -->
-- [ ] Support Mermaid diagrams in post markdown pages. <!-- id: 17 -->
+- [x] Support Mermaid diagrams in post markdown pages. <!-- id: 17 -->
+- [x] Resolve asset pipeline compilation failures (Parcel bundler Sass error). <!-- id: 18 -->
+- [x] Fix platform-specific shell commands in asset build pipeline and implement cross-platform assets watcher. <!-- id: 19 -->

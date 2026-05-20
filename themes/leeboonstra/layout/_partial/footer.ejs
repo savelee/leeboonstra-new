@@ -29,40 +29,57 @@
 <script>
 // Detect and dynamically initialize Mermaid diagrams in blog posts
 function initMermaidDiagrams() {
-  const mermaidBlocks = document.querySelectorAll(
-    'figure.highlight.mermaid, figure.highlight.language-mermaid, pre.language-mermaid, code.language-mermaid, pre.mermaid, code.mermaid'
+  const candidateBlocks = document.querySelectorAll(
+    'figure.highlight, pre.language-mermaid, code.language-mermaid, pre.mermaid, code.mermaid, pre code'
   );
   
-  if (mermaidBlocks.length > 0) {
-    const targets = [];
-    
-    mermaidBlocks.forEach(function(block) {
-      let container = block;
-      if (block.tagName === 'CODE') {
-        if (block.parentNode.tagName === 'PRE') {
-          container = block.parentNode;
-        }
+  const targets = [];
+  const mermaidRegex = /^\s*(graph\s+|flowchart\s+|sequenceDiagram|classDiagram|stateDiagram|erDiagram|gantt|pie|journey|gitGraph|requirementDiagram|mindmap|timeline|c4Context)/;
+
+  candidateBlocks.forEach(function(block) {
+    let container = block;
+    if (block.tagName === 'CODE') {
+      if (block.parentNode.tagName === 'PRE') {
+        container = block.parentNode;
       }
-      if (targets.indexOf(container) === -1) {
-        targets.push(container);
-      }
-    });
+    }
     
-    targets.forEach(function(container) {
-      const codeElem = container.querySelector('td.code pre, pre code, code');
-      const rawContent = codeElem ? codeElem.textContent : container.textContent;
+    if (targets.indexOf(container) === -1) {
+      let rawContent = '';
+      const lineElems = container.querySelectorAll('td.code pre .line, pre code .line, .line');
+      if (lineElems.length > 0) {
+        const lines = Array.from(lineElems).map(function(el) { return el.textContent; });
+        rawContent = lines.join('\n');
+      } else {
+        const codeElem = container.querySelector('td.code pre, pre code, code');
+        rawContent = codeElem ? codeElem.textContent : container.textContent;
+      }
       
+      const codeElem = container.querySelector('td.code pre, pre code, code');
+      const hasMermaidClass = container.className.includes('mermaid') || 
+                               (codeElem && codeElem.className.includes('mermaid'));
+      
+      if (hasMermaidClass || mermaidRegex.test(rawContent)) {
+        targets.push({
+          container: container,
+          content: rawContent
+        });
+      }
+    }
+  });
+  
+  if (targets.length > 0) {
+    targets.forEach(function(item) {
       const mermaidDiv = document.createElement('div');
       mermaidDiv.className = 'mermaid';
       mermaidDiv.style.display = 'flex';
       mermaidDiv.style.justifyContent = 'center';
       mermaidDiv.style.margin = '2rem 0';
-      mermaidDiv.textContent = rawContent.trim();
+      mermaidDiv.textContent = item.content.trim();
       
-      container.parentNode.replaceChild(mermaidDiv, container);
+      item.container.parentNode.replaceChild(mermaidDiv, item.container);
     });
     
-    // Dynamically load Mermaid JS from public CDN
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
     script.onload = function() {

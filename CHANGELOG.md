@@ -20,6 +20,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- **Cross-Platform SASS Asset Watcher**: Implemented a recursive, debounced asset-watching script (`build-tools/watch-assets.js`) that detects changes in SASS source files and automatically compiles and deploys them to the theme static source folder.
+
+### Fixed
+- **Asset Pipeline Parcel Sass Compiler Crash**: Resolved compilation failure in Parcel bundler by removing the redundant `@import` statement in the client script, ensuring 100% successful JavaScript asset packaging.
+- **Cross-Platform Path Script Compatibility**: Replaced Windows-specific shell commands (`copy`) in root asset scripts with platform-agnostic Node.js utilities to guarantee seamless execution on macOS and Linux environments.
+
 ### Optimized
 - **SEO Targeting for AI/ML Careers**: Enhanced central `Person` schema metadata in `head.ejs`, injecting high-priority ML search terms (`Staff Machine Learning Engineer`, `PyTorch`, `vLLM`, `RLHF`, `DPO`, `Agentic Workflows`, `LangChain`, `GraphRAG`, `Antigravity`, `Vibe Coding`, `Gemini`, `OpenAI GPT`, `Claude`) to target recruiters at Meta, Microsoft, OpenAI, and Anthropic.
 - **Schema.org Job Mapping**: Re-focused global job titles from general relations to advanced applied engineering architectures.
@@ -33,8 +40,8 @@ All notable changes to this project will be documented in this file.
 - **Hexo Operations Manual Migration**: Migrated complete Hexo setup, dependency installation, troubleshooting, and Workbox PWA caching commands from `README.md` to [docs/pipeline_hexo.md](file:///docs/pipeline_hexo.md).
 
 ### Added
-- **Mermaid Diagram Support**: Integrated client-side dynamic loading of Mermaid diagrams on blog posts. The rendering searches for `mermaid` code blocks, converts them to `<div class="mermaid">`, and dynamically fetches the Mermaid JS bundle only when diagrams are detected to optimize load times.
-- **Mermaid Integration Documentation**: Created [docs/mermaid.md](file:///Users/leeboonstra/Documents/Github/leeboonstra-new/docs/mermaid.md) to describe usage and pipeline rendering mechanics, and registered it in `mkdocs.yml`.
+- **Advanced Mermaid Diagram Support**: Integrated dynamic client-side rendering of Mermaid diagrams in blog posts with robust multi-line text extraction and HTML entity decoding, successfully parsing both standard and fallback code blocks.
+- **Post Composition & Formatting Manual**: Added a comprehensive Markdown guide [docs/post_formatting.md](file:///Users/leeboonstra/Documents/Github/leeboonstra-new/docs/post_formatting.md) explaining Prism code syntax highlighting and interactive Mermaid diagram usage, and registered it in `mkdocs.yml`.
 - **Technical Agent Blog Post**: Authored `source/_posts/vibe-coding-graphrag-workflows.md` which focuses on Vibe Coding, GraphRAG, and multi-agent systems utilizing Gemini, Claude, and OpenAI GPT models.
 - **Press Releases Updates**: Added Google Cloud blog post on AI code reviews ("When AI writes the code, who reviews it?") to the top of the Lee Boonstra Press Releases section.
 - **Unified Build Script Automation**: Integrated the responsive image pre-processing (`process-images`) and asset minification into the standard `npm run build` workflow, ensuring consistent builds.
