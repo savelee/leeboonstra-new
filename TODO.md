@@ -23,3 +23,6 @@
 - [x] Rebuild career resume chips (experience, education, skills, publications, languages) into modern elevation-responsive white bento cards. <!-- id: 20 -->
 - [x] Retain original custom typography (Source Serif Pro, Bebas Neue, Roboto Slab) to preserve identity branding. <!-- id: 21 -->
 - [x] Upgrade global color schemes to high-fidelity premium developer jewel tones (Cobalt, Rose Red, Warm Amber, Emerald). <!-- id: 22 -->
+- [x] Fix sidebar image distortion by establishing fluid max-width constraints. <!-- id: 23 -->
+- [x] Implement dynamic build timestamp cache busting for main.css stylesheet. <!-- id: 24 -->
+

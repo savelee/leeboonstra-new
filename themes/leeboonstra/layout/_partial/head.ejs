@@ -355,9 +355,7 @@
 
   <%
     var dateObj = new Date();
-    var m = dateObj.getUTCMonth() + 1;
-    var y = dateObj.getUTCFullYear();
-    var d = y + "-" + m;
+    var d = dateObj.getTime();
   %>
 
   <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
