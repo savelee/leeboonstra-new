@@ -16,6 +16,7 @@
 
 <div class="container about<% if (page.layout === 'about' || page.layout === 'bio') { %> Biography<% } %>">
     <!-- Print-Only Resume Header -->
+    <% if (page.layout === 'about' || page.layout === 'bio') { %>
     <div class="print-only-header">
       <div class="print-header-row">
         <div class="print-header-left">
@@ -41,6 +42,7 @@
         </div>
       </div>
     </div>
+    <% } %>
 
     <div class="row justify-content-md-center">
       <div class="col-8 blogcontent">
@@ -122,6 +124,7 @@
             </a>
 
             <!-- Print Resume CTA button -->
+            <% if (page.layout === 'about' || page.layout === 'bio') { %>
             <button onclick="window.print()" class="btn btn-block btn-outline-danger mt-3 print-resume-btn">
                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer mr-2" viewBox="0 0 16 16" style="vertical-align: text-bottom; display: inline-block;">
                  <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
@@ -129,6 +132,7 @@
                </svg>
                Print My Resume
             </button>
+            <% } %>
 
             <!-- Dynamic Social / Portfolio Links -->
             <h3 class="card-title mt-4">Social Links</h3>
@@ -155,6 +159,7 @@
     </div>
   
     <!-- Dynamic Bento Grid Resume Section -->
+    <% if (page.layout === 'about' || page.layout === 'bio') { %>
     <div class="resume">
       <div class="row justify-content-md-center mt-4">
         <div class="col-14">
@@ -295,4 +300,5 @@
         </div>
       </div>
     </div>
+    <% } %>
 </div>

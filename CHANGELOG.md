@@ -20,6 +20,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **Shared Layout Resume Leak**: Integrated robust EJS conditional routing (`<% if (page.layout === 'about' || page.layout === 'bio') { %>`) in the shared partial `about.ejs` template, completely isolating the print resume CTA button, print-only header block, and career timeline bento grid from non-biography layouts (speaking, contact). This guarantees that other informational pages remain lightweight on desktop and print natively utilizing raw markdown margins without injecting employment profiles.
+
 ### Added
 - **Structured Schema-Driven Resume Core**: Integrated centralized career milestone database inside `source/_data/resume.yml` following the industry-standard JSON Resume schema using human-readable YAML configurations.
 - **Multi-Format Static Career APIs**: Formulated custom Hexo generator plugin `themes/leeboonstra/scripts/resume_endpoints_generator.js` to automatically compile high-density `/about/resume.json` (JSON Resume), `/about/resume.md` (RAG-ready Markdown), and `/about/resume.txt` (Ultra-compatible plain text) endpoints during compiling.

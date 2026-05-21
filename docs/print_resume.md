@@ -21,6 +21,7 @@ This document describes the physical architecture, geometric configurations, and
 ### 1. Print-Only Resume Header (Dynamic & Dynamic Meta)
 To ensure the printed CV contains essential contact handles without adding bloat to the screen layout, a custom two-column print-only block is injected at the very top of `about.ejs`:
 * **Interactive Elements**: Fully hidden on desktop and mobile screens (`display: none !important;` under screen media, via `print.css`).
+* **Render-Time Layout Isolation**: Wrapped inside an EJS layout selector wrapper (`<% if (page.layout === 'about' || page.layout === 'bio') { %>`), preventing the node from rendering inside pages utilizing non-biography layouts (e.g. speaking, contact).
 * **Header Structure**:
   * **Left Column**: High-impact bold name (`Lee Boonstra`), job subtitle dynamically rendered using EJS variables (`<%= page.subtitle %>`), pronouns/current location, and Lee's detailed **Birth Metadata** (`Born: 16 June 1983, Apeldoorn, Netherlands`).
   * **Right Column**: Direct professional contact references:
@@ -66,6 +67,7 @@ To provide direct recruitment interactivity, the legacy static PDF download link
 * **Hover Interaction**: On hover, translates upwards (`translateY(-2px)`), drops a soft rose-red elevation shadow, transitions to a solid rose-red background with high-contrast white text, and micro-scales the inline SVG vector printer icon.
 * **JavaScript Action**: Triggers native browser print mechanisms (`window.print()`) instantly on click.
 * **Print Decoupling**: Automatically hidden in print configurations (`display: none !important;` via `.print-resume-btn` / `.photocol`).
+* **Page Layout Isolation**: Embedded render-time EJS conditional wrapper constraints so the button is completely excluded from the generated HTML document for all non-biography layouts, preventing visual clutter on unrelated static pages.
 
 ### 7. Obfuscated Anti-Spam Email Protection
 Harvest bots automatically scrape website HTML search lists and contact indices. To protect the professional domain while maintaining complete recruiter reachability:
@@ -100,5 +102,6 @@ Rigid physical-height block dividers (e.g. static `.print-page` blocks) and abso
     ```
     Orphan title headers are prevented from sitting alone at the bottom of pages.
   - Recruiter/reader lets standard page counts numbering print natively via standard browser settings check ("Headers and Footers"), which fits perfectly at standard metric margins (`20mm` symmetric) bounds.
+  - **Pruned Dynamic Generation**: The resume section is dynamically ignored during page-render stage on non-biography views (`speaking`, `contact`), guaranteeing that standard browser-level printed pages flow natively and elegantly utilizing only actual page markdown body lines.
   - **100% Scalable & Robust**: If the database grows dynamically, the prints flow organically across sheets with immaculate vertical alignment and visual perfection!
 
