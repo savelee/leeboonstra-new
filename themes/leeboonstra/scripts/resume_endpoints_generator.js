@@ -34,6 +34,34 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
 
   const routes = [];
 
+  // Helper: Map consolidated publications patents to legacy schema properties
+  const patents = (resume.publications || [])
+    .filter(p => p.type === 'patent')
+    .map(pub => {
+      const idMatch = pub.name.match(/\(([^)]+)\)/);
+      const id = idMatch ? idMatch[1] : '';
+      let title = pub.name.replace(/^(Patent|Invention Disclosure):\s*/i, '').replace(/\s*\([^)]+\)$/, '');
+      let status = 'Filed';
+      if (pub.publisher.includes('USPTO') || pub.publisher.includes('Published')) {
+        status = 'Published ' + pub.releaseDate.split('-')[0];
+      } else if (pub.name.includes('Invention Disclosure')) {
+        status = 'Filed (Invention Disclosure)';
+      } else {
+        status = 'Filed (Google Patent)';
+      }
+      return {
+        title,
+        id,
+        status,
+        url: pub.url,
+        summary: pub.summary,
+        inventor: 'Lee Boonstra'
+      };
+    });
+    
+  // Helper: Filter out patents from standard publications to avoid duplicate listings
+  const standardPublications = (resume.publications || []).filter(p => p.type !== 'patent');
+
   // 1. JSON Resume Endpoint (/about/resume.json)
   routes.push({
     path: 'about/resume.json',
@@ -70,17 +98,15 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   });
 
   md += `## PATENTS & INVENTIONS\n\n`;
-  const patents = resume.publications.filter(p => p.type === 'patent');
   patents.forEach(pat => {
-    md += `### ${pat.name}\n`;
-    md += `**Status:** ${pat.name.includes('US2025') ? 'Published' : 'Filed'} | **Date:** ${pat.releaseDate}\n`;
+    md += `### ${pat.title} (${pat.id})\n`;
+    md += `**Status:** ${pat.status} | **Inventor:** ${pat.inventor}\n`;
     if (pat.url) md += `**Source URL:** ${pat.url}\n`;
     md += `*Abstract:* ${pat.summary}\n\n`;
   });
 
   md += `## KEY PUBLICATIONS & BOOKS\n\n`;
-  const keyPubs = resume.publications.filter(p => p.type !== 'patent');
-  keyPubs.forEach(pub => {
+  standardPublications.forEach(pub => {
     md += `### ${pub.name}\n`;
     md += `**Publisher:** ${pub.publisher} (${pub.releaseDate}) | **URL:** ${pub.url}\n`;
     md += `*Description:* ${pub.summary}\n\n`;
@@ -137,20 +163,18 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   });
 
   txt += `PATENTS & INVENTIONS:\n\n`;
-  const txtPatents = resume.publications.filter(p => p.type === 'patent');
-  txtPatents.forEach(pat => {
-    txt += `* PATENT: "${pat.name}"\n`;
-    txt += `  Date: ${pat.releaseDate}\n`;
-    if (pat.url) txt += `  Link: ${pat.url}\n`;
+  patents.forEach(pat => {
+    txt += `* PATENT: "${pat.title}"\n`;
+    txt += `  ID: ${pat.id} | Status: ${pat.status}\n`;
+    txt += `  Link: ${pat.url}\n`;
     txt += `  Details: ${pat.summary}\n\n`;
   });
 
   txt += `PUBLICATIONS & BOOKS:\n\n`;
-  const txtPubs = resume.publications.filter(p => p.type !== 'patent');
-  txtPubs.forEach(pub => {
+  standardPublications.forEach(pub => {
     txt += `* PUBLICATION: "${pub.name}"\n`;
     txt += `  Published: ${pub.publisher} on ${pub.releaseDate}\n`;
-    if (pub.url) txt += `  Link: ${pub.url}\n`;
+    txt += `  Link: ${pub.url}\n`;
     txt += `  Summary: ${pub.summary}\n\n`;
   });
 

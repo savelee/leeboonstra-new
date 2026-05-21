@@ -147,7 +147,7 @@
               <!-- Dynamic Helper formatting dates to standard screen display templates -->
               <% 
                 function formatYear(dateStr) {
-                  if (!dateStr) return 'Present';
+                  if (!dateStr) return 'present';
                   return dateStr.split('-')[0];
                 }
               %>
@@ -160,7 +160,8 @@
                     <% site.data.resume.work.forEach(function(job) { %>
                       <div class="col-md-6 mb-4">
                           <div class="experience-chip">
-                              <h4 class="chip-title"><%= job.name %> | <%= job.position %> | <%= formatYear(job.startDate) %> – <%= formatYear(job.endDate) %></h4>
+                              <span class="chip-date"><%= job.name %>, <%= formatYear(job.startDate) %> – <%= formatYear(job.endDate) %></span>
+                              <h4 class="chip-title"><%= job.position %></h4>
                               <ul class="chip-list">
                                   <% job.highlights.forEach(function(bullet) { %>
                                     <li><%= bullet %></li>
@@ -282,9 +283,5 @@
       </div>
     </div>
     
-    <!-- Print-Only Resume Footer -->
-    <div class="print-only-footer">
-      Lee Boonstra &nbsp;|&nbsp; AI Engineering &nbsp;|&nbsp; lee[at]leeboonstra.com
-    </div>
     <% } %>
 </div>

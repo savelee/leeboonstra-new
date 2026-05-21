@@ -584,6 +584,7 @@ header {
         text-transform: uppercase;
         vertical-align: middle;
         letter-spacing: 0.05em;
+        color: $red !important;
     }
 
     ul {
@@ -2703,6 +2704,7 @@ figure.highlight pre {
 
 /* Hide Print-Only elements on standard screen */
 .print-only-header,
+.print-only-page-header,
 .print-only-footer,
 .print-only-section-header {
     display: none !important;

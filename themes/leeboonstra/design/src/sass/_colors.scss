@@ -11,6 +11,10 @@ $pink: #db2777;      // Premium Magenta Rose
 .headertop {
     background: $primary;
     color: #fff !important;
+    
+    .navbar-brand {
+        color: #fff !important;
+    }
 }
 
 // Default navbar styling - handled in mobile-menu.scss with media queries
