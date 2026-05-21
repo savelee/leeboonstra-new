@@ -47,6 +47,7 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   md += `**Title:** ${resume.basics.label}\n`;
   md += `**Pronouns:** ${resume.basics.pronouns}\n`;
   md += `**Location:** ${resume.basics.location.city}, ${resume.basics.location.country}\n`;
+  md += `**Email:** ${resume.basics.email}\n`;
   md += `**Web:** ${resume.basics.url}\n`;
   
   const linkedIn = resume.basics.profiles.find(p => p.network === 'LinkedIn');

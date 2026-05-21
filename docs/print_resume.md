@@ -27,7 +27,7 @@ To ensure the printed CV contains essential contact handles without adding bloat
     * **Web**: `www.leeboonstra.dev`
     * **LinkedIn**: `linkedin.com/in/leeboonstra`
     * **GitHub**: `github.com/savelee`
-    * **Email**: `lee@leeboonstra.com`
+    * **Email**: `lee[at]leeboonstra.com`
 * **Redundant Title Mitigation**: The standard web h1 title (`Biography of AI Engineer Lee Boonstra`) is completely suppressed on print to prevent duplicates.
 
 ### 2. High-Performance Point Typography Sizing
