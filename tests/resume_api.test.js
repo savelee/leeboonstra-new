@@ -151,35 +151,35 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     expect(data).toHaveProperty('basics');
     expect(data.basics).toHaveProperty('name', 'Lee Boonstra');
     expect(data.basics).toHaveProperty('label');
-    expect(data.basics.label).toContain('Staff AI Software Engineer');
+    expect(data.basics.label).toContain('AI Software Engineer');
     
     expect(data).toHaveProperty('work');
     expect(data.work.length).toBeGreaterThan(0);
     
     expect(data).toHaveProperty('skills');
-    expect(data.skills.length).toBe(3); // AI / ML, Languages, Tools
+    expect(data.skills.length).toBe(3); // AI & ML, Languages, Tools
   });
 
   test('Verify chronological milestones and structured details', () => {
     const data = parseResumeYml(YML_PATH);
     
     const staffJob = data.work[0];
-    expect(staffJob.position).toContain('Staff AI Software Engineer');
+    expect(staffJob.position).toContain('AI Software Engineer');
     expect(staffJob.startDate).toBe('2022-10-01');
     expect(staffJob.endDate).toBe(null);
     expect(staffJob.name).toBe('Google');
     
-    expect(data).toHaveProperty('patents');
-    expect(data.patents.length).toBe(3);
-    expect(data.patents[0].id).toBe('US20250078820A1');
-    expect(data.patents[0].title).toBe('Scalable High-Accuracy Transactional Agents');
+    expect(data).toHaveProperty('publications');
+    const patents = data.publications.filter(p => p.type === 'patent');
+    expect(patents.length).toBe(3);
+    expect(patents[0].name).toContain('Scalable High-Accuracy Transactional Agents');
   });
 
   test('Verify Technical Skills taxonomies target Leadership keywords', () => {
     const data = parseResumeYml(YML_PATH);
     
     const leadershipGroup = data.skills[0];
-    expect(leadershipGroup.name).toBe('AI / ML Leadership');
+    expect(leadershipGroup.name).toBe('AI & Machine Learning');
     expect(leadershipGroup.keywords).toContain('Technical Leadership');
     expect(leadershipGroup.keywords).toContain('Team Mentorship');
     expect(leadershipGroup.keywords).toContain('LangGraph Architectures');

@@ -70,23 +70,25 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   });
 
   md += `## PATENTS & INVENTIONS\n\n`;
-  resume.patents.forEach(pat => {
-    md += `### ${pat.title} (${pat.id})\n`;
-    md += `**Status:** ${pat.status} | **Inventor:** ${pat.inventor}\n`;
+  const patents = resume.publications.filter(p => p.type === 'patent');
+  patents.forEach(pat => {
+    md += `### ${pat.name}\n`;
+    md += `**Status:** ${pat.name.includes('US2025') ? 'Published' : 'Filed'} | **Date:** ${pat.releaseDate}\n`;
     if (pat.url) md += `**Source URL:** ${pat.url}\n`;
     md += `*Abstract:* ${pat.summary}\n\n`;
   });
 
   md += `## KEY PUBLICATIONS & BOOKS\n\n`;
-  resume.publications.forEach(pub => {
+  const keyPubs = resume.publications.filter(p => p.type !== 'patent');
+  keyPubs.forEach(pub => {
     md += `### ${pub.name}\n`;
     md += `**Publisher:** ${pub.publisher} (${pub.releaseDate}) | **URL:** ${pub.url}\n`;
     md += `*Description:* ${pub.summary}\n\n`;
   });
 
-  md += `## CORE TECHNICAL SKILLS\n\n`;
+  md += `### Technical Skills\n\n`;
   resume.skills.forEach(skill => {
-    md += `- **${skill.name}:** ${skill.keywords.join(', ')}\n`;
+    md += `* **${skill.name}:** ${skill.keywords.join(', ')}.\n`;
   });
   md += `\n`;
 
@@ -135,18 +137,20 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   });
 
   txt += `PATENTS & INVENTIONS:\n\n`;
-  resume.patents.forEach(pat => {
-    txt += `* PATENT: "${pat.title}"\n`;
-    txt += `  ID: ${pat.id} | Status: ${pat.status}\n`;
-    txt += `  Link: ${pat.url}\n`;
+  const txtPatents = resume.publications.filter(p => p.type === 'patent');
+  txtPatents.forEach(pat => {
+    txt += `* PATENT: "${pat.name}"\n`;
+    txt += `  Date: ${pat.releaseDate}\n`;
+    if (pat.url) txt += `  Link: ${pat.url}\n`;
     txt += `  Details: ${pat.summary}\n\n`;
   });
 
   txt += `PUBLICATIONS & BOOKS:\n\n`;
-  resume.publications.forEach(pub => {
-    txt += `* BOOK: "${pub.name}"\n`;
-    txt += `  Published: ${pub.publisher} in ${pub.releaseDate}\n`;
-    txt += `  Link: ${pub.url}\n`;
+  const txtPubs = resume.publications.filter(p => p.type !== 'patent');
+  txtPubs.forEach(pub => {
+    txt += `* PUBLICATION: "${pub.name}"\n`;
+    txt += `  Published: ${pub.publisher} on ${pub.releaseDate}\n`;
+    if (pub.url) txt += `  Link: ${pub.url}\n`;
     txt += `  Summary: ${pub.summary}\n\n`;
   });
 

@@ -33,3 +33,6 @@
 - [x] Construct build-script to compile clean, aggregated llms-full.txt index of published posts, handling media absolute extensions and liquid tag conversions. <!-- id: 30 -->
 - [x] Integrate generation script into dev and production build pipelines. <!-- id: 31 -->
 - [x] Run full build test suite and inspect generated robots.txt, llms.txt, and llms-full.txt outputs. <!-- id: 32 -->
+- [x] Fix shared layout resume leak by dynamically pruning career resume modules and print anchors on non-biography page categories (speaking, contact) during template rendering. <!-- id: 33 -->
+- [x] Formalize biography timeline section header to 'Professional Experience' inside themes layouts. <!-- id: 34 -->
+- [x] Implement professional printable resume page footer with dynamic page numbering and overlap-proof margins. <!-- id: 35 -->

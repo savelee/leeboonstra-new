@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - **Shared Layout Resume Leak**: Integrated robust EJS conditional routing (`<% if (page.layout === 'about' || page.layout === 'bio') { %>`) in the shared partial `about.ejs` template, completely isolating the print resume CTA button, print-only header block, and career timeline bento grid from non-biography layouts (speaking, contact). This guarantees that other informational pages remain lightweight on desktop and print natively utilizing raw markdown margins without injecting employment profiles.
+- **Formalized Resume Headers**: Promoted the standard career timeline landmark section heading inside EJS templates from 'Experience' to 'Professional Experience' for enhanced recruitment presentation harmony.
 
 ### Added
 - **Structured Schema-Driven Resume Core**: Integrated centralized career milestone database inside `source/_data/resume.yml` following the industry-standard JSON Resume schema using human-readable YAML configurations.
@@ -44,7 +45,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - **Professional Print Resume Template**: Integrated dynamic print-only header card inside the biography layout (`about.ejs`), mapping dynamic front-matter subtitle and essential professional anchors (GitHub, LinkedIn, Website, Location).
 - **Resume Birth Metadata & Email Contact Headers**: Appended detailed birth parameters (Born: 16 June 1983, Apeldoorn, Netherlands) to the print header, and inserted contact email (lee@leeboonstra.com) to the top printed anchors card.
-- **Repeating Print Resume Page Footer**: Appended print-only page repeating footers displaying Name and contact email (lee@leeboonstra.com) on the left, and browser-calculated physical page counters (Page X) on the right.
+- **Repeating Print Resume Page Footer**: Appended print-only page repeating footers displaying "Lee Boonstra | AI Engineering | lee[at]leeboonstra.com - Page <number>" centered at the bottom of every page, formatted using W3C page counter elements.
 - **Print Resume CTA Button**: Injected a premium outlined, hover-animated 'Print My Resume' button widget (utilizing browser window.print() triggers) into the sidebar, replacing the legacy PDF download anchor.
 - **Resume Print System Documentation**: Created spec sheet `docs/print_resume.md` describing the geometric parameters, page margins, points-scaling system, and page-break optimization blocks.
 - **Structured Data & Voice AI Tagging manual**: Created [docs/structured_data_voice_search.md](file:///docs/structured_data_voice_search.md) detailing settings and syntax markup guidelines.

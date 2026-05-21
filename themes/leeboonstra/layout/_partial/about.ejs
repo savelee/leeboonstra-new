@@ -57,57 +57,27 @@
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "AboutPage",
-              "@id": "https://www.leeboonstra.dev/about/#webpage",
-              "url": "https://www.leeboonstra.dev/about/",
-              "name": "<%- page.title %>",
-              "description": "<%- page.description %>",
-              "mainEntity": {
-                "@id": "https://www.leeboonstra.dev/#person"
-              },
-              "speakable": {
-                "@type": "SpeakableSpecification",
-                "xpath": [
-                  "/html/head/title",
-                  "/html/head/meta[@name='description']/@content"
-                ]
-              }
+          "@type": "ProfilePage",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "<%= site.data.resume.basics.name %>",
+            "jobTitle": "AI Software Engineer & Tech Lead",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Google"
             },
-            {
-              "@type": "Person",
-              "@id": "https://www.leeboonstra.dev/#person",
-              "name": "<%= site.data.resume.basics.name %>",
-              "jobTitle": "Staff Machine Learning Engineer & Tech Lead",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Google",
-                "sameAs": "https://en.wikipedia.org/wiki/Google"
-              },
-              "gender": "Non-binary",
-              "pronouns": "<%= site.data.resume.basics.pronouns %>",
-              "url": "<%= site.data.resume.basics.url %>",
-              "image": "https://www.leeboonstra.dev/images/large_leeboonstra_new.jpg",
-              "sameAs": [
-                "<%= linkedIn ? linkedIn.url : '' %>",
-                "<%= github ? github.url : '' %>",
-                "<%= site.data.resume.basics.profiles.find(function(p){return p.network==='Amazon'}).url %>"
-              ],
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Saxion University of Applied Sciences",
-                "sameAs": "https://en.wikipedia.org/wiki/Saxion_University_of_Applied_Sciences"
-              },
-              "knowsAbout": [
-                <% site.data.resume.skills.forEach(function(group, idx) { %>
-                  <% group.keywords.forEach(function(kw, kwIdx) { %>
-                    "<%= kw %>"<%= (idx === site.data.resume.skills.length - 1 && kwIdx === group.keywords.length - 1) ? '' : ',' %>
-                  <% }) %>
-                <% }) %>
-              ]
-            }
-          ]
+            "knowsAbout": [
+              <% 
+                var allKws = []; 
+                site.data.resume.skills.forEach(function(group) { 
+                  group.keywords.forEach(function(kw) { 
+                    allKws.push(kw); 
+                  }); 
+                }); 
+              %>
+              <%- allKws.map(function(k) { return `"${k}"`; }).join(', ') %>
+            ]
+          }
         }
         </script>
    
@@ -177,21 +147,20 @@
               <!-- Dynamic Helper formatting dates to standard screen display templates -->
               <% 
                 function formatYear(dateStr) {
-                  if (!dateStr) return 'present';
+                  if (!dateStr) return 'Present';
                   return dateStr.split('-')[0];
                 }
               %>
 
               <!-- Experience Bento Grid -->
               <div class="resume-section resume-experience mb-6">
-                  <h2 class="text-xl font-semibold mb-4">Experience</h2>
+                  <h2 class="text-xl font-semibold mb-4">Professional Experience</h2>
                   <p><%= site.data.resume.basics.experienceIntro %></p>
                   <div class="row">
                     <% site.data.resume.work.forEach(function(job) { %>
                       <div class="col-md-6 mb-4">
                           <div class="experience-chip">
-                              <span class="chip-date"><%= formatYear(job.startDate) %>-<%= formatYear(job.endDate) %></span>
-                              <h4 class="chip-title"><%= job.position %>, <%= job.name %></h4>
+                              <h4 class="chip-title"><%= job.name %> | <%= job.position %> | <%= formatYear(job.startDate) %> – <%= formatYear(job.endDate) %></h4>
                               <ul class="chip-list">
                                   <% job.highlights.forEach(function(bullet) { %>
                                     <li><%= bullet %></li>
@@ -207,17 +176,26 @@
               <div class="resume-section resume-patents mb-6">
                   <h2 class="text-xl font-semibold mb-4">Patents & Inventions</h2>
                   <div class="row">
-                    <% site.data.resume.patents.forEach(function(pat) { %>
-                      <div class="col-md-<%= pat.id === 'US20250078820A1' ? '12' : '6' %> mb-4">
+                    <% 
+                      var patents = site.data.resume.publications.filter(function(p) { return p.type === 'patent'; }); 
+                      function getPatentStatus(pat) {
+                        var year = pat.releaseDate.split('-')[0];
+                        if (pat.name.includes('Invention Disclosure')) return 'Filed (Invention Disclosure) ' + year;
+                        if (pat.name.includes('US20250078820A1')) return 'Published ' + year;
+                        return 'Filed ' + year;
+                      }
+                    %>
+                    <% patents.forEach(function(pat) { %>
+                      <div class="col-md-<%= pat.name.includes('US20250078820A1') ? '12' : '6' %> mb-4">
                           <div class="experience-chip">
-                              <span class="chip-date"><%= pat.status %></span>
+                              <span class="chip-date"><%= getPatentStatus(pat) %></span>
                               <h4 class="chip-title">
                                   <% if (pat.url) { %>
                                     <a href="<%= pat.url %>" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">
-                                        <%= pat.title %> (<%= pat.id %>)
+                                        <%= pat.name %>
                                     </a>
                                   <% } else { %>
-                                    <%= pat.title %> (<%= pat.id %>)
+                                    <%= pat.name %>
                                   <% } %>
                               </h4>
                               <p class="chip-text mt-2"><%= pat.summary %></p>
@@ -231,10 +209,13 @@
               <div class="resume-section resume-publications mb-6">
                   <h2 class="text-xl font-semibold mb-4">Publications & Books</h2>
                   <div class="row">
-                    <% site.data.resume.publications.forEach(function(pub) { %>
-                      <div class="col-md-<%= pub.releaseDate === '2025' ? '12' : '6' %> mb-4">
+                    <% 
+                      var publications = site.data.resume.publications.filter(function(p) { return p.type !== 'patent'; }); 
+                    %>
+                    <% publications.forEach(function(pub) { %>
+                      <div class="col-md-<%= pub.releaseDate.startsWith('2025') ? '12' : '6' %> mb-4">
                           <div class="experience-chip">
-                              <span class="chip-date"><%= pub.releaseDate %></span>
+                              <span class="chip-date"><%= pub.releaseDate.split('-')[0] %></span>
                               <h4 class="chip-title"><%= pub.name %></h4>
                               <p class="chip-text mt-2">
                                   <%= pub.summary %>
@@ -256,7 +237,7 @@
                   <h2 class="text-xl font-semibold mb-4">Education</h2>
                   <% site.data.resume.education.forEach(function(edu) { %>
                     <div class="education-chip">
-                        <span class="chip-date"><%= edu.startDate %>-<%= edu.endDate %></span>
+                        <span class="chip-date"><%= edu.startDate.split('-')[0] %>-<%= edu.endDate.split('-')[0] %></span>
                         <h4 class="chip-title"><%= edu.institution %></h4>
                         <p class="chip-text"><%= edu.studyType %> in <%= edu.area %></p>
                     </div>
@@ -299,6 +280,11 @@
           </div>
         </div>
       </div>
+    </div>
+    
+    <!-- Print-Only Resume Footer -->
+    <div class="print-only-footer">
+      Lee Boonstra &nbsp;|&nbsp; AI Engineering &nbsp;|&nbsp; lee[at]leeboonstra.com
     </div>
     <% } %>
 </div>
