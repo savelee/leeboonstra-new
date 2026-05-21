@@ -1,0 +1,194 @@
+<!--
+ Copyright 2026 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="https://schema.org/AboutPage">
+<head>
+  <meta charset="utf-8">
+  <title><%= page.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Suppress search engines indexing the preview page (directs target indexing to resume.json / about.html) -->
+  <meta name="robots" content="noindex, nofollow"/>
+  <meta name="description" content="<%= page.description %>"/>
+
+  <%
+    var dateObj = new Date();
+    var d = dateObj.getTime();
+  %>
+
+  <!-- Load standard site layouts and pre-compiled variable frameworks -->
+  <link rel="stylesheet" media="all" href="/main.css?v=<%= d %>">
+  <!-- FORCE PRINT STYLING ROUTING ON SCREEN (media="all") -->
+  <link rel="stylesheet" media="all" href="/css/print-screen.css?v=<%= d %>">
+  
+  <!-- Visual sheet display overrides matching standard A4 dimensions on browser screens -->
+  <style>
+     body {
+       background-color: #f8fafc !important; /* Premium light slate grey backdrop behind page */
+       padding: 4rem 0 !important;
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+       font-size: 10pt !important;
+       line-height: 1.45 !important;
+       color: #1e293b !important;
+       display: flex !important;
+       flex-direction: column !important;
+       align-items: center !important;
+       min-height: 100vh !important;
+       box-sizing: border-box !important;
+     }
+     
+     /* Enforce standard virtual paper container sheet */
+     .container.about {
+       background-color: #ffffff !important;
+       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 1px 0 rgba(0, 0, 0, 0.2) !important;
+       border: 1px solid #e2e8f0 !important;
+       border-radius: 12px !important;
+       padding: 25mm 20mm !important; /* Perfect physical margins mimicking real prints */
+       width: 210mm !important; /* Target A4 physical width */
+       min-height: 297mm !important; /* Target A4 physical height */
+       box-sizing: border-box !important;
+       margin: 0 auto !important;
+       position: relative !important;
+       transition: box-shadow 0.3s ease !important;
+     }
+
+     .container.about:hover {
+       box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(0, 0, 0, 0.25) !important;
+     }
+
+     /* Floating print actions navigation bar */
+     .screen-action-bar {
+       position: fixed !important;
+       top: 1.5rem !important;
+       left: 50% !important;
+       transform: translateX(-50%) !important;
+       z-index: 10000 !important;
+       display: flex !important;
+       gap: 12px !important;
+     }
+     
+     .screen-action-btn {
+       padding: 0.65rem 1.5rem !important;
+       font-size: 9.5pt !important;
+       font-weight: 700 !important;
+       border-radius: 8px !important;
+       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+       cursor: pointer !important;
+       text-transform: uppercase !important;
+       letter-spacing: 0.05em !important;
+       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+       display: inline-flex !important;
+       align-items: center !important;
+       gap: 6px !important;
+     }
+     
+     .btn-print {
+       background-color: #d93025 !important; /* Google Brand Red color scheme */
+       color: #ffffff !important;
+       border: none !important;
+     }
+     
+     .btn-print:hover {
+       background-color: #b31b1b !important;
+       transform: translateY(-2px) !important;
+       box-shadow: 0 20px 25px -5px rgba(217, 48, 37, 0.4) !important;
+     }
+     
+     .btn-back {
+       background-color: #ffffff !important;
+       color: #475569 !important;
+       border: 1px solid #cbd5e1 !important;
+     }
+     
+     .btn-back:hover {
+       background-color: #f1f5f9 !important;
+       color: #0f172a !important;
+       transform: translateY(-2px) !important;
+     }
+
+     /* Screen-Mode Layout Grid overrides to enforce A4 structure */
+     .resume-skills .row {
+       display: flex !important;
+       flex-direction: row !important;
+       justify-content: space-between !important;
+       gap: 1.5rem !important;
+     }
+     
+     .resume-skills .col-md-4 {
+       flex: 1 !important;
+       width: 31% !important;
+       max-width: 33% !important;
+     }
+
+     .resume-experience .row,
+     .resume-patents .row,
+     .resume-publications .row {
+       display: block !important;
+     }
+
+     .resume-experience [class*="col-"],
+     .resume-patents [class*="col-"],
+     .resume-publications [class*="col-"] {
+       width: 100% !important;
+       max-width: 100% !important;
+       flex: 0 0 100% !important;
+       margin-bottom: 1.25rem !important;
+     }
+     
+     @media print {
+       body {
+         background-color: #ffffff !important;
+         padding: 0 !important;
+       }
+       .container.about {
+         box-shadow: none !important;
+         border: none !important;
+         border-radius: 0 !important;
+         padding: 0 !important;
+         width: 100% !important;
+         min-height: auto !important;
+       }
+       .screen-action-bar {
+         display: none !important; /* Suppress interactive floating bar from paper prints! */
+       }
+     }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Action Bar on screen -->
+  <div class="screen-action-bar">
+     <button class="screen-action-btn btn-back" onclick="window.location.href='/about/'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        Back to Site
+     </button>
+     <button class="screen-action-btn btn-print" onclick="window.print()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+          <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+          <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2.5 2.5 0 0 0-2.5 2.5v3h7v-3A2.5 2.5 0 0 0 7 8zm0 5.5v-3a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5v3z"/>
+        </svg>
+        Print / Save PDF
+     </button>
+  </div>
+
+  <!-- Dynamic Partial Reusability: Bypasses layout.ejs but uses the exact same biography loops! -->
+  <%- partial('_partial/about') %>
+
+</body>
+</html>

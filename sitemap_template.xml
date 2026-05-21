@@ -24,6 +24,32 @@
   </url>
   {% endfor %}
 
+  <!-- Machine-readable API Resumes & Clean Visual Preview Resume for HR bots -->
+  <url>
+    <loc>{{ config.url | uriencode }}about/print/</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ config.url | uriencode }}about/resume.json</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ config.url | uriencode }}about/resume.md</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ config.url | uriencode }}about/resume.txt</loc>
+    <lastmod>{{ sNow | formatDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>{{ config.url | uriencode }}</loc>
     <lastmod>{{ sNow | formatDate }}</lastmod>

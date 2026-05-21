@@ -1,65 +1,418 @@
+/*
+ Copyright 2026 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+/* Enforce standard print-page geometry layout (A4 standard) */
+@page {
+    size: A4;
+    margin: 20mm !important;
+}
+
 @media print {
-  body {
-    color: #000;
-    background: #fff;
-    text-align: left;
-    margin: 1in;
-    font-size: 16px;
-    line-height: 24px;
+  /* Hide screen-only components completely */
+  nav, 
+  footer, 
+  .footer,
+  footer.footer,
+  header,
+  .navbar,
+  .navbar-toggler,
+  .navbar-collapse,
+  .navbar-nav,
+  .menu-overlay,
+  .menu-close-btn,
+  .photocol,
+  .print-resume-btn,
+  .disclaimer,
+  div.disclaimer,
+  .IN-widget,
+  .twitter-share-button,
+  .shadow,
+  .badge,
+  .blockquote-wrapper,
+  blockquote,
+  .resume-main-title,
+  .linkedin-connect-prompt,
+  body footer,
+  body .footer,
+  body footer.footer,
+  body .disclaimer,
+  body div.disclaimer { 
+      display: none !important; 
   }
 
-  a, a:visited {
-    color: #000;
-    text-decoration: underline;
-    white-space: pre; /* Preserve line breaks in generated content */
-    display: block; /* Make the URL occupy a separate line */
-    font-size: smaller; /* Optional: Adjust font size for the URL */
-    color: #555;       /* Optional: Adjust color for the URL */
+    /* Dynamic W3C height scaling resets - Allows natural vertical scrolling flow breaks */
+    html {
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Reset standard print-page geometry and base typography */
+    body {
+        color: #1e293b !important;
+        background-color: #fff !important;
+        background: #fff !important;
+        text-align: left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important; /* Dynamic flow growth */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        font-size: 10pt !important;
+        line-height: 1.45 !important;
+    }
+  
+    /* Override web-container rules to let contents span 100% of the physical paper width with auto-height breaks */
+    .container, 
+    .container.about, 
+    .container.about.Biography,
+    .main,
+    .row {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important; /* Auto flow */
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+  /* Biography block formatting */
+  .blogcontent {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+      padding: 0 !important;
+      margin: 0 0 1.8rem 0 !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
   }
 
-  .header a:visited {
-    display: none !important;
+  /* Hide redundant biography landing page title */
+  .blogcontent h1 {
+      display: none !important;
   }
 
-  blockquote { display: none; }
-  img {
-    max-width: 500px;
+  /* Custom dynamic print header block with A4 margin balance */
+  .print-only-header {
+      display: block !important;
+      margin-top: 0.5rem !important;
+      margin-bottom: 2rem !important;
+      border-bottom: 2px solid #0f172a !important;
+      padding-bottom: 0.8rem !important;
   }
 
-
-  /* Resume section visibility and styling - Force with maximum specificity */
-  .resume,
-  .Biography .resume,
-  div.resume,
-  .container.about.Biography .resume,
-  .container .resume,
-  body .resume,
-  html .resume {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: static !important;
+  .print-header-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-end !important;
   }
 
-  .resume .skill-tag {
-    background: none !important;
-    color: black !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+  .print-header-left {
+      flex: 1 !important;
   }
 
-  .resume .chip-date, 
+  .print-header-right {
+      text-align: right !important;
+      font-size: 7.5pt !important; /* Smaller size for contact parameters block */
+      line-height: 1.4 !important;
+      color: #475569 !important;
+  }
+
+  .print-name {
+      font-size: 24pt !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      margin: 0 0 0.15rem 0 !important;
+      letter-spacing: -0.02em !important;
+      line-height: 1.1 !important;
+  }
+
+  .print-title {
+      font-size: 11pt !important;
+      font-weight: 700 !important;
+      color: #d93025 !important; /* Authentic Google brand Red */
+      margin: 0 0 0.25rem 0 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+  }
+
+  .print-pronouns {
+      font-size: 8.5pt !important;
+      color: #64748b !important;
+      margin: 0 !important;
+  }
+
+  .print-header-right .contact-item {
+      margin-bottom: 0.1rem !important;
+  }
+
+  .print-header-right .contact-item strong {
+      color: #0f172a !important;
+  }
+
+  /* Flatten the resume container */
+  .resume {
+      display: block !important;
+      margin-top: 0 !important;
+      padding: 0 !important;
+  }
+
+  .resume .card {
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+  }
+
+  .resume .card-body {
+      padding: 0 !important;
+      height: auto !important;
+  }
+
+  /* Standardize Section headers */
+  .resume h2 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+      color: #0f172a !important;
+      font-size: 12.5pt !important;
+      font-weight: 700 !important;
+      margin-top: 1.8rem !important;
+      margin-bottom: 1rem !important;
+      padding-bottom: 0.35rem !important;
+      border-bottom: 1.5pt solid #cbd5e1 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      position: relative !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+  }
+
+  .resume h2::before {
+      content: '' !important;
+      position: absolute !important;
+      left: 0 !important;
+      bottom: -1.5pt !important;
+      width: 40pt !important;
+      height: 2pt !important;
+      background-color: #d93025 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+  }
+
+  .resume .row {
+      display: block !important;
+      margin: 0 !important;
+  }
+
+  /* Force experience elements to layout vertically at 100% width */
+  .resume-experience [class*="col-"],
+  .resume-patents [class*="col-"],
+  .resume-publications [class*="col-"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+      padding: 0 !important;
+      margin: 0 0 1.25rem 0 !important;
+      float: none !important;
+  }
+
+  /* Strip interactive styles, borders, and margins from chips */
+  .resume-section .experience-chip,
+  .resume-section .education-chip,
+  .resume-section .publications-chip {
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      height: auto !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+  }
+
+  /* Style experience subheaders and badges */
+  .resume .chip-date,
   .resume .publication-type {
-    background: none !important;
-    color: black !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+      display: inline-block !important;
+      color: #d93025 !important;
+      font-weight: 700 !important;
+      font-size: 8pt !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 0 0.2rem 0 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
   }
 
-  nav, footer, .IN-widget, .disclaimer, .twitter-share-button, .header, .shadow, .badge { display: none; } /* Hide navigation and footer */
-a::after {
-  content: "\A (" attr(href) ")";
-}
+  .resume .chip-title {
+      color: #0f172a !important;
+      font-size: 10.5pt !important;
+      font-weight: 700 !important;
+      margin: 0 0 0.3rem 0 !important;
+      line-height: 1.3 !important;
+  }
 
-}
+  .resume .chip-title a {
+      color: #0f172a !important;
+      text-decoration: none !important;
+      font-weight: 700 !important;
+  }
 
+  .resume .chip-list {
+      padding-left: 1.1rem !important;
+      margin: 0.25rem 0 0 0 !important;
+  }
+
+  .resume .chip-list li {
+      color: #334155 !important;
+      font-size: 9.5pt !important;
+      line-height: 1.4 !important;
+      margin-bottom: 0.25rem !important;
+      list-style-type: disc !important;
+  }
+
+  .resume .chip-date,
+  .resume .publication-type,
+  .resume .chip-text {
+      color: #334155 !important;
+      font-size: 9.5pt !important;
+      line-height: 1.4 !important;
+      margin: 0.25rem 0 0 0 !important;
+  }
+
+  .resume-education .education-chip {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+  }
+
+  /* technical skills grid system: 3 side-by-side columns */
+  .resume-skills .row {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      gap: 1rem !important;
+  }
+
+  .resume-skills .col-md-4 {
+      flex: 1 !important;
+      width: 31% !important;
+      max-width: 33% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      float: none !important;
+  }
+
+  .resume-skills .skill-chip {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      height: auto !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+  }
+
+  .resume-skills .skill-chip .chip-title {
+      color: #0f172a !important;
+      font-size: 10.5pt !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.6rem !important;
+      text-align: left !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+      padding-bottom: 0.25rem !important;
+  }
+
+  .resume-skills .skill-tags {
+      display: block !important;
+  }
+
+  /* Elegant high-contrast print tags */
+  .resume-skills .skill-tag {
+      background-color: #f1f5f9 !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #334155 !important;
+      border-radius: 4px !important;
+      padding: 0.15rem 0.35rem !important;
+      font-size: 7.5pt !important;
+      font-weight: 600 !important;
+      display: inline-block !important;
+      margin-bottom: 0.25rem !important;
+      margin-right: 0.2rem !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+  }
+
+  /* Languages print alignment */
+  .resume-languages .languages-chip {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 1rem !important;
+      margin-top: 0.4rem !important;
+  }
+
+  .resume-languages .language-item {
+      flex: 1 !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      text-align: left !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+  }
+
+  .resume-languages .language-name {
+      font-size: 9.5pt !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      margin-bottom: 0.1rem !important;
+  }
+
+  .resume-languages .language-level {
+      font-size: 7.5pt !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+  }
+
+  /* Disable browser inline URL printouts for perfect typography */
+  a::after {
+      content: none !important;
+  }
+
+  .resume-section {
+      page-break-inside: auto !important;
+      break-inside: auto !important;
+  }
+
+  /* Suppress custom html footer blocks completely in prints - Browser handles dynamic page coordinates naturally */
+  .print-only-footer {
+      display: none !important;
+  }
+}

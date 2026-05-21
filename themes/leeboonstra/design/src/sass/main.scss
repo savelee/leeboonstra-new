@@ -2701,3 +2701,53 @@ figure.highlight pre {
     }
 }
 
+/* Hide Print-Only elements on standard screen */
+.print-only-header,
+.print-only-footer,
+.print-only-section-header {
+    display: none !important;
+}
+
+/* Premium Outlined CTA button for Biography resume pages */
+.Biography {
+    .print-resume-btn {
+        color: $red !important;
+        border-color: $red !important;
+        background-color: transparent !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+        font-size: 1.25rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        padding: 0.6rem 1rem !important;
+        border-radius: 8px !important;
+        border-width: 2px !important; /* Premium thick border */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        outline: none !important;
+        
+        svg {
+            transition: transform 0.25s ease !important;
+        }
+        
+        &:hover {
+            color: #fff !important;
+            background-color: $red !important;
+            border-color: $red !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -6px rgba(225, 29, 72, 0.3) !important;
+            
+            svg {
+                transform: scale(1.1) rotate(-5deg);
+            }
+        }
+        
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px -4px rgba(225, 29, 72, 0.2) !important;
+        }
+    }
+}
+

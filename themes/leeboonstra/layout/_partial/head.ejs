@@ -247,18 +247,76 @@
   </script>
   
   <% if (is_post()) { %>
-  <!-- Dynamic GEO Metadata Block for Generative Search Engines -->
+  <%
+    // 1. Differentiate technical deep-dives vs standard posts
+    var techTerms = ['dialogflow', 'gemini', 'machine learning', 'ai', 'generative ai', 'vertex ai', 'pytorch', 'mlops', 'agent', 'llm', 'convai', 'voice ai'];
+    var categories = page.categories ? page.categories.map(c => c.name.toLowerCase()) : [];
+    var tags = page.tags ? page.tags.map(t => t.name.toLowerCase()) : [];
+    
+    var isTech = page.layout === 'tech' || 
+                 page.type === 'TechArticle' || 
+                 page.dependencies || 
+                 page.proficiencyLevel ||
+                 categories.some(c => techTerms.includes(c)) ||
+                 tags.some(t => techTerms.includes(t));
+
+    var schemaType = isTech ? 'TechArticle' : 'BlogPosting';
+
+    // 2. Resolve target learning carousel properties with smart fallbacks
+    var dependencies = page.dependencies || '';
+    if (!dependencies && isTech) {
+      var matchTags = page.tags ? page.tags.map(t => t.name).filter(t => ['Dialogflow', 'Gemini', 'Vertex AI', 'PyTorch', 'Node.js', 'Python'].includes(t)) : [];
+      dependencies = matchTags.length > 0 ? matchTags.join(', ') : 'Basic technical concepts';
+    }
+    var proficiencyLevel = page.proficiencyLevel || (isTech ? 'Intermediate' : '');
+
+    // 3. Resolve dynamic Speakable selectors matching actual post DOM structure
+    var speakableSelectors = [];
+    if (page.speakable) {
+      if (Array.isArray(page.speakable)) {
+        speakableSelectors = page.speakable;
+      } else if (typeof page.speakable === 'string') {
+        speakableSelectors.push(page.speakable);
+      }
+    } else if (page.content) {
+      if (page.content.indexOf('class="speakable-summary"') !== -1 || page.content.indexOf('id="speakable-summary"') !== -1) {
+        speakableSelectors.push('.speakable-summary');
+      }
+      if (page.content.indexOf('class="speakable-takeaways"') !== -1 || page.content.indexOf('id="speakable-takeaways"') !== -1) {
+        speakableSelectors.push('.speakable-takeaways');
+      }
+    }
+
+    var speakableSpec = null;
+    if (speakableSelectors.length > 0) {
+      speakableSpec = {
+        "@type": "SpeakableSpecification",
+        "cssSelector": speakableSelectors
+      };
+    } else {
+      speakableSpec = {
+        "@type": "SpeakableSpecification",
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
+        ]
+      };
+    }
+  %>
+  <!-- Dynamic Unified Article Metadata and Speakable Block -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
+      "@type": "<%= schemaType %>",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "<%= page.permalink %>"
       },
       "headline": "<%= page.title.replace(/"/g, '\\"') %>",
       "description": "<%= (page.description || page.excerpt || '').replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').substring(0, 250) %>...",
+      "image": "<%= config.url %>/images/screen.png",
       "datePublished": "<%= page.date.toISOString() %>",
+      "dateCreated": "<%= page.date.toISOString() %>",
       "dateModified": "<%= (page.updated || page.date).toISOString() %>",
       "author": {
         "@type": "Person",
@@ -271,10 +329,16 @@
         "@id": "https://www.leeboonstra.dev/#person"
       },
       "keywords": "<%= page.tags.map(t => t.name).join(', ') %>",
+      "genre": "technology",
       "about": [
         <%- page.tags.map(t => `{"@type": "Thing", "name": "${t.name.replace(/"/g, '\\"')}"}`).join(',\n        ') %>
       ],
-      "articleBody": "<%= page.content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').trim() %>"
+      "articleBody": "<%= page.content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').trim() %>",
+      <% if (isTech) { %>
+      "dependencies": "<%= dependencies.replace(/"/g, '\\"') %>",
+      "proficiencyLevel": "<%= proficiencyLevel.replace(/"/g, '\\"') %>",
+      <% } %>
+      "speakable": <%- JSON.stringify(speakableSpec, null, 2) %>
     }
   </script>
   <% } %>
@@ -359,7 +423,7 @@
   %>
 
   <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
-  <link rel="stylesheet" media="print" href="/print.css">
+  <link rel="stylesheet" media="print" href="/print.css?v=<%= d %>">
   <link rel="preload" href="/css/prism-atom-dark.min.css" as="style">
   <link rel="preload" href="/js/prism.min.js" as="script">
   <link rel="stylesheet" href="/css/prism-atom-dark.min.css">

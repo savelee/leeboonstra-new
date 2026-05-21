@@ -25,4 +25,11 @@
 - [x] Upgrade global color schemes to high-fidelity premium developer jewel tones (Cobalt, Rose Red, Warm Amber, Emerald). <!-- id: 22 -->
 - [x] Fix sidebar image distortion by establishing fluid max-width constraints. <!-- id: 23 -->
 - [x] Implement dynamic build timestamp cache busting for main.css stylesheet. <!-- id: 24 -->
-
+- [x] Implement dynamic TechArticle/BlogPosting structured data split, enhancing learning carousel tags (dependencies, proficiencyLevel). <!-- id: 25 -->
+- [x] Integrate Speakable voice assistant schema support with automatic DOM takeaway/summary target tagging and Jest coverage. <!-- id: 26 -->
+- [x] Decommission deprecated FAQ search schema blocks from EJS templates. <!-- id: 27 -->
+- [x] Configure zero-friction robots.txt permissions targeting major AI crawler bots. <!-- id: 28 -->
+- [x] Deploy AI Cheat Sheet llms.txt index linking core resources. <!-- id: 29 -->
+- [x] Construct build-script to compile clean, aggregated llms-full.txt index of published posts, handling media absolute extensions and liquid tag conversions. <!-- id: 30 -->
+- [x] Integrate generation script into dev and production build pipelines. <!-- id: 31 -->
+- [x] Run full build test suite and inspect generated robots.txt, llms.txt, and llms-full.txt outputs. <!-- id: 32 -->

@@ -1,8 +1,74 @@
-# hexo robots.txt
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 User-agent: *
 Allow: /
-Allow: /categories/
-
 Disallow: /404.html
 
+# ======================================================================
+# AI SEARCH CRAWLER CONFIGURATIONS
+# Optimizing retrieval parameters and token efficiency for GenAI search.
+# Guides search bots to RAG-ready markdown and clean visual sheets.
+# ======================================================================
+
+# OpenAI GPTBot: Exclude duplicate tag indexing, prioritize API resume formats
+User-agent: GPTBot
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+Disallow: /tags/
+Disallow: /categories/
+
+# OpenAI SearchBot: Optimization for real-time ChatGPT web searching
+User-agent: OAI-SearchBot
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+Disallow: /tags/
+Disallow: /categories/
+
+# Anthropic ClaudeBot: Direct LLM search scraping whitelist
+User-agent: ClaudeBot
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+Disallow: /tags/
+Disallow: /categories/
+
+# Perplexity AI Search Crawler
+User-agent: PerplexityBot
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+
+# Google extended crawlers for models parsing
+User-agent: Google-Extended
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+
+# Apple extended crawlers for dynamic device searches
+User-agent: Applebot-Extended
+Allow: /about/resume.json
+Allow: /about/resume.md
+Allow: /about/print/
+Allow: /
+
+# Sitemap Target roadmap link
 Sitemap: https://www.leeboonstra.dev/sitemap.xml

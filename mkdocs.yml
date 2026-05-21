@@ -81,3 +81,6 @@ nav:
       - Pipeline Custom Functions: pipeline_functions.md
       - Post Formatting Manual: post_formatting.md
       - Bento & Color Styling: style_updates.md
+      - SEO & Voice Search Markup: structured_data_voice_search.md
+      - Resume Print Architecture: print_resume.md
+      - AI Ingestion & Crawl Rules: ai_crawlers_ingestion.md

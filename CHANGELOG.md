@@ -21,6 +21,43 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Structured Schema-Driven Resume Core**: Integrated centralized career milestone database inside `source/_data/resume.yml` following the industry-standard JSON Resume schema using human-readable YAML configurations.
+- **Multi-Format Static Career APIs**: Formulated custom Hexo generator plugin `themes/leeboonstra/scripts/resume_endpoints_generator.js` to automatically compile high-density `/about/resume.json` (JSON Resume), `/about/resume.md` (RAG-ready Markdown), and `/about/resume.txt` (Ultra-compatible plain text) endpoints during compiling.
+- **Clean Visual Resume Page Endpoint**: Added custom HTML resume route `/about/print/index.html` generating a clean virtual paper page directly on-screen, forcing `print.css` styling rules globally.
+- **Clean Visual Resume Template Layout**: Formulated custom page wrapper `themes/leeboonstra/layout/print_resume_layout.ejs` loading unified styling bounds, custom physical margins, floating print actions widgets, and compiling using template reuse on EJS partial frameworks.
+- **Agentic GitHub Profile Sync Pipeline**: Created Git-sync pipeline script `scripts/sync-github-profile.js` and automated workflow `.github/workflows/github_profile_sync.yml` to automatically rebuild, format, and deploy updated technical resume landing cards to the `savelee/savelee` GitHub profile README page on every push.
+- **Global Robots AI Crawler Authorizations**: Configured explicit allow-listing for major AI indexing crawlers (`GPTBot`, `OAI-SearchBot`, `ClaudeBot`, `Google-Extended`, `Applebot-Extended`, and `PerplexityBot`) inside the base `robots.txt` template to eliminate discoverability blocks.
+- **Core Briefing Index (`llms.txt`)**: Integrated a highly curated machine-readable markdown briefing file at the site source root, directing scrapers to portfolio pathways and aggregated indices.
+- **Corpus Compiler (`generate-llms-txt.js`)**: Implemented a resilient Node.js preprocessor script that parses markdown posts, ignores hidden pages, handles liquid tag replacements (Gists and YouTube URLs), strips base64 assets to save tokens, normalizes relative URLs to absolute links, and builds a consolidated aggregated body log.
+- **AI Integration Manual**: Created [docs/ai_crawlers_ingestion.md](file:///docs/ai_crawlers_ingestion.md) detailing compiler subsystems, asset cleaning, sitemaps, and Cloudflare WAF bot settings.
+
+### Changed
+- **Refactored Biography EJS Layout**: Dynamic-looped experiences, patents, publications, academic credentials, and skill categories using the custom dynamic functions mapping `site.data.resume`, resolving structural code debt inside `about.ejs` while preserving signature visual branding.
+- **Refocused Sourcing Career Positioning**: Refined resume summary, roles headlines, technical capability arrays, and timeline landmarks inside the resume database `resume.yml` to highlight **Staff and Technical Leadership (L6+)** core competencies (systems architecture, framework governance, engineering pod direction, patents filings, and organizational impact metrics).
+- **Sitemap References**: Streamlined the dynamic sitemap declaration links inside `robots.txt` to align with root canonical mappings.
+- **Pipeline Operations Hook**: Configured core `package.json` compilation tasks to trigger automated context indexing before standard Hexo compiler generations.
+- **Documentation Registry**: Registered the new AI Ingestion handbook inside the `Local Run Manuals` index of `mkdocs.yml`.
+
+### Added
+- **Professional Print Resume Template**: Integrated dynamic print-only header card inside the biography layout (`about.ejs`), mapping dynamic front-matter subtitle and essential professional anchors (GitHub, LinkedIn, Website, Location).
+- **Resume Birth Metadata & Email Contact Headers**: Appended detailed birth parameters (Born: 16 June 1983, Apeldoorn, Netherlands) to the print header, and inserted contact email (lee@leeboonstra.com) to the top printed anchors card.
+- **Repeating Print Resume Page Footer**: Appended print-only page repeating footers displaying Name and contact email (lee@leeboonstra.com) on the left, and browser-calculated physical page counters (Page X) on the right.
+- **Print Resume CTA Button**: Injected a premium outlined, hover-animated 'Print My Resume' button widget (utilizing browser window.print() triggers) into the sidebar, replacing the legacy PDF download anchor.
+- **Resume Print System Documentation**: Created spec sheet `docs/print_resume.md` describing the geometric parameters, page margins, points-scaling system, and page-break optimization blocks.
+- **Structured Data & Voice AI Tagging manual**: Created [docs/structured_data_voice_search.md](file:///docs/structured_data_voice_search.md) detailing settings and syntax markup guidelines.
+- **Auto-tagging speakable filter script**: Formulated Hexo filter (`themes/leeboonstra/scripts/speakable.js`) and Jest testing suite (`tests/speakable_filter.test.js`) to target key takeaway sections dynamically.
+
+### Changed
+- **Resume Screen-Hide & Page Margins Overhaul**: Implemented screen display none overrides to suppress print resume blocks when viewing standard web pages, configured browser-level physical page dimensions (`@page` layout margins), specifically calibrated bottom margins padding (25mm) for repeating footer buffers, and attached vertical margins top spacing.
+- **Scaled Print Contact Anchors**: Scaled down the printed contact column anchors inside print.css to 7.5pt with custom leading gaps for professional balancing.
+- **Overhauled Resume Print Stylesheet**: Completely refactored `print.css` targeting `@media print` with maximum specificity overrides. Hides site-wide navigation/footers, flattens card frames/shadows, forces 100% vertical chronology on experience blocks, formats horizontal skill sections into clean slate badges, and disables raw inline URL appending to prevent blocky sentence structures.
+- **Registered Documentation Navs**: Appended the new Print Resume manual page inside the `Local Run Manuals` catalog of `mkdocs.yml` configuration.
+- **Print Stylesheet Cache-Busting**: Upgraded print stylesheet loading links in `head.ejs` to use dynamic version metadata parameters, ensuring absolute instant loading of layout updates.
+- **SEO Schema Separation**: Upgraded `head.ejs` to dynamically split `TechArticle` from `BlogPosting` representing standard logs and technical tutorials, resolving dependencies and proficiency targets with fallbacks.
+- **Duplicate Schema Cleanup**: Removed duplicate body-level `BlogPosting`, incorrect `Chatbots` post mappings, and nested `WebPage` with speakable bindings from `article.ejs` layout block.
+- **FAQ Decommissioning**: Deleted deprecated search layout markup blocks inside EJS layouts.
+
+### Added
 - **Bento Visual System Manual**: Created `docs/style_updates.md` detailing typographic rules, premium color palettes, and interactive card animations for the developer profile.
 
 ### Changed

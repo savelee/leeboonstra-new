@@ -1,4 +1,47 @@
+<!--
+ Copyright 2026 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
 <div class="container about<% if (page.layout === 'about' || page.layout === 'bio') { %> Biography<% } %>">
+    <!-- Print-Only Resume Header -->
+    <div class="print-only-header">
+      <div class="print-header-row">
+        <div class="print-header-left">
+          <h1 class="print-name"><%= site.data.resume.basics.name %></h1>
+          <div class="print-title"><%= site.data.resume.basics.label %></div>
+          <div class="print-pronouns">
+            Pronouns: <%= site.data.resume.basics.pronouns %> &nbsp;|&nbsp; Born: 16 June 1983, Apeldoorn, Netherlands
+            <br>
+            Current Location: <%= site.data.resume.basics.location.city %>, <%= site.data.resume.basics.location.country %>
+          </div>
+        </div>
+        <div class="print-header-right text-right">
+          <div class="contact-item"><strong>Web:</strong> <%= site.data.resume.basics.url.replace(/^https?:\/\/(www\.)?/, '') %></div>
+          <% var linkedIn = site.data.resume.basics.profiles.find(function(p) { return p.network === 'LinkedIn'; }); %>
+          <% var github = site.data.resume.basics.profiles.find(function(p) { return p.network === 'GitHub'; }); %>
+          <% if (linkedIn) { %>
+            <div class="contact-item"><strong>LinkedIn:</strong> <%= linkedIn.url.replace(/^https?:\/\/(www\.)?/, '') %></div>
+          <% } %>
+          <% if (github) { %>
+            <div class="contact-item"><strong>GitHub:</strong> <%= github.url.replace(/^https?:\/\/(www\.)?/, '') %></div>
+          <% } %>
+          <div class="contact-item"><strong>Email:</strong> <%= site.data.resume.basics.email.replace('@', '[at]') %></div>
+        </div>
+      </div>
+    </div>
+
     <div class="row justify-content-md-center">
       <div class="col-8 blogcontent">
   
@@ -8,36 +51,64 @@
 
         <%- page.content %>
 
+        <!-- Rich JSON-LD Microdata: Connects profile targets directly to recruitment crawlers -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "AboutPage",
-          "headline": "<%- page.title %>",
-          "description": "<%- page.description %>",
-          "mainEntity": {
-            "@type": "Person",
-            "name": "Lee Boonstra",
-            "@id": "https://www.leeboonstra.dev/#person"
-          }
+          "@graph": [
+            {
+              "@type": "AboutPage",
+              "@id": "https://www.leeboonstra.dev/about/#webpage",
+              "url": "https://www.leeboonstra.dev/about/",
+              "name": "<%- page.title %>",
+              "description": "<%- page.description %>",
+              "mainEntity": {
+                "@id": "https://www.leeboonstra.dev/#person"
+              },
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "xpath": [
+                  "/html/head/title",
+                  "/html/head/meta[@name='description']/@content"
+                ]
+              }
+            },
+            {
+              "@type": "Person",
+              "@id": "https://www.leeboonstra.dev/#person",
+              "name": "<%= site.data.resume.basics.name %>",
+              "jobTitle": "Staff Machine Learning Engineer & Tech Lead",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Google",
+                "sameAs": "https://en.wikipedia.org/wiki/Google"
+              },
+              "gender": "Non-binary",
+              "pronouns": "<%= site.data.resume.basics.pronouns %>",
+              "url": "<%= site.data.resume.basics.url %>",
+              "image": "https://www.leeboonstra.dev/images/large_leeboonstra_new.jpg",
+              "sameAs": [
+                "<%= linkedIn ? linkedIn.url : '' %>",
+                "<%= github ? github.url : '' %>",
+                "<%= site.data.resume.basics.profiles.find(function(p){return p.network==='Amazon'}).url %>"
+              ],
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Saxion University of Applied Sciences",
+                "sameAs": "https://en.wikipedia.org/wiki/Saxion_University_of_Applied_Sciences"
+              },
+              "knowsAbout": [
+                <% site.data.resume.skills.forEach(function(group, idx) { %>
+                  <% group.keywords.forEach(function(kw, kwIdx) { %>
+                    "<%= kw %>"<%= (idx === site.data.resume.skills.length - 1 && kwIdx === group.keywords.length - 1) ? '' : ',' %>
+                  <% }) %>
+                <% }) %>
+              ]
+            }
+          ]
         }
         </script>
-          <script type="application/ld+json">
-            {
-             "@context": "https://schema.org/",
-             "@type": "WebPage",
-             "name": "<%= page.title %>",
-             "speakable":
-             {
-              "@type": "SpeakableSpecification",
-              "xpath": [
-                "/html/head/title",
-                "/html/head/meta[@name='description']/@content"
-                ]
-              },
-             "url": "https://www.leeboonstra.dev/about/"
-             }
-          </script>
-  
+   
       </div>
       <div class="col-4 photocol">
         <div class="card shadow sidebar">
@@ -50,333 +121,178 @@
               </picture>
             </a>
 
+            <!-- Print Resume CTA button -->
+            <button onclick="window.print()" class="btn btn-block btn-outline-danger mt-3 print-resume-btn">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer mr-2" viewBox="0 0 16 16" style="vertical-align: text-bottom; display: inline-block;">
+                 <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                 <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2.5 2.5 0 0 0-2.5 2.5v3h7v-3A2.5 2.5 0 0 0 7 8zm0 5.5v-3a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5v3z"/>
+               </svg>
+               Print My Resume
+            </button>
+
+            <!-- Dynamic Social / Portfolio Links -->
             <h3 class="card-title mt-4">Social Links</h3>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="https://github.com/savelee/" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Github (savelee)</a></li>
-              <li class="mb-2"><a href="https://www.amazon.com/stores/Lee-Boonstra/author/B098GCTG91?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Amazon Author Page</a></li>
-              <li class="mb-2"><a href="https://www.linkedin.com/in/leeboonstra/" target="_blank" rel="noreferrer noopener" class="text-decoration-none">LinkedIn (leeboonstra)</a></li>
-              <li class="mb-2"><a href="https://www.leeboonstra.dev/speaker" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Past speaking events</a></li>
-              <li class="mb-2"><a href="https://www.leeboonstra.dev/videos" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Videos of me</a></li>
-              <li class="mb-2"><a href="https://www.leeboonstra.dev/images/lee.boonstra-resume.pdf" target="_blank" class="text-decoration-none">Download my resume</a></li>
+              <% if (github) { %>
+                <li class="mb-2"><a href="<%= github.url %>" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Github (<%= github.username %>)</a></li>
+              <% } %>
+              <li class="mb-2"><a href="<%= site.data.resume.basics.profiles.find(function(p){return p.network==='Amazon'}).url %>" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Amazon Author Page</a></li>
+              <% if (linkedIn) { %>
+                <li class="mb-2"><a href="<%= linkedIn.url %>" target="_blank" rel="noreferrer noopener" class="text-decoration-none">LinkedIn (<%= linkedIn.username %>)</a></li>
+              <% } %>
+              <li class="mb-2"><a href="/speaker" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Past speaking events</a></li>
+              <li class="mb-2"><a href="/videos" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Videos of me</a></li>
             </ul>
 
             <a href="/images/TechAI-Goolge-whitepaper_Prompt Engineering_v4.pdf" target="_blank">
               <picture>
-                  <source>
                   <img src="/images/small_prompting-paper.png" width="76" height="100" style="display: block;" class="border mb-3" alt="Download my Prompt Engineering whitepaper">
               </picture>
-          </a> 
+            </a> 
           </div>
         </div>
       </div>
     </div>
   
-    <!-- Resume Section Row -->
+    <!-- Dynamic Bento Grid Resume Section -->
     <div class="resume">
- 
-    <div class="row justify-content-md-center mt-4">
-      <div class="col-14">
-        
-        <div class="card  h-100">
-          <div class="card-body">
-            <h2 class="card-title text-3xl font-bold section-title mb-4">My Resume</h2>
-            <div class="mb-4">
-              <a href="https://www.linkedin.com/in/leeboonstra/" target="_blank" class="text-blue-600">
-                <span class="font-medium">Let's connect on LinkedIn</span>
-              </a>
-            </div>
-
-            <!-- Experience -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Experience</h2>
-                <p>
-                  20 years of experience in the tech industry. 10 years experience in the areas of AI & machine learning at Google.
-                </p>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2022-present</span>
-                            <h4 class="chip-title">AI Software Engineer, Tech Lead, Global Office of the CTO, Innovation Factory, Google</h4>
-                            <ul class="chip-list">
-                                <li>Designed and implemented an end-to-end GenAI speech solution for Wendy's to automate drive-thru orders.</li>
-                                <li>Filed 3 patents (1 published patent application and 2 Invention Disclosures) in conversational AI, multi-agent systems, and secure cross-boundary digital siblings.</li>
-                                <li>Orchestrate complex multi-agent architectures (LangChain, LangGraph, GraphRAG) and design high-throughput agentic systems utilizing leading frontier runtimes (Gemini, Claude, OpenAI GPT).</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2019-2022</span>
-                            <h4 class="chip-title">Senior Developer Advocate & Applied AI Engineer, Google</h4>
-                            <ul class="chip-list">
-                                <li>Spoke at over 50 large conferences, including Google Cloud Next and Google I/O, to audiences from 10 to 5,000.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2017-2019</span>
-                            <h4 class="chip-title">Customer Engineer, Google Netherlands</h4>
-                            <ul class="chip-list">
-                                <li>Provided technical solutions for major clients including ING and Rabobank.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2014-2016</span>
-                            <h4 class="chip-title">Sales Engineer, EMEA, Sencha Inc.</h4>
-                            <ul class="chip-list">
-                                <li>Customer-facing work for clients like BMW, CERN, and Thales.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2012-2014</span>
-                            <h4 class="chip-title">Lead Technical Trainer, EMEA, Sencha Inc.</h4>
-                            <ul class="chip-list">
-                                <li>Trained customers at EMC, Nielsen, McAfee, and NASDAQ.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2009-2012</span>
-                            <h4 class="chip-title">Lead Front-end Developer, eFocus (Valtech)</h4>
-                            <ul class="chip-list">
-                                <li>Team lead for a team of 5, working with clients like Heineken and Philips.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2007-2009</span>
-                            <h4 class="chip-title">Senior Java Developer, Accenture</h4>
-                            <ul class="chip-list">
-                                <li>Worked as a consultant for clients including KLM/Air France, KPN, Liberty Global.</li>
-                            </ul>
-                        </div>
-                    </div>
+      <div class="row justify-content-md-center mt-4">
+        <div class="col-14">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title text-3xl font-bold section-title mb-4 resume-main-title">My Resume</h2>
+              <% if (linkedIn) { %>
+                <div class="mb-4 linkedin-connect-prompt">
+                  <a href="<%= linkedIn.url %>" target="_blank" class="text-blue-600">
+                    <span class="font-medium">Let's connect on LinkedIn</span>
+                  </a>
                 </div>
-            </div>
+              <% } %>
 
-            <!-- Patents & Inventions -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Patents & Inventions</h2>
-                <div class="row">
-                    <div class="col-md-12 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">Published 2025</span>
-                            <h4 class="chip-title">
-                                <a href="https://patents.google.com/patent/US20250078820A1/en?inventor=Lee+Boonstra" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">
-                                    Scalable High-Accuracy Transactional Agents (US20250078820A1)
-                                </a>
-                            </h4>
-                            <p class="chip-text mt-2">
-                                Patent covering high-performance transactional Conversational AI pipelines at Google, enhancing conversational state accuracy and transactional integrity in multi-turn GenAI speech interfaces.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">Filed (GP-310555-00-US)</span>
-                            <h4 class="chip-title">Communicating Across a Trust Boundary using a Digital Sibling</h4>
-                            <p class="chip-text mt-2">
-                                Google Patent covering secure messaging protocols, cross-domain authentication schemas, and isolated execution boundaries for multi-agent system handoffs.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">Filed (IDF-326887)</span>
-                            <h4 class="chip-title">AI Agents working across Trust boundaries: The Digital Sibling</h4>
-                            <p class="chip-text mt-2">
-                                Invention Disclosure (IDF) detailing runtime agent coordination architectures and secure decentralized state replication across enterprise trust domains.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <!-- Dynamic Helper formatting dates to standard screen display templates -->
+              <% 
+                function formatYear(dateStr) {
+                  if (!dateStr) return 'present';
+                  return dateStr.split('-')[0];
+                }
+              %>
 
-            <!-- Publications & Books -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Publications & Books</h2>
-                <div class="row">
-                    <div class="col-md-12 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2025</span>
-                            <h4 class="chip-title">
-                                Authored the viral Prompt Engineering Whitepaper for Google/Kaggle
-                            </h4>
-                            <p class="chip-text mt-2">
-                                Author of the widely read prompt engineering reference guide that has reached over 100,000 developers, prompt engineers, and AI researchers worldwide.
-                                <br>
-                                <a href="https://www.kaggle.com/whitepaper-prompt-engineering" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; font-weight: 600;">
-                                    View on Kaggle
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2021</span>
-                            <h4 class="chip-title">The Definitive Guide to Conversational AI with Dialogflow and Google Cloud (Apress)</h4>
-                            <p class="chip-text mt-2">
-                                Industry reference book covering architecture, conversational mechanics, integration patterns, and NLU modeling. 
-                                <br>ISBN: 978-1-4842-7014-1 & 978-1-4842-7013-4
-                                <br>
-                                <a href="https://link.springer.com/book/10.1007/978-1-4842-7014-1" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; font-weight: 600;">
-                                    View on Springer
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="experience-chip">
-                            <span class="chip-date">2013</span>
-                            <h4 class="chip-title">Hands-on Sencha Touch 2: A Real-World App Approach (O'Reilly)</h4>
-                            <p class="chip-text mt-2">
-                                Practical handbook for high-performance mobile web applications, hybrid layout mechanics, and MVC orchestration in early corporate web interfaces.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <!-- Experience Bento Grid -->
+              <div class="resume-section resume-experience mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Experience</h2>
+                  <p><%= site.data.resume.basics.experienceIntro %></p>
+                  <div class="row">
+                    <% site.data.resume.work.forEach(function(job) { %>
+                      <div class="col-md-6 mb-4">
+                          <div class="experience-chip">
+                              <span class="chip-date"><%= formatYear(job.startDate) %>-<%= formatYear(job.endDate) %></span>
+                              <h4 class="chip-title"><%= job.position %>, <%= job.name %></h4>
+                              <ul class="chip-list">
+                                  <% job.highlights.forEach(function(bullet) { %>
+                                    <li><%= bullet %></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                      </div>
+                    <% }) %>
+                  </div>
+              </div>
 
-            <!-- Education -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Education</h2>
-                <div class="education-chip">
-                    <span class="chip-date">2004-2008</span>
-                    <h4 class="chip-title">Saxion University of Applied Sciences</h4>
-                    <p class="chip-text">Bachelor of Science in Information and Communication Technology</p>
-                </div>
-            </div>
+              <!-- Patents & Inventions Bento Grid -->
+              <div class="resume-section resume-patents mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Patents & Inventions</h2>
+                  <div class="row">
+                    <% site.data.resume.patents.forEach(function(pat) { %>
+                      <div class="col-md-<%= pat.id === 'US20250078820A1' ? '12' : '6' %> mb-4">
+                          <div class="experience-chip">
+                              <span class="chip-date"><%= pat.status %></span>
+                              <h4 class="chip-title">
+                                  <% if (pat.url) { %>
+                                    <a href="<%= pat.url %>" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">
+                                        <%= pat.title %> (<%= pat.id %>)
+                                    </a>
+                                  <% } else { %>
+                                    <%= pat.title %> (<%= pat.id %>)
+                                  <% } %>
+                              </h4>
+                              <p class="chip-text mt-2"><%= pat.summary %></p>
+                          </div>
+                      </div>
+                    <% }) %>
+                  </div>
+              </div>
 
-            <!-- Skills Section -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Technical Skills</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="skill-chip">
-                            <h4 class="chip-title">AI / ML</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">LLMs</span>
-                                <span class="skill-tag">Gemini</span>
-                                <span class="skill-tag">Gemma</span>
-                                <span class="skill-tag">Claude</span>
-                                <span class="skill-tag">GPT</span>
-                                <span class="skill-tag">Llama</span>
-                                <span class="skill-tag">GenAI</span>
-                                <span class="skill-tag">NLP</span>
-                                <span class="skill-tag">Chatbots</span>
-                                <span class="skill-tag">Prompt Engineering</span>
-                                <span class="skill-tag">ChatGPT</span>
-                                <span class="skill-tag">TTS</span>
-                                <span class="skill-tag">SST</span>
-                                <span class="skill-tag">Whisper</span>
-                                <span class="skill-tag">RAG</span>
-                                <span class="skill-tag">Vector Embedding</span>
-                                <span class="skill-tag">Dialogflow</span>
-                                <span class="skill-tag">Contact Center AI</span>
-                                <span class="skill-tag">Data Analysis</span>
-                                <span class="skill-tag">Machine Learning</span>
-                                <span class="skill-tag">Hugging Face</span>
-                                <span class="skill-tag">Kaggle</span>
-                                <span class="skill-tag">PyTorch</span>
-                                <span class="skill-tag">TensorFlow</span>
-                                <span class="skill-tag">Finetuning Models</span>
-                                <span class="skill-tag">LangChain</span>
-                                <span class="skill-tag">LangGraph</span>
-                                <span class="skill-tag">GraphRAG</span>
-                                <span class="skill-tag">Antigravity Framework</span>
-                                <span class="skill-tag">Vibe Coding</span>
-                                <span class="skill-tag">vLLM</span>
-                                <span class="skill-tag">RLHF</span>
-                                <span class="skill-tag">DPO</span>
-                                <span class="skill-tag">Agentic Workflows</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="skill-chip">
-                            <h4 class="chip-title">Languages</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Pandas</span>
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">PHP</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">HTML5</span>
-                                <span class="skill-tag">SASS</span>
-                                <span class="skill-tag">CSS3</span>
-                                <span class="skill-tag">SQL</span>
-                                <span class="skill-tag">NoSQL</span>
-                                <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Neo4j</span>
-                                <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">ChromaDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="skill-chip">
-                            <h4 class="chip-title">Frameworks & Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Google Cloud</span>
-                                <span class="skill-tag">Cloud Platforms</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">MVC</span>
-                                <span class="skill-tag">MVVM</span>
-                                <span class="skill-tag">OOP</span>
-                                <span class="skill-tag">CI/CD</span>
-                                <span class="skill-tag">UML</span>
-                                <span class="skill-tag">Agile</span>
-                                <span class="skill-tag">Scrum</span>
-                                <span class="skill-tag">Jira</span>
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">Cli tools</span>
-                                <span class="skill-tag">gRPC</span>
-                                <span class="skill-tag">REST</span>
-                                <span class="skill-tag">Flutter</span>
-                                <span class="skill-tag">Angular</span>
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Ext.js</span>
-                                <span class="skill-tag">Sencha Touch</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <!-- Publications & Books Bento Grid -->
+              <div class="resume-section resume-publications mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Publications & Books</h2>
+                  <div class="row">
+                    <% site.data.resume.publications.forEach(function(pub) { %>
+                      <div class="col-md-<%= pub.releaseDate === '2025' ? '12' : '6' %> mb-4">
+                          <div class="experience-chip">
+                              <span class="chip-date"><%= pub.releaseDate %></span>
+                              <h4 class="chip-title"><%= pub.name %></h4>
+                              <p class="chip-text mt-2">
+                                  <%= pub.summary %>
+                                  <% if (pub.url) { %>
+                                    <br>
+                                    <a href="<%= pub.url %>" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; font-weight: 600;">
+                                        View details
+                                    </a>
+                                  <% } %>
+                              </p>
+                          </div>
+                      </div>
+                    <% }) %>
+                  </div>
+              </div>
 
-            <!-- Spoken Languages -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Spoken Languages</h2>
-                <div class="languages-chip">
-                    <div class="language-item">
-                        <span class="language-name">Dutch</span>
-                        <span class="language-level">Native</span>
+              <!-- Education Bento Grid -->
+              <div class="resume-section resume-education mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Education</h2>
+                  <% site.data.resume.education.forEach(function(edu) { %>
+                    <div class="education-chip">
+                        <span class="chip-date"><%= edu.startDate %>-<%= edu.endDate %></span>
+                        <h4 class="chip-title"><%= edu.institution %></h4>
+                        <p class="chip-text"><%= edu.studyType %> in <%= edu.area %></p>
                     </div>
-                    <div class="language-item">
-                        <span class="language-name">English</span>
-                        <span class="language-level">Native</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-name">German</span>
-                        <span class="language-level">Conversational</span>
-                    </div>
-                </div>
+                  <% }) %>
+              </div>
+
+              <!-- Dynamic Technical Skills Bento Grid -->
+              <div class="resume-section resume-skills mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Technical Skills</h2>
+                  <div class="row">
+                    <% site.data.resume.skills.forEach(function(skillGroup) { %>
+                      <div class="col-md-4 mb-4">
+                          <div class="skill-chip">
+                              <h4 class="chip-title"><%= skillGroup.name %></h4>
+                              <div class="skill-tags">
+                                <% skillGroup.keywords.forEach(function(kw) { %>
+                                  <span class="skill-tag"><%= kw %></span>
+                                <% }) %>
+                              </div>
+                          </div>
+                      </div>
+                    <% }) %>
+                  </div>
+              </div>
+
+              <!-- Spoken Languages Bento Grid -->
+              <div class="resume-section resume-languages mb-6">
+                  <h2 class="text-xl font-semibold mb-4">Spoken Languages</h2>
+                  <div class="languages-chip">
+                    <% site.data.resume.languages.forEach(function(lang) { %>
+                      <div class="language-item">
+                          <span class="language-name"><%= lang.language %></span>
+                          <span class="language-level"><%= lang.fluency %></span>
+                      </div>
+                    <% }) %>
+                  </div>
+              </div>
+
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
 </div>
-
-

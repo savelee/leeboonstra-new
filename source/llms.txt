@@ -1,0 +1,13 @@
+# Lee Boonstra
+
+> Lee Boonstra is a Developer Advocate, Applied AI engineer, and technical author specializing in conversational AI, LLMs, and voice architectures.
+
+## Core Resources
+- [About Me](https://leeboonstra.dev/about) - Professional background and bio.
+- [Blog](https://leeboonstra.dev/blog) - Technical articles on AI, architecture, and development.
+- [Projects](https://leeboonstra.dev/projects) - Open-source AI tools and code repositories.
+- [Speaking](https://leeboonstra.dev/speaking) - Upcoming events and past conference presentations.
+
+## Full Content Map
+- [Full Sitemap](https://leeboonstra.dev/sitemap.xml) - Complete list of all text assets.
+- [Full Blog Posts Aggregation](https://leeboonstra.dev/llms-full.txt) - The full plain-text raw markdown of all blog posts for zero-friction ingestion by AI scraping bots.

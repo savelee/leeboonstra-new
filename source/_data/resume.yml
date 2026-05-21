@@ -1,0 +1,227 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+basics:
+  name: "Lee Boonstra"
+  label: "Staff AI Software Engineer & Tech Lead, Global Office of the CTO, Google"
+  image: "/images/large_leeboonstra_new.jpg"
+  email: "lee@leeboonstra.com"
+  phone: ""
+  url: "https://www.leeboonstra.dev"
+  pronouns: "they/them"
+  summary: |
+    Staff AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO) - Innovation Factory. Lee specializes in translating cutting-edge AI breakthroughs into planetary-scale production deployments. A proven developer advocate and technology visionary, they lead zero-to-one engineering initiatives, chair multi-agent architectural standards, and define secure cross-boundary sandbox messaging protocols (GP-310555-00-US). Renowned as an industry benchmark author (O'Reilly, Apress, and Kaggle's viral Prompt Engineering paper read by 100k+ researchers) and keynote speaker, Lee empowers engineering squads to sculpt complex AI systems using advanced agentic paradigms.
+  location:
+    city: "Amstelveen"
+    region: "North Holland"
+    countryCode: "NL"
+    country: "Netherlands"
+  profiles:
+    - network: "LinkedIn"
+      username: "leeboonstra"
+      url: "https://www.linkedin.com/in/leeboonstra"
+    - network: "GitHub"
+      username: "savelee"
+      url: "https://github.com/savelee"
+    - network: "Amazon"
+      username: "Lee-Boonstra"
+      url: "https://www.amazon.com/stores/Lee-Boonstra/author/B098GCTG91"
+  experienceIntro: "20 years of professional software engineering experience, including 10 years pioneering state-of-the-art AI, machine learning, and advanced conversational systems at Google."
+
+work:
+  - name: "Google"
+    position: "Staff AI Software Engineer & Technical Lead, Global Office of the CTO"
+    url: "https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/"
+    startDate: "2022-10-01"
+    endDate: null
+    summary: "Direct technical strategy, software architecture, and high-velocity engineering pods inside the Google Cloud Office of the CTO (OCTO) Innovation Factory, delivering zero-to-one applied GenAI platforms."
+    highlights:
+      - "Technical Lead & Chief Systems Architect for Google's groundbreaking end-to-end Conversational GenAI speech automation engine for Wendy's, successfully routing automated commerce transactions under low-latency limits."
+      - "Filed 3 patents (including published patent application US20250078820A1 and two Invention Disclosures) defining planetary-scale Conversational AI pipelines, multi-agent sandboxes, and secure decentralized state synchronization frameworks."
+      - "Pioneered next-generation multi-agent coordination frameworks utilizing Gemini, Claude, and GPT-4, establishing architectural standards and secure cross-boundary communication protocols using LangGraph and GraphRAG."
+      - "Direct technical direction and mentor elite software engineering teams across dynamic prototyping cycles, pioneering scalable MLOps benchmarks using internal high-performance frameworks (Antigravity)."
+
+  - name: "Google"
+    position: "Senior Developer Advocate & Applied AI Engineer"
+    url: "https://google.com"
+    startDate: "2019-01-01"
+    endDate: "2022-10-01"
+    summary: "Led developer enablement programs and applied engineering proof-of-concept pipelines, establishing cloud AI architecture patterns for Google Cloud's global ecosystem."
+    highlights:
+      - "Pioneered Google's global AI developer engagement strategy, presenting technical keynotes at over 50 large-scale conferences (including Google Cloud Next and Google I/O) to audiences of up to 5,000 developers."
+      - "Designed, implemented, and open-sourced production-ready conversational AI architectures, accelerating enterprise customer migration to Google Vertex AI."
+
+  - name: "Google Netherlands"
+    position: "Senior Customer Engineer, Enterprise Platforms"
+    url: "https://google.com"
+    startDate: "2017-01-01"
+    endDate: "2019-01-01"
+    summary: "Served as the primary technical advisor and systems architect for strategic Google Cloud enterprise financial clients in EMEA."
+    highlights:
+      - "Engineered secure cloud migration roadmaps, distributed computing models, and integration architectures for tier-1 multinational banking clients including ING and Rabobank."
+
+  - name: "Sencha Inc."
+    position: "Sales Engineer & Architecture Specialist, EMEA"
+    url: "https://www.sencha.com"
+    startDate: "2014-01-01"
+    endDate: "2016-01-01"
+    summary: "Designed client-side application platforms and object-oriented front-end architectures for key institutional partners in Europe."
+    highlights:
+      - "Directed architecture consulting and customer-facing engineering alignments for strategic installations including BMW, CERN, and Thales."
+
+  - name: "Sencha Inc."
+    position: "Lead Technical Trainer, EMEA"
+    url: "https://www.sencha.com"
+    startDate: "2012-01-01"
+    endDate: "2014-01-01"
+    summary: "Governed advanced technical training and developer certification architectures, establishing corporate front-end modeling standards."
+    highlights:
+      - "Educated and certified engineering organizations at Fortune 500 platforms including EMC, Nielsen, McAfee, and NASDAQ."
+
+  - name: "eFocus (Valtech)"
+    position: "Lead Front-end Developer & SWE Pod Manager"
+    url: "https://www.valtech.com"
+    startDate: "2009-01-01"
+    endDate: "2012-01-01"
+    summary: "Held engineering leadership responsibilities, directing frontend software execution and managing multi-disciplinary development teams."
+    highlights:
+      - "Direct technical management and mentorship for a software engineering pod of 5 developers, scaling target front-end integrations for market leaders including Heineken and Philips."
+
+  - name: "Accenture"
+    position: "Senior Java Consultant"
+    url: "https://www.accenture.com"
+    startDate: "2007-01-01"
+    endDate: "2009-01-01"
+    summary: "Consulted on back-end enterprise microservices, transactional databases, and distributed Java architectures for multinational enterprise operations."
+    highlights:
+      - "Engineered transactional back-end systems, scaling performance for major airline and telecommunication clients including KLM/Air France, KPN, and Liberty Global."
+
+patents:
+  - title: "Scalable High-Accuracy Transactional Agents"
+    id: "US20250078820A1"
+    status: "Published 2025"
+    inventor: "Lee Boonstra"
+    url: "https://patents.google.com/patent/US20250078820A1/en?inventor=Lee+Boonstra"
+    summary: "Patent covering high-performance transactional Conversational AI pipelines at Google, enhancing conversational state accuracy and transactional integrity in multi-turn GenAI speech interfaces."
+  - title: "Communicating Across a Trust Boundary using a Digital Sibling"
+    id: "GP-310555-00-US"
+    status: "Filed (Google Patent)"
+    inventor: "Lee Boonstra"
+    url: ""
+    summary: "Google Patent covering secure messaging protocols, cross-domain authentication schemas, and isolated execution boundaries for multi-agent system handoffs."
+  - title: "AI Agents working across Trust boundaries: The Digital Sibling"
+    id: "IDF-326887"
+    status: "Filed (Invention Disclosure)"
+    inventor: "Lee Boonstra"
+    url: ""
+    summary: "Invention Disclosure (IDF) detailing runtime agent coordination architectures and secure decentralized state replication across enterprise trust domains."
+
+publications:
+  - name: "Authored the viral Prompt Engineering Whitepaper for Google/Kaggle"
+    publisher: "Google / Kaggle"
+    releaseDate: "2025"
+    url: "https://www.kaggle.com/whitepaper-prompt-engineering"
+    summary: "Author of the widely read prompt engineering reference guide that has reached over 100,000 developers, prompt engineers, and AI researchers worldwide."
+  - name: "The Definitive Guide to Conversational AI with Dialogflow and Google Cloud"
+    publisher: "Apress"
+    releaseDate: "2021"
+    url: "https://link.springer.com/book/10.1007/978-1-4842-7014-1"
+    summary: "Industry reference book covering architecture, conversational mechanics, integration patterns, and NLU modeling. ISBN: 978-1-4842-7014-1 & 978-1-4842-7013-4."
+  - name: "Hands-on Sencha Touch 2: A Real-World App Approach"
+    publisher: "O'Reilly"
+    releaseDate: "2013"
+    url: "https://www.oreilly.com/library/view/hands-on-sencha-touch/9781449339395/"
+    summary: "Practical handbook for high-performance mobile web applications, hybrid layout mechanics, and MVC orchestration in early corporate web interfaces."
+
+education:
+  - institution: "Saxion University of Applied Sciences"
+    studyType: "Bachelor of Science"
+    area: "Information and Communication Technology"
+    startDate: "2004"
+    endDate: "2008"
+
+skills:
+  - name: "AI / ML Leadership"
+    keywords:
+      - "LLMs"
+      - "Gemini"
+      - "Gemma"
+      - "Claude"
+      - "GPT"
+      - "Llama"
+      - "GenAI Architecture"
+      - "Systems Design"
+      - "Technical Leadership"
+      - "Team Mentorship"
+      - "Prompt Engineering & DSPy"
+      - "TTS & STT"
+      - "Whisper"
+      - "RAG & GraphRAG"
+      - "Vector Embeddings"
+      - "Dialogflow CX"
+      - "PyTorch"
+      - "TensorFlow"
+      - "Distributed Computing"
+      - "vLLM serving"
+      - "Model Alignment"
+      - "DPO & RLHF"
+      - "LangChain"
+      - "LangGraph Architectures"
+      - "Antigravity Framework"
+      - "Vibe Coding"
+  - name: "Languages & Data"
+    keywords:
+      - "Python"
+      - "Pandas"
+      - "Node.js"
+      - "PHP"
+      - "Java Enterprise"
+      - "JavaScript"
+      - "TypeScript"
+      - "HTML5"
+      - "SASS"
+      - "CSS3"
+      - "SQL"
+      - "NoSQL"
+      - "MongoDB"
+      - "MySQL"
+      - "Neo4j"
+      - "Firebase"
+      - "ChromaDB"
+      - "pgvector"
+  - name: "Enterprise Tooling"
+    keywords:
+      - "Google Cloud Platform"
+      - "Borg & Borgmon"
+      - "Docker"
+      - "Kubernetes"
+      - "API Governance"
+      - "gRPC & REST Protocols"
+      - "CI/CD Orchestrations"
+      - "System Modeling (UML)"
+      - "Git"
+      - "Bespoke Developer Tooling"
+      - "Flutter"
+      - "Angular"
+      - "React"
+      - "Ext.js"
+      - "Sencha Touch"
+
+languages:
+  - language: "Dutch"
+    fluency: "Native"
+  - language: "English"
+    fluency: "Native"
+  - language: "German"
+    fluency: "Conversational"
