@@ -46,8 +46,8 @@ module.exports = {
       },
     },
     {
-      // Match CSS files with version parameters
-      "urlPattern": /\.(?:css)$/,
+      // Match CSS files with optional version/cache-busting parameters
+      "urlPattern": /\.(?:css)(?:\?.*)?$/,
       
       // Apply a stale-while-revalidate strategy for CSS
       "handler": 'StaleWhileRevalidate',
@@ -61,8 +61,8 @@ module.exports = {
       },
     },
     {
-      // Match JS files with version parameters
-      "urlPattern": /\.(?:js)$/,
+      // Match JS files with optional version/cache-busting parameters
+      "urlPattern": /\.(?:js)(?:\?.*)?$/,
       
       // Apply a stale-while-revalidate strategy for JS
       "handler": 'StaleWhileRevalidate',

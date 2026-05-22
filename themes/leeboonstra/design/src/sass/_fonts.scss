@@ -3,6 +3,9 @@
 // Bebas Neue for navbar (condensed, bold display font)
 @font-face {
     font-family: 'Bebas Neue';
+    src: url('/fonts/bebasneue-webfont.woff2') format('woff2'),
+         url('/fonts/bebasneue-webfont.woff') format('woff'),
+         url('/fonts/bebasneue-webfont.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -72,48 +75,6 @@
     font-display: swap;
 }
 
-// Magazine-style body text - Source Serif Pro (similar to BreveText, readable serif)
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'consolas';

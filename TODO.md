@@ -36,3 +36,7 @@
 - [x] Fix shared layout resume leak by dynamically pruning career resume modules and print anchors on non-biography page categories (speaking, contact) during template rendering. <!-- id: 33 -->
 - [x] Formalize biography timeline section header to 'Professional Experience' inside themes layouts. <!-- id: 34 -->
 - [x] Implement professional printable resume page footer with dynamic page numbering and overlap-proof margins. <!-- id: 35 -->
+- [x] Consolidate Google Fonts payload in head layout to minimize render-blocking requests and layout shifts. <!-- id: 36 -->
+- [x] Fix Workbox routing regular expressions to match query parameters for key static resources. <!-- id: 37 -->
+- [x] Implement actual WebP image transcoding (with quality 80 compression) for true responsive assets. <!-- id: 38 -->
+- [x] Verify build asset pipeline outputs and test runtime caching of assets. <!-- id: 39 -->

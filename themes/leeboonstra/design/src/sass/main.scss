@@ -1,6 +1,6 @@
 /* Main SCSS File */
 $enable-responsive-font-sizes: true;
-$font-family-base: 'BreveText', 'Lora', helvetica, sans-serif;
+$font-family-base: 'Lora', Georgia, 'Times New Roman', serif;
 
 @import "./_colors.scss";
 @import "./bootstrap.scss";
@@ -453,7 +453,7 @@ picture img,
     }
 
     ul {
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         margin-left: -20px;
         color: #fff;
         
@@ -476,7 +476,7 @@ picture img,
 }
 
 .disclaimer {
-    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    font-family: $font-family-base;
     font-style: italic;
     font-size: 1rem;
     padding: 0 20px;
@@ -691,9 +691,6 @@ time {
 
 .card {
 
-    .card-header {
-        font-family: 'Lexend';
-    }
     .card-foot {
         margin: 20px;
     }
@@ -1000,7 +997,7 @@ time {
     }
 
     blockquote {
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         font-size: 1.3rem;
         font-style: italic;
         border-left: 4px solid $primary;
@@ -1058,7 +1055,7 @@ time {
 
     // Refined list formatting and item alignments
     ul, ol {
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         font-size: 1.15rem;
         line-height: 1.7;
         margin-top: 1rem;
@@ -1670,7 +1667,7 @@ time {
         }
         
         figcaption {
-            font-family: 'Source Serif Pro', Georgia, serif;
+            font-family: $font-family-base;
             font-size: 0.9rem;
             color: #666;
             text-align: center;
@@ -1685,7 +1682,7 @@ time {
     }
     
     ul, ol {
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         font-size: 1.2rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
@@ -1700,7 +1697,7 @@ time {
         width: 100%;
         margin: 1.5rem 0;
         border-collapse: collapse;
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         
         th, td {
             padding: 0.75rem;
@@ -1840,14 +1837,14 @@ time {
         letter-spacing: 0.02em;
     }
     p {
-        font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+        font-family: $font-family-base;
         font-size: 1.2rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
         color: #333;
     }
     ul {
-        font-family: 'Source Serif Pro', Georgia, serif;
+        font-family: $font-family-base;
         font-size: 1.2rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
@@ -1887,7 +1884,7 @@ time {
     }
     
     p {
-        font-family: 'Source Serif Pro', Georgia, serif !important;
+        font-family: $font-family-base !important;
         font-size: 0.95rem !important;
         line-height: 1.7 !important; // Generous line height matching design preferences
         margin-bottom: 1.25rem !important;
@@ -2293,7 +2290,7 @@ footer {
         figcaption {
             margin-top: 40px;
             text-align: center;
-            font-family: 'Source Serif Pro', Georgia, serif;
+            font-family: $font-family-base;
             font-size: 1.1rem;
             color: $red;
             font-style: italic;

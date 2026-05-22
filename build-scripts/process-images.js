@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Jimp } = require('jimp');
+const { execSync } = require('child_process');
 
 // Image size configurations
 const imageSizes = {
@@ -105,9 +106,24 @@ async function processAllImages() {
                 console.log(`  ✅ ${sizeName}: ${result.width}x${result.height} (${(stats.size / 1024).toFixed(1)}KB, ${sizeReduction}% reduction)`);
                 processedCount++;
                 
-                // Create WebP version (as PNG/JPEG for now, since Jimp doesn't support WebP encoding)
+                // Create genuine WebP version using the system-installed cwebp compiler.
+                // Enforce a robust fallback to basic copy operations if the compiler fails for any reason.
                 if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
-                    fs.copyFileSync(targetPath, webpPath);
+                    let webpSuccess = false;
+                    try {
+                        // Run command-line encoding with standard target quality (q=80)
+                        execSync(`cwebp -q 80 "${targetPath}" -o "${webpPath}"`, { stdio: 'ignore' });
+                        const webpStats = fs.statSync(webpPath);
+                        const webpReduction = ((originalStats.size - webpStats.size) / originalStats.size * 100).toFixed(1);
+                        console.log(`    ⚡ WebP Transcoded: ${(webpStats.size / 1024).toFixed(1)}KB (${webpReduction}% overall reduction from source)`);
+                        webpSuccess = true;
+                    } catch (err) {
+                        console.warn(`    ⚠️ WebP transcoding failed via cwebp CLI: ${err.message}. Falling back to copy...`);
+                    }
+                    
+                    if (!webpSuccess) {
+                        fs.copyFileSync(targetPath, webpPath);
+                    }
                 }
             } else {
                 console.log(`  ❌ ${sizeName}: Failed - ${result.error}. Gracefully falling back to original file.`);

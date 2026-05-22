@@ -6,8 +6,8 @@
           <picture>
             <source srcset="/images/large_<%- post.featured %>.webp" media="(min-width: 1000px)">
             <source srcset="/images/medium_<%- post.featured %>.webp" media="(min-width: 500px)">
-            <source srcset="/images/thumb_<%- post.featured %>.webp" media="(max-width: 499px)">
-            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
+            <source srcset="/images/small_<%- post.featured %>.webp" media="(max-width: 499px)">
+            <img class="card-img-top" src="/images/small_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
           </picture>
         <% } %>
         <div class="card-header">
@@ -36,8 +36,8 @@
     <div class="card article-card shadow-sm">
         <% if (post.featured){ %>
           <picture>
-            <source srcset="/images/thumb_<%- post.featured %>.webp">
-            <img class="card-img-top" src="/images/thumb_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
+            <source srcset="/images/small_<%- post.featured %>.webp">
+            <img class="card-img-top" src="/images/small_<%- post.featured %>.jpeg" alt="<%-post.title-%>">
           </picture>
         <% } %>
         <div class="card-header">
