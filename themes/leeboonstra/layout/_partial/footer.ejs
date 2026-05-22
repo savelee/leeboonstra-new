@@ -138,6 +138,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+// Register PWA Service Worker with safe auto-refresh on active takeover
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+      console.log('PWA Service Worker registered successfully:', registration);
+      
+      // Force update check on register to accelerate discovery
+      registration.update();
+      
+      // If there is an active waiting service worker, prompt immediate installation
+      if (registration.waiting) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+    }).catch(function(err) {
+      console.warn('PWA Service Worker registration failed:', err);
+    });
+  });
+
+  // Track service worker controller changes to perform a clean tab auto-refresh
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function() {
+    if (!refreshing) {
+      refreshing = true;
+      console.log('New PWA Service Worker took control. Refreshing viewport...');
+      window.location.reload();
+    }
+  });
+}
+</script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google tag (gtag.js) -->
