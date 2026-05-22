@@ -1846,9 +1846,12 @@ time {
         margin-left: calc(50% - 50px);
         object-position: -5px 0px !important;
         img {
-            height: 100px;
-            width: 100px;
-            display: block;       
+            height: 100px !important;
+            width: 100px !important;
+            max-width: 100px !important;
+            display: block !important;
+            object-fit: cover !important;
+            object-position: -5px 0px !important;
         }
     }
 
