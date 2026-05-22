@@ -189,7 +189,7 @@ picture img,
     }
     
     .card-text {
-        font-family: 'Source Serif Pro', Georgia, serif !important;
+        font-family: $font-family-base !important;
         font-size: 1.15rem !important;
         line-height: 1.75 !important; // High visual comfort line height matching posts!
         color: #334155 !important;
@@ -555,7 +555,7 @@ h6, .h6 {
 }
 
 p, .lead {
-    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    font-family: $font-family-base;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     color: #334155;
@@ -2073,7 +2073,7 @@ time {
             padding: 1rem;
             
             .card-text {
-                font-family: 'Source Serif Pro', Georgia, serif;
+                font-family: $font-family-base;
                 line-height: 1.4;
                 color: #333;
                 margin: 0;
