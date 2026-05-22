@@ -52,7 +52,7 @@ function syncGithubProfile() {
   }
 
   const linkedIn = b.profiles ? b.profiles.find(p => p.network === 'LinkedIn') : null;
-  const github = b.profiles ? b.profiles.find(p => p.network === 'GitHub');
+  const github = b.profiles ? b.profiles.find(p => p.network === 'GitHub') : null;
 
   // Compile high-impact Staff Engineering Executive Landing Card
   let readme = `<!-- 🤖 AUTOMATICALLY GENERATED FILE - DO NOT EDIT DIRECTLY 🤖 -->

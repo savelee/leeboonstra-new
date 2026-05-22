@@ -683,44 +683,74 @@ time {
 
     }
     
-    // Specific rules for card images
+    // Specific rules for card images - UNIFORM GRID HEIGHTS
     .card-img-top {
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
+        height: 200px !important; // Desktop base default
         object-fit: cover !important;
         object-position: top !important;
         display: block !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
         
-        // Responsive heights for card images
+        // Responsive FIXED heights for standard grid cards
         @media (max-width: 480px) {
-            max-height: 120px !important;
+            height: 120px !important;
         }
         
         @media (min-width: 481px) and (max-width: 576px) {
-            max-height: 180px !important;
+            height: 160px !important;
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
-            max-height: 200px !important;
+            height: 180px !important;
         }
         
         @media (min-width: 769px) and (max-width: 992px) {
-            max-height: 250px !important;
+            height: 180px !important;
         }
         
         @media (min-width: 993px) and (max-width: 1199px) {
-            max-height: 300px !important;
+            height: 200px !important;
         }
         
         @media (min-width: 1200px) {
-            max-height: 400px !important;
+            height: 200px !important;
         }
         
         @media (min-width: 1400px) {
-            max-height: 450px !important;
+            height: 220px !important;
+        }
+    }
+    
+    // Custom overrides for the premium homepage header highlight card
+    &.tall .card-img-top {
+        height: 380px !important; // Taller lead banner height
+        object-position: top !important; // Top crop for highlights
+        
+        @media (max-width: 480px) {
+            height: 150px !important;
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            height: 220px !important;
+        }
+        
+        @media (min-width: 769px) and (max-width: 992px) {
+            height: 280px !important;
+        }
+        
+        @media (min-width: 993px) and (max-width: 1199px) {
+            height: 320px !important;
+        }
+        
+        @media (min-width: 1200px) {
+            height: 350px !important;
+        }
+        
+        @media (min-width: 1400px) {
+            height: 380px !important;
         }
     }
 
@@ -946,6 +976,141 @@ time {
                 line-height: 1.6;
                 color: #555;
                 font-style: italic;
+            }
+        }
+    }
+
+    // ==========================================================================
+    // Modern Reading Column & Readability Layout Architecture
+    // ==========================================================================
+
+    // Center and restrict core editorial columns to high-comfort reading widths
+    p, ul, ol, h1, h2, h3, h4, h5, h6, blockquote {
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    // Premium editorial outdent (left hanging position) for section subheaders on desktop
+    h2, h3, h4, h5, h6 {
+        position: relative;
+        
+        @media (min-width: 768px) {
+            left: -1.5rem;
+            max-width: calc(48rem + 1.5rem) !important;
+        }
+    }
+    
+    // Allow visual media/data structures to stand slightly wider for pop-out contrast
+    table,
+    figure,
+    figure.highlight,
+    .gist,
+    iframe,
+    .video-container {
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    // Refined list formatting and item alignments
+    ul, ol {
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 2.5rem;
+        
+        li {
+            margin-bottom: 0.75rem;
+            color: #334155; // Slate-700 readability color matching standard body paragraphs
+            
+            p {
+                margin-bottom: 0.5rem; // Tighten spacing on nested element cases
+                font-size: 1em;
+                line-height: 1.7;
+            }
+            
+            // Safe recursive nesting alignments
+            ul, ol {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                padding-left: 1.5rem;
+                max-width: 100%;
+                font-size: 1em;
+            }
+        }
+    }
+    
+    // Premium data table design specifications
+    table {
+        width: 100%;
+        margin: 2.5rem auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-family: $font-family-base;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden; // Clip child rows perfectly under border corners
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        background-color: #ffffff;
+        
+        th, td {
+            padding: 0.9rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            border-right: 1px solid #f1f5f9;
+            
+            &:last-child {
+                border-right: none;
+            }
+        }
+        
+        th {
+            background-color: #f8fafc;
+            color: #0f172a; // Slate-900 heading color
+            font-weight: 600;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            border-bottom: 2px solid #cbd5e1;
+        }
+        
+        tbody tr {
+            transition: background-color 0.2s ease;
+            
+            &:nth-child(even) {
+                background-color: #f8fafc;
+            }
+            
+            &:last-child td {
+                border-bottom: none;
+            }
+            
+            &:hover {
+                background-color: #f1f5f9;
+            }
+        }
+        
+        // Block formatting & swipe indicator for mobile layouts
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 6px;
+            
+            th, td {
+                padding: 0.75rem 1rem;
+                white-space: nowrap; // Prevent extreme wrapping inside block lines
             }
         }
     }
