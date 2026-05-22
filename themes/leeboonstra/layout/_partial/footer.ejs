@@ -130,9 +130,23 @@ function initPrismHighlighting() {
   }
 }
 
+// Add modern responsive wrappers around article data tables
+function initResponsiveTables() {
+  document.querySelectorAll('.blogcontent table').forEach(function(table) {
+    if (table.closest('figure.highlight')) return;
+    if (table.parentNode.classList.contains('table-responsive-wrapper')) return;
+    
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-responsive-wrapper';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+}
+
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
   initMermaidDiagrams();
+  initResponsiveTables();
   // Small delay to ensure all scripts are loaded
   setTimeout(initPrismHighlighting, 50);
 });

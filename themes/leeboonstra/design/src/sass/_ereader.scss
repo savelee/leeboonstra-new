@@ -1,0 +1,722 @@
+/*
+ Copyright 2026 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+// ==========================================================================
+// Default Screen Styling (Standard View Utility)
+// ==========================================================================
+.article-meta-utility {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end; /* Right-align date & toggle button with the right boundary of the container */
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    width: 100%;
+    
+    .date, .article-date {
+        margin: 0 !important;
+        display: inline-block;
+    }
+}
+
+.reader-toggle-container {
+    display: none; /* Shown dynamically via JavaScript progressive enhancement */
+    align-items: center;
+}
+
+.reader-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.8rem; /* Marginally broad for solid button padding */
+    border-radius: 6px;
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+    font-size: 1.05rem !important; /* Condensed block font looks best scaled */
+    font-weight: 400; /* Bebas Neue standard weight is robust by default */
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important; /* Pure high contrast white text */
+    background-color: $primary !important; /* Premium Cobalt Blue default theme background */
+    border: 1px solid $primary !important;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    
+    .reader-toggle-icon {
+        font-size: 0.95rem;
+        display: inline-block;
+    }
+    
+    &:hover {
+        color: #ffffff !important;
+        background-color: darken($primary, 8%) !important;
+        border-color: darken($primary, 8%) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba($primary, 0.15) !important;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// ==========================================================================
+// Dynamic Theme Overrides: Match section specific brand date/link highlights
+// ==========================================================================
+.Biography .reader-toggle-btn {
+    background-color: $red !important;
+    border-color: $red !important;
+    &:hover {
+        background-color: darken($red, 8%) !important;
+        border-color: darken($red, 8%) !important;
+        box-shadow: 0 4px 8px rgba($red, 0.15) !important;
+    }
+}
+
+.Conferences .reader-toggle-btn {
+    background-color: $orange !important;
+    border-color: $orange !important;
+    &:hover {
+        background-color: darken($orange, 8%) !important;
+        border-color: darken($orange, 8%) !important;
+        box-shadow: 0 4px 8px rgba($orange, 0.15) !important;
+    }
+}
+
+.Videos .reader-toggle-btn, .Abstracts .reader-toggle-btn {
+    background-color: $green !important;
+    border-color: $green !important;
+    &:hover {
+        background-color: darken($green, 8%) !important;
+        border-color: darken($green, 8%) !important;
+        box-shadow: 0 4px 8px rgba($green, 0.15) !important;
+    }
+}
+
+.FAQ .reader-toggle-btn, .FAQs .reader-toggle-btn, .Contact .reader-toggle-btn {
+    background-color: $lightblue !important;
+    border-color: $lightblue !important;
+    &:hover {
+        background-color: darken($lightblue, 8%) !important;
+        border-color: darken($lightblue, 8%) !important;
+        box-shadow: 0 4px 8px rgba($lightblue, 0.15) !important;
+    }
+}
+
+// ==========================================================================
+// Premium Responsive Data Table Design System (Standard Screen View)
+// ==========================================================================
+.table-responsive-wrapper {
+    width: 100% !important;
+    max-width: 48rem !important; /* Force exact same layout boundary as standard text body paragraphs (48rem) */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba($primary, 0.15) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    background-color: #ffffff !important;
+    
+    // Hide default outer outline to let the wrapper handle the rounded boundary
+    table {
+        width: 100% !important;
+        margin: 0 !important;
+        border-collapse: collapse !important;
+        border: none !important;
+        table-layout: auto !important;
+        
+        th, td {
+            padding: 0.95rem 1.25rem !important;
+            text-align: left !important;
+            line-height: 1.55 !important;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+            border-right: none !important;
+            border-left: none !important;
+            word-break: break-word !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        th {
+            background-color: $primary !important; /* Premium Cobalt Blue dynamic default */
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+            font-size: 1.05rem !important;
+            letter-spacing: 0.05em !important;
+            text-transform: uppercase !important;
+            border-bottom: 2px solid darken($primary, 8%) !important;
+        }
+        
+        tbody tr {
+            background-color: #ffffff !important;
+            transition: background-color 0.15s ease !important;
+            
+            &:nth-child(even) {
+                background-color: rgba($primary, 0.015) !important; /* Extremely soft theme color tint */
+            }
+            
+            &:hover {
+                background-color: rgba($primary, 0.05) !important; /* Hover focus theme light highlight */
+            }
+            
+            &:last-child td {
+                border-bottom: none !important;
+            }
+        }
+    }
+}
+
+// Section dynamic active color overrides for the premium table grid
+.Biography {
+    .table-responsive-wrapper {
+        border-color: rgba($red, 0.18) !important;
+        table th {
+            background-color: $red !important;
+            border-bottom-color: darken($red, 8%) !important;
+        }
+        table tbody tr:nth-child(even) { background-color: rgba($red, 0.015) !important; }
+        table tbody tr:hover { background-color: rgba($red, 0.05) !important; }
+    }
+}
+
+.Conferences {
+    .table-responsive-wrapper {
+        border-color: rgba($orange, 0.18) !important;
+        table th {
+            background-color: $orange !important;
+            border-bottom-color: darken($orange, 8%) !important;
+        }
+        table tbody tr:nth-child(even) { background-color: rgba($orange, 0.015) !important; }
+        table tbody tr:hover { background-color: rgba($orange, 0.05) !important; }
+    }
+}
+
+.Videos, .Abstracts {
+    .table-responsive-wrapper {
+        border-color: rgba($green, 0.18) !important;
+        table th {
+            background-color: $green !important;
+            border-bottom-color: darken($green, 8%) !important;
+        }
+        table tbody tr:nth-child(even) { background-color: rgba($green, 0.015) !important; }
+        table tbody tr:hover { background-color: rgba($green, 0.05) !important; }
+    }
+}
+
+.FAQ, .FAQs, .Contact {
+    .table-responsive-wrapper {
+        border-color: rgba($lightblue, 0.18) !important;
+        table th {
+            background-color: $lightblue !important;
+            border-bottom-color: darken($lightblue, 8%) !important;
+        }
+        table tbody tr:nth-child(even) { background-color: rgba($lightblue, 0.015) !important; }
+        table tbody tr:hover { background-color: rgba($lightblue, 0.05) !important; }
+    }
+}
+
+// ==========================================================================
+// Reader View Styles (E-Ink Physical Detection & Force Override)
+// ==========================================================================
+@mixin ereader-styles {
+    // 1. Core Resets: Kill transitions, animations & smooth scrolling for slow e-ink updates
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        transition-delay: 0s !important;
+        animation-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    // 2. Global Document Reset (High contrast flat canvas)
+    html, body {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    // Reset flex wrappers and container constraints to natural fluid vertical flow
+    .container, 
+    .row, 
+    .container.main, 
+    .main,
+    .row.justify-content-md-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    // Hide screen distractors, menus, widgets, social sharing columns, and site footers
+    header, 
+    nav, 
+    .navbar, 
+    .navbar-toggler, 
+    .navbar-collapse, 
+    .navbar-nav, 
+    .menu-overlay, 
+    .menu-close-btn, 
+    .mobile-menu-toggle,
+    footer, 
+    .footer, 
+    footer.footer, 
+    .print-only-footer,
+    .photocol, 
+    .col-4,
+    .sidebar,
+    .card.sidebar,
+    .social-share-buttons, 
+    .disclaimer, 
+    .IN-widget, 
+    .twitter-share-button,
+    .linkedin-connect-prompt,
+    .searchbar,
+    .article-header,
+    .badge,
+    .badge-primary {
+        display: none !important;
+    }
+
+    // 3. Perfect Reading Column Geometry Bounds
+    .col-8, 
+    .col-9, 
+    .col-12,
+    .blogcontent, 
+    article.blogcontent {
+        width: 100% !important;
+        max-width: 680px !important; /* Optimal read width ~65 characters */
+        margin: 2rem auto !important;
+        padding: 0 1.5rem !important;
+        float: none !important;
+        flex: 0 0 100% !important;
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: block !important;
+    }
+
+    // 4. Book-Like Typography Formatting
+    .blogcontent, article.blogcontent, .article-content {
+        font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+        font-size: 18px !important;
+        line-height: 1.75 !important;
+        color: #111111 !important;
+        letter-spacing: 0.01em !important;
+        word-spacing: 0.02em !important;
+
+        p {
+            margin-top: 0 !important;
+            margin-bottom: 1.6rem !important;
+        }
+
+        // Heading styles with clean top margins framing context
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', 'Lora', Georgia, serif !important;
+            color: #000000 !important;
+            font-weight: 700 !important;
+            line-height: 1.35 !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.2rem !important;
+            letter-spacing: -0.01em !important;
+            
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        }
+
+        h1 { font-size: 2.2rem !important; margin-top: 1.5rem !important; }
+        h2 { font-size: 1.7rem !important; border-bottom: 1px solid #dddddd !important; padding-bottom: 0.4rem !important; }
+        h3 { font-size: 1.4rem !important; }
+        h4 { font-size: 1.2rem !important; }
+
+        strong, b {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+
+        em, i {
+            font-style: italic !important;
+        }
+
+        // Link formats optimized for grayscale high contrast
+        a {
+            color: #0044cc !important;
+            text-decoration: underline !important;
+            font-weight: 600 !important;
+            
+            &:hover, &:focus, &:active {
+                color: #002288 !important;
+                text-decoration: underline !important;
+            }
+        }
+
+        // Clean list margins
+        ul, ol {
+            margin-top: 0 !important;
+            margin-bottom: 1.6rem !important;
+            padding-left: 2.2rem !important;
+            
+            li {
+                margin-bottom: 0.6rem !important;
+                line-height: 1.7 !important;
+                list-style-position: outside !important;
+            }
+        }
+        
+        ul li { list-style-type: disc !important; }
+        ol li { list-style-type: decimal !important; }
+
+        // Classic book-like blockquote formatting
+        blockquote {
+            border-left: 4px solid #111111 !important;
+            background-color: #f8f9fa !important;
+            padding: 1.2rem 1.6rem !important;
+            margin: 1.8rem 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            
+            p {
+                font-style: italic !important;
+                color: #2c3e50 !important;
+                font-size: 1.05rem !important;
+                line-height: 1.65 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        // Flat high contrast responsive table overrides (for PWA and physical printing)
+        .table-responsive-wrapper {
+            border: 1px solid #111111 !important;
+            box-shadow: none !important;
+            background-color: #ffffff !important;
+            margin: 2rem 0 !important;
+            border-radius: 0 !important;
+            width: 100% !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            
+            table {
+                width: 100% !important;
+                margin: 0 !important;
+                border-collapse: collapse !important;
+                border: none !important;
+                table-layout: auto !important;
+                
+                th, td {
+                    padding: 0.8rem 1.1rem !important;
+                    border: 1px solid #cccccc !important;
+                    color: #111111 !important;
+                    font-family: 'Lora', Georgia, serif !important;
+                    font-size: 0.95rem !important;
+                    word-break: break-word !important;
+                    word-wrap: break-word !important;
+                    overflow-wrap: break-word !important;
+                }
+                
+                th {
+                    background-color: #f1f5f9 !important; /* Soft flat background */
+                    color: #000000 !important;
+                    font-family: 'Lora', Georgia, serif !important; /* Force standard body text serif look */
+                    font-weight: 700 !important;
+                    font-size: 0.95rem !important;
+                    letter-spacing: 0 !important;
+                    text-transform: none !important;
+                    border-bottom: 2px solid #111111 !important;
+                }
+                
+                tbody tr {
+                    background-color: #ffffff !important;
+                    
+                    &:nth-child(even) {
+                        background-color: #f8f9fa !important; /* Clean flat grayscale tint */
+                    }
+                    
+                    &:hover {
+                        background-color: #f1f5f9 !important; /* Simple flat hover override */
+                    }
+                }
+            }
+        }
+    }
+
+    // 5. Uncropped fluid natural aspect ratio for technical images/diagrams
+    .blogcontent img,
+    .blogcontent picture,
+    .blogcontent picture img,
+    .article-content img,
+    img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 2rem auto !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 6px !important;
+        background-color: #ffffff !important;
+    }
+
+    // 6. High-Contrast Code Highlight Blocks (Flat Light Theme for E-ink serving)
+    figure.highlight,
+    figure.highlight *,
+    figure.highlight table,
+    figure.highlight tbody,
+    figure.highlight tr,
+    figure.highlight td,
+    figure.highlight td.code,
+    figure.highlight pre,
+    figure.highlight pre[class*="language-"],
+    pre,
+    code {
+        background-color: #f8f9fa !important;
+        color: #1a202c !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    }
+
+    figure.highlight {
+        margin: 1.8rem 0 !important;
+        padding: 0 !important;
+        border: 1px solid #cbd5e1 !important;
+        overflow: auto !important;
+        
+        &::before {
+            background-color: #f1f5f9 !important;
+            color: #475569 !important;
+            border-bottom: 1px solid #cbd5e1 !important;
+            padding: 0.4rem 0.8rem !important;
+        }
+        
+        table {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+        
+        pre {
+            padding: 1rem !important;
+            margin: 0 !important;
+            border: none !important;
+        }
+    }
+
+    // High legibility token styling
+    .token.comment, .token.prolog, .token.doctype, .token.cdata { color: #64748b !important; font-style: italic !important; }
+    .token.punctuation { color: #1e293b !important; }
+    .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: #b91c1c !important; }
+    .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: #15803d !important; }
+    .token.operator, .token.entity, .token.url { color: #1e293b !important; }
+    .token.atrule, .token.attr-value, .token.keyword { color: #1d4ed8 !important; font-weight: bold !important; }
+    .token.function, .token.class-name { color: #6b21a8 !important; }
+    .token.regex, .token.important, .token.variable { color: #ea580c !important; }
+
+    figure.highlight pre {
+        white-space: pre !important;
+        word-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+    // 7. Bento Resume Enhancements: Sharp borders, simple black lines
+    .resume {
+        margin-top: 2rem !important;
+        padding: 0 !important;
+        
+        .card {
+            border: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+        
+        .card-body {
+            padding: 0 !important;
+        }
+
+        h2 {
+            border-bottom: 2px solid #111111 !important;
+            padding-bottom: 0.4rem !important;
+            margin-top: 2.5rem !important;
+            margin-bottom: 1.5rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+            color: #000000 !important;
+            
+            &::before {
+                display: none !important;
+            }
+        }
+
+        .experience-chip, 
+        .education-chip, 
+        .skill-chip, 
+        .publications-chip,
+        .language-item {
+            transform: none !important;
+            box-shadow: none !important;
+            background: #ffffff !important;
+            border: 1px solid #111111 !important;
+            border-radius: 4px !important;
+            padding: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+            
+            &:hover {
+                transform: none !important;
+                border-color: #111111 !important;
+                box-shadow: none !important;
+            }
+        }
+        
+        .chip-date, .publication-type {
+            background: #f1f5f9 !important;
+            color: #111111 !important;
+            border: 1px solid #111111 !important;
+            border-radius: 2px !important;
+            padding: 0.2rem 0.5rem !important;
+            font-size: 0.8rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .chip-title {
+            color: #000000 !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+        }
+
+        .chip-list li {
+            color: #111111 !important;
+            font-size: 0.95rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 0.4rem !important;
+        }
+
+        .skill-tags .skill-tag {
+            background: #f1f5f9 !important;
+            color: #111111 !important;
+            border: 1px solid #111111 !important;
+            border-radius: 4px !important;
+            padding: 0.25rem 0.5rem !important;
+            font-size: 0.85rem !important;
+            transform: none !important;
+            
+            &:hover {
+                transform: none !important;
+                background: #e2e8f0 !important;
+            }
+        }
+        
+        .language-item {
+            text-align: left !important;
+            padding: 1rem !important;
+        }
+    }
+    
+    // Force toggle link parameters to stand out cleanly
+    .reader-toggle-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.4rem !important;
+        padding: 0.3rem 0.7rem !important;
+        border-radius: 4px !important;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        background: #ffffff !important;
+        border: 1.5px solid #000000 !important;
+        text-decoration: none !important;
+        box-shadow: none !important;
+        
+        &:hover {
+            background: #eeeeee !important;
+            color: #000000 !important;
+        }
+    }
+    
+    .article-meta-utility {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        border-bottom: 1px solid #dddddd !important;
+        padding-bottom: 0.8rem !important;
+    }
+}
+
+// 1. Emulated/Standard screen hook detection
+@media (update: slow) {
+    @include ereader-styles;
+}
+
+// 2. Class manual force state trigger
+html.force-ereader,
+body.force-ereader {
+    @include ereader-styles;
+}
+
+// 3. Physical Print Layout formatting (for all standard blog pages)
+@media print {
+    @include ereader-styles;
+    
+    // Hide standard screen controls from physical sheet printouts
+    .reader-toggle-container,
+    .reader-toggle-btn {
+        display: none !important;
+    }
+    
+    // Core physical print safety overrides for code blocks (ensures no static scrollbars on paper!)
+    figure.highlight,
+    pre,
+    code,
+    pre[class*="language-"],
+    .token {
+        overflow: visible !important;
+        white-space: pre-wrap !important; /* Force code lines to wrap naturally on printed paper! */
+        word-break: break-all !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    figure.highlight {
+        overflow: visible !important;
+        
+        pre {
+            white-space: pre-wrap !important;
+            word-break: break-all !important;
+            overflow: visible !important;
+        }
+        
+        td.code {
+            overflow: visible !important;
+        }
+    }
+}
+

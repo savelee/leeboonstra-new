@@ -410,7 +410,6 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
   
 
   <%- autoCanonical(config, page) %>
@@ -426,8 +425,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
-  <link rel="stylesheet" media="print" href="/print.css?v=<%= d %>">
+  <% if (page.layout === 'about' || page.layout === 'bio') { %>
+    <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
+    <link rel="stylesheet" media="print" href="/print.css?v=<%= d %>">
+  <% } else { %>
+    <link rel="stylesheet" href="/main.css?v=<%= d %>">
+  <% } %>
   <link rel="preload" href="/css/prism-atom-dark.min.css" as="style">
   <link rel="preload" href="/js/prism.min.js" as="script">
   <link rel="stylesheet" href="/css/prism-atom-dark.min.css">
@@ -673,17 +676,32 @@
   <meta property="og:locale" content="en"/>
   <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.png"/>
 
-  <link rel="preconnect" href="https://www.youtube.com"/>
-  <link rel="preconnect" href="https://www.google-analytics.com"/>
-  <link rel="preconnect" href="https://platform.linkedin.com"/>
-  <link rel="preconnect" href="https://github.githubassets.com"/>
-  <link rel="preconnect" href="https://gist.github.com" />
+  <link rel="dns-prefetch" href="https://www.youtube.com"/>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+  <link rel="dns-prefetch" href="https://platform.linkedin.com"/>
+  <link rel="dns-prefetch" href="https://github.githubassets.com"/>
+  <link rel="dns-prefetch" href="https://gist.github.com" />
 
   <link type="text/plain" rel="author" href="//www.leeboonstra.dev/humans.txt"/>
 
   <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin />
   <link rel="preload" href="/fonts/Consolas.woff2" as="font" crossorigin />
   
+  <!-- Instant E-Reader / Reader Mode State Application -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var isReaderMode = params.has('reader') || params.has('ereader') || localStorage.getItem('reader-mode') === 'true';
+      
+      if (params.get('reader') === '0' || params.get('ereader') === '0') {
+        isReaderMode = false;
+      }
+      
+      if (isReaderMode) {
+        document.documentElement.classList.add('force-ereader');
+      }
+    })();
+  </script>
 </head>
 <body class="<%= page.title %> <%= page.class %>">
 

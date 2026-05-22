@@ -83,4 +83,5 @@ nav:
       - Bento & Color Styling: style_updates.md
       - SEO & Voice Search Markup: structured_data_voice_search.md
       - Resume Print Architecture: print_resume.md
+      - E-Reader & Reader Mode: reader-mode.md
       - AI Ingestion & Crawl Rules: ai_crawlers_ingestion.md

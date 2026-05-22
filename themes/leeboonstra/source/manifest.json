@@ -1,7 +1,19 @@
 {
-	"short_name": "Lee Boonstra",
-	"name": "LeeBoonstra.dev - Google SWE Lee Boonstra Dev Blog ",
+	"short_name": "Lee's Tech Blog",
+	"name": "Lee's Tech Blog",
 	"icons": [
+	  {
+		"src": "/web-app-manifest-192x192.png",
+		"sizes": "192x192",
+		"type": "image/png",
+		"purpose": "maskable"
+	  },
+	  {
+		"src": "/web-app-manifest-512x512.png",
+		"sizes": "512x512",
+		"type": "image/png",
+		"purpose": "maskable"
+	  },
 	  {
 		"src": "/android-chrome-192x192.png",
 		"sizes": "192x192",

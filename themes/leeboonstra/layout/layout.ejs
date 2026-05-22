@@ -1,12 +1,12 @@
 <%- partial('_partial/head'), {}, {cache: true} %>
 
-  <div class="container main article-cards">    
+  <main class="container main article-cards">    
     <div class="row">
 
       <%- body %>
 
     </div>
-  </div>
+  </main>
   <% if (page.total > 1){ %>
     <%- partial('_widget/pagination', {type: 'page'}) %>
   <% } %>
