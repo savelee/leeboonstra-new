@@ -182,6 +182,15 @@
       "value": "max-age=86400"
       }
       ]
+      },
+      {
+      "source": "/serviceworker.js",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "no-cache, no-store, must-revalidate"
+      }
+      ]
       }
       ]
   }

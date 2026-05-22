@@ -2,9 +2,10 @@ module.exports = {
   "globDirectory": "public/",
   "globPatterns": [
     "**/*.{js,ico,ttf,woff,svg,woff2}",
-    "index.html",
     "404.html"
   ],
+  "skipWaiting": true,
+  "clientsClaim": true,
   "globIgnores": [
     "**/node_modules/**/*",
     "serviceworker.js",
