@@ -16,9 +16,14 @@ const config = {
     ]
   },
   css: {
-    inputDir: 'public/css',
-    outputDir: 'public/css',
-    files: ['prism-atom-dark.css', 'prism-line-numbers.css']
+    inputDir: 'public',
+    outputDir: 'public',
+    files: [
+      { input: 'css/prism-atom-dark.css', output: 'css/prism-atom-dark.min.css' },
+      { input: 'css/prism-line-numbers.css', output: 'css/prism-line-numbers.min.css' },
+      { input: 'main.css', output: 'main.css' },
+      { input: 'print.css', output: 'print.css' }
+    ]
   }
 };
 
@@ -76,9 +81,9 @@ function minifyCSS() {
     rebase: false // Don't rebase URLs
   });
   
-  for (const file of config.css.files) {
-    const inputPath = path.join(config.css.inputDir, file);
-    const outputPath = path.join(config.css.outputDir, file.replace('.css', '.min.css'));
+  for (const fileConfig of config.css.files) {
+    const inputPath = path.join(config.css.inputDir, fileConfig.input);
+    const outputPath = path.join(config.css.outputDir, fileConfig.output);
     
     if (fs.existsSync(inputPath)) {
       try {
@@ -86,12 +91,18 @@ function minifyCSS() {
         const result = cleanCSS.minify(css);
         
         if (result.errors.length > 0) {
-          console.error(`❌ CSS errors in ${file}:`, result.errors);
+          console.error(`❌ CSS errors in ${fileConfig.input}:`, result.errors);
           continue;
         }
         
+        // Ensure destination directory path exists
+        const outputFolder = path.dirname(outputPath);
+        if (!fs.existsSync(outputFolder)) {
+            fs.mkdirSync(outputFolder, { recursive: true });
+        }
+        
         fs.writeFileSync(outputPath, result.styles);
-        console.log(`✅ Minified: ${file} → ${path.basename(outputPath)}`);
+        console.log(`✅ Minified: ${fileConfig.input} → ${fileConfig.output}`);
         
         // Show size reduction
         const originalSize = fs.statSync(inputPath).size;
@@ -100,7 +111,7 @@ function minifyCSS() {
         console.log(`   Size: ${(originalSize / 1024).toFixed(1)}KB → ${(minifiedSize / 1024).toFixed(1)}KB (${reduction}% reduction)`);
         
       } catch (error) {
-        console.error(`❌ Error minifying ${file}:`, error.message);
+        console.error(`❌ Error minifying ${fileConfig.input}:`, error.message);
       }
     } else {
       console.log(`⚠️ File not found: ${inputPath}`);

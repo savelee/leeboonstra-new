@@ -169,6 +169,11 @@ picture img,
         
         .badge {
             margin: 0 !important;
+            margin-right: 0.6rem !important;
+            
+            &:last-child {
+                margin-right: 0 !important;
+            }
         }
         
         .date {
@@ -216,7 +221,7 @@ picture img,
 
 
 // Force responsive sidebar behavior with higher specificity
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px), (orientation: portrait) and (max-width: 1199.98px) {
     .container.main.article-cards .row .col-3 {
         width: 100% !important;
         flex: 0 0 100% !important;
@@ -232,6 +237,10 @@ picture img,
         order: 1 !important;
     }
     
+    .container.main.article-cards .row .col-12 {
+        order: 3 !important;
+    }
+    
     .container.main.article-cards .row {
         display: flex !important;
         flex-direction: column !important;
@@ -242,8 +251,8 @@ picture img,
     }
 }
 
-// Ensure proper column layout on larger screens
-@media (min-width: 768px) {
+// Ensure proper column layout on larger screens in landscape
+@media (min-width: 1200px), (min-width: 992px) and (orientation: landscape) {
     .container.main.article-cards .row {
         display: flex !important;
         flex-direction: row !important;
@@ -264,6 +273,17 @@ picture img,
         order: 1 !important;
     }
     
+    .container.main.article-cards .row .col-12 {
+        order: 3 !important;
+    }
+    
+    .container.main.article-cards .row .float-md-left {
+        float: left !important;
+    }
+}
+
+// General tablet-and-up layout rules for About page
+@media (min-width: 768px) {
     // About page specific styles
     .container.about {
         min-height: calc(100vh - 200px);
@@ -294,10 +314,6 @@ picture img,
         &.Biography .card-body {
             height: auto !important;
         }
-    }
-    
-    .container.main.article-cards .row .float-md-left {
-        float: left !important;
     }
 }
 
@@ -442,7 +458,7 @@ picture img,
         color: #fff !important;
     }
 
-    h4 {
+    h3, h4 {
         font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
         font-size: 1.5rem !important;
         font-weight: 400 !important;
@@ -476,10 +492,11 @@ picture img,
 }
 
 .disclaimer {
-    font-family: $font-family-base;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
     font-style: italic;
-    font-size: 1rem;
-    padding: 0 20px;
+    font-size: 0.85rem;
+    color: #475569;
+    padding: 10px 20px;
 }
 
 body {
@@ -677,6 +694,30 @@ header {
     
     a {
         color: #fff;
+    }
+}
+
+a.badge-primary-link {
+    background-color: $primary !important;
+    color: #fff !important;
+    margin-right: 0.6rem !important;
+    margin-bottom: 0.4rem !important;
+    padding: 0.35em 0.65em !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease-in-out !important;
+    
+    &:hover, &:focus {
+        background-color: darken($primary, 15%) !important;
+        color: #fff !important;
+        text-decoration: none !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+        transform: translateY(-1px) !important;
     }
 }
 
@@ -1869,13 +1910,14 @@ time {
     font-family: $font-family-base;
     color: #475569;
 
-    h2 {
+    h2,
+    .card-body.sidebar & h2 {
         font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
         font-size: 1.65rem !important;
         font-weight: 400 !important;
         text-transform: uppercase !important;
         letter-spacing: 0.05em !important;
-        color: #0f172a !important;
+        color: $primary !important;
         text-align: center !important;
         margin-top: 1.25rem !important;
         margin-bottom: 1.25rem !important;
@@ -2040,20 +2082,14 @@ time {
         margin-bottom: 1.5rem;
         margin-right: 1rem; // Add spacing between cards
         
-        // Ensure 4 cards per row on large screens
-        @media (min-width: 992px) {
+        // Ensure 4 cards per row on large screens in landscape
+        @media (min-width: 1200px), (min-width: 992px) and (orientation: landscape) {
             flex: 0 0 calc(25% - 1rem); // 25% width minus full margin
             max-width: calc(25% - 1rem);
         }
         
-        // 3 cards per row on medium screens
-        @media (min-width: 768px) and (max-width: 991px) {
-            flex: 0 0 calc(33.333% - 1rem);
-            max-width: calc(33.333% - 1rem);
-        }
-        
-        // 2 cards per row on small screens
-        @media (min-width: 576px) and (max-width: 767px) {
+        // 2 cards per row on small/medium screens or portrait displays
+        @media (min-width: 576px) and (max-width: 991.98px), (orientation: portrait) and (min-width: 576px) and (max-width: 1199.98px) {
             flex: 0 0 calc(50% - 1rem);
             max-width: calc(50% - 1rem);
         }
@@ -2193,20 +2229,14 @@ footer {
         margin-bottom: 1.5rem;
         margin-right: 1rem; // Add spacing between cards
         
-        // Ensure 4 cards per row on large screens
-        @media (min-width: 992px) {
+        // Ensure 4 cards per row on large screens in landscape
+        @media (min-width: 1200px), (min-width: 992px) and (orientation: landscape) {
             flex: 0 0 calc(25% - 1rem); // 25% width minus full margin
             max-width: calc(25% - 1rem);
         }
         
-        // 3 cards per row on medium screens
-        @media (min-width: 768px) and (max-width: 991px) {
-            flex: 0 0 calc(33.333% - 1rem);
-            max-width: calc(33.333% - 1rem);
-        }
-        
-        // 2 cards per row on small screens
-        @media (min-width: 576px) and (max-width: 767px) {
+        // 2 cards per row on small/medium screens or portrait displays
+        @media (min-width: 576px) and (max-width: 991.98px), (orientation: portrait) and (min-width: 576px) and (max-width: 1199.98px) {
             flex: 0 0 calc(50% - 1rem);
             max-width: calc(50% - 1rem);
         }

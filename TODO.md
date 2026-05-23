@@ -40,3 +40,15 @@
 - [x] Fix Workbox routing regular expressions to match query parameters for key static resources. <!-- id: 37 -->
 - [x] Implement actual WebP image transcoding (with quality 80 compression) for true responsive assets. <!-- id: 38 -->
 - [x] Verify build asset pipeline outputs and test runtime caching of assets. <!-- id: 39 -->
+- [x] Modernize Google Analytics tracking implementation (optimize script location, dynamic config parsing, dev traffic exclusion, and preconnect parameters). <!-- id: 40 -->
+- [x] Integrate speed and accessibility optimizations (main HTML5 landmark, optimized preconnect scopes, and corrected heading ordering). <!-- id: 41 -->
+- [x] Consolidate PWA homescreen settings, setting name to "Lee's Tech Blog" and adding maskable launch icons. <!-- id: 42 -->
+- [x] Implement mobile speed and mobile-throttled FCP/LCP enhancements (asynchronous Google Fonts loading, logical conditioning for Prism highlight engines, correct image WebP book cover picture containers in sidebars, and set up CleanCSS Level 2 advanced property minifications). <!-- id: 44 -->
+- [x] Regenerate modern Workbox PWA Service Worker assets cache index and deploy the fully optimized build to Firebase hosting. <!-- id: 45 -->
+- [x] Modernize dynamic navigation panel, mobile closing tags, and menu toggler with high-legibility modern outline SVGs. <!-- id: 46 -->
+- [x] Refactor category lists into individualized badge pill components with responsive margin spacing ("one blue line" fix). <!-- id: 47 -->
+- [x] Force responsive single-column layout stack on all wide viewports in portrait orientation. <!-- id: 48 -->
+- [x] Sync sidebar biography header text color with primary theme brand color. <!-- id: 49 -->
+- [x] Fix sidebar biography header styling specificity conflict with general card-body h2 rules to restore correct color and font-size. <!-- id: 50 -->
+- [ ] Darken footer disclaimer, change font to Lora, make a little bit smaller, and add "Hexo Blog Design by Lee Boonstra" <!-- id: 51 -->
+

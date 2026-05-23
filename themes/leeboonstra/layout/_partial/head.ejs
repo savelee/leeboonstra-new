@@ -20,11 +20,41 @@
 
   // keywords.
   var keyWords = config.keywords ? config.keywords : config.title;
-  %>
-  <title><% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %></title>
-  <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>" type="application/atom+xml"/>
+
+  // Resolve social share parameters (Open Graph & Twitter Cards) safely
+  var ogType = is_post() ? 'article' : 'website';
+  var ogUrl = page.permalink || '';
+  if (!ogUrl) {
+    var pathStr = page.path || '';
+    var rootStr = config.root || '/';
+    if (pathStr.startsWith('/')) {
+      pathStr = pathStr.substring(1);
+    }
+    if (!rootStr.endsWith('/')) {
+      rootStr += '/';
+    }
+    ogUrl = config.url + rootStr + pathStr;
+  }
+  if (ogUrl && !ogUrl.startsWith('http')) {
+    ogUrl = config.url + (ogUrl.startsWith('/') ? '' : '/') + ogUrl;
+  }
+  var ogTitle = (title ? title : (config.title ? config.title : '')).trim();
   
-  <meta name="description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
+  var ogDescriptionRaw = page.description || page.excerpt || config.description || '';
+  var ogDescription = strip_html(ogDescriptionRaw).replace(/\s+/g, ' ').trim();
+  if (ogDescription.length > 200) {
+    ogDescription = ogDescription.substring(0, 197) + '...';
+  }
+  
+  var ogImage = config.url + '/images/screen.png';
+  if (page.featured) {
+    ogImage = config.url + '/images/large_' + page.featured + '.webp';
+  }
+  %>
+  <title><% if (title) { %><%= title.trim() %><% } else { %><%= config.title.trim() %><% } %></title>
+  <link rel="alternate" href="/atom.xml" title="<% if (title) { %><%= title.trim() %><% } else { %><%= config.title.trim() %><% } %>" type="application/atom+xml">
+  
+  <meta name="description" content="<%- ogDescription %>">
   
   <script type="application/ld+json">
     {
@@ -314,7 +344,7 @@
       },
       "headline": "<%= page.title.replace(/"/g, '\\"') %>",
       "description": "<%= (page.description || page.excerpt || '').replace(/<\/?[^>]+(>|$)/g, "").replace(/\s+/g, " ").replace(/"/g, '\\"').substring(0, 250) %>...",
-      "image": "<%= config.url %>/images/screen.png",
+      "image": "<%- ogImage %>",
       "datePublished": "<%= page.date.toISOString() %>",
       "dateCreated": "<%= page.date.toISOString() %>",
       "dateModified": "<%= (page.updated || page.date).toISOString() %>",
@@ -404,17 +434,17 @@
     }
     </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   
-
+ 
   <%- autoCanonical(config, page) %>
-
-  <meta name="theme-color" content="#fafafa"/>
+ 
+  <meta name="theme-color" content="#fafafa">
 
   <%
     var dateObj = new Date();
@@ -423,7 +453,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@600;700&display=swap">
+  </noscript>
 
   <% if (page.layout === 'about' || page.layout === 'bio') { %>
     <link rel="stylesheet" media="screen" href="/main.css?v=<%= d %>">
@@ -431,9 +464,11 @@
   <% } else { %>
     <link rel="stylesheet" href="/main.css?v=<%= d %>">
   <% } %>
+  <% if (is_post()) { %>
   <link rel="preload" href="/css/prism-atom-dark.min.css" as="style">
   <link rel="preload" href="/js/prism.min.js" as="script">
   <link rel="stylesheet" href="/css/prism-atom-dark.min.css">
+  <% } %>
   <style>
     /* Custom hexo-prism dark theme */
     figure.highlight {
@@ -659,33 +694,40 @@
     }
   </style>
 
-  <link rel="manifest" href="/manifest.json"/>  
+  <link rel="manifest" href="/manifest.json">  
   
-  <meta name="robots" content="all"/>
-  <meta name="yandex-verification" content="adf3dcb0d559ea5a"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="robots" content="all">
+  <meta name="yandex-verification" content="adf3dcb0d559ea5a">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="image_src" type="image/png" href="//www.leeboonstra.dev/images/screen.png"/>
-  <link rel="profile" href="https://gmpg.org/xfn/11"/>
-  <link rel="pingback" href="https://www.leeboonstra.dev"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
-  <meta property="og:url" content="https://www.leeboonstra.dev/"/>
-  <meta property="og:site_name" content="<% if (title) { %><%= title %> <% } else { %><%= config.title %> <% } %>"/>
-  <meta property="og:description" content="<% if (page.description) { %><%= page.description %> <% } else { %><%= config.description %> <% } %>"/>
-  <meta property="og:locale" content="en"/>
-  <meta property="og:image" content="https://www.leeboonstra.dev/images/screen.png"/>
+  <link rel="image_src" type="image/png" href="<%- ogImage %>">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <link rel="pingback" href="https://www.leeboonstra.dev">
+  <meta property="og:type" content="<%- ogType %>">
+  <meta property="og:title" content="<%- ogTitle %>"/>
+  <meta property="og:url" content="<%- ogUrl %>">
+  <meta property="og:site_name" content="<%- config.title %>"/>
+  <meta property="og:description" content="<%- ogDescription %>"/>
+  <meta property="og:locale" content="en">
+  <meta property="og:image" content="<%- ogImage %>">
 
-  <link rel="dns-prefetch" href="https://www.youtube.com"/>
-  <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-  <link rel="dns-prefetch" href="https://platform.linkedin.com"/>
-  <link rel="dns-prefetch" href="https://github.githubassets.com"/>
-  <link rel="dns-prefetch" href="https://gist.github.com" />
+  <!-- Twitter Card metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%- ogTitle %>">
+  <meta name="twitter:description" content="<%- ogDescription %>">
+  <meta name="twitter:image" content="<%- ogImage %>">
 
-  <link type="text/plain" rel="author" href="//www.leeboonstra.dev/humans.txt"/>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://platform.linkedin.com">
+  <link rel="dns-prefetch" href="https://github.githubassets.com">
+  <link rel="dns-prefetch" href="https://gist.github.com">
 
-  <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin />
-  <link rel="preload" href="/fonts/Consolas.woff2" as="font" crossorigin />
+  <link type="text/plain" rel="author" href="//www.leeboonstra.dev/humans.txt">
+
+  <link rel="preload" href="/fonts/bebasneue-webfont.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/Consolas.woff2" as="font" crossorigin>
   
   <!-- Instant E-Reader / Reader Mode State Application -->
   <script>
@@ -702,6 +744,24 @@
       }
     })();
   </script>
+
+  <% if (config.google_analytics) { %>
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= config.google_analytics %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Programmatically disable tracking in local development environments to prevent data pollution
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.endsWith('.local')) {
+      window['ga-disable-<%= config.google_analytics %>'] = true;
+      console.log('Google Analytics is programmatically disabled on localhost.');
+    }
+
+    gtag('config', '<%= config.google_analytics %>');
+  </script>
+  <% } %>
 </head>
 <body class="<%= page.title %> <%= page.class %>">
 
@@ -709,7 +769,7 @@
 
     <div class="d-block w-100 headertop">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+        <svg class="icon icon-modern icon-menu"><use xlink:href="#icon-menu"></use></svg>
       </button>
       <span class="navbar-brand">LeeBoonstra.dev</span>
       <form class="form-inline mt-2 mt-md-0 searchbar">
@@ -717,32 +777,43 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-
+ 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
-      <symbol id="icon-iHome" viewBox="0 0 32 32">
-      <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+      <symbol id="icon-iHome" viewBox="0 0 24 24">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
       </symbol>
-      <symbol id="icon-iWriting" viewBox="0 0 32 32">
-      <path d="M0 32c4-12 14.469-32 32-32-8.219 6.594-12 22-18 22s-6 0-6 0l-6 10h-2z"></path>
+      <symbol id="icon-iWriting" viewBox="0 0 24 24">
+        <path d="M2 21a8 8 0 0 1 13.292-6M22 2c-3.275 1-10.29 8.219-12.292 12M2 21c3.275-1 10.29-8.219 12.292-12m-6.07 8.38 2.05-2.05m-3.92 6.13 2.05-2.05m-5.83 5.83 1.25-1.25"/>
       </symbol>
-      <symbol id="icon-iVideos" viewBox="0 0 32 32">
-      <path d="M12 9c0-2.761 2.239-5 5-5s5 2.239 5 5c0 2.761-2.239 5-5 5s-5-2.239-5-5zM0 9c0-2.761 2.239-5 5-5s5 2.239 5 5c0 2.761-2.239 5-5 5s-5-2.239-5-5zM24 19v-3c0-1.1-0.9-2-2-2h-20c-1.1 0-2 0.9-2 2v10c0 1.1 0.9 2 2 2h20c1.1 0 2-0.9 2-2v-3l8 5v-14l-8 5zM20 24h-16v-6h16v6z"></path>
+      <symbol id="icon-iVideos" viewBox="0 0 24 24">
+        <path d="m22 8-6 4 6 4V8Z"/>
+        <rect width="14" height="12" x="2" y="6" rx="2" ry="2"/>
       </symbol>
-      <symbol id="icon-iSpeaking" viewBox="0 0 32 32">
-      <path d="M15 22c2.761 0 5-2.239 5-5v-12c0-2.761-2.239-5-5-5s-5 2.239-5 5v12c0 2.761 2.239 5 5 5zM22 14v3c0 3.866-3.134 7-7 7s-7-3.134-7-7v-3h-2v3c0 4.632 3.5 8.447 8 8.944v4.056h-4v2h10v-2h-4v-4.056c4.5-0.497 8-4.312 8-8.944v-3h-2z"></path>
+      <symbol id="icon-iSpeaking" viewBox="0 0 24 24">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+        <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+        <line x1="12" x2="12" y1="19" y2="22"/>
       </symbol>
-      <symbol id="icon-iAbstracts" viewBox="0 0 32 32">
-      <path d="M27 0h-24c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h24c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM26 28h-22v-24h22v24zM8 14h14v2h-14zM8 18h14v2h-14zM8 22h14v2h-14zM8 10h14v2h-14z"></path>
+      <symbol id="icon-iAbstracts" viewBox="0 0 24 24">
+        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+        <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+        <path d="M10 9H8"/>
+        <path d="M16 13H8"/>
+        <path d="M16 17H8"/>
       </symbol>
-      <symbol id="icon-iChat" viewBox="0 0 36 32">
-      <path d="M34 28.161c0 1.422 0.813 2.653 2 3.256v0.498c-0.332 0.045-0.671 0.070-1.016 0.070-2.125 0-4.042-0.892-5.398-2.321-0.819 0.218-1.688 0.336-2.587 0.336-4.971 0-9-3.582-9-8s4.029-8 9-8c4.971 0 9 3.582 9 8 0 1.73-0.618 3.331-1.667 4.64-0.213 0.463-0.333 0.979-0.333 1.522zM7.209 6.912c-2.069 1.681-3.209 3.843-3.209 6.088 0 1.259 0.35 2.481 1.039 3.63 0.711 1.185 1.781 2.268 3.093 3.133 0.949 0.625 1.587 1.623 1.755 2.747 0.056 0.375 0.091 0.753 0.105 1.129 0.233-0.194 0.461-0.401 0.684-0.624 0.755-0.755 1.774-1.172 2.828-1.172 0.168 0 0.336 0.011 0.505 0.032 0.655 0.083 1.323 0.125 1.987 0.126v4c-0.848-0-1.68-0.054-2.492-0.158-3.437 3.437-7.539 4.053-11.505 4.144v-0.841c2.142-1.049 4-2.961 4-5.145 0-0.305-0.024-0.604-0.068-0.897-3.619-2.383-5.932-6.024-5.932-10.103 0-7.18 7.163-13 16-13 8.702 0 15.781 5.644 15.995 12.672-1.284-0.572-2.683-0.919-4.133-1.018-0.36-1.752-1.419-3.401-3.070-4.742-1.104-0.897-2.404-1.606-3.863-2.108-1.553-0.534-3.211-0.804-4.928-0.804s-3.375 0.271-4.928 0.804c-1.46 0.502-2.76 1.211-3.863 2.108z"></path>
+      <symbol id="icon-iChat" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </symbol>
-      <symbol id="icon-iBio" viewBox="0 0 32 32">
-      <path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+      <symbol id="icon-iBio" viewBox="0 0 24 24">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
       </symbol>
-      <symbol id="icon-iFAQs" viewBox="0 0 32 32">
-      <path d="M26.667 0h-21.333c-2.934 0-5.334 2.4-5.334 5.334v21.332c0 2.936 2.4 5.334 5.334 5.334h21.333c2.934 0 5.333-2.398 5.333-5.334v-21.332c0-2.934-2.399-5.334-5.333-5.334zM26.667 4c0.25 0 0.486 0.073 0.688 0.198l-11.355 9.388-11.355-9.387c0.202-0.125 0.439-0.198 0.689-0.198h21.333zM5.334 28c-0.060 0-0.119-0.005-0.178-0.013l7.051-9.78-0.914-0.914-7.293 7.293v-19.098l12 14.512 12-14.512v19.098l-7.293-7.293-0.914 0.914 7.051 9.78c-0.058 0.008-0.117 0.013-0.177 0.013h-21.333z"></path>
+      <symbol id="icon-iFAQs" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" x2="12.01" y1="17" y2="17"/>
       </symbol>
       <symbol id="icon-itwitter" viewBox="0 0 32 32">
       <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
@@ -759,32 +830,36 @@
       <symbol id="icon-istackoverflow" viewBox="0 0 32 32">
       <path d="M32 20v12h-32v-12h4v8h24v-8zM6 22h20v4h-20zM6.473 17.671l0.866-3.905 19.526 4.328-0.866 3.905zM8.739 9.642l1.69-3.625 18.126 8.452-1.69 3.625zM30.991 11.296l-2.435 3.173-15.867-12.175 1.761-2.294h1.82z"></path>
       </symbol>
-      <symbol id="icon-menu" viewBox="0 0 32 32">
-        <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
-        </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <line x1="4" x2="20" y1="12" y2="12"/>
+        <line x1="4" x2="20" y1="6" y2="6"/>
+        <line x1="4" x2="20" y1="18" y2="18"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <line x1="18" x2="6" y1="6" y2="18"/>
+        <line x1="6" x2="18" y1="6" y2="18"/>
+      </symbol>
       </defs>
       </svg>
-
+ 
     <!-- Menu overlay for mobile -->
     <div class="menu-overlay"></div>
-
+ 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-
+ 
       <!-- Close button for mobile menu -->
       <button class="menu-close-btn" type="button" aria-label="Close menu">
-        <svg class="icon icon-close" viewBox="0 0 24 24">
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-        </svg>
+        <svg class="icon icon-modern icon-close"><use xlink:href="#icon-close"></use></svg>
       </button>
-
+ 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-
+ 
           <% for (var prop in config.nav){ %>
             <li class="nav-item icon<%= prop %> <%= is_current(config.nav[prop]) ? 'active' : '' %> <%- is_home() ? 'home' : '' %> text-center">
               <a class="nav-link" href="<%- url_for(config.nav[prop]) %>">
-                <svg class="icon i<%= prop %>"><use xlink:href="#icon-i<%= prop %>"></use></svg>
+                <svg class="icon icon-modern i<%= prop %>"><use xlink:href="#icon-i<%= prop %>"></use></svg>
                 <span><%= prop %></span>
               </a>
             </li>

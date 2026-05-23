@@ -91,8 +91,8 @@
             <h3 class="card-title">Photo's</h3>
             <a href="/images/large_leeboonstra_new.jpg">
               <picture>
-                <source srcset="/images/small_leeboonstra_new.webp 200w">
-                <img src="/images/small_leeboonstra_new.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, Developer Relations Engineer and public speaker." />
+                <source srcset="/images/small_leeboonstra_new.webp" type="image/webp">
+                <img src="/images/small_leeboonstra_new.jpg" class="rounded mx-auto d-block" alt="Lee Boonstra, AI Software Engineer and public keynote speaker." />
               </picture>
             </a>
 
@@ -164,7 +164,7 @@
                       <div class="col-md-6 mb-4">
                           <div class="experience-chip">
                               <span class="chip-date"><%= job.name %>, <%= formatYear(job.startDate) %> – <%= formatYear(job.endDate) %></span>
-                              <h4 class="chip-title"><%= job.position %></h4>
+                              <h3 class="chip-title"><%= job.position %></h3>
                               <ul class="chip-list">
                                   <% job.highlights.forEach(function(bullet) { %>
                                     <li><%= bullet %></li>
@@ -193,7 +193,7 @@
                       <div class="col-md-<%= pat.name.includes('US20250078820A1') ? '12' : '6' %> mb-4">
                           <div class="experience-chip">
                               <span class="chip-date"><%= getPatentStatus(pat) %></span>
-                              <h4 class="chip-title">
+                              <h3 class="chip-title">
                                   <% if (pat.url) { %>
                                     <a href="<%= pat.url %>" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">
                                         <%= pat.name %>
@@ -201,7 +201,7 @@
                                   <% } else { %>
                                     <%= pat.name %>
                                   <% } %>
-                              </h4>
+                              </h3>
                               <p class="chip-text mt-2"><%= pat.summary %></p>
                           </div>
                       </div>
@@ -220,7 +220,7 @@
                       <div class="col-md-<%= pub.releaseDate.startsWith('2025') ? '12' : '6' %> mb-4">
                           <div class="experience-chip">
                               <span class="chip-date"><%= pub.releaseDate.split('-')[0] %></span>
-                              <h4 class="chip-title"><%= pub.name %></h4>
+                              <h3 class="chip-title"><%= pub.name %></h3>
                               <p class="chip-text mt-2">
                                   <%= pub.summary %>
                                   <% if (pub.url) { %>
@@ -242,7 +242,7 @@
                   <% site.data.resume.education.forEach(function(edu) { %>
                     <div class="education-chip">
                         <span class="chip-date"><%= edu.startDate.split('-')[0] %>-<%= edu.endDate.split('-')[0] %></span>
-                        <h4 class="chip-title"><%= edu.institution %></h4>
+                        <h3 class="chip-title"><%= edu.institution %></h3>
                         <p class="chip-text"><%= edu.studyType %> in <%= edu.area %></p>
                     </div>
                   <% }) %>
@@ -255,7 +255,7 @@
                     <% site.data.resume.skills.forEach(function(skillGroup) { %>
                       <div class="col-md-4 mb-4">
                           <div class="skill-chip">
-                              <h4 class="chip-title"><%= skillGroup.name %></h4>
+                              <h3 class="chip-title"><%= skillGroup.name %></h3>
                               <div class="skill-tags">
                                 <% skillGroup.keywords.forEach(function(kw) { %>
                                   <span class="skill-tag"><%= kw %></span>

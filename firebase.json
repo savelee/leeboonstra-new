@@ -139,6 +139,15 @@
       ],
       "headers": [
       {
+      "source": "**/*.@(xml|css)",
+      "headers": [
+      {
+      "key": "Cache-Control",
+      "value": "max-age=86400"
+      }
+      ]
+      },
+      {
       "source": "**/*.@(eot|otf|svg|ttf|ttc|woff2|woff|font.css)",
       "headers": [
       {
@@ -157,11 +166,11 @@
       ]
       },
       {
-      "source": "**/prism-atom-dark.css",
+      "source": "**/css/prism-*.css",
       "headers": [
       {
       "key": "Cache-Control",
-      "value": "max-age=31557600"
+      "value": "max-age=31557600, immutable"
       }
       ]
       },
@@ -171,15 +180,6 @@
       {
       "key": "Cache-Control",
       "value": "no-cache"
-      }
-      ]
-      },
-      {
-      "source": "**/*.@(xml|css)",
-      "headers": [
-      {
-      "key": "Cache-Control",
-      "value": "max-age=86400"
       }
       ]
       },

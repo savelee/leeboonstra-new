@@ -81,7 +81,9 @@ nav:
       - Pipeline Custom Functions: pipeline_functions.md
       - Post Formatting Manual: post_formatting.md
       - Bento & Color Styling: style_updates.md
+      - Modern Navigation Icons: style_updates_modern_icons.md
       - SEO & Voice Search Markup: structured_data_voice_search.md
       - Resume Print Architecture: print_resume.md
       - E-Reader & Reader Mode: reader-mode.md
       - AI Ingestion & Crawl Rules: ai_crawlers_ingestion.md
+      - Google Analytics Integration: google_analytics.md

@@ -1,10 +1,9 @@
 <footer class="row align-items-start footer">
-    <h3 class="hidden">More articles to Dialogflow Conversational AI content</h3>
     <div class="col">
         <%- partial('_widget/category') %>
     </div>
     <div class="col">
-        <h4>External Sites</h4>
+        <h3>External Sites</h3>
         <ul>
             <li><a target="_blank" rel="noreferrer noopener" href="https://gist.github.com/savelee">My Gists Code Snippets</a></li>
             <li><a target="_blank" rel="noreferrer noopener" href="http://www.github.com/savelee">My Github</a></li>
@@ -21,11 +20,13 @@
     </div>
 </footer>
 <div class="disclaimer d-flex justify-content-end">
-  <span class="text-muted">Disclaimer: The opinions stated here are my own, not those of my company. - 2026 &reg; Lee Boonstra</span>
+  <span>Disclaimer: The opinions stated here are my own, not those of my company. &bull; 2026 &reg; Lee Boonstra &bull; Hexo Blog Design by Lee Boonstra</span>
 </div> 
 
 <script src="/mobile-menu.min.js" async></script>
+<% if (is_post()) { %>
 <script src="/js/prism.min.js"></script>
+<% } %>
 <script>
 // Detect and dynamically initialize Mermaid diagrams in blog posts
 function initMermaidDiagrams() {
@@ -95,6 +96,7 @@ function initMermaidDiagrams() {
   }
 }
 </script>
+<% if (is_post()) { %>
 <script>
 // Add language classes to hexo-prism code blocks and trigger highlighting
 function initPrismHighlighting() {
@@ -129,6 +131,9 @@ function initPrismHighlighting() {
     Prism.highlightAll();
   }
 }
+</script>
+<% } %>
+<script>
 
 // Add modern responsive wrappers around article data tables
 function initResponsiveTables() {
@@ -148,7 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initMermaidDiagrams();
   initResponsiveTables();
   // Small delay to ensure all scripts are loaded
+  <% if (is_post()) { %>
   setTimeout(initPrismHighlighting, 50);
+  <% } %>
 });
 </script>
 
@@ -181,16 +188,4 @@ if ('serviceWorker' in navigator) {
     }
   });
 }
-</script>
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBHKHEDYB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BBBHKHEDYB');
 </script>

@@ -109,9 +109,19 @@ code,
     fill: currentColor;
   }
   
+  .icon.icon-modern {
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2px !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+  
     .icon-menu {
         height: 20px !important;
-        fill: $white;
+        fill: none !important;
+        stroke: $white !important;
+        stroke-width: 2px !important;
     }
 
   .icon-iHome,

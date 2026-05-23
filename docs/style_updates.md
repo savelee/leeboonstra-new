@@ -46,3 +46,17 @@ Resume blocks are completely redesigned into modular, clickable bento card compo
 * **Physical Layout**: Solid `#ffffff` backgrounds with rounded corners (`16px`) and subtle borders (`1px solid rgba(15, 23, 42, 0.08)`).
 * **Active Interactions**: On hover, cards translate upwards by `-4px` and transition to an elegant, smooth shadow depth.
 * **Pill Badges**: Customized date and type pills leverage highly-refined, semi-transparent color overlays matching the parent page theme for maximum elegance.
+
+### 5. Responsive Stacking & Portrait Tablet Grid System
+To support high-fidelity display across vertical screens (such as portrait tablets and vertical desktop monitors in the 768px-1199px range):
+* **Cramped Sidebar Resolution**: The mobile layout stacking behavior (where the main reading content and the biography sidebar stack to 100% width) has its breakpoint elevated to target either screens under `992px` or **portrait viewports under 1200px**. This guarantees that vertical monitors and large portrait tablets (like a 1080p vertical desktop or an iPad Pro 12.9") see a gorgeous, spacious stacked layout, preventing standard text and titles from wrapping awkwardly.
+* **Balanced Secondary Card Grid**: The horizontal grid layout is configured to use a balanced **2-column** layout on all portrait screens under 1200px. With our current page settings displaying exactly 5 posts (1 highlighted lead post + 4 secondary cards), this change results in a perfectly balanced 2x2 grid, avoiding any single trailing cards. On widescreen landscape layouts (>= 992px in landscape or >= 1200px globally), the cards naturally lay out in a single flat line of 4 columns.
+ 
++### 6. Clean Footer Disclaimer and Attribution
++We styled the base page disclaimer to present secondary text with high legibility and minimal footprint:
++* **Font Family**: `'Lora', Georgia, serif` (italicized for editorial contrast).
++* **Font Size**: `0.85rem` (creating a subtle hierarchy that balances with footer widgets).
++* **Typography Color**: `#475569` (Darker Slate Gray to offer strong contrast on pure white backgrounds while remaining secondary).
++* **Author Attribution**: A clean bullet dot (`•`) separates the standard opinions disclaimer from the design authorship credit: `Hexo Blog Design by Lee Boonstra`.
+
+
