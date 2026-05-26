@@ -696,7 +696,11 @@
 
   <link rel="manifest" href="/manifest.json">  
   
+  <% if (is_tag() || is_category() || is_archive()) { %>
+  <meta name="robots" content="noindex, follow">
+  <% } else { %>
   <meta name="robots" content="all">
+  <% } %>
   <meta name="yandex-verification" content="adf3dcb0d559ea5a">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -704,10 +708,10 @@
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <link rel="pingback" href="https://www.leeboonstra.dev">
   <meta property="og:type" content="<%- ogType %>">
-  <meta property="og:title" content="<%- ogTitle %>"/>
+  <meta property="og:title" content="<%- ogTitle %>">
   <meta property="og:url" content="<%- ogUrl %>">
-  <meta property="og:site_name" content="<%- config.title %>"/>
-  <meta property="og:description" content="<%- ogDescription %>"/>
+  <meta property="og:site_name" content="<%- config.title %>">
+  <meta property="og:description" content="<%- ogDescription %>">
   <meta property="og:locale" content="en">
   <meta property="og:image" content="<%- ogImage %>">
 

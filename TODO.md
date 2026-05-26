@@ -50,5 +50,7 @@
 - [x] Force responsive single-column layout stack on all wide viewports in portrait orientation. <!-- id: 48 -->
 - [x] Sync sidebar biography header text color with primary theme brand color. <!-- id: 49 -->
 - [x] Fix sidebar biography header styling specificity conflict with general card-body h2 rules to restore correct color and font-size. <!-- id: 50 -->
-- [ ] Darken footer disclaimer, change font to Lora, make a little bit smaller, and add "Hexo Blog Design by Lee Boonstra" <!-- id: 51 -->
+- [x] Darken footer disclaimer, change font to Lora, make a little bit smaller, and add "Hexo Blog Design by Lee Boonstra" <!-- id: 51 -->
+- [x] Fix XML sitemap duplicate indexing and apply dynamic HTML robots noindex, follow tags on tags, categories, and archive indexes <!-- id: 52 -->
+
 

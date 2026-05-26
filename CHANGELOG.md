@@ -20,6 +20,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- Sanitized trailing slashes (`/`) from core void elements (`<meta>`, `<link>`, `<img>`) inside layout modules (`head.ejs`, `profile.ejs`, `about.ejs`, `print_resume_layout.ejs`) to strictly satisfy modern W3C HTML5 standards.
+- Replaced third-party legacy package `hexo-auto-canonical` with a clean, lightweight native helper script (`themes/leeboonstra/scripts/canonical.js`) to generate HTML5-compliant trailing-slash-free canonical link elements.
+- Refactored responsive markdown image generator utility (`themes/leeboonstra/scripts/image.js`) to parse and write valid standard-compliant image tags.
+
+### Added
+- Added standard architectural documentation under `docs/w3c_validation_fixes.md` detailing code rationale, and registered it within the documentation navigation menu (`mkdocs.yml`).
+
 ### Added
 - **Dynamic Social Sharing Previews (Open Graph & Twitter Cards)**: Configured dynamic social sharing calculations inside the theme's core `<head>` template (`head.ejs`). Automatically computes correct `og:type` (`article` for posts, `website` for pages), resolves canonical `og:url` dynamically, crops plaintext descriptions to exact lengths for social snippets, and serves high-resolution article-specific featured images (`large_*.webp`) to social previews. Introduced explicit `summary_large_image` Twitter card metadata blocks for premium, wide visual preview display cards on X. Synchronized the post JSON-LD schema's key visual block target with the dynamic featured banner.
 - **Modern Outline Icon System**: Overhauled dynamic navigation bar and functional UI symbols (Home, Bio, Speaking, Writing, Videos, Abstracts, Chat, FAQs, Hamburger, and Close) from old solid silhouette shapes to pixel-perfect 24x24 single-stroke vector coordinates. Built a dynamic `.icon-modern` styling wrapper class to establish line thickness/stroke parameters cleanly, preventing interference with brand-specific solid media icons (GitHub, LinkedIn, RSS, StackOverflow). Documented system in `docs/style_updates_modern_icons.md` and registered navigation target within `mkdocs.yml`.
@@ -41,6 +49,7 @@ All notable changes to this project will be documented in this file.
 - **Fixed Ternary Syntax in GitHub Profile Sync Script**: Resolved a missing trailing expression colon syntax crash on line 55 of `scripts/sync-github-profile.js` to ensure error-free runtime asset packaging.
 
 ### Changed
+- **Sitemap XML Duplicate Indexing Exclusions & Dynamic Robots Meta Rules**: Configured sitemap generator settings (`_config.yml`) to set `tags: false` and `categories: false`, and surgically stripped Nunjucks tag/category loops from the custom `sitemap_template.xml` file to keep low-value duplicate tag and category list paths out of the sitemap. Added a dynamic EJS block in the `<head>` partial template (`head.ejs`) to inject `<meta name="robots" content="noindex, follow">` on all tag, category, and chronological archive pages. This stops engines from indexing duplicate lists while allowing them to discover and pass authority to actual post URLs. Created a system manual page `docs/sitemap_exclusions.md` and registered it within the documentation navigation menu (`mkdocs.yml`).
 - **Footer Disclaimer Contrast & Typography**: Refactored the bottom disclaimer styling (`.disclaimer` SASS properties) to use the signature `Lora` serif font, reduced font size to `0.85rem` for subtext balancing, and updated text color to standard Slate-gray (`#475569`) to improve readability and contrast on standard screen backdrops.
 - **Design Authorship Attribution**: Appended a design credit string ("Hexo Blog Design by Lee Boonstra") separated by a clean bullet element inside the shared footer layout template (`footer.ejs`).
 - **Responsive Grid Layout and Sidebar Breakpoints for Portrait Monitors**: Configured responsive mobile-stacking override selectors to cover all viewports under `992px` OR portrait orientations under `1200px` to resolve cramped column formatting and word-wrapping on vertical monitors. Standardized all portrait list pages and video containers in these bounds to render as a balanced **2-column grid** (allowing standard 4 secondary cards to sit as a perfectly balanced 2x2 layout instead of a 3+1 design, while maintaining a clean flat line of 4 columns on landscape desktops). Updated the central visual design specifications in `docs/style_updates.md`.

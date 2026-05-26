@@ -87,3 +87,5 @@ nav:
       - E-Reader & Reader Mode: reader-mode.md
       - AI Ingestion & Crawl Rules: ai_crawlers_ingestion.md
       - Google Analytics Integration: google_analytics.md
+      - Sitemap Index Exclusions: sitemap_exclusions.md
+      - W3C HTML5 Validation: w3c_validation_fixes.md

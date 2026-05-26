@@ -46,8 +46,8 @@ sitemap:
     path: sitemap.xml
     rel: true
     template: sitemap_template.xml
-    tags: true
-    categories: true
+    tags: false
+    categories: false
 
 # widget behavior
 archive_type: 'monthly'

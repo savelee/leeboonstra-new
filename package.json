@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "hexo": "^7.0.0",
-    "hexo-auto-canonical": "^0.1.1",
     "hexo-featured-image": "^0.4.3",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
