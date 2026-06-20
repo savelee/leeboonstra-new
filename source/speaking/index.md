@@ -1,16 +1,51 @@
 ---
 title: Public Speaking, Keynotes, Conferences and Events
-description: Public speaking & events, topics include; Prompt Engineering, Google AI, Conversational AI, LLMs, Voice Technology
+description: Keynotes and technical deep-dives at global scale (Google I/O, Google Cloud Next) on Generative AI, agentic architectures, speech technology, and AI governance.
 event: true
 nocomments: true
 layout: speaking
 ---
 
-Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chatbots, Contact Centers, NLU, Machine Learning for developers, JavaScript, Node JS, Diversity, LGBTQ+.
+As an AI Software Engineer and Advocate in the Google Cloud Office of the CTO (Applied Innovation Factory), I translate frontier AI research into production-ready enterprise systems. Over the past decade, I have presented keynotes and technical deep-dives at more than 50 large-scale global conferences—including Google I/O and Google Cloud Next—to audiences of up to 5,000 developers, researchers, and technology executives.
 
-<img src="/images/medium_leeboonstra_new.jpg" class="img-fluid border" alt="Lee Speaking" loading="lazy">
+I specialize in delivering high-impact, code-forward sessions tailored to engineers, as well as vision keynotes on the future of enterprise AI.
 
-<hr />
+<p class="my-4">
+  <a href="/videos" class="btn-custom-action" style="margin-right: 0.75rem;">📺 Watch Past Sessions & Keynotes</a>
+  <a href="/about/" class="btn-custom-action">📄 Lee's Biography</a>
+</p>
+
+<div class="portfolio-card">
+
+### Core Topics:
+*   **Agentic Orchestration & GraphRAG:** Designing secure multi-agent systems, time-aware reasoning pipelines, and constraint-driven data engineering.
+*   **Speech Automation & Voice AI:** Engineering low-latency speech pipelines, acoustic ambiguity resolution, and transactional voice commerce.
+*   **AI Security & Trust Boundaries:** Establishing guardrails, human-in-the-loop gates, and digital sibling security boundaries for multi-agent handoffs.
+*   **Developer Enablement & Scalability:** Practical prompt engineering, MLOps, and developer tool workflows.
+*   **Diversity & Product Safety:** Building inclusive systems, auditing bias in NLP, and tech chapter leadership.
+
+</div>
+
+<div class="portfolio-card">
+
+2026
+----
+
+* ### 5-Day AI Agents: Intensive Vibe Coding Course With Google
+
+  Jun 19 5PM (CEST) | **Online** [Website](https://www.kaggle.com/competitions/5-day-ai-agents-intensive-vibecoding-course-with-google) | Spec-Driven Production Grade Development in the Age of Vibe Coding
+
+  Last November, we launched our first 5-Day AI Agents Intensive Course with Google, reaching over 1.5 million learners. By popular demand, we’re excited to bring it back—now with updated content, new speakers, and a hands-on capstone project, all at no cost to registrants. I will speak on: "Spec-Driven Production Grade Development in the Age of Vibe Coding. The Blueprint for Scalable Workflows and Team Evolution: From Vibe Prototypes to Production Reality."
+
+* ### The Dutch State of AI in Advertising
+
+  April 15 | **DPG Media, Amsterdam, NL** [Website](https://vianederland.nl/event/the-dutch-state-of-ai-in-advertising) | Expert Panel: Agentic AI Systems
+
+  This event provided a comprehensive overview of how AI is transforming brand emotion, media planning, and creative development. Targeted at a wide range of professionals, it explored the future trajectory of AI in the Dutch market. For Google, I contributed to the expert panel, sharing insights on the development and governance of agentic AI systems within the advertising industry.
+
+</div>
+
+<div class="historical-events portfolio-card">
 
 2024
 ----
@@ -641,3 +676,5 @@ Topics I speak about: Generative AI, Prompt Engineering, Conversational AI, Chat
     02-2013 | **Frankfurt DE** | [Preview](https://speakerdeck.com/savelee/an-introduction-to-sencha-cmd-frankfurt-sencha-meetup)
     
     Presentation: An introduction to Sencha Cmd.
+
+</div>

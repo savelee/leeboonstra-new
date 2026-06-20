@@ -1,8 +1,8 @@
 ---
 title: External Blogs & Articles
 categories: 
-- Writing
-class: Writing
+- ExternalBlogs
+class: ExternalBlogs
 date: 2022-01-01 11:45:17
 alias: /developer/external-blogs/
 hidden: true

@@ -157,7 +157,11 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     expect(data.work.length).toBeGreaterThan(0);
     
     expect(data).toHaveProperty('skills');
-    expect(data.skills.length).toBe(3); // AI & ML, Languages, Tools
+    expect(data.skills.length).toBe(5); // AI & ML, GenAI & Orchestration, Languages, Infra, Databases
+    
+    expect(data).toHaveProperty('volunteer');
+    expect(data.volunteer.length).toBeGreaterThan(0);
+    expect(data.volunteer[0].organization).toBe('Stichting Meer Dan Gewenst');
   });
 
   test('Verify chronological milestones and structured details', () => {
@@ -182,6 +186,14 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     expect(leadershipGroup.name).toBe('AI & Machine Learning');
     expect(leadershipGroup.keywords).toContain('Technical Leadership');
     expect(leadershipGroup.keywords).toContain('Team Mentorship');
-    expect(leadershipGroup.keywords).toContain('LangGraph Architectures');
+    expect(leadershipGroup.keywords).toContain('Frontier LLMs (Gemini, Gemma, Claude, GPT, Llama)');
+    
+    const genaiGroup = data.skills.find(s => s.name === 'GenAI Architectures & Orchestration');
+    expect(genaiGroup).toBeDefined();
+    expect(genaiGroup.keywords).toContain('LangGraph Architectures');
+    
+    const dbGroup = data.skills.find(s => s.name === 'Databases');
+    expect(dbGroup).toBeDefined();
+    expect(dbGroup.keywords).toContain('Vector Search (pgvector, ChromaDB)');
   });
 });

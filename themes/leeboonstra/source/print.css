@@ -33,6 +33,9 @@
   .navbar-nav,
   .menu-overlay,
   .menu-close-btn,
+  .author-bio-card,
+  .reader-toggle-container,
+  .article-meta-utility,
   .photocol,
   .print-resume-btn,
   .disclaimer,
@@ -173,7 +176,8 @@
       padding: 0 !important;
   }
 
-  .resume .card {
+  .resume .card,
+  .portfolio-card {
       border: none !important;
       background: transparent !important;
       box-shadow: none !important;

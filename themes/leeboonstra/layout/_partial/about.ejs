@@ -96,6 +96,14 @@
               </picture>
             </a>
 
+            <!-- Elite Networking & Strategic Horizons Callout -->
+            <% if (page.layout === 'about' || page.layout === 'bio') { %>
+            <div class="mt-4 networking-callout" style="font-size: 9pt; line-height: 1.5; border-left: 3px solid #e11d48; padding-left: 12px; color: #334155; text-align: left;">
+              <p class="mb-2"><strong>🚀 Elite Networking & Strategic Horizons:</strong> Fully engaged in driving generative AI architecture at Google, but keeping a selective open channel for next-level frontier AI initiatives. If your Big Tech AI lab is actively looking for high-leverage AI engineers to bridge the gap between experimental R&D and market-disrupting agentic AI infrastructure, let’s talk.</p>
+              <p class="mb-0 text-muted" style="font-size: 8pt; color: #64748b;"><strong>🛑 Note:</strong> Dedicated to my current scope; strictly not open to generic SWE, traditional cloud migration, legacy backend, non-staff, or non-remote roles.</p>
+            </div>
+            <% } %>
+
             <!-- Print Resume CTA button -->
             <% if (page.layout === 'about' || page.layout === 'bio') { %>
             <button onclick="window.print()" class="btn btn-block btn-outline-danger mt-3 print-resume-btn">
@@ -107,6 +115,7 @@
             </button>
             <% } %>
 
+            <% if (page.layout === 'about' || page.layout === 'bio') { %>
             <!-- Dynamic Social / Portfolio Links -->
             <h3 class="card-title mt-4">Social Links</h3>
             <ul class="list-unstyled">
@@ -117,15 +126,21 @@
               <% if (linkedIn) { %>
                 <li class="mb-2"><a href="<%= linkedIn.url %>" target="_blank" rel="noreferrer noopener" class="text-decoration-none">LinkedIn (<%= linkedIn.username %>)</a></li>
               <% } %>
-              <li class="mb-2"><a href="/speaker" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Past speaking events</a></li>
-              <li class="mb-2"><a href="/videos" target="_blank" rel="noreferrer noopener" class="text-decoration-none">Videos of me</a></li>
+              <li class="mb-2"><a href="/speaking/" class="text-decoration-none">Past speaking events</a></li>
+              <li class="mb-2"><a href="/videos/" class="text-decoration-none">Videos of me</a></li>
             </ul>
 
             <a href="/images/TechAI-Goolge-whitepaper_Prompt Engineering_v4.pdf" target="_blank">
               <picture>
-                  <img src="/images/small_prompting-paper.png" width="76" height="100" style="display: block;" class="border mb-3" alt="Download my Prompt Engineering whitepaper">
+                  <img src="/images/small_prompting-paper.png" height="100%" style="display: block; width: auto;" class="border mb-3" alt="Download my Prompt Engineering whitepaper">
               </picture>
             </a> 
+            <a href="/images/leeboonstra-specdriven-development.pdf" target="_blank">
+              <picture>
+                  <img src="/images/small_vibecoding-paper.png" height="100%" style="display: block; width: auto;" class="border mb-3" alt="Download my Spec-Driven Development whitepaper">
+              </picture>
+            </a> 
+            <% } %>
           </div>
         </div>
       </div>
@@ -238,7 +253,7 @@
 
               <!-- Education Bento Grid -->
               <div class="resume-section resume-education mb-6">
-                  <h2 class="text-xl font-semibold mb-4">Education</h2>
+                  <h2 class="text-xl font-semibold mb-4">Education & Citizenship</h2>
                   <% site.data.resume.education.forEach(function(edu) { %>
                     <div class="education-chip">
                         <span class="chip-date"><%= edu.startDate.split('-')[0] %>-<%= edu.endDate.split('-')[0] %></span>
@@ -246,6 +261,15 @@
                         <p class="chip-text"><%= edu.studyType %> in <%= edu.area %></p>
                     </div>
                   <% }) %>
+                  <% if (site.data.resume.volunteer) { %>
+                    <% site.data.resume.volunteer.forEach(function(vol) { %>
+                      <div class="education-chip mt-3">
+                          <span class="chip-date"><%= vol.position %></span>
+                          <h3 class="chip-title"><%= vol.organization %></h3>
+                          <p class="chip-text"><%= vol.summary %></p>
+                      </div>
+                    <% }) %>
+                  <% } %>
               </div>
 
               <!-- Dynamic Technical Skills Bento Grid -->

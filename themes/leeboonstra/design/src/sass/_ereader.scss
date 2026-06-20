@@ -74,10 +74,42 @@
     }
 }
 
+.btn-custom-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.8rem; /* Marginally broad for solid button padding */
+    border-radius: 6px;
+    font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+    font-size: 1.05rem !important; /* Condensed block font looks best scaled */
+    font-weight: 400; /* Bebas Neue standard weight is robust by default */
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important; /* Pure high contrast white text */
+    background-color: $primary !important; /* Premium Cobalt Blue default theme background */
+    border: 1px solid $primary !important;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    
+    &:hover {
+        color: #ffffff !important;
+        background-color: darken($primary, 8%) !important;
+        border-color: darken($primary, 8%) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba($primary, 0.15) !important;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
 // ==========================================================================
 // Dynamic Theme Overrides: Match section specific brand date/link highlights
 // ==========================================================================
-.Biography .reader-toggle-btn {
+.Biography .reader-toggle-btn,
+.Biography .btn-custom-action {
     background-color: $red !important;
     border-color: $red !important;
     &:hover {
@@ -87,7 +119,8 @@
     }
 }
 
-.Conferences .reader-toggle-btn {
+.Conferences .reader-toggle-btn,
+.Conferences .btn-custom-action {
     background-color: $orange !important;
     border-color: $orange !important;
     &:hover {
@@ -97,7 +130,8 @@
     }
 }
 
-.Videos .reader-toggle-btn, .Abstracts .reader-toggle-btn {
+.Videos .reader-toggle-btn, .Abstracts .reader-toggle-btn,
+.Videos .btn-custom-action, .Abstracts .btn-custom-action {
     background-color: $green !important;
     border-color: $green !important;
     &:hover {
@@ -107,7 +141,8 @@
     }
 }
 
-.FAQ .reader-toggle-btn, .FAQs .reader-toggle-btn, .Contact .reader-toggle-btn {
+.FAQ .reader-toggle-btn, .FAQs .reader-toggle-btn, .Contact .reader-toggle-btn,
+.FAQ .btn-custom-action, .FAQs .btn-custom-action, .Contact .btn-custom-action {
     background-color: $lightblue !important;
     border-color: $lightblue !important;
     &:hover {
@@ -718,5 +753,87 @@ body.force-ereader {
             overflow: visible !important;
         }
     }
+}
+
+// Speaking event list compaction (hierarchy formatting for older dates)
+.historical-events {
+    font-size: 0.9rem !important;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+        opacity: 0.95;
+    }
+    
+    h2 {
+        font-size: 1.35rem !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.15rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 0.35rem !important;
+    }
+    
+    ul, li {
+        margin-bottom: 0.35rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    p {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+// Speaking Page Timeline List Resets (Hides redundant list bullets next to H3 headings)
+.Conferences .blogcontent ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    
+    li {
+        list-style-type: none !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        
+        h3 {
+            margin-top: 1.5rem !important;
+            margin-bottom: 0.5rem !important;
+            display: block !important;
+        }
+    }
+}
+
+// Portfolio Card Styling for Speaking and Writing page content sections
+.portfolio-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.01) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    
+    &:hover {
+        transform: translateY(-4px) !important;
+        border-color: rgba($primary, 0.3) !important;
+        box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -4px rgba(15, 23, 42, 0.03) !important;
+    }
+}
+
+// Color highlights matching page layout contexts
+.Biography .portfolio-card:hover {
+    border-color: rgba($red, 0.3) !important;
+}
+
+.Conferences .portfolio-card:hover {
+    border-color: rgba($orange, 0.3) !important;
+}
+
+.Videos .portfolio-card:hover, .Abstracts .portfolio-card:hover {
+    border-color: rgba($green, 0.3) !important;
 }
 

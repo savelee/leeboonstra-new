@@ -20,7 +20,41 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Two new video posts covering the Kaggle "5-Day AI Agents: Intensive Vibe Coding Course with Google" event: "DAY 5 Livestream" and "Whitepaper Companion Podcast: Spec-Driven Production Grade Development in the Age of Vibe Coding".
+- Elite Networking & Strategic Horizons callout section in biography sidebar on screen.
+- Philanthropy (volunteer) details to the resume database (`source/_data/resume.yml`), template renders, and static text/markdown API generation.
+- The Dutch State of AI in Advertising speaking event for 2026 to `source/speaking/index.md`.
+- Button linking to `/videos` page inside the speaking page introduction.
+- Custom `.btn-custom-action` SASS classes and `.historical-events` wrapping layouts to align and compress older timeline sections.
+- "Lee's Biography" link button next to watch videos link in speaking page introduction.
+- Author Bio Card component in article layout footer (`article.ejs`) with custom links to about and speaking pages.
+
+### Changed
+- Rewrote speaking page introduction to focus on high-impact keynotes and developer audiences.
+- Rewrote writing page title and introduction copy to establish authorship and showcase publication result metrics.
+- Styled watch videos links to use `.btn-custom-action` and wrapped in `<p>` tags for exact alignment.
+- Restructured `/writing/` page layout (`_partial/writing.ejs`) to use a two-column about page layout with the full profile sidebar (including social and author links) while dynamically looping through books and writing posts as portfolio cards.
+- Upgraded book cover image quality on the `/writing/` page, referencing high-resolution source files (O'Reilly, Apress, and Kaggle Whitepaper) instead of compressed thumbnails.
+- Added SASS overrides for `.portfolio-card` inside `main.scss` to disable global header outdents (`left: 0 !important`), scale card headers down to `1.25rem`, scale body text to `0.85rem`, and align list content horizontally with card headers by removing list margins and bullets.
+- Hidden duplicate *External Blogs & Articles* block from `/writing/` index by shifting `write-blogs.md` to `ExternalBlogs` category.
+- Wrapped major content sections (Core Topics, timeline years, and archives) on `/speaking/` inside responsive `.portfolio-card` containers to harmonize visual patterns with biography sections.
+- Restructured `about.ejs` sidebar layout to restrict social links, Amazon author profile, and prompt engineering whitepaper download elements to biography/about layouts, keeping generic pages focused.
+- Changed "Past speaking events" links inside biography sidebar to target `/speaking/` instead of `/speaker`.
+- Refined professional experience bullets to be highly result-focused while preserving existing multi-agent leadership context.
+- Restructured technical skills taxonomy in `resume.yml` into 5 high-impact categories: AI & Machine Learning (preserving all original keywords and appending new ones), GenAI Architectures & Orchestration, Databases, Data & Cloud Infrastructure, and Programming Languages.
+- Combined and updated publication metrics (downloads, views, online accesses, citations) inside the book and whitepaper summaries.
+- Updated `tests/resume_api.test.js` to assert the 5-group skills structure while preserving original AI/ML assertions.
+
+### Removed
+- Large intro profile photo from the speaking page (`source/speaking/index.md`).
+- Large author book cover photo from the top of the `/writing/` page introduction (`source/writing/index.md`).
+- Book cover image from the O'Reilly book post (`source/_posts/write-oreilly.md`).
+
 ### Fixed
+- Hid "Reader View" toggle and utility metadata wrappers from physical prints and PDF generations inside `print.css`.
+- Hid "About the Author" bio cards from physical prints and PDF generations inside `print.css`.
+- Fixed list item bullet overlap styling on speaking page timeline headers by resetting native list offsets.
 - Sanitized trailing slashes (`/`) from core void elements (`<meta>`, `<link>`, `<img>`) inside layout modules (`head.ejs`, `profile.ejs`, `about.ejs`, `print_resume_layout.ejs`) to strictly satisfy modern W3C HTML5 standards.
 - Replaced third-party legacy package `hexo-auto-canonical` with a clean, lightweight native helper script (`themes/leeboonstra/scripts/canonical.js`) to generate HTML5-compliant trailing-slash-free canonical link elements.
 - Refactored responsive markdown image generator utility (`themes/leeboonstra/scripts/image.js`) to parse and write valid standard-compliant image tags.

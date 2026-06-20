@@ -21,7 +21,7 @@ This whitepaper discusses prompt engineering in detail. We will look into the va
 
 Read my Prompt Engineering whitepaper on Kaggle: https://www.kaggle.com/whitepaper-prompt-engineering
 
-![Prompt Engineering Paper](/images/small_prompting-paper.png)
+<img src="/images/prompting-paper.png" style="height: 100%; width: auto;" alt="Prompt Engineering Paper">
 
 <!-- more --> 
 

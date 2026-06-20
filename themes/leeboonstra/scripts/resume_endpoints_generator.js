@@ -118,10 +118,15 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
   });
   md += `\n`;
 
-  md += `## EDUCATION\n\n`;
+  md += `## EDUCATION & CITIZENSHIP\n\n`;
   resume.education.forEach(edu => {
     md += `- **${edu.studyType} in ${edu.area}**\n  Institution: ${edu.institution} | Dates: ${edu.startDate} - ${edu.endDate}\n`;
   });
+  if (resume.volunteer && resume.volunteer.length > 0) {
+    resume.volunteer.forEach(vol => {
+      md += `- **${vol.position}** at ${vol.organization}\n  ${vol.summary}\n`;
+    });
+  }
   md += `\n`;
 
   md += `## SPOKEN LANGUAGES\n\n`;
@@ -183,11 +188,17 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
     txt += `* ${skill.name}:\n  ${skill.keywords.join(', ')}\n\n`;
   });
 
-  txt += `EDUCATION BACKGROUND:\n\n`;
+  txt += `EDUCATION & CITIZENSHIP BACKGROUND:\n\n`;
   resume.education.forEach(edu => {
     txt += `* ${edu.studyType} in ${edu.area.toUpperCase()}\n`;
     txt += `  University: ${edu.institution} (${edu.startDate} - ${edu.endDate})\n\n`;
   });
+  if (resume.volunteer && resume.volunteer.length > 0) {
+    txt += `VOLUNTEER & PHILANTHROPY:\n\n`;
+    resume.volunteer.forEach(vol => {
+      txt += `* ${vol.position.toUpperCase()} at ${vol.organization.toUpperCase()}\n  ${vol.summary}\n\n`;
+    });
+  }
 
   txt += `SPOKEN LANGUAGES:\n\n`;
   resume.languages.forEach(lang => {
