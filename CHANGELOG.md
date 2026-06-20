@@ -58,9 +58,12 @@ All notable changes to this project will be documented in this file.
 - Sanitized trailing slashes (`/`) from core void elements (`<meta>`, `<link>`, `<img>`) inside layout modules (`head.ejs`, `profile.ejs`, `about.ejs`, `print_resume_layout.ejs`) to strictly satisfy modern W3C HTML5 standards.
 - Replaced third-party legacy package `hexo-auto-canonical` with a clean, lightweight native helper script (`themes/leeboonstra/scripts/canonical.js`) to generate HTML5-compliant trailing-slash-free canonical link elements.
 - Refactored responsive markdown image generator utility (`themes/leeboonstra/scripts/image.js`) to parse and write valid standard-compliant image tags.
+- Fixed YouTube player click event listener on the `/videos/` page to prevent anchor navigation and handle event target mismatches.
 
 ### Added
 - Added standard architectural documentation under `docs/w3c_validation_fixes.md` detailing code rationale, and registered it within the documentation navigation menu (`mkdocs.yml`).
+- Added two new Hexo posts in the Videos category for "5-Days of AI Agents: Intensive Vibe Coding Course With Google" and "Whitepaper Companion Podcast: Spec-Driven Production Grade Development in the Age of Vibe Coding".
+
 
 ### Added
 - **Dynamic Social Sharing Previews (Open Graph & Twitter Cards)**: Configured dynamic social sharing calculations inside the theme's core `<head>` template (`head.ejs`). Automatically computes correct `og:type` (`article` for posts, `website` for pages), resolves canonical `og:url` dynamically, crops plaintext descriptions to exact lengths for social snippets, and serves high-resolution article-specific featured images (`large_*.webp`) to social previews. Introduced explicit `summary_large_image` Twitter card metadata blocks for premium, wide visual preview display cards on X. Synchronized the post JSON-LD schema's key visual block target with the dynamic featured banner.

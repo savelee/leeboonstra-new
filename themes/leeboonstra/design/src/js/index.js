@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.youtubeLink');
     buttons.forEach(function(button){
         button.addEventListener('click', event => {
-            console.log(event.target.children[0]);
-            var id = event.target.children[0].innerHTML;
-            var url = 'https://www.youtube.com/embed/' + id;
-
-            document.getElementById('youtubeFrame').setAttribute('src', url)
+            event.preventDefault();
+            const idElement = button.querySelector('.youtubeId');
+            if (idElement) {
+                var id = idElement.innerHTML.trim();
+                var url = 'https://www.youtube.com/embed/' + id;
+                document.getElementById('youtubeFrame').setAttribute('src', url);
+            }
         });
     });
 });
