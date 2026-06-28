@@ -21,6 +21,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- **Standard Mode Biography Card Column Alignment**: Constrained the `.author-bio-card` in `main.scss` to `48rem` (`100ch` on >= 1400px) and centered it, aligning its boundaries perfectly with the body text column.
+- **Biography Card Spacing Synchronization**: Updated standard mode column paddings inside `.author-bio-card` to match reader mode exactly (`0 1.25rem 0 0` on the image column, and `0` on the text column), correcting the loose spacing between the profile image and the biography text.
 - **Standard Mode Author Bio Card Layout**: Standardized the `.author-bio-card` in `main.scss` to always maintain a horizontal flex layout on all screen sizes (no stacking on mobile). Enforced a `100px` by `100px` round profile image on the left, and overridden the biography heading (`h4`) to align at `left: 0`, preventing the desktop hanging outdent.
 - **Reader Mode Border Cleanups**: Removed gray borders, padding, and background frames from images, code blocks (`figure.highlight`, `pre`, `code`), and horizontal rules (`hr`) in reader mode, creating a cleaner, book-like E-ink interface.
 - **Reader Mode Author Bio Card**: Implemented comprehensive overrides for `.author-bio-card` inside the reader-mode mixin, ensuring the profile image stays on the left (as a small, round, borderless circle), the card background renders as gray (`#f1f5f9`) without borders, and action buttons maintain their blue background, white text, and underline-free styling.

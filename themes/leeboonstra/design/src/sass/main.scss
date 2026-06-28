@@ -3187,6 +3187,17 @@ figure.highlight pre {
     background-color: #f8f9fa !important;
     box-shadow: none !important;
     padding: 1.5rem !important;
+    
+    // Align with the body text column
+    max-width: 48rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    
+    @media (min-width: 1400px) {
+        max-width: 100ch !important;
+    }
 
     p, h1, h2, h3, h4, h5, h6 {
         max-width: none !important;
@@ -3199,28 +3210,30 @@ figure.highlight pre {
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
+        margin: 0 !important; // Reset Bootstrap row margins
     }
 
-    // Image column: always on the left, no stacking
+    // Image column: always on the left, no stacking, exact same spacing as reader mode
     .col-xs-12,
     .col-md-2 {
         flex: 0 0 auto !important;
         width: auto !important;
         max-width: none !important;
-        margin-bottom: 0 !important;
-        padding-right: 1.5rem !important;
+        margin: 0 !important;
+        padding: 0 1.25rem 0 0 !important; // Same as reader mode (1.25rem right padding, others 0)
         text-align: left !important;
         display: block !important;
     }
 
-    // Text column: takes remaining space
+    // Text column: takes remaining space, exact same spacing as reader mode
     .col-xs-12,
     .col-md-10 {
         flex: 1 1 auto !important;
         width: auto !important;
         max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important; // Same as reader mode (no padding)
         text-align: left !important;
-        padding: 0 !important;
         display: block !important;
     }
 
