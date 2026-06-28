@@ -516,9 +516,9 @@
         margin: 2rem auto !important;
         border-radius: 0 !important;
         box-shadow: none !important;
-        border: 1px solid #e2e8f0 !important;
-        padding: 6px !important;
-        background-color: #ffffff !important;
+        border: none !important;
+        padding: 0 !important;
+        background-color: transparent !important;
     }
 
     // 6. High-Contrast Code Highlight Blocks (Flat Light Theme for E-ink serving)
@@ -535,7 +535,7 @@
     code {
         background-color: #f8f9fa !important;
         color: #1a202c !important;
-        border: 1px solid #e2e8f0 !important;
+        border: none !important;
         border-radius: 4px !important;
         text-shadow: none !important;
         box-shadow: none !important;
@@ -545,13 +545,13 @@
     figure.highlight {
         margin: 1.8rem 0 !important;
         padding: 0 !important;
-        border: 1px solid #cbd5e1 !important;
+        border: none !important;
         overflow: auto !important;
         
         &::before {
             background-color: #f1f5f9 !important;
             color: #475569 !important;
-            border-bottom: 1px solid #cbd5e1 !important;
+            border-bottom: none !important;
             padding: 0.4rem 0.8rem !important;
         }
         
@@ -565,6 +565,14 @@
             margin: 0 !important;
             border: none !important;
         }
+    }
+
+    // Clean, borderless horizontal rules
+    hr {
+        border: none !important;
+        border-top: none !important;
+        height: 0 !important;
+        margin: 2rem 0 !important;
     }
 
     // High legibility token styling
@@ -703,6 +711,123 @@
         margin-bottom: 1.5rem !important;
         border-bottom: 1px solid #dddddd !important;
         padding-bottom: 0.8rem !important;
+    }
+
+    // About Block (Author Bio Card) overrides for reader mode
+    .author-bio-card {
+        display: block !important;
+        background-color: #f1f5f9 !important; /* Gray background */
+        border: none !important; /* No borders */
+        box-shadow: none !important;
+        padding: 1.5rem !important;
+        margin-top: 2.5rem !important;
+        margin-bottom: 2.5rem !important;
+        border-radius: 10px !important;
+
+        .row {
+            display: flex !important; /* Force horizontal alignment */
+            flex-direction: row !important;
+            align-items: center !important;
+            flex-wrap: nowrap !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+        }
+
+        // Image column
+        .col-xs-12,
+        .col-md-2 {
+            display: block !important;
+            flex: 0 0 auto !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 1.25rem 0 0 !important;
+            background: transparent !important;
+        }
+
+        // Text column
+        .col-md-10 {
+            display: block !important;
+            flex: 1 1 auto !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: left !important;
+            background: transparent !important;
+        }
+
+        // Profile image
+        img,
+        picture img {
+            width: 50px !important;
+            height: 50px !important;
+            max-width: 50px !important;
+            max-height: 50px !important;
+            border-radius: 50% !important; /* Round */
+            border: none !important; /* No borders */
+            padding: 0 !important;
+            margin: 0 !important;
+            display: inline-block !important;
+            object-fit: cover !important;
+            background-color: transparent !important;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin-top: 0 !important;
+            margin-bottom: 0.5rem !important;
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            border: none !important;
+            background: transparent !important;
+        }
+
+        h4 {
+            font-family: 'Bebas Neue', sans-serif !important;
+            font-size: 1.35rem !important;
+            letter-spacing: 0.05em !important;
+            text-transform: uppercase !important;
+            color: #0f172a !important;
+        }
+
+        p {
+            font-size: 0.9rem !important;
+            line-height: 1.5 !important;
+            color: #475569 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .author-links {
+            display: flex !important;
+            gap: 0.75rem !important;
+            flex-wrap: wrap !important;
+            background: transparent !important;
+        }
+
+        // Buttons
+        .btn-custom-action {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0.35rem 0.8rem !important;
+            border-radius: 6px !important;
+            font-family: 'Bebas Neue', 'Arial Black', Arial, sans-serif !important;
+            font-size: 1.05rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.06em !important;
+            text-transform: uppercase !important;
+            color: #ffffff !important; /* Always white text */
+            background-color: $primary !important; /* Blue background */
+            border: none !important;
+            text-decoration: none !important; /* No underline */
+            cursor: pointer !important;
+            
+            &:hover, &:focus, &:active {
+                color: #ffffff !important;
+                background-color: darken($primary, 8%) !important;
+                text-decoration: none !important;
+            }
+        }
     }
 }
 

@@ -3180,12 +3180,77 @@ figure.highlight pre {
     }
 }
 
-/* Author Bio Card Styling overrides to prevent alignment issues in article content */
+/* Author Bio Card Styling overrides to prevent alignment issues and standardize layout */
 .author-bio-card {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
+
     p, h1, h2, h3, h4, h5, h6 {
         max-width: none !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+
+    .row {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    // Image column: always on the left, no stacking
+    .col-xs-12,
+    .col-md-2 {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        margin-bottom: 0 !important;
+        padding-right: 1.5rem !important;
+        text-align: left !important;
+        display: block !important;
+    }
+
+    // Text column: takes remaining space
+    .col-xs-12,
+    .col-md-10 {
+        flex: 1 1 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    // Profile image: always 100px by 100px, round
+    img,
+    picture img {
+        width: 100px !important;
+        height: 100px !important;
+        max-width: 100px !important;
+        max-height: 100px !important;
+        min-width: 100px !important;
+        min-height: 100px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 1px solid #e2e8f0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    // Heading: no left minus value
+    h4 {
+        left: 0 !important;
+        position: relative !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    p {
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
     }
 }
 
