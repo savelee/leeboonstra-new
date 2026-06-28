@@ -47,6 +47,8 @@ In traditional physical medicine, diagnostic models are built on **discrete, bio
 
 In contrast, **psychiatric diagnostics lack biological boundaries**. Because we cannot peer into the brain to read a clean biomarker for depression or anxiety, the DSM relies on a *categorical classification model*. It defines complex mental disorders not by unique biomarkers, but as arbitrary checklists of overlapping, descriptive behaviors.
 
+This structural collapse isn't just a theoretical concern; it has been empirically demonstrated. In a 2025 study published in *Scientific Reports*, researchers introduced the **High-Dimensional Symptom Space (HDSS)** model. By mapping the clinical symptom profiles of over 5,000 adolescents into a 119-dimensional space, they discovered that the mathematical distances *within* a diagnostic category (M=8.5) were virtually indistinguishable from the distances *between* different categories (M=8.8). In other words, when you map actual patient data, the DSM's categorical boxes completely dissolve.
+
 When distinct diagnostic categories share identical symptom definitions (e.g., fatigue, sleep disturbances, concentration difficulties), the boundaries between disorders become entangled. This creates massive **overlaps** and **tautological loops** where a clinician is mathematically forced to diagnose a patient with multiple conditions simultaneously which is not necessarily a clinical reality, but rather evidence that the categorical model itself is structurally defective.
 
 ## Vibing, Scraping, Structuring, and Embedding
@@ -146,6 +148,8 @@ In psychiatric research, there is a highly debated concept called the **p-factor
 
 Our vector space suggests a much simpler, more humbling explanation: **the p-factor is a linguistic artifact**. The language used to write the DSM is highly redundant. The text embeddings prove that many diagnoses are mathematically "close" simply because the APA used the same words to describe different constructs. The overlap isn't necessarily a deep biological secret; it's a structural design defect in the manual's language.
 
+This is where my linguistic experiment and the HDSS paper offer two fascinating, complementary perspectives. The HDSS paper shows that *actual patient presentations* collapse into a single, continuous space rather than discrete clusters. My embedding experiment suggests a potential structural reason for this: the very *language* used to define these disorders is mathematically entangled. If the diagnostic instrument (the DSM) is built on redundant, overlapping semantic definitions, the clinical data collected through it will inevitably reflect that overlap. It raises an intriguing question: is the p-factor a deep biological mystery, or is it, at least in part, a linguistic artifact of how we designed the manual?
+
 > **Why Psychiatric AI is Chasing a Ghost**  
 > Training AI models on passive smartphone data to predict DSM labels is a dead end. If the underlying labels are mathematically entangled, a model boasting high accuracy isn't discovering a biological truth. It is just predicting the circular language of the manual and automating a flawed baseline.
 
@@ -160,4 +164,10 @@ Now, I am not a psychiatrist, nor have I ever studied psychiatry. I am just a so
 When you spend your entire career inside a single discipline, you naturally adopt its consensus assumptions, its vocabulary, and its traditional structures (like the DSM's categorical boxes) as absolute truth. But when a software engineer or data scientist looks at the exact same domain, they don't see academic consensus; they see **data architecture, relational integrity, schemas, and state machines**.
 
 When we collaborate across boundaries—combining the deep contextual wisdom of the domain expert with the rigorous, systems-level architecture of the engineer—we stop automating the flaws of the past and start building the architecture of the future.
+
+## Further Reading
+
+*   **[The Silicon Shrink: How Artificial Intelligence Made the World an Asylum](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1)** (Daniel Oberhaus, 2024) — The book that inspired this experiment, offering a brilliant critique of "digital phenotyping" and the structural flaws of the DSM.
+*   **[Modeling psychopathology in high-dimensional vector space using the high-dimensional symptom space (HDSS) model](https://pmc.ncbi.nlm.nih.gov/articles/PMC12508039/)** (Wild & Cutler, 2025) — Published in *Scientific Reports*, this paper demonstrates how mapping actual patient response data (CBCL) into high-dimensional space exposes the same categorical collapse and offers a path toward tracking personalized clinical trajectories.
+
 
