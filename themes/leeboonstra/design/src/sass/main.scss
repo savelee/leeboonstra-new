@@ -129,6 +129,20 @@ picture img,
     }
 }
 
+// Custom class to override default image containment/cropping behavior for technical diagrams
+.img-contain,
+.img-contain img,
+.img-contain picture,
+.img-contain picture img,
+img.img-contain,
+picture.img-contain,
+picture.img-contain img {
+    object-fit: contain !important;
+    max-height: none !important;
+    height: auto !important;
+    display: block !important;
+}
+
 .hidden {
     display: none;
 }
@@ -333,7 +347,20 @@ picture img,
         margin-left: auto;
         margin-right: auto;
 
-        p {
+        p,
+        ul,
+        ol,
+        blockquote,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        .highlight,
+        figure.highlight,
+        .author-bio-card {
             max-width: 100ch;
         }
 

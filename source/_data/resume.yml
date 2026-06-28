@@ -161,7 +161,11 @@ skills:
   - name: "AI & Machine Learning"
     level: "Master"
     keywords:
-      - "Frontier LLMs (Gemini, Gemma, Claude, GPT, Llama)"
+      - "Frontier LLMs (Gemini, Claude, GPT) and Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)"
+      - "JAX"
+      - "Model Tuning"
+      - "Deep Reinforcement Learning (RL)"
+      - "MuJoCo"
       - "Model Alignment (DPO, RLHF)"
       - "Prompt Engineering & DSPy"
       - "PyTorch"
@@ -176,7 +180,7 @@ skills:
       - "Vector Embeddings"
       - "Dialogflow CX"
       - "Distributed Computing"
-      - "vLLM serving"
+      - "vLLM"
   - name: "GenAI Architectures & Orchestration"
     level: "Master"
     keywords:
@@ -191,6 +195,7 @@ skills:
     keywords:
       - "Python"
       - "Pandas"
+      - "NumPy"
       - "Node.js"
       - "PHP"
       - "Java Enterprise"
@@ -200,6 +205,10 @@ skills:
       - "SASS"
       - "CSS3"
       - "SQL"
+      - "React"
+      - "Angular"
+      - "Ext JS"
+      - "Sencha Touch"
   - name: "Data & Cloud Infrastructure"
     level: "Master"
     keywords:
@@ -214,10 +223,6 @@ skills:
       - "Git"
       - "Bespoke Developer Tooling"
       - "Flutter"
-      - "Angular"
-      - "React"
-      - "Ext.js"
-      - "Sencha Touch"
   - name: "Databases"
     level: "Master"
     keywords:

@@ -20,7 +20,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **Code Block and Typography Alignment**: Standardized the maximum width of all editorial elements (paragraphs, headings, lists, blockquotes, and code blocks/highlights) to `100ch` inside `.blogcontent` on large viewports (>= 1400px). This ensures code blocks and other text elements align perfectly with the reading column rather than expanding to the full container width.
+- **Author Bio Card Compactness & Styling**: Refined the "About the Author" card in the post footer to align with the `100ch` reading column. Reduced the padding to `p-3`, scaled the profile image down by 50% (to `50px`), and adjusted the grid layout to a tighter `2/10` split. Standardized the action buttons to use the premium `.btn-custom-action` class, matching the exact styling, hover effects, and category-active highlights of the `READER VIEW` button.
+- **Resume Skills Taxonomy and Unit Tests**: Updated `resume.yml` to include new AI/ML keywords (`JAX`, `Model Tuning`, `Deep Reinforcement Learning (RL)`, `MuJoCo`), modernized the LLM and vLLM terms, and migrated frontend frameworks (`React`, `Angular`, `Ext JS`, `Sencha Touch`) along with `NumPy` into the Programming Languages section. Updated `resume_api.test.js` to synchronize assertions and maintain a passing test suite.
+
 ### Added
+- **Image Containment Utility Class**: Introduced the `.img-contain` SASS/CSS class to allow specific high-fidelity diagrams and charts to bypass global cropping (`object-fit: cover`) and height caps. Applied the class to the topological network graph, semantic vector space, and virtual shrink simulator diagrams in the DSM-5 vector space blog post by wrapping them in `<div class="chart-container img-contain">`, ensuring they render fully without distortion while preserving the responsive image asset pipeline.
+- **DSM-5 Vector Space Blog Post Image Integration**: Standardized all visual assets to use standard Markdown image syntax (`![alt text](url)`) to enable automatic responsive WebP transcoding, and removed the comorbidity loop Mermaid diagram. Implemented a self-contained `.chart-container` wrapping class and local `<style>` block directly inside `dsm5-vector-space.md` to enforce `object-fit: contain !important` and remove height caps, ensuring the technical charts scale to their full, natural proportions without affecting global site layouts.
 - Two new video posts covering the Kaggle "5-Day AI Agents: Intensive Vibe Coding Course with Google" event: "DAY 5 Livestream" and "Whitepaper Companion Podcast: Spec-Driven Production Grade Development in the Age of Vibe Coding".
 - Elite Networking & Strategic Horizons callout section in biography sidebar on screen.
 - Philanthropy (volunteer) details to the resume database (`source/_data/resume.yml`), template renders, and static text/markdown API generation.
