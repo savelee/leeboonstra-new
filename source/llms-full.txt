@@ -21,6 +21,13 @@ As I read, I wondered:
 
 > *What if the linguistic boundaries of the DSM are so overlapping and redundant that the math of vector spaces exposes them as an artificial illusion?*
 
+So, being an applied AI engineer with too much time waiting at an airport, a Google Cloud project, Antigravity for some vibe coding, and a healthy dose of professional skepticism, I decided to build an engineering proof. I wanted to map the entire DSM-5 into high-dimensional vector space, project it down to a 2D canvas, and see what the geometry of clinical language actually looks like.
+
+The results are mathematically clear, clinically chaotic, and raise serious questions about the future of Psychiatric AI.
+
+You can explore the live, interactive proof and run the simulations yourself here:  
+👉 **[Interactive DSM-5 Vector Space Visualizer](https://savelee.github.io/dsm-in-vector-space/)**
+
 <!--more-->
 
 <div class="chart-container">
@@ -29,14 +36,6 @@ As I read, I wondered:
 
 </div>
 
-So, being an applied AI engineer with too much time waiting at an airport, a Google Cloud project, Antigravity for some vibe coding, and a healthy dose of professional skepticism, I decided to build an engineering proof. I wanted to map the entire DSM-5 into high-dimensional vector space, project it down to a 2D canvas, and see what the geometry of clinical language actually looks like.
-
-The results are mathematically clear, clinically chaotic, and raise serious questions about the future of Psychiatric AI.
-
-You can explore the live, interactive proof and run the simulations yourself here:  
-👉 **[Interactive DSM-5 Vector Space Visualizer](https://savelee.github.io/dsm-in-vector-space/)**
-
----
 
 ## The Relational Collapse: Biology vs. Categorical Boxes
 
