@@ -15,7 +15,7 @@
 ---
 
 As an engineer, I look at the world through the lens of data architecture, relations, database schemas, and decision trees. 
-Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/dp/0262049473). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to **DSM-5** (The American Psychiatric Association's *Diagnostic and Statistical Manual of Mental Disorders*) diagnoses. His argument is that this tracking is fundamentally flawed because the underlying foundation—the DSM itself—is broken. If the diagnostic categories are arbitrary and unscientific, training AI to detect them is just automating subjectivity.
+Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to **DSM-5** (The American Psychiatric Association's *Diagnostic and Statistical Manual of Mental Disorders*) diagnoses. His argument is that this tracking is fundamentally flawed because the underlying foundation—the DSM itself—is broken. If the diagnostic categories are arbitrary and unscientific, training AI to detect them is just automating subjectivity.
 
 As I read, I wondered:
 
