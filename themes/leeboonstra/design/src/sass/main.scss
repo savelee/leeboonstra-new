@@ -2539,7 +2539,7 @@ figure.highlight pre[class*="language-"] {
 
 figure.highlight {
     border-radius: 0.5rem !important;
-    margin: 2rem 0 !important;
+    margin: 2rem auto !important;
     overflow: hidden !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
     position: relative !important;
@@ -3177,6 +3177,15 @@ figure.highlight pre {
             margin-bottom: 0.5rem !important;
             line-height: 1.4 !important;
         }
+    }
+}
+
+/* Author Bio Card Styling overrides to prevent alignment issues in article content */
+.author-bio-card {
+    p, h1, h2, h3, h4, h5, h6 {
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
