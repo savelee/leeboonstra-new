@@ -1982,10 +1982,10 @@ time {
         }
     }
 
-    // Modern horizontal flex grid layout for resume/book downloads
+    // Modern grid layout for resume/book downloads (2x2 grid in sidebar)
     .books {
-        display: flex !important;
-        flex-direction: row !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 70px) !important;
         gap: 0.75rem !important;
         justify-content: center !important;
         align-items: center !important;
@@ -1993,11 +1993,14 @@ time {
         width: 100% !important;
         
         picture, a picture {
-            display: inline-block !important;
+            display: block !important;
             float: none !important; // Stop legacy layout floats
             margin: 0 !important;
+            width: 70px !important;
             
             img {
+                width: 70px !important;
+                height: auto !important; // Prevent aspect ratio distortion
                 margin: 0 !important;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
                 border-radius: 4px !important;
@@ -2213,6 +2216,7 @@ time {
 .col-3 .card .card-body .books picture,
 .col-3 .card .card-body .books picture img {
     width: 70px !important;
+    height: auto !important; // Enforce correct aspect ratio scaling in sidebar
 }
 
 .shadow {
@@ -3181,6 +3185,7 @@ figure.highlight pre {
 }
 
 /* Author Bio Card Styling overrides to prevent alignment issues and standardize layout */
+/* Author Bio Card Styling overrides to prevent alignment issues and standardize layout */
 .author-bio-card {
     border: 1px solid #e2e8f0 !important;
     border-radius: 10px !important;
@@ -3238,6 +3243,12 @@ figure.highlight pre {
     }
 
     // Profile image: always 100px by 100px, round
+    picture {
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+        display: block !important;
+    }
+
     img,
     picture img {
         width: 100px !important;

@@ -21,6 +21,9 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- **Biography Card Image Spacing**: Added `30px` left and right margins to the `<picture>` element inside `.author-bio-card` in standard mode, providing elegant spacing and breathing room around the profile image.
+- **Sidebar Books 2x2 Grid Layout**: Migrated the `.books` container in `main.scss` from a horizontal flex row to a structured CSS Grid (`repeat(2, 70px)`), stacking the 4 books as a 2x2 grid to fit perfectly in the narrow homepage sidebar.
+- **Book Cover Aspect Ratio Correction**: Enforced `height: auto !important` on all `.books` images to prevent the 2nd book cover (and others) from stretching or distorting due to conflicting inline HTML height attributes.
 - **Standard Mode Biography Card Column Alignment**: Constrained the `.author-bio-card` in `main.scss` to `48rem` (`100ch` on >= 1400px) and centered it, aligning its boundaries perfectly with the body text column.
 - **Biography Card Spacing Synchronization**: Updated standard mode column paddings inside `.author-bio-card` to match reader mode exactly (`0 1.25rem 0 0` on the image column, and `0` on the text column), correcting the loose spacing between the profile image and the biography text.
 - **Standard Mode Author Bio Card Layout**: Standardized the `.author-bio-card` in `main.scss` to always maintain a horizontal flex layout on all screen sizes (no stacking on mobile). Enforced a `100px` by `100px` round profile image on the left, and overridden the biography heading (`h4`) to align at `left: 0`, preventing the desktop hanging outdent.
