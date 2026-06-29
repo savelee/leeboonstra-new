@@ -412,6 +412,55 @@
             }
         }
 
+        // Global button overrides in reader mode (white text, no underline, no hover effects)
+        .btn-custom-action {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            transform: none !important;
+            box-shadow: none !important;
+            
+            &:hover, &:focus, &:active {
+                color: #ffffff !important;
+                text-decoration: none !important;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        // Page-specific button background resets in reader mode (no hover color changes)
+        .Biography .btn-custom-action {
+            background-color: $red !important;
+            border-color: $red !important;
+            &:hover, &:focus, &:active {
+                background-color: $red !important;
+                border-color: $red !important;
+            }
+        }
+        .Conferences .btn-custom-action {
+            background-color: $orange !important;
+            border-color: $orange !important;
+            &:hover, &:focus, &:active {
+                background-color: $orange !important;
+                border-color: $orange !important;
+            }
+        }
+        .Videos .btn-custom-action, .Abstracts .btn-custom-action {
+            background-color: $green !important;
+            border-color: $green !important;
+            &:hover, &:focus, &:active {
+                background-color: $green !important;
+                border-color: $green !important;
+            }
+        }
+        .FAQ .btn-custom-action, .FAQs .btn-custom-action, .Contact .btn-custom-action {
+            background-color: $lightblue !important;
+            border-color: $lightblue !important;
+            &:hover, &:focus, &:active {
+                background-color: $lightblue !important;
+                border-color: $lightblue !important;
+            }
+        }
+
         // Clean list margins
         ul, ol {
             margin-top: 0 !important;
