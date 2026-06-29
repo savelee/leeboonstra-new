@@ -1814,6 +1814,19 @@ time {
         font-size: 1.4rem;
         text-align: center;
     }
+
+    // Standardize book download images in the sidebar to be the same size
+    .card-body {
+        a picture img[src*="prompting-paper"],
+        a picture img[src*="vibecoding-paper"] {
+            width: 197px !important;
+            height: 255px !important;
+            max-width: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            margin: 0 auto 1.5rem auto !important;
+        }
+    }
 }
 
 .pagination {

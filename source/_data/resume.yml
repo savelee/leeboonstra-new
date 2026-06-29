@@ -161,7 +161,8 @@ skills:
   - name: "AI & Machine Learning"
     level: "Master"
     keywords:
-      - "Frontier LLMs (Gemini, Claude, GPT) and Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)"
+      - "Frontier LLMs (Gemini, Claude, GPT)"
+      - "Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)"
       - "JAX"
       - "Model Tuning"
       - "Deep Reinforcement Learning (RL)"

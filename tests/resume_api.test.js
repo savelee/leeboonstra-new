@@ -186,7 +186,8 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     expect(leadershipGroup.name).toBe('AI & Machine Learning');
     expect(leadershipGroup.keywords).toContain('Technical Leadership');
     expect(leadershipGroup.keywords).toContain('Team Mentorship');
-    expect(leadershipGroup.keywords).toContain('Frontier LLMs (Gemini, Claude, GPT) and Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)');
+    expect(leadershipGroup.keywords).toContain('Frontier LLMs (Gemini, Claude, GPT)');
+    expect(leadershipGroup.keywords).toContain('Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)');
     
     const genaiGroup = data.skills.find(s => s.name === 'GenAI Architectures & Orchestration');
     expect(genaiGroup).toBeDefined();

@@ -20,7 +20,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- **Resume Skills Taxonomy**: Split the combined Frontier/Open-Source LLM skill tag into two separate, cleaner tags: `"Frontier LLMs (Gemini, Claude, GPT)"` and `"Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)"`.
+- **Resume Unit Tests**: Updated `tests/resume_api.test.js` to verify the new split LLM tags.
+
 ### Fixed
+- **About Page Sidebar Book Sizing**: Standardized all book download images in the `/about` page sidebar to be exactly `197px` by `255px` (matching the prompt engineering cover size) and enforced `object-fit: cover` to prevent image distortion.
 - **Biography Card Image Spacing**: Added `30px` left and right margins to the `<picture>` element inside `.author-bio-card` in standard mode, providing elegant spacing and breathing room around the profile image.
 - **Sidebar Books 2x2 Grid Layout**: Migrated the `.books` container in `main.scss` from a horizontal flex row to a structured CSS Grid (`repeat(2, 70px)`), stacking the 4 books as a 2x2 grid to fit perfectly in the narrow homepage sidebar.
 - **Book Cover Aspect Ratio Correction**: Enforced `height: auto !important` on all `.books` images to prevent the 2nd book cover (and others) from stretching or distorting due to conflicting inline HTML height attributes.
