@@ -163,7 +163,14 @@ When we collaborate across boundaries—combining the deep contextual wisdom of 
 
 ## Further Reading
 
-*   **[The Silicon Shrink: How Artificial Intelligence Made the World an Asylum](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1)** (Daniel Oberhaus, 2024) — The book that inspired this experiment, offering a brilliant critique of "digital phenotyping" and the structural flaws of the DSM.
+*   **[The Silicon Shrink: How Artificial Intelligence Made the World an Asylum](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1)** (Daniel Oberhaus, Feb 2025) — The book that inspired this experiment, offering a brilliant critique of "digital phenotyping" and the structural flaws of the DSM.
+    <small style="display: block; margin-top: 0.5em; color: var(--color-text-muted, #666); line-height: 1.6;">
+    Why the race to apply AI in psychiatry is so dangerous, and how to understand the new tech-driven psychiatric paradigm.
+    <br><br>
+    AI psychiatrists promise to detect mental disorders with superhuman accuracy, provide affordable therapy for those who can’t afford or can’t access treatment, and even invent new psychiatric drugs. But the hype obscures an unnerving reality. In *The Silicon Shrink*, Daniel Oberhaus tells the inside story of how the quest to use AI in psychiatry has created the conditions to turn the world into an asylum. Most of these systems, he writes, have vanishingly little evidence that they improve patient outcomes, but the risks they pose have less to do with technological shortcomings than the application of deeply flawed psychiatric models of mental disorder at unprecedented scale.
+    <br><br>
+    Oberhaus became interested in the subject of mental health after tragically losing his sister to suicide. In *The Silicon Shrink*, he argues that these new, ostensibly therapeutic technologies already pose significant risks to vulnerable people, and they won’t stop there. These new breeds of AI systems are creating a psychiatric surveillance economy in which the emotions, behavior, and cognition of everyday people are subtly manipulated by psychologically savvy algorithms that have escaped the clinic. Oberhaus also introduces readers to the concept of “swipe psychology,” which is quickly establishing itself as the dominant mode of diagnosing and treating mental disorders.
+    </small>
 *   **[Modeling psychopathology in high-dimensional vector space using the high-dimensional symptom space (HDSS) model](https://pmc.ncbi.nlm.nih.gov/articles/PMC12508039/)** (Wild & Cutler, 2025) — Published in *Scientific Reports*, this paper demonstrates how mapping actual patient response data (CBCL) into high-dimensional space exposes the same categorical collapse and offers a path toward tracking personalized clinical trajectories.
 
 
