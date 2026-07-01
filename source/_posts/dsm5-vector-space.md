@@ -13,10 +13,13 @@ tags:
   - Therapy AI
   - Mental Health Tech
 categories:
-  - AI Development
-  - Vector Embeddings
-  - Mental Health AI
   - Applied AI
+  - Mental Health AI
+  - Vector Embeddings
+  - Engineering Proof
+alias:
+  - /ai-development/engineering-proof/applied-ai/dsm5-vector-space/
+  - /ai-development/vector-embeddings/mental-health-ai/applied-ai/dsm5-vector-space/
 featured: vectors
 date: 2026-06-26 09:00:00
 ---
