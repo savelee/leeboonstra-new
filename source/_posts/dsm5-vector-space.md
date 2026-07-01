@@ -18,8 +18,10 @@ categories:
   - Applied AI
 featured: vectors
 date: 2026-06-26 09:00:00
+---
+
 <small style="display: block; color: var(--color-text-muted, #777); line-height: 1.5; font-style: italic; margin-bottom: 1.5em;">
-I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, critique, collaborate, or build upon these initial findings.
+I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, collaborate, or build upon these initial findings.
 </small>
 
 As an engineer, I look at the world through the lens of data architecture, relations, database schemas, and decision trees. 
