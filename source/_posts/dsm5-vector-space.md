@@ -18,7 +18,9 @@ categories:
   - Applied AI
 featured: vectors
 date: 2026-06-26 09:00:00
----
+<small style="display: block; color: var(--color-text-muted, #777); line-height: 1.5; font-style: italic; margin-bottom: 1.5em;">
+I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, critique, collaborate, or build upon these initial findings.
+</small>
 
 As an engineer, I look at the world through the lens of data architecture, relations, database schemas, and decision trees. 
 Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to **DSM-5** (The American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders) diagnoses. His argument is that this tracking is fundamentally flawed because the underlying foundation—the DSM itself—is broken. If the diagnostic categories are arbitrary and unscientific, training AI to detect them is just automating subjectivity.
@@ -55,7 +57,7 @@ When distinct diagnostic categories share identical symptom definitions (e.g., f
 
 ## Vibing, Scraping, Structuring, and Embedding
 
-So here's what I did. I broke the experiment into three phases:
+So here's what I did. I broke the experiment into the following phases:
 1. Extracting and synthesizing the DSM-5 data,
 2. Normalizing it into a clean data structures
 3. Encoding the clinical text into dense vector representations.
@@ -63,7 +65,7 @@ So here's what I did. I broke the experiment into three phases:
 👉 **[Interactive DSM-5 Vector Space Visualizer](https://savelee.github.io/dsm-in-vector-space/)**
 
 Because the APA aggressively copyrights the DSM-5-TR to monetize the manual, there is no clean, open-source DSM webservice, API, or public database sitting on an open registry.
-To bypass this, I uploaded a PDF of an easy-to-explain DSM-5 guide into **[NotebookLM](https://notebooklm.google/)**. It allowed me to quickly extract the core diagnostic concepts and define clean JSON data structures. From there, I wrote Python scripts to parse the criteria, run quality checks, and ensure the symptom matching and labeling aligned with clinical definitions. (For example, if one disorder mentioned *insomnia* and another one has the synonym *sleeplessness*, then the synonym name should actually be the same. LLMs like Gemmini are really great to detect and group synonyms from large amounts of texts.)
+To bypass this, I uploaded a PDF of an easy-to-explain DSM-5 guide into **[NotebookLM](https://notebooklm.google/)**. It allowed me to quickly extract the core diagnostic concepts and define clean JSON data structures. From there, I wrote Python scripts to parse the criteria, run quality checks, and ensure the symptom matching and labeling aligned with clinical definitions. (For example, if one disorder mentioned *insomnia* and another one has the synonym *sleeplessness*, then the synonym name should actually be the same. LLMs like Gemini are really great to detect and group synonyms from large amounts of texts.)
 
 The resulting clean dataset was organized into official chapters in my [data repository](https://github.com/savelee/dsm-in-vector-space/tree/main/data), culminating in a [master diagnoses list](https://github.com/savelee/dsm-in-vector-space/blob/main/data/diagnoses.json) and a [consolidated symptom dictionary](https://github.com/savelee/dsm-in-vector-space/blob/main/data/unique_symptoms.json).
 
@@ -172,5 +174,9 @@ When we collaborate across boundaries—combining the deep contextual wisdom of 
     Oberhaus became interested in the subject of mental health after tragically losing his sister to suicide. In *The Silicon Shrink*, he argues that these new, ostensibly therapeutic technologies already pose significant risks to vulnerable people, and they won’t stop there. These new breeds of AI systems are creating a psychiatric surveillance economy in which the emotions, behavior, and cognition of everyday people are subtly manipulated by psychologically savvy algorithms that have escaped the clinic. Oberhaus also introduces readers to the concept of “swipe psychology,” which is quickly establishing itself as the dominant mode of diagnosing and treating mental disorders.
     </small>
 *   **[Modeling psychopathology in high-dimensional vector space using the high-dimensional symptom space (HDSS) model](https://pmc.ncbi.nlm.nih.gov/articles/PMC12508039/)** (Wild & Cutler, 2025) — Published in *Scientific Reports*, this paper demonstrates how mapping actual patient response data (CBCL) into high-dimensional space exposes the same categorical collapse and offers a path toward tracking personalized clinical trajectories.
+
+<small style="display: block; color: var(--color-text-muted, #777); line-height: 1.5; font-style: italic; margin-top: 2em;">
+The analysis presented here is strictly an engineering and computational proof of concept. I hold no medical or psychiatric credentials. All data and tools have been released as open-source software on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub (savelee/dsm-in-vector-space)</a> to encourage rigorous evaluation, refinement, and collaboration by qualified medical and psychiatric professionals.
+</small>
 
 
