@@ -163,6 +163,8 @@ When you spend your entire career inside a single discipline, you naturally adop
 
 When we collaborate across boundaries—combining the deep contextual wisdom of the domain expert with the rigorous, systems-level architecture of the engineer—we stop automating the flaws of the past and start building the architecture of the future.
 
+> <small style="color: var(--color-text-muted, #777); font-style: italic;"><strong>NOTE:</strong> The analysis presented here is strictly an engineering and computational proof of concept. I hold no medical or psychiatric credentials. All data and tools have been released as open-source software on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub (savelee/dsm-in-vector-space)</a> to encourage rigorous evaluation, refinement, and collaboration by qualified medical and psychiatric professionals.</small>
+
 ## Further Reading
 
 *   **[The Silicon Shrink: How Artificial Intelligence Made the World an Asylum](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1)** (Daniel Oberhaus, Feb 2025) — The book that inspired this experiment, offering a brilliant critique of "digital phenotyping" and the structural flaws of the DSM.
@@ -174,7 +176,5 @@ When we collaborate across boundaries—combining the deep contextual wisdom of 
     Oberhaus became interested in the subject of mental health after tragically losing his sister to suicide. In *The Silicon Shrink*, he argues that these new, ostensibly therapeutic technologies already pose significant risks to vulnerable people, and they won’t stop there. These new breeds of AI systems are creating a psychiatric surveillance economy in which the emotions, behavior, and cognition of everyday people are subtly manipulated by psychologically savvy algorithms that have escaped the clinic. Oberhaus also introduces readers to the concept of “swipe psychology,” which is quickly establishing itself as the dominant mode of diagnosing and treating mental disorders.
     </small>
 *   **[Modeling psychopathology in high-dimensional vector space using the high-dimensional symptom space (HDSS) model](https://pmc.ncbi.nlm.nih.gov/articles/PMC12508039/)** (Wild & Cutler, 2025) — Published in *Scientific Reports*, this paper demonstrates how mapping actual patient response data (CBCL) into high-dimensional space exposes the same categorical collapse and offers a path toward tracking personalized clinical trajectories.
-
-> <small style="color: var(--color-text-muted, #777); font-style: italic;"><strong>NOTE:</strong> The analysis presented here is strictly an engineering and computational proof of concept. I hold no medical or psychiatric credentials. All data and tools have been released as open-source software on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub (savelee/dsm-in-vector-space)</a> to encourage rigorous evaluation, refinement, and collaboration by qualified medical and psychiatric professionals.</small>
 
 
