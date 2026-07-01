@@ -14,7 +14,8 @@ tags:
   - Mental Health Tech
 categories:
   - AI Development
-  - Engineering Proof
+  - Vector Embeddings
+  - Mental Health AI
   - Applied AI
 featured: vectors
 date: 2026-06-26 09:00:00
