@@ -20,9 +20,7 @@ featured: vectors
 date: 2026-06-26 09:00:00
 ---
 
-<small style="display: block; color: var(--color-text-muted, #777); line-height: 1.5; font-style: italic; margin-bottom: 1.5em;">
-I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, collaborate, or build upon these initial findings.
-</small>
+> <small style="color: var(--color-text-muted, #777); font-style: italic;"><strong>NOTE:</strong> I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, collaborate, or build upon these initial findings.</small>
 
 As an engineer, I look at the world through the lens of data architecture, relations, database schemas, and decision trees. 
 Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to **DSM-5** (The American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders) diagnoses. His argument is that this tracking is fundamentally flawed because the underlying foundation—the DSM itself—is broken. If the diagnostic categories are arbitrary and unscientific, training AI to detect them is just automating subjectivity.
@@ -177,8 +175,6 @@ When we collaborate across boundaries—combining the deep contextual wisdom of 
     </small>
 *   **[Modeling psychopathology in high-dimensional vector space using the high-dimensional symptom space (HDSS) model](https://pmc.ncbi.nlm.nih.gov/articles/PMC12508039/)** (Wild & Cutler, 2025) — Published in *Scientific Reports*, this paper demonstrates how mapping actual patient response data (CBCL) into high-dimensional space exposes the same categorical collapse and offers a path toward tracking personalized clinical trajectories.
 
-<small style="display: block; color: var(--color-text-muted, #777); line-height: 1.5; font-style: italic; margin-top: 2em;">
-The analysis presented here is strictly an engineering and computational proof of concept. I hold no medical or psychiatric credentials. All data and tools have been released as open-source software on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub (savelee/dsm-in-vector-space)</a> to encourage rigorous evaluation, refinement, and collaboration by qualified medical and psychiatric professionals.
-</small>
+> <small style="color: var(--color-text-muted, #777); font-style: italic;"><strong>NOTE:</strong> The analysis presented here is strictly an engineering and computational proof of concept. I hold no medical or psychiatric credentials. All data and tools have been released as open-source software on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub (savelee/dsm-in-vector-space)</a> to encourage rigorous evaluation, refinement, and collaboration by qualified medical and psychiatric professionals.</small>
 
 
