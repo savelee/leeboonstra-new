@@ -10,7 +10,7 @@
 *Categories: AI Development, Engineering Management, Developer Workflow*
 *Tags: AI Agents, Engineering Management, Large Language Models, Agentic Coding, Tokens*
 
-> Why the 'token-aware developer' narrative is a corporate myth. Breaking down production API costs, IDE usage, and autonomous agent multipliers in an AI-first software engineering organization.
+> Why the 'token-aware developer' is a myth. Learn how to reduce enterprise AI coding costs and manage agentic LLM tooling without slowing software velocity.
 
 ---
 
@@ -24,13 +24,13 @@ The playbook goes like this: first, overhire engineering departments during a ma
 
 We have watched this exact cycle play out in real-time with tech giants like Meta and Amazon slashing corporate positions explicitly to offset ballooning AI infrastructure and compute costs. It’s a classic case of bad planning: management used AI as a brute-force multiplier for an already bloated org structure, rather than a catalyst to design a lean, modern engineering pipeline. And now? The engineers who survived the layoffs are being told they need to be "token-aware" to save the company money. Trying to blame a developer's "token hygiene" for these operational costs completely misdiagnoses the problem—and proves that your business is stuck in the past.
 
-<img src="https://leeboonstra.dev/images/cartoon2.png" alt="Blaming the SWE for high AI costs" style="object-fit: contain !important; display: block; margin: 20px auto; border-radius: 8px;" />
-
 ## The Three Types of Token Bills (And Why Seniors Already Get It)
 
 To understand why this "token-aware developer" narrative is a myth, we have to split the AI bill into three completely distinct buckets:
 
 <!--more-->
+
+<img src="https://leeboonstra.dev/images/cartoon2.png" alt="Blaming the SWE for high AI costs" style="object-fit: contain !important; display: block; margin: 20px auto; border-radius: 8px;" />
 
 ### 1. Production API Costs
 
@@ -75,7 +75,7 @@ Not every task requires a massive, multi-billion-parameter frontier model. Local
 
 Furthermore, we need to stop routing every task through an LLM by default. If a task can be solved by a traditional regex expression, a well-written shell script, or a standard linter, it shouldn't be sent to an LLM at all. True efficiency comes from fallback routing and model switching, not micromanaging human behavior.
 
-When you enable an engineer to drive at warp speed, the problem isn't how much fuel they're burning. The problem is whether your tracks can handle the speed. As I wrote about recently in my post, [Learning the Hard Way: When Agents Build Agents](https://leeboonstra.dev/2026/05/22/learning-the-hard-way-when-agents-build-agents/), accelerating code production doesn't magically solve software engineering. It simply moves the bottleneck downstream to integration, code review, and architectural alignment.
+When you enable an engineer to drive at warp speed, the problem isn't how much fuel they're burning. The problem is whether your tracks can handle the speed. As I wrote about recently in my post, [Learning the Hard Way: When Agents Build Agents](https://leeboonstra.dev/ai-development/engineering-management/developer-workflow/learning-the-hard-way-when-agents-build-agents/), accelerating code production doesn't magically solve software engineering. It simply moves the bottleneck downstream to integration, code review, and architectural alignment.
 
 ## Stop Counting Tokens, Start Counting Value
 
