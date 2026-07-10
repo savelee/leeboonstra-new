@@ -213,6 +213,37 @@ picture.img-contain img {
         line-height: 1.75 !important; // High visual comfort line height matching posts!
         color: #334155 !important;
         margin-bottom: 1.75rem !important;
+
+        blockquote {
+            line-height: 1.4 !important;
+            margin: 1.5rem 0 !important;
+
+            p {
+                line-height: 1.4 !important;
+
+                &:has(small),
+                &.small {
+                    line-height: 1.4 !important;
+                }
+
+                small {
+                    font-size: 0.85em;
+                    line-height: 1.4 !important;
+                    display: inline-block;
+                }
+            }
+
+            small {
+                font-size: 0.85em;
+                line-height: 1.4 !important;
+                display: inline-block;
+            }
+        }
+
+        p:has(small),
+        small {
+            line-height: 1.4 !important;
+        }
     }
     
     .card-foot {
@@ -1061,7 +1092,15 @@ time {
             font-size: 1.3rem;
             line-height: 1.7;
             font-weight: 600;
-        }    
+        }
+
+        &:has(small) {
+            line-height: 1.4;
+        }
+
+        small {
+            line-height: 1.4;
+        }
     }
 
     blockquote {
@@ -1081,6 +1120,23 @@ time {
                 color: #555;
                 font-style: italic;
             }
+
+            &:has(small),
+            &.small {
+                line-height: 1.4;
+            }
+
+            small {
+                font-size: 0.85em;
+                line-height: 1.4;
+                display: inline-block;
+            }
+        }
+
+        small {
+            font-size: 0.85em;
+            line-height: 1.4;
+            display: inline-block;
         }
     }
 

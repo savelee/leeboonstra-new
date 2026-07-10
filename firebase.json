@@ -132,6 +132,16 @@
       "type": 301
       },
       {
+      "source": "/ai-development/engineering-proof/applied-ai/dsm5-vector-space/",
+      "destination": "/applied-ai/mental-health-ai/vector-embeddings/engineering-proof/dsm5-vector-space/",
+      "type": 301
+      },
+      {
+      "source": "/ai-development/vector-embeddings/mental-health-ai/applied-ai/dsm5-vector-space/",
+      "destination": "/applied-ai/mental-health-ai/vector-embeddings/engineering-proof/dsm5-vector-space/",
+      "type": 301
+      },
+      {
       "source": "/about-me/",
       "destination": "/about/",
       "type": 301
