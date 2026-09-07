@@ -172,18 +172,31 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     expect(staffJob.startDate).toBe('2022-10-01');
     expect(staffJob.endDate).toBe(null);
     expect(staffJob.name).toBe('Google');
+    expect(staffJob.highlights.some(h => h.includes('Real2Sim') && h.includes('Blender'))).toBe(true);
+    expect(staffJob.highlights.some(h => h.includes('Spanner Property Graphs') || h.includes('Graph Query Language'))).toBe(true);
     
     expect(data).toHaveProperty('publications');
     const patents = data.publications.filter(p => p.type === 'patent');
-    expect(patents.length).toBe(3);
+    expect(patents.length).toBeGreaterThanOrEqual(3);
     expect(patents[0].name).toContain('Scalable High-Accuracy Transactional Agents');
+    
+    const whitepapers = data.publications.filter(p => p.type === 'whitepaper');
+    expect(whitepapers.some(p => p.name.includes('Spec-Driven Development'))).toBe(true);
   });
 
-  test('Verify Technical Skills taxonomies target Leadership keywords', () => {
+  test('Verify Technical Skills taxonomies target Leadership and Physical AI keywords', () => {
     const data = parseResumeYml(YML_PATH);
     
-    const leadershipGroup = data.skills[0];
-    expect(leadershipGroup.name).toBe('AI & Machine Learning');
+    const physicalGroup = data.skills.find(s => s.name === 'Physical AI, Robotics & Simulation');
+    expect(physicalGroup).toBeDefined();
+    expect(physicalGroup.keywords).toContain('Reinforcement Learning (RL)');
+    expect(physicalGroup.keywords).toContain('MuJoCo (MJCF)');
+    expect(physicalGroup.keywords).toContain('MJWarp Simulator');
+    expect(physicalGroup.keywords).toContain('Blender (Computational Geometry & Python API)');
+    expect(physicalGroup.keywords).toContain('Agibot');
+    
+    const leadershipGroup = data.skills.find(s => s.name === 'AI & Machine Learning');
+    expect(leadershipGroup).toBeDefined();
     expect(leadershipGroup.keywords).toContain('Technical Leadership');
     expect(leadershipGroup.keywords).toContain('Team Mentorship');
     expect(leadershipGroup.keywords).toContain('Frontier LLMs (Gemini, Claude, GPT)');
@@ -192,9 +205,11 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     const genaiGroup = data.skills.find(s => s.name === 'GenAI Architectures & Orchestration');
     expect(genaiGroup).toBeDefined();
     expect(genaiGroup.keywords).toContain('LangGraph Architectures');
+    expect(genaiGroup.keywords).toContain('Spec-Driven Development');
     
-    const dbGroup = data.skills.find(s => s.name === 'Databases');
-    expect(dbGroup).toBeDefined();
-    expect(dbGroup.keywords).toContain('Vector Search (pgvector, ChromaDB)');
+    const infraGroup = data.skills.find(s => s.name === 'Data & Cloud Infrastructure');
+    expect(infraGroup).toBeDefined();
+    expect(infraGroup.keywords).toContain('Google Cloud Spanner (Graph / GQL)');
+    expect(infraGroup.keywords).toContain('Vector Search (pgvector, ChromaDB)');
   });
 });

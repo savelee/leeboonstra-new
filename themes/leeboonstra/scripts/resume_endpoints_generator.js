@@ -218,7 +218,7 @@ hexo.extend.generator.register('resume_api_endpoints', function(locals) {
     path: 'about/print/index.html',
     layout: 'print_resume_layout', // Custom visual template layout
     data: {
-      title: 'Resume | ' + resume.basics.name + ' - Staff AI Engineer',
+      title: 'Resume | ' + resume.basics.name + ' - AI Software Engineer',
       subtitle: resume.basics.label,
       description: 'Clean visual A4 sheet preview for ' + resume.basics.name,
       content: compiledBioHtml,
