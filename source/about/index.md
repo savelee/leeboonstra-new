@@ -1,25 +1,25 @@
 ---
 title: Lee Boonstra | AI Engineering
-subtitle: AI Software Engineer & Tech Lead, Office of the CTO, Google
-description: Google AI SWE and tech lead at OCTO, Lee Boonstra, architects Physical AI simulation pipelines, Blender/MuJoCo procedural 3D robotics environments, deterministic Spanner GraphRAG, and large-scale agentic systems.
+subtitle: Staff AI Software Engineer & Tech Lead, Office of the CTO, Google
+description: Google Staff AI Software Engineer and tech lead at OCTO, Lee Boonstra, architects Physical AI simulation pipelines, Isaac Sim/Blender/MuJoCo procedural 3D robotics environments, deterministic Spanner GraphRAG, and large-scale agentic systems.
 nocomments: true
 layout: about
 class: Biography
 ---
 
-AI SWE & Tech Lead with 10 years of experience at <a href="https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/">Google (Global Office of the CTO)</a>.
+Staff AI Software Engineer with 10 years of experience at <a href="https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/">Google (Global Office of the CTO)</a>.
 
 
-**Biography:** Lee Boonstra (they/them) is an AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO), Applied Innovation Factory. They specialize in architecting Physical AI simulation pipelines, deterministic GraphRAG on Spanner Property Graphs, large-scale multi-agent coordination frameworks, and frontier enterprise AI platforms. With over two decades of engineering experience, Lee excels at driving zero-to-one applied innovation—from procedural 3D Real2Sim physics generation in **Blender 5.2+** and **MuJoCo** for autonomous robotics policy training to production multi-agent systems using **LangGraph** and Google's internal **Antigravity Framework**.
+**Biography:** Lee Boonstra (they/them) is a Staff AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO), Applied Innovation Factory. They specialize in architecting Physical AI simulation pipelines, deterministic GraphRAG on Spanner Property Graphs, large-scale multi-agent coordination frameworks, and frontier enterprise AI platforms. With over two decades of engineering experience, Lee excels at driving zero-to-one applied innovation—from procedural 3D Real2Sim physics generation in **Blender 5.2+**, **Isaac Sim**, and **MuJoCo** for autonomous robotics policy training to production multi-agent systems using **LangGraph** and Google's internal **Antigravity Framework**.
 
-Their technical scope covers Physical AI simulation (**MJWarp**, **MuJoCo**, **Agibot**, **Blender** computational geometry and Python APIs), Deep Reinforcement Learning (RL), Google Cloud Spanner Property Graphs (**GQL**), distributed scaling with **vLLM**, and transactional Speech AI. Lee orchestrates enterprise-grade solutions using frontier LLMs including Google's **Gemini**, OpenAI's **GPT**, and Anthropic's **Claude** models. Key production milestones include engineering the automated 6-stage Real2Sim procedural generation engine for enterprise robotics (achieving 95% spatial ingestion accuracy and a 100% collision-free physics pass rate), deterministic Spanner GQL GraphRAG for global logistics platforms (integrated into Google's Data Engineering Agent), and the nationwide GenAI speech automation engine for Wendy's. Lee's innovations are captured in 3 patent disclosures and filings (including [US20250078820A1](https://patents.google.com/patent/US20250078820A1)) covering transactional speech agent accuracy and secure cross-boundary agent communication.
+Their technical scope covers Physical AI simulation (**MJWarp**, **MuJoCo**, **Isaac Sim**, **Agibot**, **Blender** computational geometry and Python APIs), Deep Reinforcement Learning (RL), Google Cloud Spanner Property Graphs (**GQL**), distributed scaling with **vLLM**, and transactional Speech AI. Lee orchestrates enterprise-grade solutions using frontier LLMs including Google's **Gemini**, OpenAI's **GPT**, and Anthropic's **Claude** models. Key production milestones include engineering the automated 6-stage Real2Sim procedural generation engine for enterprise robotics (achieving 95% spatial ingestion accuracy and a 100% collision-free physics pass rate), deterministic Spanner GQL GraphRAG for global logistics platforms (integrated into Google's Data Engineering Agent), and the nationwide GenAI speech automation engine for Wendy's. Lee's innovations are captured in 3 patent disclosures and filings (including [US20250078820A1](https://patents.google.com/patent/US20250078820A1)) covering transactional speech agent accuracy and secure cross-boundary agent communication.
 
 <div class="blockquote-wrapper">
   <blockquote class="blockquote">
     <h2>
      "I'm good at explaining engineering to beginners and explaining to engineers where to begin.
      </h2>
-    <figcaption>&mdash;Lee Boonstra<br><em>SWE, Google</em></h4></figcaption>
+    <figcaption>&mdash;Lee Boonstra<br><em>Staff AI Software Engineer, Google</em></h4></figcaption>
   </blockquote>
 </div>
 

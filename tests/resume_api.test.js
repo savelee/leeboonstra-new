@@ -190,6 +190,7 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     const physicalGroup = data.skills.find(s => s.name === 'Physical AI, Robotics & Simulation');
     expect(physicalGroup).toBeDefined();
     expect(physicalGroup.keywords).toContain('Reinforcement Learning (RL)');
+    expect(physicalGroup.keywords).toContain('Isaac Sim');
     expect(physicalGroup.keywords).toContain('MuJoCo (MJCF)');
     expect(physicalGroup.keywords).toContain('MJWarp Simulator');
     expect(physicalGroup.keywords).toContain('Blender (Computational Geometry & Python API)');

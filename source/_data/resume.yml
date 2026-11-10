@@ -14,14 +14,14 @@
 
 basics:
   name: "Lee Boonstra"
-  label: "AI Software Engineer & Tech Lead, Global Office of the CTO, Google"
+  label: "Staff AI Software Engineer & Tech Lead, Global Office of the CTO, Google"
   image: "/images/large_leeboonstra_new.jpg"
   email: "lee[at]leeboonstra.com"
   phone: ""
   url: "https://www.leeboonstra.dev"
   pronouns: "they/them"
   summary: |
-    AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO) - Innovation Factory. Lee specializes in architecting Physical AI simulation pipelines, deterministic GraphRAG on Spanner Property Graphs, large-scale multi-agent coordination frameworks, and frontier enterprise AI platforms. Renowned as an industry benchmark author (O'Reilly, Apress, Kaggle's Prompt Engineering Guide with 400k+ downloads, and the global Spec-Driven Development whitepaper read by 300k+ engineers) and keynote speaker, Lee empowers engineering squads to sculpt complex AI systems using advanced agentic and physical simulation paradigms.
+    Staff AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO) - Innovation Factory. Lee specializes in architecting Physical AI simulation pipelines, deterministic GraphRAG on Spanner Property Graphs, large-scale multi-agent coordination frameworks, and frontier enterprise AI platforms. Renowned as an industry benchmark author (O'Reilly, Apress, Kaggle's Prompt Engineering Guide with 400k+ downloads, and the global Spec-Driven Development whitepaper read by 300k+ engineers) and keynote speaker, Lee empowers engineering squads to sculpt complex AI systems using advanced agentic and physical simulation paradigms.
   location:
     city: "Amstelveen"
     region: "North Holland"
@@ -41,13 +41,13 @@ basics:
 
 work:
   - name: "Google"
-    position: "AI Software Engineer & Tech Lead (Global Office of the CTO)"
+    position: "Staff AI Software Engineer & Tech Lead (Global Office of the CTO)"
     url: "https://blog.google/products/google-cloud/octo-google-clouds-two-way-innovation-street/"
     startDate: "2022-10-01"
     endDate: null
     summary: "Direct technical strategy, software architecture, and high-velocity engineering pods inside the Google Cloud Office of the CTO (OCTO) Innovation Factory, delivering zero-to-one Physical AI simulation systems, deterministic GraphRAG, and applied GenAI platforms."
     highlights:
-      - "Engineered an automated Real2Sim procedural 3D physics generator to unblock Reinforcement Learning (RL) policy training for autonomous robotics; synthesized 3D meshes, collision primitives, and friction matrices in Blender 5.2+ from 2D vision extraction with Gemini critic loops, exporting scene graphs into MuJoCo MJCF for GPU-accelerated simulation in MJWarp with 95% spatial ingestion accuracy and a 100% collision-free physics pass rate."
+      - "Engineered an automated Real2Sim procedural 3D physics generator to unblock Reinforcement Learning (RL) policy training for autonomous robotics; synthesized 3D meshes, collision primitives, and friction matrices in Blender 5.2+ from 2D vision extraction with Gemini critic loops, exporting scene graphs into MuJoCo MJCF and Isaac Sim for GPU-accelerated simulation in MJWarp with 95% spatial ingestion accuracy and a 100% collision-free physics pass rate."
       - "Architected a deterministic GraphRAG engine executing compiled Graph Query Language (GQL) on Google Cloud Spanner Property Graphs with a 3-tier database isolation model (Standard, Extension, Proprietary) and SQL-to-GraphSQL translation for global logistics supply chain platforms, achieving zero-hallucination multi-hop reasoning and transitioning architectures to Core Engineering to upgrade the Data Engineering Agent (DEA)."
       - "Architected and delivered the nationwide Wendy's drive-thru GenAI speech automation engine as Technical Team Lead; invented and patented the Speech Utterance Finalizer (US20250078820A1) to eliminate human deliberation audio fragmentation, boosting order accuracy by 20%, cutting customer wait times by 15%, driving >1B PR impressions, and winning the Google Cloud Customer Empathy Award."
       - "Authored global developer whitepapers and technical guides reaching over 550,000 developers globally, including 300,000+ developers for Spec-Driven Development in 1H 2026 and 400,000+ downloads for the Kaggle Prompt Engineering Guide."
@@ -172,6 +172,7 @@ skills:
     level: "Master"
     keywords:
       - "Reinforcement Learning (RL)"
+      - "Isaac Sim"
       - "MuJoCo (MJCF)"
       - "MJWarp Simulator"
       - "Blender (Computational Geometry & Python API)"
