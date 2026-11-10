@@ -150,6 +150,7 @@ describe('Resume YAML Data Integrity & Compiles Verification', () => {
     
     expect(data).toHaveProperty('basics');
     expect(data.basics).toHaveProperty('name', 'Lee Boonstra');
+    expect(data.basics).toHaveProperty('pronouns', 'he/they');
     expect(data.basics).toHaveProperty('label');
     expect(data.basics.label).toContain('AI Software Engineer');
     

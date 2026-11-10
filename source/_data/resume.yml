@@ -19,7 +19,7 @@ basics:
   email: "lee[at]leeboonstra.com"
   phone: ""
   url: "https://www.leeboonstra.dev"
-  pronouns: "they/them"
+  pronouns: "he/they"
   summary: |
     Staff AI Software Engineer, Tech Lead, and Systems Architect with 10 years of experience within Google's Global Office of the CTO (OCTO) - Innovation Factory. Lee specializes in architecting Physical AI simulation pipelines, deterministic GraphRAG on Spanner Property Graphs, large-scale multi-agent coordination frameworks, and frontier enterprise AI platforms. Renowned as an industry benchmark author (O'Reilly, Apress, Kaggle's Prompt Engineering Guide with 400k+ downloads, and the global Spec-Driven Development whitepaper read by 300k+ engineers) and keynote speaker, Lee empowers engineering squads to sculpt complex AI systems using advanced agentic and physical simulation paradigms.
   location:
@@ -52,7 +52,7 @@ work:
       - "Architected and delivered the nationwide Wendy's drive-thru GenAI speech automation engine as Technical Team Lead; invented and patented the Speech Utterance Finalizer (US20250078820A1) to eliminate human deliberation audio fragmentation, boosting order accuracy by 20%, cutting customer wait times by 15%, driving >1B PR impressions, and winning the Google Cloud Customer Empathy Award."
       - "Authored global developer whitepapers and technical guides reaching over 550,000 developers globally, including 300,000+ developers for Spec-Driven Development in 1H 2026 and 400,000+ downloads for the Kaggle Prompt Engineering Guide."
       - "Regained the Brazilian Supreme Court (STF) as a Tier-1 partner by architecting MultiDocAI, a time-aware legal reasoning pipeline that transformed open-ended generation into a constrained JSON-Schema ETL process, achieving 87% initial recall and precision up to 1.0."
-      - "Pioneered next-generation multi-agent coordination frameworks and state machine orchestrators utilizing Gemini, Claude, and GPT-4, establishing architectural standards and secure cross-boundary communication protocols using LangGraph and GraphRAG."
+      - "Pioneered next-generation multi-agent coordination frameworks, model fine-tuning pipelines, and state machine orchestrators utilizing Gemini, Gemma, Claude, and GPT-4, establishing architectural standards and secure cross-boundary communication protocols using LangGraph and GraphRAG."
       - "Managed a €100k+ annual budget and allocated 25% of leadership effort to product safety as Chapter Lead of the Pride@ Netherlands ERG, directly auditing harmful Dutch dictionary terms for the Google Assistant engineering team."
 
   - name: "Google"

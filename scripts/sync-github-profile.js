@@ -58,7 +58,7 @@ function syncGithubProfile() {
   let readme = `<!-- 🤖 AUTOMATICALLY GENERATED FILE - DO NOT EDIT DIRECTLY 🤖 -->
 <!-- Synced programmatically via AI-pipeline from www.leeboonstra.dev/about -->
 
-# Hi, I'm Lee Boonstra (they/them) 🦄
+# Hi, I'm Lee Boonstra (he/they) 🦄
 
 ![Staff AI Software Engineer & Tech Lead](https://img.shields.io/badge/Rank-Staff_AI_SWE_%2F_Tech_Lead-4285F4?style=for-the-badge&logo=google&logoColor=white)
 [![Dynamic Resume Version](https://img.shields.io/badge/Interactive_Resume-Screen_%26_Print-10B981?style=for-the-badge&logo=google&logoColor=white)](https://www.leeboonstra.dev/about/print/)
