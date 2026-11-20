@@ -67,7 +67,7 @@ filename_case: 1
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true
+future: false
 prism_plugin:
   mode: 'realtime'    # realtime/preprocess
   theme: 'atom-dark'
