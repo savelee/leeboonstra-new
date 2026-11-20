@@ -14,7 +14,7 @@ categories:
   - Applied AI
   - Physical AI
   - Robotics
-featured: robotics_sim_isometric
+featured: robotics_blender_isometric
 date: 2026-12-05 12:00:00
 ---
 
