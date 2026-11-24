@@ -1,0 +1,597 @@
+<!--
+ Copyright 2026 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= page.title || 'Presentation Viewer' %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="description" content="<%= page.description || 'Fullscreen PDF presentation viewer' %>">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .stage {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      cursor: pointer;
+    }
+
+    .stage.hud-hidden {
+      cursor: none;
+    }
+
+    #slide-canvas {
+      display: block;
+      max-width: 100vw;
+      max-height: 100vh;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.75);
+    }
+
+    .hud {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 999px;
+      z-index: 20;
+      transition: opacity 0.25s ease;
+    }
+
+    .hud.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .hud button, .hud a {
+      appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+
+    .hud button:hover, .hud a:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .hud button:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .slide-counter {
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+      color: #cbd5e1;
+      padding: 0 6px;
+      min-width: 56px;
+      text-align: center;
+    }
+
+    .launcher {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #0f172a;
+      overflow-y: auto;
+      user-select: text;
+    }
+
+    .launcher-card {
+      width: 100%;
+      max-width: 540px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .launcher-card h1 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+
+    .launcher-card p {
+      margin: 0 0 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #94a3b8;
+    }
+
+    .launcher-form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .launcher-form input[type="text"] {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 14px;
+    }
+
+    .launcher-form button, .file-btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .launcher-form button:hover, .file-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .pdf-list {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pdf-list li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .pdf-list li a:hover {
+      border-color: #60a5fa;
+      color: #ffffff;
+    }
+
+    .local-drop {
+      border-top: 1px solid #334155;
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .shortcuts {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .status-banner {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: #000000;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 24px;
+      z-index: 30;
+    }
+
+    .status-banner a {
+      color: #60a5fa;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="launcher" class="launcher is-hidden">
+    <div class="launcher-card">
+      <h1>PDF Presentation Mode</h1>
+      <p>Pass <code>?file=your-deck.pdf</code> for any PDF hosted in <code>/pdf/</code>, or select a file below.</p>
+
+      <form id="pdf-form" class="launcher-form">
+        <input id="pdf-input" type="text" placeholder="e.g. my-talk.pdf" autocomplete="off" required>
+        <button type="submit">Present</button>
+      </form>
+
+      <% if (page.pdfFiles && page.pdfFiles.length > 0) { %>
+        <ul class="pdf-list">
+          <% page.pdfFiles.forEach(function(fileName) { %>
+            <li>
+              <a href="/present/?file=<%= encodeURIComponent(fileName) %>">
+                <span><%= fileName %></span>
+                <span>Present &rarr;</span>
+              </a>
+            </li>
+          <% }); %>
+        </ul>
+      <% } %>
+
+      <div class="local-drop">
+        <span>Or preview a local PDF file directly:</span>
+        <label class="file-btn">
+          Choose PDF
+          <input id="local-file-input" type="file" accept="application/pdf" class="is-hidden">
+        </label>
+      </div>
+
+      <div class="shortcuts">
+        Controls: Click / Enter / Space / &rarr; (Next) &bull; &larr; / Backspace (Prev) &bull; F (Fullscreen) &bull; Home / End
+      </div>
+    </div>
+  </div>
+
+  <div id="stage" class="stage is-hidden" title="Click to advance slide">
+    <canvas id="slide-canvas"></canvas>
+  </div>
+
+  <div id="hud" class="hud is-hidden">
+    <button id="btn-prev" type="button" title="Previous slide">&larr;</button>
+    <span id="slide-counter" class="slide-counter">1 / 1</span>
+    <button id="btn-next" type="button" title="Next slide">&rarr;</button>
+    <button id="btn-fullscreen" type="button" title="Toggle fullscreen (F)">Fullscreen</button>
+    <a href="/present/" title="Back to deck selector">&#10005;</a>
+  </div>
+
+  <div id="status-banner" class="status-banner is-hidden">
+    <div id="status-message">Loading presentation...</div>
+    <a id="status-back" href="/present/" class="is-hidden">Back to Presentation Selector</a>
+  </div>
+
+  <script type="module">
+    const PDFJS_VERSION = '4.4.168';
+    const PDFJS_CDN = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${PDFJS_VERSION}/build`;
+
+    const launcherEl = document.getElementById('launcher');
+    const stageEl = document.getElementById('stage');
+    const canvasEl = document.getElementById('slide-canvas');
+    const ctx = canvasEl.getContext('2d');
+    const hudEl = document.getElementById('hud');
+    const counterEl = document.getElementById('slide-counter');
+    const prevBtn = document.getElementById('btn-prev');
+    const nextBtn = document.getElementById('btn-next');
+    const fullscreenBtn = document.getElementById('btn-fullscreen');
+    const statusBannerEl = document.getElementById('status-banner');
+    const statusMsgEl = document.getElementById('status-message');
+    const statusBackEl = document.getElementById('status-back');
+    const pdfFormEl = document.getElementById('pdf-form');
+    const pdfInputEl = document.getElementById('pdf-input');
+    const localFileInputEl = document.getElementById('local-file-input');
+
+    let pdfDoc = null;
+    let currentPage = 1;
+    let totalPages = 0;
+    let activeRenderTask = null;
+    let hudTimer = null;
+
+    /**
+     * Validates and normalizes a requested PDF path to a safe same-origin `/pdf/*.pdf` URL.
+     *
+     * @param {string|null} rawInput Raw query parameter value.
+     * @returns {string|null} Normalized `/pdf/<filename>.pdf` URL or `null` if invalid.
+     */
+    function resolvePdfUrl(rawInput) {
+      if (typeof rawInput !== 'string') {
+        return null;
+      }
+      const trimmed = rawInput.trim();
+      if (!trimmed) {
+        return null;
+      }
+      if (
+        /^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(trimmed) ||
+        trimmed.startsWith('//') ||
+        trimmed.includes('\\') ||
+        trimmed.includes('..')
+      ) {
+        return null;
+      }
+      let normalized = trimmed.replace(/^\/+/, '');
+      if (normalized.startsWith('pdf/')) {
+        normalized = normalized.slice(4);
+      }
+      if (!normalized || !/^[a-zA-Z0-9._\-/ ]+\.pdf$/i.test(normalized)) {
+        return null;
+      }
+      return '/pdf/' + normalized;
+    }
+
+    function showStatus(message, showBackLink = false) {
+      statusMsgEl.textContent = message;
+      statusBackEl.classList.toggle('is-hidden', !showBackLink);
+      statusBannerEl.classList.remove('is-hidden');
+    }
+
+    function hideStatus() {
+      statusBannerEl.classList.add('is-hidden');
+    }
+
+    function resetHudTimeout() {
+      hudEl.classList.remove('hidden');
+      stageEl.classList.remove('hud-hidden');
+      if (hudTimer) {
+        clearTimeout(hudTimer);
+      }
+      hudTimer = setTimeout(() => {
+        hudEl.classList.add('hidden');
+        stageEl.classList.add('hud-hidden');
+      }, 2500);
+    }
+
+    function updateControls() {
+      counterEl.textContent = `${currentPage} / ${totalPages}`;
+      prevBtn.disabled = currentPage <= 1;
+      nextBtn.disabled = currentPage >= totalPages;
+    }
+
+    async function renderSlide(pageNumber) {
+      if (!pdfDoc) {
+        return;
+      }
+
+      if (activeRenderTask) {
+        try {
+          activeRenderTask.cancel();
+        } catch (_) {
+          // Ignore cancellation errors on superseded render tasks
+        }
+      }
+
+      const page = await pdfDoc.getPage(pageNumber);
+      const baseViewport = page.getViewport({ scale: 1 });
+      const fitScale = Math.min(
+        window.innerWidth / baseViewport.width,
+        window.innerHeight / baseViewport.height
+      );
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const viewport = page.getViewport({ scale: fitScale * dpr });
+
+      canvasEl.width = Math.floor(viewport.width);
+      canvasEl.height = Math.floor(viewport.height);
+      canvasEl.style.width = `${Math.floor(viewport.width / dpr)}px`;
+      canvasEl.style.height = `${Math.floor(viewport.height / dpr)}px`;
+
+      activeRenderTask = page.render({
+        canvasContext: ctx,
+        viewport
+      });
+
+      try {
+        await activeRenderTask.promise;
+        activeRenderTask = null;
+      } catch (err) {
+        if (err && err.name !== 'RenderingCancelledException') {
+          throw err;
+        }
+      }
+
+      updateControls();
+    }
+
+    function goToSlide(targetPage) {
+      if (!pdfDoc) {
+        return;
+      }
+      const clamped = Math.max(1, Math.min(totalPages, targetPage));
+      if (clamped !== currentPage) {
+        currentPage = clamped;
+        renderSlide(currentPage);
+      }
+    }
+
+    function nextSlide() {
+      if (currentPage < totalPages) {
+        goToSlide(currentPage + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentPage > 1) {
+        goToSlide(currentPage - 1);
+      }
+    }
+
+    async function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    }
+
+    async function startPresentation(pdfSource) {
+      launcherEl.classList.add('is-hidden');
+      showStatus('Loading presentation...');
+
+      try {
+        const pdfjsLib = await import(`${PDFJS_CDN}/pdf.min.mjs`);
+        pdfjsLib.GlobalWorkerOptions.workerSrc = `${PDFJS_CDN}/pdf.worker.min.mjs`;
+
+        const loadingTask = pdfjsLib.getDocument(pdfSource);
+        pdfDoc = await loadingTask.promise;
+        totalPages = pdfDoc.numPages;
+        currentPage = 1;
+
+        hideStatus();
+        stageEl.classList.remove('is-hidden');
+        hudEl.classList.remove('is-hidden');
+        await renderSlide(currentPage);
+        resetHudTimeout();
+      } catch (err) {
+        showStatus(`Unable to load PDF: ${err && err.message ? err.message : 'Unknown error'}`, true);
+      }
+    }
+
+    // Event bindings
+    stageEl.addEventListener('click', () => {
+      nextSlide();
+      resetHudTimeout();
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+      resetHudTimeout();
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+      resetHudTimeout();
+    });
+
+    fullscreenBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFullscreen();
+      resetHudTimeout();
+    });
+
+    document.addEventListener('mousemove', () => {
+      if (pdfDoc) {
+        resetHudTimeout();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!pdfDoc) {
+        return;
+      }
+      if (['Enter', ' ', 'ArrowRight', 'ArrowDown', 'PageDown'].includes(e.key)) {
+        e.preventDefault();
+        nextSlide();
+      } else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(e.key)) {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        goToSlide(1);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        goToSlide(totalPages);
+      } else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (pdfDoc) {
+        renderSlide(currentPage);
+      }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+      fullscreenBtn.textContent = document.fullscreenElement ? 'Exit Fullscreen' : 'Fullscreen';
+      if (pdfDoc) {
+        renderSlide(currentPage);
+      }
+    });
+
+    pdfFormEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const candidate = resolvePdfUrl(pdfInputEl.value);
+      if (!candidate) {
+        pdfInputEl.setCustomValidity('Enter a valid .pdf filename inside /pdf/');
+        pdfInputEl.reportValidity();
+        return;
+      }
+      pdfInputEl.setCustomValidity('');
+      window.location.href = `/present/?file=${encodeURIComponent(candidate.replace(/^\/pdf\//, ''))}`;
+    });
+
+    localFileInputEl.addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) {
+        return;
+      }
+      const buffer = await file.arrayBuffer();
+      startPresentation({ data: new Uint8Array(buffer) });
+    });
+
+    // Boot
+    const params = new URLSearchParams(window.location.search);
+    const requestedFile = params.get('file') || params.get('pdf');
+
+    if (requestedFile) {
+      const safeUrl = resolvePdfUrl(requestedFile);
+      if (!safeUrl) {
+        showStatus('Invalid PDF path. Only same-origin files inside /pdf/ are allowed.', true);
+      } else {
+        startPresentation(safeUrl);
+      }
+    } else {
+      launcherEl.classList.remove('is-hidden');
+    }
+  </script>
+</body>
+</html>

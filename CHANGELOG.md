@@ -20,6 +20,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- **Hidden PDF Presentation Viewer (`/present/`)**: Added a standalone, non-indexed fullscreen PDF slide presentation viewer (`themes/leeboonstra/scripts/present_generator.js` and `themes/leeboonstra/layout/present.ejs`) supporting PDFs hosted in `source/pdf/`, click/`Enter`/arrow-key slide navigation, fullscreen mode (`F`), and `noindex, nofollow` + `robots.txt` exclusions (`/present/` and `/pdf/`). Added unit tests in `tests/present_generator.test.js` and documentation in `docs/present_viewer.md`.
+
 ### Changed
 - **Resume Skills Taxonomy**: Split the combined Frontier/Open-Source LLM skill tag into two separate, cleaner tags: `"Frontier LLMs (Gemini, Claude, GPT)"` and `"Open Source LLMs (Gemma, Llama, Gwen, Mistral, Phi)"`.
 - **Resume Unit Tests**: Updated `tests/resume_api.test.js` to verify the new split LLM tags.
