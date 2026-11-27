@@ -26,16 +26,23 @@ date: 2026-06-26 09:00:00
 
 > <small style="color: var(--color-text-muted, #777); font-style: italic; font-size: 0.5em;"><strong>NOTE:</strong> I am a software engineer and data practitioner, not a psychiatrist, psychologist, or medical professional. This project is an exploratory engineering proof examining the mathematical properties of clinical language in vector space. The underlying codebase is fully open-sourced on <a href="https://github.com/savelee/dsm-in-vector-space" target="_blank" rel="noopener">GitHub</a> as a foundational starting point, and I invite subject matter experts, clinicians, and researchers to review, collaborate, or build upon these initial findings.</small>
 
-As an engineer, I look at the world through the lens of data architecture, relations, database schemas, and decision trees. 
-Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to **DSM-5** (The American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders) diagnoses. His argument is that this tracking is fundamentally flawed because the underlying foundation—the DSM itself—is broken. If the diagnostic categories are arbitrary and unscientific, training AI to detect them is just automating subjectivity.
+As an engineer, I look at the world through data architecture, relations, database schemas, and decision trees.
+
+Before we dive into the math, here is the core argument in plain terms—and why I believe **Psychiatric AI** built on the **DSM-5** (the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders) is at serious risk:
+
+1. **Symptoms overlap everywhere.** Different DSM diagnoses share many of the same symptoms—fatigue, insomnia, poor concentration, restlessness—so the boundaries between categories blur together.
+2. **It classifies by checklist, not biology.** Unlike physical medicine, there is no blood test or brain scan for most psychiatric conditions; the DSM groups people using subjective, descriptive checklists.
+3. **Scaling a flawed baseline causes harm.** If you train AI models to predict overlapping, subjective labels and deploy them at scale, the AI does not resolve the confusion—it automates and amplifies it.
+
+Lately, I've been reading Daniel Oberhaus's book, [*The Silicon Shrink: How Artificial Intelligence Made the World an Asylum*](https://www.amazon.com/Silicon-Shrink-Artificial-Intelligence-Asylum/dp/026204935X/ref=sr_1_1). In Chapter 4, Oberhaus critiques **"digital phenotyping"**—the idea that we can passively track smartphone keystrokes, typing cadences, and language choices to map human behavior back to DSM-5 diagnoses. His point is simple: if the underlying diagnostic categories are arbitrary, training AI to detect them only automates subjectivity.
 
 As I read, I wondered:
 
 > *What if the linguistic boundaries of the DSM are so overlapping and redundant that the math of vector spaces exposes them as an artificial illusion?*
 
-So, being an applied AI engineer with too much time while waiting at an airport, a Google Cloud project, Antigravity for some vibe coding, and a healthy dose of professional skepticism, I decided to build an engineering proof. I wanted to map the entire DSM-5 into high-dimensional vector space, project it down to a 2D canvas, and see what the geometry of clinical language actually looks like.
+So, as an applied AI engineer with too much time at an airport, a Google Cloud project, Antigravity for vibe coding, and a healthy dose of skepticism, I built an engineering proof. I mapped the entire DSM-5 into a mathematical coordinate system (a **vector space**), projected it onto a 2D map, and looked at what the geometry of clinical language actually reveals.
 
-The results are mathematically clear, clinically chaotic, and raise serious questions about the future of Psychiatric AI.
+The result is unambiguous: the categories collapse into one another, raising serious questions about the future of Psychiatric AI.
 
 You can explore the live, interactive proof and run the simulations yourself here:  
 
@@ -46,35 +53,36 @@ You can explore the live, interactive proof and run the simulations yourself her
 ![DSM-5 disorders mapped into high-dimensional vector space](/images/vectors.jpeg)
 
 </div>
+<p><small><em><strong>Figure 1:</strong> Each point represents a DSM-5 symptom or diagnosis description projected into 2D vector space, with colors indicating different diagnostic chapters. Notice how the colored clouds bleed into one another across the center instead of forming separated islands—proving that the DSM's categories are not mathematically distinct in language.</em></small></p>
 
 👉 **[Interactive DSM-5 Vector Space Visualizer](https://savelee.github.io/dsm-in-vector-space/)**
 
 ## The Relational Collapse: Biology vs. Categorical Boxes
 
-In traditional physical medicine, diagnostic models are built on **discrete, biologically isolated decision trees**. If you present with a illness, determining whether you have a **Common Cold vs. COVID-19** is a binary, physically verifiable classification. You either have the rhinovirus, the SARS-CoV-2 virus or what-ever virus, or you don't. The diagnostic boundaries are clear, mutually exclusive, and grounded in objective biology.
+In traditional physical medicine, diagnostic models are built on **discrete, biologically isolated decision trees**. If you present with an illness, determining whether you have a **Common Cold vs. COVID-19** is a binary, physically verifiable classification. You either have the rhinovirus, the SARS-CoV-2 virus or what-ever virus, or you don't. The diagnostic boundaries are clear, mutually exclusive, and grounded in objective biology.
 
-In contrast, **psychiatric diagnostics lack biological boundaries**. Because we cannot peek into someone's brain, to read a clean biomarker for depression or anxiety, the DSM relies on a *categorical classification model*. It defines complex mental disorders not by unique biomarkers, but as arbitrary checklists of overlapping, descriptive behaviors.
+In contrast, **psychiatric diagnostics lack biological boundaries**. Because we cannot peek into someone's brain to read a clean biomarker for depression or anxiety, the DSM relies on a *categorical classification model*. It defines complex mental disorders not by unique biomarkers, but as checklists of overlapping, descriptive behaviors.
 
-This structural collapse isn't just a theoretical concern; it has been demonstrated. In a 2025 study published in *Scientific Reports*, researchers introduced the **High-Dimensional Symptom Space (HDSS)** model. By mapping the clinical symptom profiles of over 5,000 adolescents into a 119-dimensional space, they discovered that the mathematical distances *within* a diagnostic category were virtually indistinguishable from the distances *between* different categories. In other words, when you map actual patient data, the DSM's categorical boxes completely dissolve.
+This structural collapse isn't just a theoretical concern; it has been demonstrated. In a 2025 study published in *Scientific Reports*, researchers introduced the **High-Dimensional Symptom Space (HDSS)** model. By mapping the clinical symptom profiles of over 5,000 adolescents into a 119-dimensional space, they discovered that the mathematical distances *within* a diagnostic category were virtually indistinguishable from the distances *between* different categories. When you map actual patient data, the DSM's categorical boxes dissolve.
 
-When distinct diagnostic categories share identical symptom definitions (e.g., fatigue, sleep disturbances, concentration difficulties), the boundaries between disorders become entangled. This creates massive **overlaps** and **tautological loops** where a clinician is likely to diagnose a patient with multiple conditions simultaneously which is not necessarily the clinical reality, but rather evidence that the categorical model itself is structurally defective.
+When distinct diagnostic categories share identical symptom definitions (e.g., fatigue, sleep disturbances, concentration difficulties), the boundaries between disorders become entangled. This creates massive **overlaps** and **tautological loops** where a clinician is likely to diagnose a patient with multiple conditions simultaneously—not necessarily reflecting clinical reality, but exposing a structural defect in the categorical model itself.
 
 ## Vibing, Scraping, Structuring, and Embedding
 
-So here's what I did. I broke the experiment into the following phases:
-1. Extracting and synthesizing the DSM-5 data,
-2. Normalizing it into a clean data structures
-3. Encoding the clinical text into dense vector representations.
-4. Finally, I built a companion web app to visualize the results in 2D space:  
+So here's what I did. I broke the experiment into four phases:
+1. Extracting and structuring the DSM-5 criteria.
+2. Normalizing the text into clean data structures.
+3. Converting the clinical descriptions into **vector embeddings**—numerical coordinates that place similar meanings close together on a mathematical map.
+4. Building a companion web app to visualize the results in 2D space:  
 👉 **[Interactive DSM-5 Vector Space Visualizer](https://savelee.github.io/dsm-in-vector-space/)**
 
-Because the APA aggressively copyrights the DSM-5-TR to monetize the manual, there is no clean, open-source DSM webservice, API, or public database sitting on an open registry.
-To bypass this, I uploaded a PDF of an easy-to-explain DSM-5 guide into **[NotebookLM](https://notebooklm.google/)**. It allowed me to quickly extract the core diagnostic concepts and define clean JSON data structures. From there, I wrote Python scripts to parse the criteria, run quality checks, and ensure the symptom matching and labeling aligned with clinical definitions. (For example, if one disorder mentioned *insomnia* and another one has the synonym *sleeplessness*, then the synonym name should actually be the same. LLMs like Gemini are really great to detect and group synonyms from large amounts of texts.)
+Because the APA aggressively copyrights the DSM-5-TR to monetize the manual, there is no open-source DSM webservice, API, or public database.
+To work around this, I uploaded a PDF of a plain-language DSM-5 guide into **[NotebookLM](https://notebooklm.google/)**. It helped me extract the core diagnostic concepts and define clean JSON data structures. From there, I wrote Python scripts to parse the criteria, run quality checks, and merge duplicate symptom phrasing. (For example, if one disorder listed *insomnia* and another listed *sleeplessness*, they needed to share a canonical label. LLMs like Gemini are great at detecting and grouping synonyms across large bodies of text.)
 
-The resulting clean dataset was organized into official chapters in my [data repository](https://github.com/savelee/dsm-in-vector-space/tree/main/data), culminating in a [master diagnoses list](https://github.com/savelee/dsm-in-vector-space/blob/main/data/diagnoses.json) and a [consolidated symptom dictionary](https://github.com/savelee/dsm-in-vector-space/blob/main/data/unique_symptoms.json).
+The resulting dataset was organized into official chapters in my [data repository](https://github.com/savelee/dsm-in-vector-space/tree/main/data), culminating in a [master diagnoses list](https://github.com/savelee/dsm-in-vector-space/blob/main/data/diagnoses.json) and a [consolidated symptom dictionary](https://github.com/savelee/dsm-in-vector-space/blob/main/data/unique_symptoms.json).
 
-With a clean dataset of clinical descriptions, I generated dense vector representations using Google Cloud's **`text-embedding-005`** model on Gemini Enterprise.
-I configured the API call with `task_type="CLUSTERING"` to ensure the model treated each symptom description as an independent semantic entity in a 768-dimensional space, rather than a search query:
+With a clean dataset of clinical descriptions, I generated dense vector representations using Google Cloud's **`text-embedding-005`** model on Gemini Enterprise. In plain terms, this turns each symptom sentence into a list of 768 numbers so we can measure how close any two symptoms are in meaning.
+I configured the API call with `task_type="CLUSTERING"` so the model treated each symptom description as an independent semantic entity rather than a search query:
 
 ```python
 # Extract from our embedding generator script
@@ -97,7 +105,7 @@ The resulting high-dimensional vector representations were saved in my [pre-comp
 
 ## Mapping the Geometry of Clinical Language
 
-To translate these 768-dimensional vectors into a visual format, I built a client-side **React + TypeScript + Vite** web application: [`modern-viz/`](https://github.com/savelee/dsm-in-vector-space/tree/main/modern-viz). It runs entirely in the browser without a backend, so i can deploy it on **Github Pages** for free. The application uses **t-SNE** (t-Distributed Stochastic Neighbor Embedding) to project the high-dimensional coordinates down to a 2D grid, alongside an interactive, physics-based network graph.
+To translate these 768-dimensional vectors into a visual format, I built a client-side **React + TypeScript + Vite** web application: [`modern-viz/`](https://github.com/savelee/dsm-in-vector-space/tree/main/modern-viz). It runs entirely in the browser without a backend, so I can deploy it on **GitHub Pages** for free. The application uses **t-SNE** (a dimensionality-reduction technique that squashes high-dimensional coordinates down to a flat 2D grid) alongside an interactive, physics-based network graph.
 
 The web app exposes three distinct layers of the DSM's structural collapse:
 
@@ -110,6 +118,7 @@ Using an [interactive network mapping component](https://github.com/savelee/dsm-
 ![Topological Network Graph mapping DSM-5 disorders to symptom nodes](/images/topology.png)
 
 </div>
+<p><small><em><strong>Figure 2:</strong> A force-directed network graph linking DSM-5 disorders (colored hubs) to individual symptom nodes. Look at the dense web of shared edges in the center: high-degree symptoms such as fatigue, insomnia, and poor concentration act as hubs pulling unrelated chapters together—proving that a single symptom profile simultaneously triggers multiple separate diagnoses.</em></small></p>
 
 ### 2. The Semantic Vector Space
 
@@ -124,6 +133,7 @@ This tab projects the text of the clinical descriptions into a [2D semantic spac
 ![Semantic Vector Space visualizing dense embeddings of DSM-5 symptoms in 2D](/images/vector_space.png)
 
 </div>
+<p><small><em><strong>Figure 3:</strong> A 2D t-SNE projection of <code>text-embedding-005</code> symptom vectors, highlighting selected disorders side by side. Notice how symptoms from supposedly distinct conditions (such as Major Depressive Disorder and Generalized Anxiety Disorder) land at nearly identical coordinates—proving that the semantic overlap is baked directly into the DSM's clinical definitions.</em></small></p>
 
 ### 3. The Virtual Shrink Simulator
 
@@ -131,19 +141,19 @@ To turn this math into a practical demonstration, I built an [interactive clinic
 
 If you input an overlapping clinical profile, the engine triggers a **"Comorbidity Loop Warning"** and spikes the entropy meter, proving the categorical model cannot resolve the patient into a single box.
 
-*If I had more time, or maybe I will pick this up at some point, then I would have build a (speech) chat agent, that could diagnose on the fly. By filtering options out.*
+*If I had more time—or if I revisit this project—I would build a voice chat agent that narrows down diagnostic options on the fly.*
 
 ## A Visual Proof
 
-To see how easily the DSM's categorical architecture collapses, we can analyze the **Anxiety-Depression Vortex**. When a patient presents with fatigue, sleep disturbances, poor concentration, and restlessness, the diagnostic engine enters a permanent, circular loop. (e.g. circular logic where Condition A requires symptoms that inherently trigger the diagnosis of Condition B, locking the data model (or the clinician) in an infinite loop of over-diagnosised conditions).
+To see how easily the DSM's categorical architecture collapses, we can look at the **Anxiety-Depression Vortex**. When a patient presents with fatigue, sleep disturbances, poor concentration, and restlessness, the diagnostic engine enters a circular loop: Condition A requires symptoms that simultaneously trigger Condition B, locking the data model (or clinician) into over-diagnosed comorbidity.
 
-By analyzing the geometric clusters generated by `text-embedding-005`, we can extract three critical lessons that challenge the very foundation of Computational Psychiatry and Psychiatric AI (PAI):
+By analyzing the geometric clusters generated by `text-embedding-005`, we can extract two structural findings that challenge the foundation of Computational Psychiatry and Psychiatric AI (PAI):
 
-### 1. The Tautology Trap
+### 1. Administrative Boilerplate Clustering
 
 When looking at the Symptom Semantic Space, I noticed a strange, tight cluster of highly unrelated symptoms pulling together near the edge of the graph. When I inspected the raw text, the cause became obvious: these sentences all contained the standard legalistic boilerplate: *"The symptoms cause clinically significant distress or impairment in social, occupational, or other important areas of functioning."*
 
-Because the manual repeats this phrasing across hundreds of disorders, the embedding model groups these different clinical realities at the same coordinates. This is a **Tautology Trap**—proving the DSM often groups conditions based on administrative boilerplate rather than clinical reality.
+Because the manual repeats this phrasing across hundreds of disorders, the embedding model groups these different clinical realities at the same coordinates—proving the DSM often clusters conditions based on administrative boilerplate rather than clinical reality.
 
 ### 2. Language is the Glitch
 
@@ -155,13 +165,32 @@ This is where my linguistic experiment and the HDSS paper offer two fascinating,
 
 > Training AI models on passive smartphone data to predict DSM labels is a dead end. If the underlying labels are mathematically entangled, a model boasting high accuracy isn't discovering a biological truth. It is just predicting the circular language of the manual and automating a flawed baseline.
 
+## Beyond Text: Multimodal Emotion Recognition & FACS
+
+If text-based DSM checklists collapse under mathematical scrutiny, it is tempting to ask: what if AI looks beyond text—analyzing facial expressions, vocal tone, and body language instead?
+
+In **Multimodal Emotion Recognition**, AI systems process video frames, audio waves, and text simultaneously. On the visual side, many of these models rely on the **Facial Action Coding System (FACS)**—a taxonomy that breaks human facial expressions down into individual muscle movements called **Action Units** (for example, *Inner Brow Raiser*, *Brow Lowerer*, *Lip Corner Depressor*, or *Lip Pressor*). By detecting combinations of these muscle cues, a model classifies a face into discrete labels such as *neutral*, *happy*, *fear*, *sadness*, *contempt*, *surprise*, *anger*, or *disgust*.
+
+On the surface, this looks similar to how a human therapist reads non-verbal body language. The critical difference—and why letting a machine classify emotions through a camera at scale is genuinely concerning—is **context**:
+
+- **A therapist knows the patient's history.** When a therapist sees the corners of a patient's lips turn down, they don't read that muscle movement in a vacuum. They know the patient's spouse recently left them and that the patient has a history of depression—so classifying that expression as *sadness* is grounded in lived reality.
+- **A machine only sees surface pixels.** A camera has no access to personal history, relationships, or why someone's brow is furrowed. A tense jaw or lowered brow can come from deep concentration, screen glare, chronic discomfort, or simple habit—not anger or clinical distress. The same facial expression can also carry very different meanings across cultures, and something as mundane as a sudden light flash, poor lighting, or a camera glitch can trigger technical misclassifications.
+
+As I explored in my post on [AI Fairness, Bias, and the Human Advantage](https://www.leeboonstra.dev/ai-development/responsible-ai/mlfairness/), pattern-recognition systems also inherit skewed training data and uneven accuracy across demographics, lighting conditions, and vocal accents. Pairing a flawed, overlapping DSM baseline with context-blind facial classification at scale doesn't deliver objective insight—it risks mislabeling vulnerable people and causing real-world harm.
+
 ## The Path Forward
 
-If we want to build truly revolutionary AI systems for mental health, we must stop trying to automate the rigid, 20th-century box models of the DSM.
+If we want to build genuinely useful AI systems for mental health, we must stop trying to automate the rigid, 20th-century box models of the DSM.
 
-A static vector map is only a starting point. True clinical understanding is not just a coordinate; it is a trajectory. This is why the human conversation between a patient and a therapist remains irreplaceable. A vector embedding might capture the semantic similarity of symptoms, but it cannot untangle the complex, temporal choreography of a life: the precise **order of sequence** (e.g., did the insomnia trigger the panic, or did the panic cause the insomnia?), the downstream **behavioral consequences** (e.g., avoiding morning meetings, calling out sick, or abusing caffeine to stay awake during the day), the **situational timing and duration** (e.g., the panic attacks only hit on Monday evenings at exactly 8:00 PM and last for roughly 45 agonizing minutes), and the deeply **personal narrative context** (e.g., the client is carrying immense guilt over their recent promotion because it belonged to a laid-off colleague). The therapist's office is where these static coordinates are animated into a coherent, dynamic story.
+A static vector map is only a starting point, because true clinical understanding is a trajectory rather than a coordinate. This is why the human conversation between a patient and a therapist remains irreplaceable. A vector embedding can measure semantic similarity between symptoms, but it cannot untangle the temporal story of a life:
+- **Sequence**: Did the insomnia trigger the panic, or did the panic cause the insomnia?
+- **Behavioral consequences**: Is the patient avoiding morning meetings, calling out sick, or relying on caffeine to get through the day?
+- **Timing and duration**: Do panic attacks hit only on Monday evenings at 8:00 PM for 45 minutes?
+- **Personal narrative context**: Is the patient carrying guilt over a recent promotion because it belonged to a laid-off colleague?
 
-Now, I am not a psychiatrist, nor have I ever studied psychiatry. I am just a software engineer with a laptop and a vibecoding toolkit. But in a way, that is exactly the point. This experiment proves why specialized verticals, like medicine, law, finance, logistics—can benefit immensely from working more closely with software engineers and data scientists.
+The therapist's office is where static coordinates become a coherent human story.
+
+I am not a psychiatrist, nor have I studied psychiatry. I am a software engineer with a laptop and a vibecoding toolkit. In a way, that is the point: specialized fields—like medicine, law, finance, and logistics—benefit immensely from collaborating with software engineers and data scientists.
 
 When you spend your entire career inside a single discipline, you naturally adopt its consensus assumptions, its vocabulary, and its traditional structures (like the DSM's categorical boxes) as absolute truth. But when a software engineer or data scientist looks at the exact same domain, they don't see academic consensus; they see **data architecture, relational integrity, schemas, and state machines**.
 
