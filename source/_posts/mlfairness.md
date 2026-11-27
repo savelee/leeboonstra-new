@@ -13,7 +13,7 @@ categories:
   - AI Development
   - Responsible AI
 featured: mlfairness_t2i_stereotyping
-date: 2026-11-26 12:00:00
+date: 2026-11-27 10:00:00
 ---
 
 Two identical resumes land in an automated hiring pipeline: same degree, same ten years of engineering experience, same open-source contributions. The only difference is the name at the top of the page.

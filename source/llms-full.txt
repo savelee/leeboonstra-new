@@ -189,7 +189,7 @@ That won’t replace the airport baggage handler tomorrow. It means the robots e
 
 ## The Myth of the Neutral Default: Why Generative AI Reflects Our Blind Spots (And How to Engineer Around Them)
 
-*Published: 2026-11-26*
+*Published: 2026-11-27*
 *Categories: AI Development, Responsible AI*
 *Tags: Machine Learning Fairness, Bias in AI, Responsible AI, Generative AI, Brand Safety, Human Advantage, Human-in-the-Loop*
 
